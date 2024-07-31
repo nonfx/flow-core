@@ -1,0 +1,3 @@
+try{
+(()=>{var m=__STORYBOOK_ADDONS__,{addons:t,types:O,mockChannel:h}=__STORYBOOK_ADDONS__;var S=__STORYBOOK_THEMING__,{CacheProvider:b,ClassNames:g,Global:k,ThemeProvider:u,background:y,color:C,convert:N,create:a,createCache:R,createGlobal:v,createReset:B,css:D,darken:G,ensure:K,ignoreSsrWarning:Y,isPropValid:w,jsx:P,keyframes:A,lighten:E,styled:H,themes:I,typography:M,useTheme:j,withTheme:F}=__STORYBOOK_THEMING__;var s=a({base:"dark",brandTitle:"Flow",brandUrl:"https://flow.ollion.com/v2/index.html"});t.setConfig({theme:s});})();
+}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
