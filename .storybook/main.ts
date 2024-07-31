@@ -13,7 +13,7 @@ const alias = [
 	"flow-table",
 	"flow-dashboard"
 ].map(pkg => ({
-	find: `@ollion/${pkg}`,
+	find: `@nonfx/${pkg}`,
 	replacement: path.resolve(__dirname, "../packages", pkg, "src")
 }));
 
@@ -29,9 +29,9 @@ export default {
 
 	framework: "@storybook/web-components-vite",
 
-	async viteFinal(config, { configType }) {
+	async viteFinal(config) {
 		return mergeConfig(config, {
-			base: configType === "PRODUCTION" ? "/v2/" : "",
+			base: "",
 			resolve: {
 				alias
 			}

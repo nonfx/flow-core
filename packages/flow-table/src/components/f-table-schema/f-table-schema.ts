@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FButton, FDiv, flowElement, FRoot, FSearch, FText } from "@ollion/flow-core";
+import { FButton, FDiv, flowElement, FRoot, FSearch, FText } from "@nonfx/flow-core";
 import { html, HTMLTemplateResult, nothing, PropertyValueMap, unsafeCSS } from "lit";
 import { property, query, state } from "lit/decorators.js";
 import { FTable, FTableSelectable, FTableSize, FTableVariant } from "../f-table/f-table";
@@ -9,7 +9,7 @@ import { FTrow, FTrowChevronPosition, FTrowState } from "../f-trow/f-trow";
 import eleStyle from "./f-table-schema.scss?inline";
 import globalStyle from "./f-table-schema-global.scss?inline";
 import { repeat } from "lit/directives/repeat.js";
-import { injectCss } from "@ollion/flow-core-config";
+import { injectCss } from "@nonfx/flow-core-config";
 
 injectCss("f-table-schema", globalStyle);
 
@@ -180,6 +180,16 @@ export class FTableSchema extends FRoot {
 
 	set ["header-cell-template"](val: FTableSchemaHeaderCellemplate | undefined) {
 		this.headerCellTemplate = val;
+	}
+
+	/**
+	 * to show scrollbar
+	 */
+	@property({ type: Boolean, reflect: true, attribute: "show-scrollbar" })
+	showScrollbar = false;
+
+	set ["show-scrollbar"](val: boolean) {
+		this.showScrollbar = val;
 	}
 
 	@state()
@@ -466,7 +476,7 @@ export class FTableSchema extends FRoot {
 					  </f-div>`
 					: nothing}
 			</slot>
-			<div class="f-table-schema-wrapper">
+			<div class="f-table-schema-wrapper" ?show-scrollbar=${this.showScrollbar}>
 				<f-table
 					id="f-table-element"
 					.variant=${this.variant}

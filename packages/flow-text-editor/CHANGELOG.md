@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [0.0.5] - 2024-07-31
+
+### Patch
+
+- `f-text-editor` : testing version control.
+
 ## [0.0.1] - 2024-07-08
 
 ### Features

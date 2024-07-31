@@ -1,11 +1,17 @@
 name: Test and Release
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  HUSKY: 0
+
+permissions:
+  contents: write
 
 jobs:
   publish_to_npm:
@@ -14,11 +20,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAGES_TOKEN }}
 
-      - name: Setup Node.js 18.x
+      - name: Setup Node.js 20.x
         uses: actions/setup-node@v2.5.2
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Install pnpm
         run: corepack enable && corepack prepare pnpm@8.9.0 --activate
@@ -29,7 +37,7 @@ jobs:
         with:
           publish: pnpm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAGES_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Get current date
@@ -44,17 +52,17 @@ jobs:
           released-package-versions: ${{ steps.changesets.outputs.publishedPackages }}
           changelog-files-config: |
             {
-              "@ollion/flow-log":"packages/flow-log/CHANGELOG.md",
-              "@ollion/flow-code-editor":"packages/flow-code-editor/CHANGELOG.md",
-              "@ollion/flow-md-editor":"packages/flow-md-editor/CHANGELOG.md",
-              "@ollion/flow-text-editor":"packages/flow-text-editor/CHANGELOG.md",
-              "@ollion/flow-core":"packages/flow-core/CHANGELOG.md",
-              "@ollion/flow-table":"packages/flow-table/CHANGELOG.md",
-              "@ollion/flow-core-config":"packages/flow-core-config/CHANGELOG.md",
-              "@ollion/flow-form-builder":"packages/flow-form-builder/CHANGELOG.md",
-              "@ollion/flow-lineage":"packages/flow-lineage/CHANGELOG.md",
-              "@ollion/flow-dashboard":"packages/flow-dashboard/CHANGELOG.md",
-              "@ollion/custom-elements-manifest-to-types":"packages/custom-elements-manifest-to-types/CHANGELOG.md"
+              "@nonfx/flow-log":"packages/flow-log/CHANGELOG.md",
+              "@nonfx/flow-code-editor":"packages/flow-code-editor/CHANGELOG.md",
+              "@nonfx/flow-md-editor":"packages/flow-md-editor/CHANGELOG.md",
+              "@nonfx/flow-text-editor":"packages/flow-text-editor/CHANGELOG.md",
+              "@nonfx/flow-core":"packages/flow-core/CHANGELOG.md",
+              "@nonfx/flow-table":"packages/flow-table/CHANGELOG.md",
+              "@nonfx/flow-core-config":"packages/flow-core-config/CHANGELOG.md",
+              "@nonfx/flow-form-builder":"packages/flow-form-builder/CHANGELOG.md",
+              "@nonfx/flow-lineage":"packages/flow-lineage/CHANGELOG.md",
+              "@nonfx/flow-dashboard":"packages/flow-dashboard/CHANGELOG.md",
+              "@nonfx/custom-elements-manifest-to-types":"packages/custom-elements-manifest-to-types/CHANGELOG.md"
             }
 
       - name: Send Slack Notification
