@@ -27,6 +27,10 @@ jobs:
 
       - name: Install pnpm
         run: corepack enable && corepack prepare pnpm@8.9.0 --activate
+      - name: Disable Husky
+        run: |
+          npm config set HUSKY 0
+          git config --global core.hooksPath /dev/null
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
