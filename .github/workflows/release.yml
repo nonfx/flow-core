@@ -7,6 +7,9 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions:
+  contents: write
+
 jobs:
   publish_to_npm:
     name: Publishing to npm registry
@@ -14,11 +17,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAGES_TOKEN }}
 
-      - name: Setup Node.js 18.x
+      - name: Setup Node.js 20.x
         uses: actions/setup-node@v2.5.2
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Install pnpm
         run: corepack enable && corepack prepare pnpm@8.9.0 --activate
