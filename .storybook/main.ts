@@ -31,7 +31,7 @@ export default {
 
 	async viteFinal(config, { configType }) {
 		return mergeConfig(config, {
-			base: configType === "PRODUCTION" ? "/v2/" : "",
+			base: "",
 			resolve: {
 				alias
 			}

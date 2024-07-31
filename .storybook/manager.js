@@ -36,7 +36,7 @@ export const theme = create({
 
 	// Brand assets
 	brandTitle: "Flow",
-	brandUrl: "https://flow.ollion.com/v2/index.html"
+	brandUrl: "https://github.com/nonfx/flow-core"
 });
 
 addons.setConfig({
