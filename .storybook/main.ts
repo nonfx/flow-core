@@ -29,7 +29,7 @@ export default {
 
 	framework: "@storybook/web-components-vite",
 
-	async viteFinal(config, { configType }) {
+	async viteFinal(config) {
 		return mergeConfig(config, {
 			base: "",
 			resolve: {
