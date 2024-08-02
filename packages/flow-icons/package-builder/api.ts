@@ -1,5 +1,4 @@
 import api from "axios";
-import config from "./config.js";
 
 const headers = () => {
 	return {
