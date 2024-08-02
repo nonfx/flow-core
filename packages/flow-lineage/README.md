@@ -55,8 +55,8 @@ import "@nonfx/flow-lineage";
 
 ```javascript
 import "@nonfx/flow-core";
-import "@ollion/flow-system-icon";
-import "@ollion/flow-product-icon";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 import "@nonfx/flow-lineage";
 
 createApp(App).use(router).mount("#app"); //runtime

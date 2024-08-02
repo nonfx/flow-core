@@ -25,11 +25,7 @@ export default defineNuxtPlugin({
 	name: "flow",
 	enforce: "pre",
 	async setup(_nuxtApp) {
-		await Promise.all([
-			import("@nonfx/flow-core"),
-			import("@nonfx/flow-form-builder"),
-			import("@ollion/flow-system-icon")
-		]).then(() => {
+		await Promise.all([import("@nonfx/flow-core"), import("@nonfx/flow-form-builder")]).then(() => {
 			console.log("Flow components loaded");
 		});
 	}

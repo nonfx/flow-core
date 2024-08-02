@@ -35,6 +35,9 @@
 		},
 		{
 			"path": "./packages/flow-text-editor"
+		},
+		{
+			"path": "./packages/flow-icons"
 		}
 	]
 }

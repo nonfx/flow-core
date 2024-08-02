@@ -1,8 +1,7 @@
 import { html } from "lit-html";
-import SystemIconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
-import ProductIconPack from "@ollion/flow-product-icon/dist/types/icon-pack";
-import GcpIconPack from "@ollion/flow-gcp-icon/dist/types/icon-pack";
-import AwsIconPack from "@ollion/flow-aws-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+
+register(["aws", "gcp", "product", "system", "saas-system", "engineering"]);
 
 import { ConfigUtil } from "@nonfx/flow-core-config";
 import { changeRoute } from "./utils";
@@ -94,14 +93,7 @@ export const decorators = [
 				}
 			}
 		};
-		ConfigUtil.setConfig({
-			iconPack: {
-				...SystemIconPack,
-				...ProductIconPack,
-				...GcpIconPack,
-				...AwsIconPack
-			}
-		});
+		register(["aws", "gcp", "product", "system", "saas-system", "engineering"]);
 		ConfigUtil.setConfig({ theme: "f-ollion-dark" });
 		return html`
 			<div
@@ -162,9 +154,9 @@ async function run() {
 run();
 
 // 404 error state --start--
-const el = document.body.querySelector(".sb-errordisplay.sb-wrapper");
-const errorMessage = el.querySelector("#error-message.sb-heading");
-const codeMessage = el.querySelector(".sb-errordisplay_code");
+const el = document.body.querySelector(".sb-errordisplay.sb-wrapper")!;
+const errorMessage = el.querySelector<HTMLElement>("#error-message.sb-heading")!;
+const codeMessage = el.querySelector<HTMLElement>(".sb-errordisplay_code")!;
 const url = new URL(window.location.href);
 const url_id = url.searchParams.get("id");
 
@@ -193,7 +185,7 @@ if (el) {
 	el?.insertAdjacentHTML("afterbegin", paraDefine);
 	codeMessage.style.display = "none";
 	errorMessage.style.display = "none";
-	const homeButton = el.querySelector("#home-button");
+	const homeButton = el.querySelector("#home-button")!;
 	homeButton.addEventListener("click", changePath);
 }
 

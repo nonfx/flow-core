@@ -1,11 +1,10 @@
 import { html, fixture, expect } from "@open-wc/testing";
 
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 // setting icon pack for testing icon related test cases
 
 import { FCountdown, ConfigUtil, FDiv } from "@nonfx/flow-core";
-
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-coundown", () => {
 	it("is defined", () => {

@@ -1,4 +1,5 @@
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 import { expect, fixture, html, oneEvent } from "@open-wc/testing";
 
 // importing flow-core components
@@ -7,7 +8,6 @@ import "@nonfx/flow-core";
 import { ConfigUtil, FDateTimePicker } from "@nonfx/flow-core";
 
 // setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-date-time-picker", () => {
 	it("is defined", () => {

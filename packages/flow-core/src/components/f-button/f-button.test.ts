@@ -1,5 +1,6 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 
 // import flow-core elements
 import "@nonfx/flow-core";
@@ -7,9 +8,6 @@ import "@nonfx/flow-core";
 import { FButton, FIcon, ConfigUtil, FCounter } from "@nonfx/flow-core";
 // importing `loadingSVG` to cross check
 import loadingSVG from "./../../mixins/svg/loader";
-
-// setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-button", () => {
 	it("is defined", () => {

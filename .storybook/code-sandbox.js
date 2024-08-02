@@ -5,7 +5,8 @@ export function getCodeSandBoxUrl(story) {
 		files: {
 			"index.js": {
 				content: `import "@nonfx/flow-core";
-		  import "@ollion/flow-system-icon";
+		  import { register } from "@nonfx/flow-icons";
+register(["system"]);
 		  document.getElementById("app").innerHTML =\`${story}\`
 		  `,
 				isBinary: false
@@ -32,7 +33,7 @@ export function getCodeSandBoxUrl(story) {
 			"package.json": {
 				content: {
 					dependencies: {
-						"@ollion/flow-system-icon": "latest",
+						"@nonfx/flow-icons": "latest",
 						"@nonfx/flow-core": "latest"
 					}
 				}
