@@ -86,7 +86,7 @@ importers:
         version: 7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/web-components-vite':
         specifier: ^7.5.3
-        version: 7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.3.3)(vite@4.5.1(@types/node@18.19.6)(sass@1.69.7))
+        version: 7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.3.3)(vite@4.5.1(@types/node@22.1.0)(sass@1.69.7))
       '@types/d3':
         specifier: 7.4.3
         version: 7.4.3
@@ -149,7 +149,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
 
   packages/custom-elements-manifest-to-types:
     dependencies:
@@ -232,7 +232,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -326,7 +326,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       vue:
         specifier: 2.6.14
         version: 2.6.14
@@ -345,7 +345,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
 
   packages/flow-dashboard:
     dependencies:
@@ -406,7 +406,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -464,7 +464,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -478,6 +478,9 @@ importers:
         specifier: workspace:*
         version: link:../flow-core-config
     devDependencies:
+      '@types/node':
+        specifier: ^22.1.0
+        version: 22.1.0
       axios:
         specifier: ^0.27.2
         version: 0.27.2
@@ -489,13 +492,13 @@ importers:
         version: 16.4.5
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.2(@types/node@18.19.6)(typescript@5.3.3)
+        version: 10.9.2(@types/node@22.1.0)(typescript@5.3.3)
       typescript:
         specifier: ^5.2.2
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
 
   packages/flow-lineage:
     dependencies:
@@ -547,7 +550,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       vue:
         specifier: 2.6.14
         version: 2.6.14
@@ -608,7 +611,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -663,7 +666,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -712,7 +715,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -764,7 +767,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^4.4.11
-        version: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+        version: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
       web-component-analyzer:
         specifier: ^2.0.0-next.4
         version: 2.0.0
@@ -3043,6 +3046,9 @@ packages:
 
   '@types/node@18.19.6':
     resolution: {integrity: sha512-X36s5CXMrrJOs2lQCdDF68apW4Rfx9ixYMawlepwmE4Anezv/AV2LSpKD1Ub8DAc+urp5bk0BGZ6NtmBitfnsg==}
+
+  '@types/node@22.1.0':
+    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -7450,6 +7456,9 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
+  undici-types@6.13.0:
+    resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
+
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
@@ -10150,7 +10159,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@storybook/builder-vite@7.6.7(typescript@5.3.3)(vite@4.5.1(@types/node@18.19.6)(sass@1.69.7))':
+  '@storybook/builder-vite@7.6.7(typescript@5.3.3)(vite@4.5.1(@types/node@22.1.0)(sass@1.69.7))':
     dependencies:
       '@storybook/channels': 7.6.7
       '@storybook/client-logger': 7.6.7
@@ -10168,7 +10177,7 @@ snapshots:
       fs-extra: 11.2.0
       magic-string: 0.30.5
       rollup: 3.29.4
-      vite: 4.5.1(@types/node@18.19.6)(sass@1.69.7)
+      vite: 4.5.1(@types/node@22.1.0)(sass@1.69.7)
     optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -10503,9 +10512,9 @@ snapshots:
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
 
-  '@storybook/web-components-vite@7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.3.3)(vite@4.5.1(@types/node@18.19.6)(sass@1.69.7))':
+  '@storybook/web-components-vite@7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.3.3)(vite@4.5.1(@types/node@22.1.0)(sass@1.69.7))':
     dependencies:
-      '@storybook/builder-vite': 7.6.7(typescript@5.3.3)(vite@4.5.1(@types/node@18.19.6)(sass@1.69.7))
+      '@storybook/builder-vite': 7.6.7(typescript@5.3.3)(vite@4.5.1(@types/node@22.1.0)(sass@1.69.7))
       '@storybook/core-server': 7.6.7
       '@storybook/node-logger': 7.6.7
       '@storybook/web-components': 7.6.7(lit@3.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -10857,6 +10866,10 @@ snapshots:
   '@types/node@18.19.6':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/node@22.1.0':
+    dependencies:
+      undici-types: 6.13.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -16211,6 +16224,24 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
+  ts-node@10.9.2(@types/node@22.1.0)(typescript@5.3.3):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.9
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 22.1.0
+      acorn: 8.11.3
+      acorn-walk: 8.3.1
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.3.3
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+
   ts-simple-type@2.0.0-next.0: {}
 
   tslib@1.14.1: {}
@@ -16324,6 +16355,8 @@ snapshots:
       through: 2.3.8
 
   undici-types@5.26.5: {}
+
+  undici-types@6.13.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.0: {}
 
@@ -16500,13 +16533,13 @@ snapshots:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  vite@4.5.1(@types/node@18.19.6)(sass@1.69.7):
+  vite@4.5.1(@types/node@22.1.0)(sass@1.69.7):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.33
       rollup: 3.29.4
     optionalDependencies:
-      '@types/node': 18.19.6
+      '@types/node': 22.1.0
       fsevents: 2.3.3
       sass: 1.69.7
 
