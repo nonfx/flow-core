@@ -20,7 +20,8 @@ Paste the below snippet in your project and add your application startup/runtime
 
 ```javascript
 import "@nonfx/flow-core";
-import "@nonfx/flow-icons";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 ```
 
 <br>
