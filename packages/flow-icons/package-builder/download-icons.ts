@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+// @ts-nocheck
 import { getAllSvgImageUrl, getIconContent, getNode } from "./api.js";
 import * as fs from "fs";
 import config from "./config.js";
