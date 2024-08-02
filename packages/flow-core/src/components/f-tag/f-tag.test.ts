@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { FTag, FIcon, ConfigUtil, FCounter } from "@nonfx/flow-core";
+import { FTag, FIcon, FCounter } from "@nonfx/flow-core";
 // importing `loadingSVG` to cross check
 import loadingSVG from "../../mixins/svg/loader";
 

@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { FIcon, ConfigUtil, FToast } from "@nonfx/flow-core";
+import { FIcon, FToast } from "@nonfx/flow-core";
 
 // setting icon pack for testing icon related test cases
 

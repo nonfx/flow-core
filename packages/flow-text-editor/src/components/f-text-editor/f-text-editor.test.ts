@@ -5,7 +5,6 @@ import { expect } from "@open-wc/testing";
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil } from "@nonfx/flow-core";
 import { FTextEditor } from "@nonfx/flow-text-editor";
 
 /**

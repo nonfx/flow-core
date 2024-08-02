@@ -6,7 +6,6 @@ import sampleMd from "./sample-md";
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil } from "@nonfx/flow-core";
 import { FMDEditor } from "@nonfx/flow-md-editor";
 
 describe("f-md-editor", () => {

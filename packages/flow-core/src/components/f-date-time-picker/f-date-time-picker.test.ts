@@ -5,7 +5,7 @@ import { expect, fixture, html, oneEvent } from "@open-wc/testing";
 // importing flow-core components
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FDateTimePicker } from "@nonfx/flow-core";
+import { FDateTimePicker } from "@nonfx/flow-core";
 
 // setting icon pack for testing icon related test cases
 

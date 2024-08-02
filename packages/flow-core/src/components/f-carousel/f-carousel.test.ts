@@ -6,7 +6,7 @@ import FCarouselExample from "./i-fcarousel-example";
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FCarousel } from "@nonfx/flow-core";
+import { FCarousel } from "@nonfx/flow-core";
 import { html } from "lit";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 

@@ -5,7 +5,7 @@ register(["system"]);
 // importing flow-core components
 import "@nonfx/flow-core";
 
-import { FBreadcrumb, ConfigUtil } from "@nonfx/flow-core";
+import { FBreadcrumb } from "@nonfx/flow-core";
 
 describe("f-breadcrumb", () => {
 	it("is defined", () => {

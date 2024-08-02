@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FCheckbox } from "@nonfx/flow-core";
+import { FCheckbox } from "@nonfx/flow-core";
 import { FTable, FTcell } from "@nonfx/flow-table";
 
 describe("f-table", () => {

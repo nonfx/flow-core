@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FIconButton } from "@nonfx/flow-core";
+import { FIconButton } from "@nonfx/flow-core";
 import { FTcell, FTable } from "@nonfx/flow-table";
 
 describe("f-tcell", () => {

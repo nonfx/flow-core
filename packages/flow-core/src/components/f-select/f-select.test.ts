@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { FIcon, ConfigUtil, FSelect, FText, FTag, FCheckbox } from "@nonfx/flow-core";
+import { FIcon, FSelect, FText, FTag, FCheckbox } from "@nonfx/flow-core";
 // setting icon pack for testing icon related test cases
 
 describe("f-select", () => {

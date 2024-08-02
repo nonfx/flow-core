@@ -5,7 +5,6 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil } from "@nonfx/flow-core";
 import { FTrow, FTable } from "@nonfx/flow-table";
 
 describe("f-trow", () => {

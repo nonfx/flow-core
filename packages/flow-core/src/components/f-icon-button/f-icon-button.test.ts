@@ -5,7 +5,7 @@ import { register } from "@nonfx/flow-icons";
 register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
-import { FIconButton, ConfigUtil } from "@nonfx/flow-core";
+import { FIconButton } from "@nonfx/flow-core";
 
 describe("f-icon-button", () => {
 	it("is defined", () => {

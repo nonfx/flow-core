@@ -5,7 +5,7 @@ import { expect, fixture, html } from "@open-wc/testing";
 // importing flow-core components
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FEmojiPicker, FIcon } from "@nonfx/flow-core";
+import { FEmojiPicker, FIcon } from "@nonfx/flow-core";
 
 // setting icon pack for testing icon related test cases
 

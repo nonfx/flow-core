@@ -4,7 +4,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FDiv } from "@nonfx/flow-core";
+import { FDiv } from "@nonfx/flow-core";
 import {
 	FTableSchema,
 	FTableSchemaData,

@@ -6,7 +6,6 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 import "@nonfx/flow-dashboard";
-import { ConfigUtil } from "@nonfx/flow-core";
 import { FTimeseriesChart } from "@nonfx/flow-dashboard";
 
 describe("f-timeseries-chart", () => {

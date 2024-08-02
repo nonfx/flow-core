@@ -4,7 +4,7 @@ import { register } from "@nonfx/flow-icons";
 register(["system"]);
 // setting icon pack for testing icon related test cases
 
-import { FCountdown, ConfigUtil, FDiv } from "@nonfx/flow-core";
+import { FCountdown, FDiv } from "@nonfx/flow-core";
 
 describe("f-coundown", () => {
 	it("is defined", () => {

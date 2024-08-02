@@ -5,7 +5,7 @@ register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FDiv, FSuggest } from "@nonfx/flow-core";
+import { FDiv, FSuggest } from "@nonfx/flow-core";
 import { html } from "lit";
 
 // setting icon pack for testing icon related test cases

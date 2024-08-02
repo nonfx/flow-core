@@ -2,7 +2,7 @@ import { html, fixture, expect } from "@open-wc/testing";
 import { register } from "@nonfx/flow-icons";
 register(["system"]);
 import "@nonfx/flow-core";
-import { FPictogram, ConfigUtil } from "@nonfx/flow-core";
+import { FPictogram } from "@nonfx/flow-core";
 
 describe("f-pictogram", () => {
 	it("is defined", () => {
