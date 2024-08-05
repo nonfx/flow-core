@@ -1,17 +1,16 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FDiv } from "@nonfx/flow-core";
+import { FDiv } from "@nonfx/flow-core";
 import {
 	FTableSchema,
 	FTableSchemaData,
 	FTableSchemaDataRow,
 	FTableSchemaCell
 } from "@nonfx/flow-table";
-
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 import { HTMLTemplateResult } from "lit";
 

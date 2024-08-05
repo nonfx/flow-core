@@ -1,12 +1,11 @@
 import { html, fixture, expect } from "@open-wc/testing";
 
 // IconPack to test
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 // import flow-core elements
 import "@nonfx/flow-core";
-import { FIconButton, ConfigUtil } from "@nonfx/flow-core";
-
-ConfigUtil.setConfig({ iconPack: IconPack });
+import { FIconButton } from "@nonfx/flow-core";
 
 describe("f-icon-button", () => {
 	it("is defined", () => {

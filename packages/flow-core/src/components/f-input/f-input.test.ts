@@ -1,15 +1,15 @@
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 import { expect, fixture, html } from "@open-wc/testing";
 
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FIcon, FInput, FText } from "@nonfx/flow-core";
+import { FIcon, FInput, FText } from "@nonfx/flow-core";
 // importing `loadingSVG` to cross check
 import loadingSVG from "../../mixins/svg/loader";
 
 // setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-input", () => {
 	it("is defined", () => {

@@ -92,14 +92,15 @@ Icons are not packaged with Flow core to allow more flexibility and customizatio
 ### 1️⃣ Install the icon pack
 
 ```sh
-npm i --save @ollion/flow-system-icon
+npm i --save @nonfx/flow-icons
 ```
 
 ### 2️⃣ Import the icon pack
 
 ```javascript
 import "@nonfx/flow-core";
-import "@ollion/flow-system-icon";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 ```
 
 - [Icons Github repo](https://github.com/ollionorg/flow-icon)

@@ -1,15 +1,15 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FText, FFileUpload, FDiv } from "@nonfx/flow-core";
+import { FText, FFileUpload, FDiv } from "@nonfx/flow-core";
 // importing `loadingSVG` to cross check
 import loadingSVG from "../../mixins/svg/loader";
 
 // setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-file-upload", () => {
 	it("is defined", () => {

@@ -1,9 +1,8 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 import "@nonfx/flow-core";
-import { FPictogram, ConfigUtil } from "@nonfx/flow-core";
-
-ConfigUtil.setConfig({ iconPack: IconPack });
+import { FPictogram } from "@nonfx/flow-core";
 
 describe("f-pictogram", () => {
 	it("is defined", () => {

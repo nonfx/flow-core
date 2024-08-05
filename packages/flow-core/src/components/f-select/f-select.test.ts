@@ -1,12 +1,12 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { FIcon, ConfigUtil, FSelect, FText, FTag, FCheckbox } from "@nonfx/flow-core";
+import { FIcon, FSelect, FText, FTag, FCheckbox } from "@nonfx/flow-core";
 // setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-select", () => {
 	it("is defined", () => {

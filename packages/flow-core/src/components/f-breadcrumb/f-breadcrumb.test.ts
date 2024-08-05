@@ -1,13 +1,11 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 
 // importing flow-core components
 import "@nonfx/flow-core";
 
-import { FBreadcrumb, ConfigUtil } from "@nonfx/flow-core";
-
-// setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
+import { FBreadcrumb } from "@nonfx/flow-core";
 
 describe("f-breadcrumb", () => {
 	it("is defined", () => {

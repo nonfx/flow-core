@@ -1,13 +1,12 @@
 import { html, fixture, expect } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FCheckbox } from "@nonfx/flow-core";
+import { FCheckbox } from "@nonfx/flow-core";
 import { FTable, FTcell } from "@nonfx/flow-table";
-
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-table", () => {
 	it("is defined", () => {

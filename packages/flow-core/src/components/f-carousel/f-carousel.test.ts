@@ -1,16 +1,16 @@
 import { expect, fixture, oneEvent } from "@open-wc/testing";
-import IconPack from "@ollion/flow-system-icon/dist/types/icon-pack";
+import { register } from "@nonfx/flow-icons";
+register(["system"]);
 import FCarouselExample from "./i-fcarousel-example";
 
 // import flow-core elements
 import "@nonfx/flow-core";
 
-import { ConfigUtil, FCarousel } from "@nonfx/flow-core";
+import { FCarousel } from "@nonfx/flow-core";
 import { html } from "lit";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 
 // setting icon pack for testing icon related test cases
-ConfigUtil.setConfig({ iconPack: IconPack });
 
 describe("f-suggest", () => {
 	it("is defined", () => {
