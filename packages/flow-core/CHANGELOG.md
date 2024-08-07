@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [2.10.1] - 2024-08-07
+
+### Patch Changes
+
+- loading default font removed
+- f-div clickable transition added
+
 ## [2.10.0] - 2024-07-10
 
 ### Minor Changes
