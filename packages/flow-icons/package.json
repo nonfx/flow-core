@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Flow icons package",
   "module": "dist/flow-icons.es.js",
   "main": "dist/flow-icons.cjs.js",
@@ -31,8 +31,8 @@
     "@types/node": "^22.1.0"
   },
   "peerDependencies": {
-    "@nonfx/flow-core": "^2.0.3",
-    "@nonfx/flow-core-config": "^1.1.3"
+    "@nonfx/flow-core": "*",
+    "@nonfx/flow-core-config": "*"
   },
   "repository": {
     "type": "git",
