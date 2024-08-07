@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.1.4] - 2023-08-07
+
+### Patch Changes
+
+- setting custom font api added
+
 ## [1.1.3] - 2023-10-12
 
 ### Patch Changes

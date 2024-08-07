@@ -57,6 +57,7 @@ jobs:
               "@nonfx/flow-md-editor":"packages/flow-md-editor/CHANGELOG.md",
               "@nonfx/flow-text-editor":"packages/flow-text-editor/CHANGELOG.md",
               "@nonfx/flow-core":"packages/flow-core/CHANGELOG.md",
+              "@nonfx/flow-icons":"packages/flow-icons/CHANGELOG.md",
               "@nonfx/flow-table":"packages/flow-table/CHANGELOG.md",
               "@nonfx/flow-core-config":"packages/flow-core-config/CHANGELOG.md",
               "@nonfx/flow-form-builder":"packages/flow-form-builder/CHANGELOG.md",

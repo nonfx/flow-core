@@ -93,8 +93,31 @@ export const decorators = [
 				}
 			}
 		};
+
+		const link = document.createElement("link");
+
+		link.rel = "stylesheet";
+		link.href =
+			"https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300&family=Roboto:wght@100;300;400;500;700&display=swap";
+
+		document.head.appendChild(link);
+
+		const monolink = document.createElement("link");
+
+		monolink.rel = "stylesheet";
+		monolink.href =
+			"https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300&family=Roboto:wght@100;300;400;500;700&display=swap";
+
+		document.head.appendChild(monolink);
+
 		register(["aws", "gcp", "product", "system", "saas-system", "engineering"]);
-		ConfigUtil.setConfig({ theme: "f-ollion-dark" });
+		ConfigUtil.setConfig({
+			theme: "f-light",
+			customFont: {
+				default: `"Montserrat", "Montserrat", sans-serif`,
+				mono: `"Operator Mono", monospace`
+			}
+		});
 		return html`
 			<div
 				style="background-color:var(--color-surface-default);color:var(--color-text-default);font-family:var(--flow-font);height:inherit;padding: 0px;"

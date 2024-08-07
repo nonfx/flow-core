@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-core",
-  "version": "2.10.0",
+  "version": "2.10.1",
   "description": "Core package of flow design system",
   "module": "dist/flow-core.es.js",
   "main": "dist/flow-core.cjs.js",
@@ -58,7 +58,7 @@
     "web-component-analyzer": "^2.0.0-next.4"
   },
   "peerDependencies": {
-    "@nonfx/flow-core-config": "*"
+    "@nonfx/flow-core-config": "^1.1.4"
   },
   "repository": {
     "type": "git",

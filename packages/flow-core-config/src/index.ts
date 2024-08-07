@@ -7,6 +7,10 @@ export type FlowCoreConfig = {
 	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	theme: "f-dark" | "f-light" | string;
 	iconPack: Record<string, string> | null;
+	customFont?: {
+		default: string;
+		mono?: string;
+	};
 };
 
 export const themeSubject = new Subject<string>();
@@ -24,6 +28,30 @@ export const ConfigUtil = {
 		configSubject.next({ ...configSubject.value, ...cfg });
 		if (cfg.theme) {
 			this.initTheme();
+		}
+		if (cfg.customFont) {
+			const existingStyle = document.documentElement.style.cssText; // Get existing styles
+			let newStyle = `--flow-font: ${cfg.customFont.default};
+	--text-para-x-small-fontfamily: ${cfg.customFont.default};
+	--text-para-large-fontfamily: ${cfg.customFont.default};
+	--text-para-medium-fontfamily: ${cfg.customFont.default};
+	--text-para-small-fontfamily: ${cfg.customFont.default};
+	--text-para-x-large-fontfamily: ${cfg.customFont.default};
+	--text-heading-x-small-fontfamily: ${cfg.customFont.default};
+	--text-heading-small-fontfamily: ${cfg.customFont.default};
+	--text-heading-x-large-fontfamily: ${cfg.customFont.default};
+	--text-heading-medium-fontfamily: ${cfg.customFont.default};
+	--text-heading-large-fontfamily: ${cfg.customFont.default};`;
+
+			if (cfg.customFont.mono) {
+				newStyle += `	--flow-code-font: ${cfg.customFont.mono};
+	--text-code-small-fontfamily: ${cfg.customFont.mono};
+	--text-code-large-fontfamily: ${cfg.customFont.mono};
+	--text-code-medium-fontfamily: ${cfg.customFont.mono};
+	--text-code-x-small-fontfamily: ${cfg.customFont.mono};
+	--text-code-x-large-fontfamily: ${cfg.customFont.mono};`;
+			}
+			document.documentElement.style.cssText = existingStyle + newStyle;
 		}
 	},
 	initTheme() {
