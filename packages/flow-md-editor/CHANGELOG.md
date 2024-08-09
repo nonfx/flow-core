@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.1.3] - 2024-08-09
+
+### Patch Changes
+
+- `f-md-editor` peerDependencies updated.
+
 ## [2.1.2] - 2024-07-08
 
 ### Patch Changes
