@@ -184,8 +184,7 @@ export class FIcon extends FRoot {
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
 		this.role = "img";
-		if (!this.getAttribute("aria-label"))
-			this.setAttribute("aria-label", "" + this._originalSource);
+
 		this.setAttribute("aria-disabled", this.disabled ? "true" : "false");
 	}
 
