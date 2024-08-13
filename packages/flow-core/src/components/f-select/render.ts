@@ -11,7 +11,12 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 import loader from "../../mixins/svg/loader";
 import { map } from "lit/directives/map.js";
-import "@lit-labs/virtualizer";
+
+if (!customElements.get("lit-virtualizer")) {
+	import("@lit-labs/virtualizer").catch(err => {
+		console.error("Failed to load lit-virtualizer:", err);
+	});
+}
 
 export default function render(this: FSelect) {
 	this.validateProperties();

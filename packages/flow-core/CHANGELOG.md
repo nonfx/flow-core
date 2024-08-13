@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.3] - 2024-08-13
+
+### Patch Changes
+
+- `lit-virtualizer` registration bug fixed.
+
 ## [2.10.2] - 2024-08-13
 
 ### Patch Changes
