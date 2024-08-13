@@ -619,7 +619,7 @@ importers:
   packages/flow-md-editor:
     dependencies:
       '@nonfx/flow-core':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../flow-core
       '@nonfx/flow-core-config':
         specifier: workspace:*

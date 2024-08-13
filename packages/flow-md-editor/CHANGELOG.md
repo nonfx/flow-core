@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.1.5] - 2024-08-09
+
+### Patch Changes
+
+- nested dependency issue
+
 ## [2.1.4] - 2024-08-09
 
 ### Patch Changes
