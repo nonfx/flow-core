@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.2] - 2024-08-13
+
+### Patch Changes
+
+- default `aria-label` application removed
+
 ## [2.10.1] - 2024-08-07
 
 ### Patch Changes
