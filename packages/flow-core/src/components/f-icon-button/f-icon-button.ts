@@ -301,8 +301,6 @@ export class FIconButton extends FRoot {
 		 */
 		this.iconElement.requestUpdate();
 		this.counterElement?.requestUpdate();
-
-		if (!this.getAttribute("title")) this.setAttribute("title", this.icon);
 	}
 }
 

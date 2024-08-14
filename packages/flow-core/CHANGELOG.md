@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.4] - 2024-08-14
+
+### Patch Changes
+
+- remove default value of title in f-icon-button
+
 ## [2.10.3] - 2024-08-13
 
 ### Patch Changes
