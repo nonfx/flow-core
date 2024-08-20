@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.5] - 2024-08-20
+
+### Patch Changes
+
+- `f-light` and `f-dark` tokens updated
+
 ## [2.10.4] - 2024-08-14
 
 ### Patch Changes

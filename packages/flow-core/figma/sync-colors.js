@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 const { getStyles, getNode } = require("./api");
 const prettier = require("prettier");
@@ -356,7 +357,7 @@ async function generateStyles() {
 
 		console.log("\n");
 		generateTokenScss(colorTokens);
-		generateTextScss(textTokens);
+		//generateTextScss(textTokens);
 	} catch (error) {
 		console.error(error);
 	}

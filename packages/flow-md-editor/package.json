@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-md-editor",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Code editor component for flow library",
   "module": "dist/flow-md-editor.es.js",
   "main": "dist/flow-md-editor.es.js",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "@nonfx/flow-core": "workspace:^",
-    "@nonfx/flow-core-config": "workspace:*",
+    "@nonfx/flow-core-config": "workspace:^",
     "lit": "^3.1.0",
     "showdown": "^2.1.0"
   },
