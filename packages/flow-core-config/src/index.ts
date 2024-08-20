@@ -1,16 +1,15 @@
 import { BehaviorSubject, Subject } from "rxjs";
 
-/**
- * TODO :include font-family, icons
- */
+export type CustomFontConfig = {
+	para: string;
+	header: string;
+	mono?: string;
+};
 export type FlowCoreConfig = {
 	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	theme: "f-dark" | "f-light" | string;
 	iconPack: Record<string, string> | null;
-	customFont?: {
-		default: string;
-		mono?: string;
-	};
+	customFont?: CustomFontConfig;
 };
 
 export const themeSubject = new Subject<string>();
@@ -31,17 +30,19 @@ export const ConfigUtil = {
 		}
 		if (cfg.customFont) {
 			const existingStyle = document.documentElement.style.cssText; // Get existing styles
-			let newStyle = `--flow-font: ${cfg.customFont.default};
-	--text-para-x-small-fontfamily: ${cfg.customFont.default};
-	--text-para-large-fontfamily: ${cfg.customFont.default};
-	--text-para-medium-fontfamily: ${cfg.customFont.default};
-	--text-para-small-fontfamily: ${cfg.customFont.default};
-	--text-para-x-large-fontfamily: ${cfg.customFont.default};
-	--text-heading-x-small-fontfamily: ${cfg.customFont.default};
-	--text-heading-small-fontfamily: ${cfg.customFont.default};
-	--text-heading-x-large-fontfamily: ${cfg.customFont.default};
-	--text-heading-medium-fontfamily: ${cfg.customFont.default};
-	--text-heading-large-fontfamily: ${cfg.customFont.default};`;
+
+			const customFontConfig = cfg.customFont as CustomFontConfig;
+			let newStyle = `--flow-font: ${customFontConfig.para};
+	--text-para-x-small-fontfamily: ${customFontConfig.para};
+	--text-para-large-fontfamily: ${customFontConfig.para};
+	--text-para-medium-fontfamily: ${customFontConfig.para};
+	--text-para-small-fontfamily: ${customFontConfig.para};
+	--text-para-x-large-fontfamily: ${customFontConfig.para};
+	--text-heading-x-small-fontfamily: ${customFontConfig.header};
+	--text-heading-small-fontfamily: ${customFontConfig.header}};
+	--text-heading-x-large-fontfamily: ${customFontConfig.header}};
+	--text-heading-medium-fontfamily: ${customFontConfig.header}};
+	--text-heading-large-fontfamily: ${customFontConfig.header}};`;
 
 			if (cfg.customFont.mono) {
 				newStyle += `	--flow-code-font: ${cfg.customFont.mono};

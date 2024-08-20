@@ -356,7 +356,7 @@ async function generateStyles() {
 
 		console.log("\n");
 		generateTokenScss(colorTokens);
-		generateTextScss(textTokens);
+		//generateTextScss(textTokens);
 	} catch (error) {
 		console.error(error);
 	}
