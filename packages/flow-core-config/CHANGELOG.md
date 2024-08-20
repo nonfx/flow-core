@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.1.6] - 2023-08-20
+
+### Patch changes
+
+- setting custom font api typo fixed.
+
 ## [1.1.5] - 2023-08-20
 
 ### Patch changes
