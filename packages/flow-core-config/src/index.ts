@@ -39,10 +39,10 @@ export const ConfigUtil = {
 	--text-para-small-fontfamily: ${customFontConfig.para};
 	--text-para-x-large-fontfamily: ${customFontConfig.para};
 	--text-heading-x-small-fontfamily: ${customFontConfig.header};
-	--text-heading-small-fontfamily: ${customFontConfig.header}};
-	--text-heading-x-large-fontfamily: ${customFontConfig.header}};
-	--text-heading-medium-fontfamily: ${customFontConfig.header}};
-	--text-heading-large-fontfamily: ${customFontConfig.header}};`;
+	--text-heading-small-fontfamily: ${customFontConfig.header};
+	--text-heading-x-large-fontfamily: ${customFontConfig.header};
+	--text-heading-medium-fontfamily: ${customFontConfig.header};
+	--text-heading-large-fontfamily: ${customFontConfig.header};`;
 
 			if (cfg.customFont.mono) {
 				newStyle += `	--flow-code-font: ${cfg.customFont.mono};
