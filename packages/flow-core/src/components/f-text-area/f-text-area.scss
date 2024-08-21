@@ -34,6 +34,9 @@
 			&[resizable] {
 				resize: vertical;
 			}
+			&[readonly] {
+				pointer-events: none;
+			}
 
 			@each $size, $value in $sizes {
 				&[size="#{$size}"] {

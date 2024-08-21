@@ -1,4 +1,4 @@
-import { html, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
+import { html, PropertyValueMap, PropertyValues, render, unsafeCSS } from "lit";
 import { property, query } from "lit/decorators.js";
 import eleStyle from "./f-text-area.scss?inline";
 import globalStyle from "./f-text-area-global.scss?inline";
@@ -8,7 +8,7 @@ import { FDiv } from "../f-div/f-div";
 import { flowElement } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { keyed } from "lit/directives/keyed.js";
+
 injectCss("f-text-area", globalStyle);
 
 export type FTextAreaState = "primary" | "default" | "success" | "warning" | "danger";
@@ -63,8 +63,8 @@ export class FTextArea extends FRoot {
 	/**
 	 * @attribute This shows the character count while typing and auto limits after reaching the max length.
 	 */
-	@property({ reflect: true, type: String, attribute: "max-length" })
-	maxLength?: string;
+	@property({ reflect: true, type: Number, attribute: "max-length" })
+	maxLength?: number;
 
 	/**
 	 * @attribute Provides a resize handle on the bottom right of text-area which enables a user to resize the text-area within the parents scope.
@@ -114,8 +114,8 @@ export class FTextArea extends FRoot {
 	 */
 	handleInput(e: InputEvent) {
 		e.stopPropagation();
+		let currentvalue = this.value ?? "";
 		if (this.maskValue) {
-			let currentvalue = this.value ?? "";
 			if (e.data === null && e.inputType === "insertLineBreak") {
 				currentvalue += "\n";
 			} else if (e.data === null && e.inputType === "deleteContentBackward") {
@@ -135,6 +135,7 @@ export class FTextArea extends FRoot {
 			} else if (e.data !== null) {
 				currentvalue += e.data;
 			}
+
 			const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 				detail: {
 					value: currentvalue
@@ -145,7 +146,7 @@ export class FTextArea extends FRoot {
 			this.value = currentvalue;
 			this.dispatchEvent(event);
 		} else {
-			const currentvalue = this.textareaElement?.innerText;
+			currentvalue = this.textareaElement?.textContent!;
 			const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 				detail: {
 					value: currentvalue
@@ -166,7 +167,6 @@ export class FTextArea extends FRoot {
 	 * clear value inside f-text-area on click of clear icon.
 	 */
 	clearValue() {
-		if (this.textareaElement) this.textareaElement.innerText = ``;
 		const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 			detail: {
 				value: ""
@@ -188,12 +188,6 @@ export class FTextArea extends FRoot {
 		} else {
 			return `max-height: inherit`;
 		}
-	}
-	protected shouldUpdate(changedProperties: PropertyValues): boolean {
-		if (changedProperties.size === 1 && changedProperties.has("value") && this.textareaElement) {
-			return this.value !== this.textareaElement.innerText;
-		}
-		return true;
 	}
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
@@ -236,7 +230,7 @@ export class FTextArea extends FRoot {
 						</f-div>
 						<slot name="description"></slot>
 					</f-div>
-					<f-div padding="none" gap="none" width="hug-content">
+					<f-div padding="none none none x-small" gap="none" width="hug-content">
 						${this.maxLength
 							? html` <f-text variant="para" size="small" weight="regular" state="secondary"
 									>${this.value?.length ?? 0} / ${this.maxLength}</f-text
@@ -245,29 +239,25 @@ export class FTextArea extends FRoot {
 					</f-div>
 				</f-div>
 				<div class="f-text-area-wrapper">
-					${keyed(
-						this.value,
-						html`<span
-							role="textbox"
-							contenteditable
-							class="f-text-area"
-							data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
-							style=${this.applyStyles(parentDiv)}
-							state=${ifDefined(this.state)}
-							size=${ifDefined(this.size)}
-							placeholder=${ifDefined(this.placeholder)}
-							category=${ifDefined(this.category)}
-							rows=${ifDefined(this.rows)}
-							maxlength=${ifDefined(this.maxLength ? +this.maxLength : undefined)}
-							?resizable=${this.resizable}
-							?readonly=${this.readOnly}
-							?mask-value=${this.maskValue}
-							spellcheck=${this.maskValue ? "false" : "true"}
-							@input=${this.handleInput}
-							>${this.maskValue ? this.getDots() : this.value ?? ""}</span
-						>`
-					)}
-					${this.clear && Boolean(this.value)
+					<span
+						role="textbox"
+						contenteditable
+						class="f-text-area"
+						data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
+						style=${this.applyStyles(parentDiv)}
+						state=${ifDefined(this.state)}
+						size=${ifDefined(this.size)}
+						placeholder=${ifDefined(this.placeholder)}
+						category=${ifDefined(this.category)}
+						rows=${ifDefined(this.rows)}
+						maxlength=${ifDefined(this.maxLength ? +this.maxLength : undefined)}
+						?resizable=${this.resizable}
+						?readonly=${this.readOnly}
+						?mask-value=${this.maskValue}
+						spellcheck=${this.maskValue ? "false" : "true"}
+						@input=${this.handleInput}
+					></span>
+					${this.clear && Boolean(this.value) && !this.readOnly
 						? html` <f-icon
 								class="f-text-area-clear-icon"
 								source="i-close"
@@ -288,7 +278,11 @@ export class FTextArea extends FRoot {
 
 	protected updated(changedProperties: PropertyValues): void {
 		super.updated(changedProperties);
+		const computedValue = this.maskValue ? this.getDots() : this.value ?? ""!;
 
+		if (this.textareaElement!.textContent !== computedValue) {
+			this.textareaElement!.textContent = computedValue;
+		}
 		this.calcHeight();
 	}
 }
