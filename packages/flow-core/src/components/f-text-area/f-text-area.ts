@@ -1,5 +1,5 @@
-import { html, PropertyValueMap, unsafeCSS } from "lit";
-import { property } from "lit/decorators.js";
+import { html, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
+import { property, query } from "lit/decorators.js";
 import eleStyle from "./f-text-area.scss?inline";
 import globalStyle from "./f-text-area-global.scss?inline";
 import { FRoot } from "../../mixins/components/f-root/f-root";
@@ -7,6 +7,7 @@ import { FText } from "../f-text/f-text";
 import { FDiv } from "../f-div/f-div";
 import { flowElement } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
+import { ifDefined } from "lit/directives/if-defined.js";
 injectCss("f-text-area", globalStyle);
 
 export type FTextAreaState = "primary" | "default" | "success" | "warning" | "danger";
@@ -94,6 +95,24 @@ export class FTextArea extends FRoot {
 	@property({ reflect: true, type: Boolean, attribute: "mask-value" })
 	maskValue?: boolean = false;
 
+	@query("textarea")
+	textareaElement!: HTMLTextAreaElement;
+
+	calcHeight() {
+		if (!this.rows) {
+			if (this.value) {
+				const numberOfLineBreaks = (this.value.match(/\n/g) || []).length;
+				const minHeight = this.size === "small" ? 28 : 36;
+				const newHeight = minHeight + numberOfLineBreaks * 18;
+				if (newHeight && newHeight > 72) {
+					this.textareaElement.style.height = `${newHeight}px`;
+				}
+			}
+		} else {
+			this.textareaElement.style.removeProperty("height");
+		}
+	}
+
 	/**
 	 * emit event
 	 */
@@ -140,6 +159,7 @@ export class FTextArea extends FRoot {
 			this.value = (e.target as HTMLInputElement)?.value;
 			this.dispatchEvent(event);
 		}
+		this.calcHeight();
 	}
 
 	replaceCharacter(string: string, index: number, replacement: string) {
@@ -224,14 +244,14 @@ export class FTextArea extends FRoot {
 				<div class="f-text-area-wrapper">
 					<textarea
 						class="f-text-area"
-						data-qa-id=${this.getAttribute("data-qa-element-id")}
+						data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
 						style=${this.applyStyles(parentDiv)}
-						state=${this.state}
-						size=${this.size}
-						placeholder=${this.placeholder}
-						category=${this.category}
-						rows=${this.rows ?? "3"}
-						maxlength=${this.maxLength}
+						state=${ifDefined(this.state)}
+						size=${ifDefined(this.size)}
+						placeholder=${ifDefined(this.placeholder)}
+						category=${ifDefined(this.category)}
+						rows=${this.rows ? +this.rows : 3}
+						maxlength=${ifDefined(this.maxLength ? +this.maxLength : undefined)}
 						?resizable=${this.resizable}
 						?readonly=${this.readOnly}
 						?mask-value=${this.maskValue}
@@ -255,7 +275,13 @@ export class FTextArea extends FRoot {
 	}
 
 	getDots() {
-		return this.value?.replace(/[^\n]/g, "·");
+		return this.value?.replace(/[^\n]/g, "·") || "";
+	}
+
+	protected updated(changedProperties: PropertyValues): void {
+		super.updated(changedProperties);
+
+		this.calcHeight();
 	}
 }
 
