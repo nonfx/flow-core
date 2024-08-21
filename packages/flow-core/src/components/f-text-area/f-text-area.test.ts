@@ -19,7 +19,7 @@ describe("f-text-area", () => {
 		const descendant = el.shadowRoot!.querySelector(".f-text-area")!;
 		expect(descendant.getAttribute("category")).to.equal("fill");
 		expect(descendant.getAttribute("state")).to.equal("default");
-		expect(descendant.getAttribute("rows")).to.equal("3");
+		//expect(descendant.getAttribute("rows")).to.equal("3");
 	});
 	it("should render clear icon at right side", async () => {
 		const el = await fixture(html` <f-text-area value="abc" ?clear=${true}></f-text-area> `);

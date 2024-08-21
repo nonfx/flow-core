@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.6] - 2024-08-20
+
+### Patch Changes
+
+- `f-textarea` auto height if `rows` are not specified.
+
 ## [2.10.5] - 2024-08-20
 
 ### Patch Changes

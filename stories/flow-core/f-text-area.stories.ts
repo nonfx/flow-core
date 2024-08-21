@@ -1,6 +1,5 @@
 import { html } from "lit-html";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useEffect, useState } from "@storybook/client-api";
 import fTextAreaAnatomy from "../svg/i-ftextarea-anatomy.js";
 
 export default {
@@ -14,13 +13,9 @@ export default {
 };
 
 export const Playground = {
-	render: args => {
-		const [_, updateArgs] = useArgs();
-
-		const handleInput = e => {
-			updateArgs({
-				value: e.detail.value
-			});
+	render: (args: Record<string, any>) => {
+		const handleInput = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -126,7 +121,7 @@ export const Playground = {
 		disabled: false,
 		["read-only"]: false,
 		["mask-value"]: false,
-		clear: false
+		clear: true
 	}
 };
 
@@ -136,12 +131,12 @@ export const Anatomy = {
 };
 
 export const Category = {
-	render: args => {
-		const categories = ["fill", "outline", "transparent"];
-		const [value, setValue] = useState("");
+	render: () => {
+		const categories: ("fill" | "transparent" | "outline")[] = ["fill", "outline", "transparent"];
+		const value = "";
 
-		const handleInput = e => {
-			setValue(e.detail.value);
+		const handleInput = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -169,11 +164,11 @@ export const Category = {
 };
 
 export const Value = {
-	render: args => {
-		const [value, setValue] = useState("Value Here");
+	render: () => {
+		const value = "Value Here";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -197,11 +192,11 @@ export const Value = {
 };
 
 export const Placeholder = {
-	render: args => {
-		const [value, setValue] = useState("");
+	render: () => {
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -225,12 +220,12 @@ export const Placeholder = {
 };
 
 export const Size = {
-	render: args => {
+	render: () => {
 		const sizes = ["small", "medium"];
-		const [value, setValue] = useState("");
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -257,15 +252,15 @@ export const Size = {
 };
 
 export const State = {
-	render: args => {
-		const states = [
+	render: () => {
+		const states: ("primary" | "default" | "success" | "warning" | "danger")[][] = [
 			["default", "primary", "success"],
 			["danger", "warning", "default"]
 		];
-		const [value, setValue] = useState("");
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -300,11 +295,11 @@ export const State = {
 };
 
 export const MaxLength = {
-	render: args => {
-		const [value, setValue] = useState("");
+	render: () => {
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -329,11 +324,11 @@ export const MaxLength = {
 };
 
 export const Rows = {
-	render: args => {
-		const [value, setValue] = useState("");
+	render: () => {
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
@@ -358,11 +353,11 @@ export const Rows = {
 };
 
 export const Flags = {
-	render: args => {
-		const [value, setValue] = useState("some text");
+	render: () => {
+		const value = "";
 
-		const handleValue = e => {
-			setValue(e.detail.value);
+		const handleValue = (e: CustomEvent) => {
+			console.log("@input event", e);
 		};
 
 		return html`
