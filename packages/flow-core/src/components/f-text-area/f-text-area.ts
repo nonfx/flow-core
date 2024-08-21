@@ -8,12 +8,13 @@ import { FDiv } from "../f-div/f-div";
 import { flowElement } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { keyed } from "lit/directives/keyed.js";
 injectCss("f-text-area", globalStyle);
 
 export type FTextAreaState = "primary" | "default" | "success" | "warning" | "danger";
 
 export type FTextAreaCustomEvent = {
-	value: string;
+	value?: string;
 };
 
 @flowElement("f-text-area")
@@ -50,8 +51,8 @@ export class FTextArea extends FRoot {
 	/**
 	 * @attribute Defines the  no. of rows to display. By default f-text-area provides 3 rows. After 3 rows text area becomes scrollable.
 	 */
-	@property({ reflect: true, type: String })
-	rows?: string;
+	@property({ reflect: true, type: Number })
+	rows?: number;
 
 	/**
 	 * @attribute Defines the placeholder text for f-text-area.
@@ -95,21 +96,16 @@ export class FTextArea extends FRoot {
 	@property({ reflect: true, type: Boolean, attribute: "mask-value" })
 	maskValue?: boolean = false;
 
-	@query("textarea")
-	textareaElement!: HTMLTextAreaElement;
+	@query(".f-text-area")
+	textareaElement?: HTMLTextAreaElement;
 
 	calcHeight() {
-		if (!this.rows) {
-			if (this.value) {
-				const numberOfLineBreaks = (this.value.match(/\n/g) || []).length;
-				const minHeight = this.size === "small" ? 28 : 36;
-				const newHeight = minHeight + numberOfLineBreaks * 18;
-				if (newHeight && newHeight > 72) {
-					this.textareaElement.style.height = `${newHeight}px`;
-				}
+		if (this.rows) {
+			const minHeight = this.size === "small" ? 8 : 16;
+			const newHeight = minHeight + this.rows * 18;
+			if (this.textareaElement && newHeight) {
+				this.textareaElement.style.minHeight = `${newHeight}px`;
 			}
-		} else {
-			this.textareaElement.style.removeProperty("height");
 		}
 	}
 
@@ -149,17 +145,17 @@ export class FTextArea extends FRoot {
 			this.value = currentvalue;
 			this.dispatchEvent(event);
 		} else {
+			const currentvalue = this.textareaElement?.innerText;
 			const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 				detail: {
-					value: (e.target as HTMLInputElement)?.value
+					value: currentvalue
 				},
 				bubbles: true,
 				composed: true
 			});
-			this.value = (e.target as HTMLInputElement)?.value;
+			this.value = currentvalue;
 			this.dispatchEvent(event);
 		}
-		this.calcHeight();
 	}
 
 	replaceCharacter(string: string, index: number, replacement: string) {
@@ -170,6 +166,7 @@ export class FTextArea extends FRoot {
 	 * clear value inside f-text-area on click of clear icon.
 	 */
 	clearValue() {
+		if (this.textareaElement) this.textareaElement.innerText = ``;
 		const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 			detail: {
 				value: ""
@@ -191,6 +188,12 @@ export class FTextArea extends FRoot {
 		} else {
 			return `max-height: inherit`;
 		}
+	}
+	protected shouldUpdate(changedProperties: PropertyValues): boolean {
+		if (changedProperties.size === 1 && changedProperties.has("value") && this.textareaElement) {
+			return this.value !== this.textareaElement.innerText;
+		}
+		return true;
 	}
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
@@ -242,24 +245,29 @@ export class FTextArea extends FRoot {
 					</f-div>
 				</f-div>
 				<div class="f-text-area-wrapper">
-					<textarea
-						class="f-text-area"
-						data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
-						style=${this.applyStyles(parentDiv)}
-						state=${ifDefined(this.state)}
-						size=${ifDefined(this.size)}
-						placeholder=${ifDefined(this.placeholder)}
-						category=${ifDefined(this.category)}
-						rows=${this.rows ? +this.rows : 3}
-						maxlength=${ifDefined(this.maxLength ? +this.maxLength : undefined)}
-						?resizable=${this.resizable}
-						?readonly=${this.readOnly}
-						?mask-value=${this.maskValue}
-						spellcheck=${this.maskValue ? "false" : "true"}
-						@input=${this.handleInput}
-						.value=${this.maskValue ? this.getDots() : this.value ?? ""}
-					></textarea>
-					${this.clear && this.value
+					${keyed(
+						this.value,
+						html`<span
+							role="textbox"
+							contenteditable
+							class="f-text-area"
+							data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
+							style=${this.applyStyles(parentDiv)}
+							state=${ifDefined(this.state)}
+							size=${ifDefined(this.size)}
+							placeholder=${ifDefined(this.placeholder)}
+							category=${ifDefined(this.category)}
+							rows=${ifDefined(this.rows)}
+							maxlength=${ifDefined(this.maxLength ? +this.maxLength : undefined)}
+							?resizable=${this.resizable}
+							?readonly=${this.readOnly}
+							?mask-value=${this.maskValue}
+							spellcheck=${this.maskValue ? "false" : "true"}
+							@input=${this.handleInput}
+							>${this.maskValue ? this.getDots() : this.value ?? ""}</span
+						>`
+					)}
+					${this.clear && Boolean(this.value)
 						? html` <f-icon
 								class="f-text-area-clear-icon"
 								source="i-close"

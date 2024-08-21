@@ -126,7 +126,7 @@ export const Playground = {
 		disabled: false,
 		["read-only"]: false,
 		["mask-value"]: false,
-		clear: false
+		clear: true
 	}
 };
 
