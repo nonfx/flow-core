@@ -1,4 +1,4 @@
-import { html, PropertyValueMap, PropertyValues, render, unsafeCSS } from "lit";
+import { html, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
 import { property, query } from "lit/decorators.js";
 import eleStyle from "./f-text-area.scss?inline";
 import globalStyle from "./f-text-area-global.scss?inline";
@@ -146,7 +146,7 @@ export class FTextArea extends FRoot {
 			this.value = currentvalue;
 			this.dispatchEvent(event);
 		} else {
-			currentvalue = this.textareaElement?.textContent!;
+			currentvalue = this.textareaElement!.textContent ?? "";
 			const event = new CustomEvent<FTextAreaCustomEvent>("input", {
 				detail: {
 					value: currentvalue
