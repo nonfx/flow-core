@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.8] - 2024-08-28
+
+### Patch Changes
+
+- `f-counter` part added to customize inner css
+
 ## [2.10.7] - 2024-08-28
 
 ### Patch Changes
