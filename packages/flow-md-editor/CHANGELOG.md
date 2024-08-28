@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.1.7] - 2024-08-28
+
+### Patch Changes
+
+- bump version to use latest flow-core
+
 ## [2.1.6] - 2024-08-20
 
 ### Patch Changes
