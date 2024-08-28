@@ -83,13 +83,15 @@ export class FCounter extends FRoot {
 		if (this.label === undefined) {
 			throw new Error("f-counter : label is mandatory field");
 		}
-		if (
-			this.state?.includes("custom") &&
-			this.fill &&
-			!validateHTMLColor(this.fill) &&
-			!validateHTMLColorName(this.fill)
-		) {
-			throw new Error("f-counter : enter correct color-name or hex-color-code");
+		if (!this.state?.includes("custom, var(")) {
+			if (
+				this.state?.includes("custom") &&
+				this.fill &&
+				!validateHTMLColor(this.fill) &&
+				!validateHTMLColorName(this.fill)
+			) {
+				throw new Error("f-counter : enter correct color-name or hex-color-code");
+			}
 		}
 	}
 	// this will abbreviate long labels to short
@@ -134,6 +136,9 @@ export class FCounter extends FRoot {
 	 * compute textColor when custom color of tag is defined.
 	 */
 	get textColor() {
+		if (this.fill.startsWith("var")) {
+			return "var(--color-text-default)";
+		}
 		return getTextContrast(this.fill) === "dark-text" ? "#202a36" : "#fcfcfd";
 	}
 
@@ -174,6 +179,7 @@ export class FCounter extends FRoot {
 		 * creating local fill variable out of state prop.
 		 */
 		this.fill = getCustomFillColor(this.state ?? "");
+		console.log(this.fill);
 		// validate props/attributes and throws errors if required
 		this.validateProperties();
 		// classes to apply on inner element

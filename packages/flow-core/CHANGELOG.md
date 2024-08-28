@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.7] - 2024-08-28
+
+### Patch Changes
+
+- `f-counter` updated to accept color in variable.
+
 ## [2.10.6] - 2024-08-20
 
 ### Patch Changes

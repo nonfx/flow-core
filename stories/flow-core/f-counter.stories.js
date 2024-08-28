@@ -86,8 +86,8 @@ export const Playground = {
 	args: {
 		category: "fill",
 		label: 88,
-		size: "medium",
-		state: "neutral",
+		size: "large",
+		state: "custom, var(--color-danger-surface)",
 		loading: false,
 		disabled: false
 	}
