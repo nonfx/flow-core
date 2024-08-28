@@ -179,7 +179,6 @@ export class FCounter extends FRoot {
 		 * creating local fill variable out of state prop.
 		 */
 		this.fill = getCustomFillColor(this.state ?? "");
-		console.log(this.fill);
 		// validate props/attributes and throws errors if required
 		this.validateProperties();
 		// classes to apply on inner element
