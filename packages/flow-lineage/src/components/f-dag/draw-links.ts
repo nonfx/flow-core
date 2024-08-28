@@ -8,19 +8,22 @@ export default function drawLinks(this: FDag) {
 		side: "left" | "right" | "top" | "bottom",
 		size: number
 	) => {
-		const element = this.querySelector<HTMLElement>(`#${id}`)!;
-		let connectionCount: number = Number(element.dataset[side]);
-		if (!connectionCount) {
-			connectionCount = 0;
-		}
+		const element = this.querySelector<HTMLElement>(`#${id}`);
 		let point = size / 2;
-		if (connectionCount % 2 !== 0) {
-			point = size / 2 - connectionCount * 12;
-		}
+		if (element) {
+			let connectionCount: number = Number(element.dataset[side]);
+			if (!connectionCount) {
+				connectionCount = 0;
+			}
 
-		element.dataset[side] = `${connectionCount + 1}`;
-		if (point > size || point < 0) {
-			return size / 2;
+			if (connectionCount % 2 !== 0) {
+				point = size / 2 - connectionCount * 12;
+			}
+
+			element.dataset[side] = `${connectionCount + 1}`;
+			if (point > size || point < 0) {
+				return size / 2;
+			}
 		}
 		return point;
 	};
