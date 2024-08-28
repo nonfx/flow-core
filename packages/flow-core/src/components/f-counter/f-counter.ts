@@ -194,6 +194,7 @@ export class FCounter extends FRoot {
 		 * Final html to render
 		 */
 		return html`<div
+			part="counter"
 			class=${classMap(classes)}
 			style=${this.applyStyles()}
 			size=${ifDefined(this.size)}
