@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [1.0.0] - 2024-09-04
+
+### Major
+
+- `sass-system` and `engineering` icons removed
+- bundle size reduced to 1.1MB from 3MB
+
 ## [0.0.6] - 2024-08-29
 
 ### Patch

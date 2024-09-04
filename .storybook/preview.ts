@@ -1,8 +1,6 @@
 import { html } from "lit-html";
 import { register } from "@nonfx/flow-icons";
 
-register(["aws", "gcp", "product", "system", "saas-system", "engineering"]);
-
 import { ConfigUtil } from "@nonfx/flow-core-config";
 import { changeRoute } from "./utils";
 import "@nonfx/flow-core";
@@ -20,6 +18,10 @@ import { themes } from "@storybook/theming";
 import { Preview } from "@storybook/web-components";
 
 import "./storybook.css";
+
+(async () => {
+	await register(["aws", "gcp", "product", "system", "policy"]);
+})();
 
 const preview: Preview = {
 	parameters: {

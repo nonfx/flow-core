@@ -1,14 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_984_853)">
-        <path
-            d="M24 1.5C24 0.980135 23.7308 0.497335 23.2886 0.224025C22.8464 -0.0492845 22.2942 -0.0741306 21.8292 0.158361L10.1459 6H4.5C2.01472 6 0 8.01472 0 10.5C0 12.9853 2.01472 15 4.5 15H4.91887L7.57699 22.9743C7.78116 23.5869 8.35437 24 9.00001 24H10.5C11.3284 24 12 23.3284 12 22.5V15.9271L21.8292 20.8416C22.2942 21.0741 22.8464 21.0493 23.2886 20.776C23.7308 20.5027 24 20.0199 24 19.5V1.5Z"
-            fill="white"
-        />
-    </g>
-    <defs>
-        <clipPath id="clip0_984_853">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clip-path="url(#a)"><path fill="#fff" d="M24 1.5A1.5 1.5 0 0 0 21.83.158L10.145 6H4.5a4.5 4.5 0 0 0 0 9h.419l2.658 7.974A1.5 1.5 0 0 0 9 24h1.5a1.5 1.5 0 0 0 1.5-1.5v-6.573l9.83 4.915A1.5 1.5 0 0 0 24 19.5z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>`;

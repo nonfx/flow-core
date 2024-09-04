@@ -1,27 +1,20 @@
-import flowAwsIcon from "./flow-aws-icon";
-import flowEngineeringIcon from "./flow-engineering-icon";
-import flowGCPIcon from "./flow-gcp-icon";
-import flowProductIcon from "./flow-product-icon";
-import flowSystemIcon from "./flow-system-icon";
-import saasSystemIcon from "./saas-system-icon";
-
-export type IconPackNames = "aws" | "gcp" | "product" | "system" | "saas-system" | "engineering";
-const ICON_PACK_MAP: Record<IconPackNames, Record<string, string>> = {
-	aws: flowAwsIcon,
-	gcp: flowGCPIcon,
-	engineering: flowEngineeringIcon,
-	product: flowProductIcon,
-	system: flowSystemIcon,
-	"saas-system": saasSystemIcon
+export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy";
+const ICON_PACK_MAP: Record<IconPackNames, Promise<unknown>> = {
+	aws: import("./flow-aws-icon"),
+	gcp: import("./flow-gcp-icon"),
+	product: import("./flow-product-icon"),
+	system: import("./flow-system-icon"),
+	policy: import("./flow-system-icon")
 };
 
 import { ConfigUtil } from "@nonfx/flow-core-config";
 
-export function register(iconPacks: IconPackNames[]) {
+export async function register(iconPacks: IconPackNames[]) {
 	for (let index = 0; index < iconPacks.length; index++) {
 		const iconPackName = iconPacks[index];
+		const iconsMap = (await ICON_PACK_MAP[iconPackName]) as Record<string, string>;
 		ConfigUtil.setConfig({
-			iconPack: { ...ICON_PACK_MAP[iconPackName], ...ConfigUtil.getConfig().iconPack }
+			iconPack: { ...iconsMap, ...ConfigUtil.getConfig().iconPack }
 		});
 	}
 }

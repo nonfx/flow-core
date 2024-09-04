@@ -10,6 +10,7 @@ import prettier from "prettier";
 import path from "path";
 import "dotenv/config";
 import { fileURLToPath } from "url";
+import { optimize } from "svgo";
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
@@ -115,12 +116,9 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 
 								promises.push(
 									getIconContent(url[1] as string).then(
-										async icon => {
-											const formattedIcon = await prettier.format(icon.data, {
-												printWidth: 100,
-												singleQuote: true,
-												tabWidth: 4,
-												parser: "html"
+										icon => {
+											const { data: formattedIcon } = optimize(icon.data, {
+												multipass: true
 											});
 
 											const svgToJS = `export default \`${formattedIcon}\`;`;
