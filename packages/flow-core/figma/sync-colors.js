@@ -26,14 +26,14 @@ function generateTokenScss(colorTokens) {
   @function getHover($value) {
 	$hover-color: lighten($value, 5%);
 	@if lightness($value) > 50 {
-	  $hover-color: darken($value, 10%);
+	  $hover-color: darken($value, 3%);
 	}
 	@return $hover-color;
   } 
   @function getSelected($value) {
     $hover-color: lighten($value, 10%);
     @if lightness($value) > 50 {
-        $hover-color: darken($value, 20%);
+        $hover-color: darken($value, 5%);
     }
     @return $hover-color;
 }

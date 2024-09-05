@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.0.1] - 2024-09-05
+
+### Patch
+
+- Policy icons import fixed.
+
 ## [1.0.0] - 2024-09-04
 
 ### Major

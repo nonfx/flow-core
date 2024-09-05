@@ -41,9 +41,10 @@ export const PlaygroundDirectiveTooltip = {
 
 	args: {
 		tooltip: {
-			text: "This is object tooltip",
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu euismod eros. Maecenas varius facilisis libero sit amet tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi sit amet hendrerit ante. Integer nec neque massa. Donec elit nulla, volutpat a auctor at, ullamcorper eleifend velit. Etiam sagittis, elit et maximus venenatis, sapien nisi auctor odio, non faucibus sapien erat sit amet tellus. Suspendisse fermentum porttitor lorem in laoreet. Proin vehicula iaculis eros sed pretium. Aenean in turpis massa.",
 			placement: "bottom",
-			closable: true
+			closable: true,
+			maxWidth: "300px"
 		}
 	}
 };
