@@ -2,6 +2,14 @@
 
 # Change Log
 
+## [2.10.11] - 2024-09-04
+
+### Patch Changes
+
+- maxWidth added for tooltip object.
+- selected color updated for f-div.
+- scrollbar color updated
+
 ## [2.10.10] - 2024-09-04
 
 ### Patch Changes

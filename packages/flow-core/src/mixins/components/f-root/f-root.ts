@@ -20,6 +20,7 @@ export type FTooltipObject = {
 	text: string;
 	closable?: boolean;
 	placement?: FTooltipPlacement;
+	maxWidth?: string;
 };
 
 export type FRootTooltip = string | FTooltipObject;
@@ -45,6 +46,13 @@ export class FRoot extends LitElement {
 			return this.tooltip.text;
 		}
 		return this.tooltip;
+	}
+
+	get tooltipMaxWidth() {
+		if (this.tooltip !== null && typeof this.tooltip === "object") {
+			return this.tooltip.maxWidth ?? `500px`;
+		}
+		return "500px";
 	}
 
 	mouseEnter?: () => void;
@@ -135,6 +143,7 @@ export class FRoot extends LitElement {
 					if (!isExternalTooltip) {
 						const tooltipTextElement = tooltipElement?.querySelector<FText>("#tooltip-text");
 						if (tooltipTextElement && this.tooltipText) {
+							tooltipTextElement.style.maxWidth = this.tooltipMaxWidth;
 							tooltipTextElement.innerText = this.tooltipText;
 						}
 					}

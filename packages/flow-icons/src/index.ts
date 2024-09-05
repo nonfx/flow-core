@@ -4,7 +4,7 @@ const ICON_PACK_MAP: Record<IconPackNames, Promise<unknown>> = {
 	gcp: import("./flow-gcp-icon"),
 	product: import("./flow-product-icon"),
 	system: import("./flow-system-icon"),
-	policy: import("./flow-system-icon")
+	policy: import("./flow-policy-icon")
 };
 
 import { ConfigUtil } from "@nonfx/flow-core-config";
