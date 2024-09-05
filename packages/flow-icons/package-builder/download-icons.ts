@@ -117,9 +117,22 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 								promises.push(
 									getIconContent(url[1] as string).then(
 										icon => {
-											const { data: formattedIcon } = optimize(icon.data, {
-												multipass: true
+											let { data: formattedIcon } = optimize(icon.data, {
+												multipass: true,
+												plugins: [
+													{
+														name: "preset-default",
+														params: {
+															overrides: {
+																removeViewBox: false
+															}
+														}
+													}
+												]
 											});
+											if (pkg === "flow-system-icon") {
+												formattedIcon = formattedIcon.replace(/fill="#fff"/g, `fill="white"`);
+											}
 
 											const svgToJS = `export default \`${formattedIcon}\`;`;
 											//@ts-ignore
