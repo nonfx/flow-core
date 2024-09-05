@@ -1,765 +1,841 @@
+import i_adjustments from "./svg/i-adjustments";
+import i_academic_cap from "./svg/i-academic-cap";
+import i_add_above from "./svg/i-add-above";
+import i_alarm_snooze from "./svg/i-alarm-snooze";
+import i_alert from "./svg/i-alert";
+import i_alarm from "./svg/i-alarm";
+import i_ai from "./svg/i-ai";
+import i_add_below from "./svg/i-add-below";
+import i_admin from "./svg/i-admin";
+import i_alarm_off from "./svg/i-alarm-off";
+import i_arrow_circle_left from "./svg/i-arrow-circle-left";
+import i_alert_fill from "./svg/i-alert-fill";
+import i_app_shape from "./svg/i-app-shape";
+import i_archive from "./svg/i-archive";
+import i_arrange from "./svg/i-arrange";
+import i_alert_2 from "./svg/i-alert-2";
+import i_area from "./svg/i-area";
+import i_annotation from "./svg/i-annotation";
+import i_app from "./svg/i-app";
+import i_arrow_circle_down from "./svg/i-arrow-circle-down";
+import i_arrow_circle_right from "./svg/i-arrow-circle-right";
+import i_arrow_down_left from "./svg/i-arrow-down-left";
+import i_arrow_rotate from "./svg/i-arrow-rotate";
+import i_arrow_down_right from "./svg/i-arrow-down-right";
+import i_arrow_right from "./svg/i-arrow-right";
+import i_arrow_sm_left from "./svg/i-arrow-sm-left";
+import i_arrow_circle_up from "./svg/i-arrow-circle-up";
+import i_arrow_down from "./svg/i-arrow-down";
+import i_arrow_left from "./svg/i-arrow-left";
+import i_arrow_sm_down from "./svg/i-arrow-sm-down";
+import i_arrow_up from "./svg/i-arrow-up";
+import i_ascending from "./svg/i-ascending";
+import i_arrow_split from "./svg/i-arrow-split";
 import i_arrow_up_left from "./svg/i-arrow-up-left";
 import i_arrow_up_right from "./svg/i-arrow-up-right";
-import i_zoom_out from "./svg/i-zoom-out";
-import i_view from "./svg/i-view";
-import i_arrow_up from "./svg/i-arrow-up";
-import i_arrow_down_right from "./svg/i-arrow-down-right";
-import i_pointer_right from "./svg/i-pointer-right";
-import i_user_add from "./svg/i-user-add";
-import i_arrow_down_left from "./svg/i-arrow-down-left";
-import i_user_double from "./svg/i-user-double";
-import i_star from "./svg/i-star";
-import i_alarm from "./svg/i-alarm";
-import i_tag from "./svg/i-tag";
-import i_close from "./svg/i-close";
-import i_terminal_outline from "./svg/i-terminal-outline";
-import i_clock_outline from "./svg/i-clock-outline";
-import i_arrow_left from "./svg/i-arrow-left";
-import i_arrow_right from "./svg/i-arrow-right";
-import i_clock_fill from "./svg/i-clock-fill";
-import i_arrow_down from "./svg/i-arrow-down";
-import i_org from "./svg/i-org";
-import i_lock from "./svg/i-lock";
-import i_pause_fill from "./svg/i-pause-fill";
-import i_paragraph from "./svg/i-paragraph";
-import i_info_fill from "./svg/i-info-fill";
-import i_play_fill from "./svg/i-play-fill";
-import i_refresh from "./svg/i-refresh";
-import i_plus from "./svg/i-plus";
-import i_search from "./svg/i-search";
-import i_box from "./svg/i-box";
-import i_sort_asc from "./svg/i-sort-asc";
-import i_sort_desc from "./svg/i-sort-desc";
-import i_home from "./svg/i-home";
-import i_flag from "./svg/i-flag";
-import i_sort from "./svg/i-sort";
-import i_globe from "./svg/i-globe";
-import i_folder from "./svg/i-folder";
-import i_link from "./svg/i-link";
-import i_unlock from "./svg/i-unlock";
-import i_grid_view from "./svg/i-grid-view";
-import i_calendar from "./svg/i-calendar";
-import i_download from "./svg/i-download";
-import i_hamburger from "./svg/i-hamburger";
-import i_minus from "./svg/i-minus";
-import i_flash from "./svg/i-flash";
-import i_view_fill from "./svg/i-view-fill";
-import i_zoom_in from "./svg/i-zoom-in";
-import i_key from "./svg/i-key";
-import i_filter from "./svg/i-filter";
-import i_terminal_fill from "./svg/i-terminal-fill";
-import i_tick_fill from "./svg/i-tick-fill";
-import i_view_off_fill from "./svg/i-view-off-fill";
-import i_stop from "./svg/i-stop";
-import i_shield from "./svg/i-shield";
-import i_delete from "./svg/i-delete";
-import i_tick_thick from "./svg/i-tick-thick";
-import i_tick from "./svg/i-tick";
-import i_cut from "./svg/i-cut";
-import i_code from "./svg/i-code";
-import i_user from "./svg/i-user";
-import i_variable from "./svg/i-variable";
-import i_upload from "./svg/i-upload";
-import i_setting from "./svg/i-setting";
-import i_chevron_left from "./svg/i-chevron-left";
-import i_chevron_up from "./svg/i-chevron-up";
-import i_alert from "./svg/i-alert";
-import i_chevron_right from "./svg/i-chevron-right";
-import i_cloud from "./svg/i-cloud";
-import i_hashtag from "./svg/i-hashtag";
-import i_chevron_down from "./svg/i-chevron-down";
-import i_question_filled from "./svg/i-question-filled";
-import i_dropper from "./svg/i-dropper";
-import i_ascending from "./svg/i-ascending";
-import i_descending from "./svg/i-descending";
-import i_edit from "./svg/i-edit";
-import i_fingerprint from "./svg/i-fingerprint";
-import i_database from "./svg/i-database";
-import i_tick_2 from "./svg/i-tick-2";
-import i_puzzle from "./svg/i-puzzle";
-import i_text from "./svg/i-text";
-import i_plus_fill from "./svg/i-plus-fill";
-import i_location from "./svg/i-location";
-import i_expand_2 from "./svg/i-expand-2";
-import i_cloud_upload from "./svg/i-cloud-upload";
-import i_circle_small from "./svg/i-circle-small";
-import i_cloud_download from "./svg/i-cloud-download";
-import i_bulb from "./svg/i-bulb";
-import i_circle from "./svg/i-circle";
-import i_bookmark from "./svg/i-bookmark";
-import i_table from "./svg/i-table";
-import i_dollar_filled from "./svg/i-dollar-filled";
-import i_cli from "./svg/i-cli";
-import i_camera from "./svg/i-camera";
-import i_mail from "./svg/i-mail";
-import i_more_filled from "./svg/i-more-filled";
-import i_alert_2 from "./svg/i-alert-2";
-import i_chip from "./svg/i-chip";
-import i_search_fill from "./svg/i-search-fill";
-import i_more from "./svg/i-more";
-import i_fire from "./svg/i-fire";
-import i_shield_success from "./svg/i-shield-success";
-import i_file from "./svg/i-file";
-import i_music from "./svg/i-music";
-import i_date_time from "./svg/i-date-time";
-import i_shield_alert from "./svg/i-shield-alert";
-import i_copy from "./svg/i-copy";
-import i_chat from "./svg/i-chat";
-import i_movie from "./svg/i-movie";
-import i_book from "./svg/i-book";
-import i_share_2 from "./svg/i-share-2";
-import i_info_solo from "./svg/i-info-solo";
-import i_equal from "./svg/i-equal";
-import i_caret_up from "./svg/i-caret-up";
-import i_user_remove from "./svg/i-user-remove";
-import i_admin from "./svg/i-admin";
-import i_logout from "./svg/i-logout";
-import i_caret_down from "./svg/i-caret-down";
-import i_hide from "./svg/i-hide";
-import i_login from "./svg/i-login";
-import i_column from "./svg/i-column";
-import i_user_stop from "./svg/i-user-stop";
-import i_stopwatch from "./svg/i-stopwatch";
-import i_drag_vertical from "./svg/i-drag-vertical";
-import i_enter from "./svg/i-enter";
-import i_expand_3 from "./svg/i-expand-3";
-import i_not_equal from "./svg/i-not-equal";
-import i_arrow_rotate from "./svg/i-arrow-rotate";
-import i_shrink from "./svg/i-shrink";
-import i_git_account from "./svg/i-git-account";
-import i_env_shape from "./svg/i-env-shape";
-import i_app_shape from "./svg/i-app-shape";
-import i_scale from "./svg/i-scale";
-import i_user_info from "./svg/i-user-info";
-import i_triangle_up from "./svg/i-triangle-up";
-import i_generic from "./svg/i-generic";
-import i_project_shape from "./svg/i-project-shape";
-import i_triangle_right from "./svg/i-triangle-right";
-import i_infinity from "./svg/i-infinity";
-import i_pentagram from "./svg/i-pentagram";
-import i_destroy from "./svg/i-destroy";
-import i_issue_1 from "./svg/i-issue-1";
-import i_launch from "./svg/i-launch";
-import i_expand_1 from "./svg/i-expand_1";
-import i_triangle_down from "./svg/i-triangle-down";
-import i_icon from "./svg/i-icon";
-import i_dev from "./svg/i-dev";
-import i_indent from "./svg/i-indent";
-import i_triangle_left from "./svg/i-triangle-left";
-import i_expand from "./svg/i-expand";
-import i_collapse from "./svg/i-collapse";
-import i_health_1 from "./svg/i-health-1";
-import i_reload from "./svg/i-reload";
-import i_cloud_off from "./svg/i-cloud-off";
-import i_cart from "./svg/i-cart";
-import i_separator from "./svg/i-separator";
-import i_history from "./svg/i-history";
-import i_letter from "./svg/i-letter";
-import i_play from "./svg/i-play";
-import i_prod from "./svg/i-prod";
-import i_reset from "./svg/i-reset";
-import i_arrange from "./svg/i-arrange";
-import i_app from "./svg/i-app";
-import i_user_time from "./svg/i-user-time";
-import i_transform from "./svg/i-transform";
-import i_theme from "./svg/i-theme";
-import i_tree from "./svg/i-tree";
-import i_tick_double from "./svg/i-tick-double";
-import i_film from "./svg/i-film";
-import i_pause from "./svg/i-pause";
-import i_clock_warn from "./svg/i-clock-warn";
-import i_incremental from "./svg/i-incremental";
-import i_line from "./svg/i-line";
-import i_integration from "./svg/i-integration";
-import i_alarm_off from "./svg/i-alarm-off";
-import i_dollar from "./svg/i-dollar";
-import i_crown from "./svg/i-crown";
-import i_arrow_split from "./svg/i-arrow-split";
-import i_pipe from "./svg/i-pipe";
-import i_health_2 from "./svg/i-health-2";
-import i_new_tab from "./svg/i-new-tab";
-import i_bar from "./svg/i-bar";
-import i_staging from "./svg/i-staging";
-import i_alarm_snooze from "./svg/i-alarm-snooze";
+import i_arrow_sm_right from "./svg/i-arrow-sm-right";
+import i_assets from "./svg/i-assets";
+import i_arrow_sm_up from "./svg/i-arrow-sm-up";
 import i_arrow_tab from "./svg/i-arrow-tab";
-import i_minus_2 from "./svg/i-minus-2";
-import i_pin from "./svg/i-pin";
-import i_cloud_remove from "./svg/i-cloud-remove";
-import i_transfer from "./svg/i-transfer";
-import i_git_branch from "./svg/i-git-branch";
-import i_git_commit from "./svg/i-git-commit";
-import i_hamburger_close from "./svg/i-hamburger-close";
-import i_percentage from "./svg/i-percentage";
+import i_backspace from "./svg/i-backspace";
+import i_bar from "./svg/i-bar";
+import i_attachment_2 from "./svg/i-attachment-2";
+import i_book from "./svg/i-book";
+import i_book_open from "./svg/i-book-open";
+import i_beaker from "./svg/i-beaker";
+import i_bookmark from "./svg/i-bookmark";
+import i_bolt from "./svg/i-bolt";
+import i_at_symbol from "./svg/i-at-symbol";
+import i_box from "./svg/i-box";
+import i_calendar from "./svg/i-calendar";
+import i_bulb from "./svg/i-bulb";
+import i_bot from "./svg/i-bot";
+import i_cake from "./svg/i-cake";
+import i_bucket from "./svg/i-bucket";
+import i_camera from "./svg/i-camera";
+import i_bookmark_alt from "./svg/i-bookmark-alt";
 import i_bug from "./svg/i-bug";
+import i_calculator from "./svg/i-calculator";
+import i_chart_bar from "./svg/i-chart-bar";
+import i_cart from "./svg/i-cart";
+import i_category from "./svg/i-category";
+import i_caret_down from "./svg/i-caret-down";
+import i_canonical from "./svg/i-canonical";
+import i_catalog from "./svg/i-catalog";
+import i_caret_up from "./svg/i-caret-up";
+import i_chevron_double_right from "./svg/i-chevron-double-right";
+import i_chevron_double_down from "./svg/i-chevron-double-down";
+import i_chart_square_bar from "./svg/i-chart-square-bar";
+import i_chat_3 from "./svg/i-chat-3";
+import i_chat from "./svg/i-chat";
+import i_checkerboard from "./svg/i-checkerboard";
+import i_chat_2 from "./svg/i-chat-2";
+import i_chat_support from "./svg/i-chat-support";
+import i_chart_pie from "./svg/i-chart-pie";
+import i_chevron_double_left from "./svg/i-chevron-double-left";
+import i_circle_small from "./svg/i-circle-small";
+import i_class from "./svg/i-class";
+import i_chevron_left from "./svg/i-chevron-left";
+import i_circle from "./svg/i-circle";
+import i_chevron_double_up from "./svg/i-chevron-double-up";
+import i_chevron_right from "./svg/i-chevron-right";
+import i_chip from "./svg/i-chip";
+import i_chevron_down from "./svg/i-chevron-down";
+import i_chevron_up from "./svg/i-chevron-up";
+import i_classification from "./svg/i-classification";
+import i_clock_outline from "./svg/i-clock-outline";
+import i_clipboard_copy_in from "./svg/i-clipboard-copy-in";
+import i_clock_warn from "./svg/i-clock-warn";
+import i_clipboard_copy from "./svg/i-clipboard-copy";
+import i_close from "./svg/i-close";
+import i_cli from "./svg/i-cli";
+import i_clock_fill from "./svg/i-clock-fill";
+import i_clipboard_check from "./svg/i-clipboard-check";
+import i_cloud_download from "./svg/i-cloud-download";
+import i_cloud_upload from "./svg/i-cloud-upload";
+import i_cloud_landing from "./svg/i-cloud-landing";
+import i_close_circle from "./svg/i-close-circle";
+import i_cloud_off from "./svg/i-cloud-off";
 import i_cloud_add from "./svg/i-cloud-add";
 import i_cloud_iac from "./svg/i-cloud-iac";
-import i_email_sent from "./svg/i-email-sent";
-import i_git from "./svg/i-git";
-import i_table_1 from "./svg/i-table-1";
-import i_pdf from "./svg/i-pdf";
-import i_file_SFTP from "./svg/i-file-SFTP";
-import i_file_code from "./svg/i-file-code";
-import i_java from "./svg/i-java";
-import i_area from "./svg/i-area";
-import i_unlink from "./svg/i-unlink";
-import i_git_repo from "./svg/i-git-repo";
-import i_bot from "./svg/i-bot";
-import i_file_csv from "./svg/i-file-csv";
-import i_user_filled from "./svg/i-user-filled";
-import i_column_right from "./svg/i-column-right";
-import i_notch_right from "./svg/i-notch-right";
+import i_close_2 from "./svg/i-close-2";
+import i_cloud from "./svg/i-cloud";
+import i_cloud_remove from "./svg/i-cloud-remove";
 import i_column_left from "./svg/i-column-left";
-import i_loader_success from "./svg/i-loader-success";
-import i_loader from "./svg/i-loader";
-import i_loader_danger from "./svg/i-loader-danger";
-import i_loader_warning from "./svg/i-loader-warning";
-import i_hamburger_open from "./svg/i-hamburger-open";
-import i_fallback from "./svg/i-fallback";
-import i_tree_chart from "./svg/i-tree-chart";
+import i_component from "./svg/i-component";
+import i_collapse from "./svg/i-collapse";
+import i_collapse_3 from "./svg/i-collapse-3";
+import i_code from "./svg/i-code";
+import i_column_right from "./svg/i-column-right";
+import i_column from "./svg/i-column";
+import i_color_swatch from "./svg/i-color-swatch";
+import i_collection from "./svg/i-collection";
+import i_currency_euro from "./svg/i-currency-euro";
+import i_copy_classification from "./svg/i-copy-classification";
+import i_copy from "./svg/i-copy";
+import i_cube_transparent from "./svg/i-cube-transparent";
+import i_currency_bangladeshi from "./svg/i-currency-bangladeshi";
+import i_credit_card from "./svg/i-credit-card";
+import i_crown from "./svg/i-crown";
 import i_computer from "./svg/i-computer";
+import i_currency_pound from "./svg/i-currency-pound";
+import i_cursor_click from "./svg/i-cursor-click";
+import i_customer_support from "./svg/i-customer-support";
+import i_dataset from "./svg/i-dataset";
+import i_database from "./svg/i-database";
+import i_date_time from "./svg/i-date-time";
+import i_cut from "./svg/i-cut";
 import i_data_lake from "./svg/i-data-lake";
-import i_user_equity from "./svg/i-user-equity";
+import i_currency_yen from "./svg/i-currency-yen";
+import i_currency_rupee from "./svg/i-currency-rupee";
+import i_destroy from "./svg/i-destroy";
+import i_division from "./svg/i-division";
+import i_delete from "./svg/i-delete";
+import i_document from "./svg/i-document";
+import i_dev from "./svg/i-dev";
+import i_device_mobile from "./svg/i-device-mobile";
+import i_description from "./svg/i-description";
+import i_descending from "./svg/i-descending";
+import i_domain from "./svg/i-domain";
+import i_document_search from "./svg/i-document-search";
+import i_document_preview from "./svg/i-document-preview";
+import i_dollar from "./svg/i-dollar";
+import i_document_remove from "./svg/i-document-remove";
+import i_dollar_filled from "./svg/i-dollar-filled";
+import i_document_duplicate from "./svg/i-document-duplicate";
+import i_document_add from "./svg/i-document-add";
+import i_document_report from "./svg/i-document-report";
+import i_email_sent from "./svg/i-email-sent";
 import i_drag_corner from "./svg/i-drag-corner";
+import i_edit from "./svg/i-edit";
+import i_drag_vertical from "./svg/i-drag-vertical";
+import i_download from "./svg/i-download";
+import i_dots_vertical from "./svg/i-dots-vertical";
+import i_dropper from "./svg/i-dropper";
+import i_edit_fill from "./svg/i-edit-fill";
+import i_drag_horizontal from "./svg/i-drag-horizontal";
+import i_download_cart from "./svg/i-download-cart";
+import i_evidence_approved from "./svg/i-evidence-approved";
+import i_enter from "./svg/i-enter";
+import i_env_shape from "./svg/i-env-shape";
+import i_equal from "./svg/i-equal";
+import i_evidence from "./svg/i-evidence";
+import i_emoji_happy from "./svg/i-emoji-happy";
+import i_emoji_sad from "./svg/i-emoji-sad";
+import i_email_tick from "./svg/i-email-tick";
+import i_external_link from "./svg/i-external-link";
+import i_expand from "./svg/i-expand";
+import i_evidence_rejected from "./svg/i-evidence-rejected";
+import i_expand_3 from "./svg/i-expand-3";
+import i_export from "./svg/i-export";
+import i_expand_4 from "./svg/i-expand-4";
+import i_evidence_missing from "./svg/i-evidence-missing";
+import i_expand_2 from "./svg/i-expand-2";
+import i_file_upload from "./svg/i-file-upload";
+import i_file_download from "./svg/i-file-download";
+import i_file_csv from "./svg/i-file-csv";
+import i_family from "./svg/i-family";
+import i_file_SFTP from "./svg/i-file-SFTP";
+import i_fallback from "./svg/i-fallback";
+import i_fast_forward from "./svg/i-fast-forward";
+import i_file_code from "./svg/i-file-code";
+import i_file from "./svg/i-file";
+import i_folder_add from "./svg/i-folder-add";
+import i_folder_open from "./svg/i-folder-open";
+import i_flag from "./svg/i-flag";
+import i_flash from "./svg/i-flash";
+import i_filter from "./svg/i-filter";
+import i_folder from "./svg/i-folder";
+import i_folder_download from "./svg/i-folder-download";
+import i_film from "./svg/i-film";
+import i_fire from "./svg/i-fire";
+import i_fingerprint from "./svg/i-fingerprint";
+import i_generate from "./svg/i-generate";
+import i_folder_remove from "./svg/i-folder-remove";
+import i_git_commit from "./svg/i-git-commit";
+import i_function from "./svg/i-function";
+import i_git_account from "./svg/i-git-account";
+import i_generic from "./svg/i-generic";
+import i_git from "./svg/i-git";
+import i_gift_hamper from "./svg/i-gift-hamper";
+import i_git_branch from "./svg/i-git-branch";
+import i_git_repo from "./svg/i-git-repo";
+import i_hand from "./svg/i-hand";
+import i_hamburger_open from "./svg/i-hamburger-open";
+import i_grid_view from "./svg/i-grid-view";
+import i_hamburger from "./svg/i-hamburger";
+import i_globe_2 from "./svg/i-globe-2";
+import i_hamburger_close from "./svg/i-hamburger-close";
+import i_health_1 from "./svg/i-health-1";
+import i_globe from "./svg/i-globe";
+import i_hashtag from "./svg/i-hashtag";
+import i_hide from "./svg/i-hide";
+import i_inbox from "./svg/i-inbox";
+import i_home from "./svg/i-home";
+import i_health_2 from "./svg/i-health-2";
+import i_heart from "./svg/i-heart";
+import i_id_card from "./svg/i-id-card";
+import i_import from "./svg/i-import";
+import i_icon from "./svg/i-icon";
+import i_inbox_in from "./svg/i-inbox-in";
+import i_history from "./svg/i-history";
+import i_issue_1 from "./svg/i-issue-1";
+import i_java from "./svg/i-java";
+import i_incremental from "./svg/i-incremental";
+import i_indent from "./svg/i-indent";
+import i_justification from "./svg/i-justification";
+import i_infinity from "./svg/i-infinity";
+import i_info_solo from "./svg/i-info-solo";
+import i_info_fill from "./svg/i-info-fill";
+import i_integration from "./svg/i-integration";
+import i_line_of_business from "./svg/i-line-of-business";
+import i_link from "./svg/i-link";
+import i_launch from "./svg/i-launch";
+import i_line from "./svg/i-line";
+import i_library_fill from "./svg/i-library-fill";
+import i_letter from "./svg/i-letter";
+import i_key from "./svg/i-key";
+import i_lambda from "./svg/i-lambda";
+import i_mail_open from "./svg/i-mail-open";
+import i_loader_success from "./svg/i-loader-success";
+import i_loader_warning from "./svg/i-loader-warning";
+import i_loader from "./svg/i-loader";
+import i_location from "./svg/i-location";
+import i_loader_danger from "./svg/i-loader-danger";
+import i_lock from "./svg/i-lock";
+import i_mail from "./svg/i-mail";
+import i_logout from "./svg/i-logout";
+import i_login from "./svg/i-login";
+import i_map from "./svg/i-map";
+import i_menu_alt_2 from "./svg/i-menu-alt-2";
+import i_microphone from "./svg/i-microphone";
+import i_menu_alt_4 from "./svg/i-menu-alt-4";
+import i_minus_2 from "./svg/i-minus-2";
+import i_map_1 from "./svg/i-map-1";
+import i_menu_alt_3 from "./svg/i-menu-alt-3";
+import i_minus from "./svg/i-minus";
+import i_menu_alt_1 from "./svg/i-menu-alt-1";
+import i_more from "./svg/i-more";
+import i_moon from "./svg/i-moon";
+import i_movie from "./svg/i-movie";
+import i_name from "./svg/i-name";
+import i_more_filled from "./svg/i-more-filled";
 import i_minus_fill from "./svg/i-minus-fill";
-import i_notch_up from "./svg/i-notch-up";
+import i_music from "./svg/i-music";
+import i_minus_sm from "./svg/i-minus-sm";
+import i_network from "./svg/i-network";
+import i_notarization from "./svg/i-notarization";
+import i_node_connector from "./svg/i-node-connector";
+import i_newspaper from "./svg/i-newspaper";
+import i_notch_right from "./svg/i-notch-right";
 import i_notch_left from "./svg/i-notch-left";
-import i_office_building from "./svg/i-office-building";
+import i_not_equal from "./svg/i-not-equal";
 import i_notch_down from "./svg/i-notch-down";
-import i_phone_outgoing from "./svg/i-phone-outgoing";
+import i_new_tab from "./svg/i-new-tab";
+import i_notch_up from "./svg/i-notch-up";
+import i_pause from "./svg/i-pause";
+import i_onboarding from "./svg/i-onboarding";
+import i_paper_airplane from "./svg/i-paper-airplane";
+import i_paragraph from "./svg/i-paragraph";
+import i_paper_clip_not_found from "./svg/i-paper-clip-not-found";
+import i_org from "./svg/i-org";
+import i_office_building from "./svg/i-office-building";
+import i_paper_clip from "./svg/i-paper-clip";
+import i_org_fill from "./svg/i-org-fill";
 import i_pencil_alt from "./svg/i-pencil-alt";
 import i_phone_incoming from "./svg/i-phone-incoming";
 import i_photo from "./svg/i-photo";
-import i_inbox from "./svg/i-inbox";
-import i_color_swatch from "./svg/i-color-swatch";
-import i_archive from "./svg/i-archive";
-import i_inbox_in from "./svg/i-inbox-in";
-import i_phone from "./svg/i-phone";
-import i_document from "./svg/i-document";
-import i_menu_alt_1 from "./svg/i-menu-alt-1";
-import i_chart_pie from "./svg/i-chart-pie";
-import i_file_download from "./svg/i-file-download";
-import i_switch_horizontal from "./svg/i-switch-horizontal";
-import i_menu_alt_3 from "./svg/i-menu-alt-3";
-import i_switch_vertical from "./svg/i-switch-vertical";
-import i_menu_alt_2 from "./svg/i-menu-alt-2";
-import i_menu_alt_4 from "./svg/i-menu-alt-4";
-import i_document_add from "./svg/i-document-add";
-import i_credit_card from "./svg/i-credit-card";
-import i_mail_open from "./svg/i-mail-open";
-import i_heart from "./svg/i-heart";
-import i_volume_off from "./svg/i-volume-off";
-import i_adjustments from "./svg/i-adjustments";
-import i_document_remove from "./svg/i-document-remove";
-import i_volume_up from "./svg/i-volume-up";
-import i_document_duplicate from "./svg/i-document-duplicate";
-import i_paper_clip_not_found from "./svg/i-paper-clip-not-found";
-import i_trending_up from "./svg/i-trending-up";
-import i_dots_vertical from "./svg/i-dots-vertical";
-import i_paper_clip from "./svg/i-paper-clip";
-import i_alert_fill from "./svg/i-alert-fill";
-import i_arrow_circle_down from "./svg/i-arrow-circle-down";
-import i_close_circle from "./svg/i-close-circle";
-import i_arrow_circle_right from "./svg/i-arrow-circle-right";
-import i_trending_down from "./svg/i-trending-down";
-import i_at_symbol from "./svg/i-at-symbol";
-import i_receipt_refund from "./svg/i-receipt-refund";
-import i_currency_rupee from "./svg/i-currency-rupee";
-import i_selector from "./svg/i-selector";
-import i_currency_euro from "./svg/i-currency-euro";
-import i_currency_pound from "./svg/i-currency-pound";
-import i_currency_yen from "./svg/i-currency-yen";
-import i_printer from "./svg/i-printer";
-import i_emoji_sad from "./svg/i-emoji-sad";
-import i_emoji_happy from "./svg/i-emoji-happy";
-import i_ticket from "./svg/i-ticket";
-import i_clipboard_copy_in from "./svg/i-clipboard-copy-in";
-import i_moon from "./svg/i-moon";
-import i_qrcode from "./svg/i-qrcode";
-import i_arrow_circle_left from "./svg/i-arrow-circle-left";
-import i_arrow_circle_up from "./svg/i-arrow-circle-up";
-import i_sun from "./svg/i-sun";
-import i_external_link from "./svg/i-external-link";
-import i_clipboard_copy from "./svg/i-clipboard-copy";
-import i_clipboard_check from "./svg/i-clipboard-check";
-import i_template from "./svg/i-template";
-import i_microphone from "./svg/i-microphone";
-import i_chat_alt from "./svg/i-chat-alt";
-import i_cursor_click from "./svg/i-cursor-click";
-import i_document_report from "./svg/i-document-report";
-import i_book_open from "./svg/i-book-open";
-import i_annotation from "./svg/i-annotation";
-import i_sparkles from "./svg/i-sparkles";
-import i_download_cart from "./svg/i-download-cart";
-import i_collection from "./svg/i-collection";
-import i_academic_cap from "./svg/i-academic-cap";
-import i_plus_sm from "./svg/i-plus-sm";
-import i_calculator from "./svg/i-calculator";
-import i_speakerphone from "./svg/i-speakerphone";
+import i_pause_fill from "./svg/i-pause-fill";
+import i_pentagram from "./svg/i-pentagram";
+import i_percentage from "./svg/i-percentage";
 import i_phone_missed_call from "./svg/i-phone-missed-call";
-import i_reply from "./svg/i-reply";
-import i_verified from "./svg/i-verified";
-import i_chevron_double_down from "./svg/i-chevron-double-down";
-import i_chevron_double_right from "./svg/i-chevron-double-right";
-import i_folder_download from "./svg/i-folder-download";
-import i_gift_hamper from "./svg/i-gift-hamper";
-import i_receipt_tax from "./svg/i-receipt-tax";
-import i_document_search from "./svg/i-document-search";
-import i_chevron_double_left from "./svg/i-chevron-double-left";
-import i_server from "./svg/i-server";
-import i_chart_square_bar from "./svg/i-chart-square-bar";
-import i_minus_sm from "./svg/i-minus-sm";
-import i_support from "./svg/i-support";
-import i_beaker from "./svg/i-beaker";
-import i_folder_remove from "./svg/i-folder-remove";
-import i_currency_bangladeshi from "./svg/i-currency-bangladeshi";
-import i_bookmark_alt from "./svg/i-bookmark-alt";
-import i_chart_bar from "./svg/i-chart-bar";
-import i_wifi from "./svg/i-wifi";
-import i_truck from "./svg/i-truck";
-import i_status_online from "./svg/i-status-online";
-import i_folder_add from "./svg/i-folder-add";
-import i_chevron_double_up from "./svg/i-chevron-double-up";
-import i_newspaper from "./svg/i-newspaper";
-import i_shopping_bag from "./svg/i-shopping-bag";
-import i_presentation_chart_line from "./svg/i-presentation-chart-line";
-import i_folder_open from "./svg/i-folder-open";
-import i_library_fill from "./svg/i-library-fill";
-import i_arrow_sm_down from "./svg/i-arrow-sm-down";
-import i_arrow_sm_left from "./svg/i-arrow-sm-left";
-import i_arrow_sm_up from "./svg/i-arrow-sm-up";
-import i_arrow_sm_right from "./svg/i-arrow-sm-right";
-import i_view_grid_add from "./svg/i-view-grid-add";
-import i_status_offline from "./svg/i-status-offline";
-import i_fast_forward from "./svg/i-fast-forward";
-import i_save_as from "./svg/i-save-as";
-import i_thumb_up from "./svg/i-thumb-up";
-import i_cube_transparent from "./svg/i-cube-transparent";
-import i_presentation_chart_bar from "./svg/i-presentation-chart-bar";
-import i_backspace from "./svg/i-backspace";
-import i_id_card from "./svg/i-id-card";
-import i_paper_airplane from "./svg/i-paper-airplane";
-import i_map from "./svg/i-map";
-import i_save from "./svg/i-save";
-import i_thumb_down from "./svg/i-thumb-down";
-import i_hand from "./svg/i-hand";
-import i_rewind from "./svg/i-rewind";
-import i_email_tick from "./svg/i-email-tick";
+import i_pdf from "./svg/i-pdf";
+import i_phone_outgoing from "./svg/i-phone-outgoing";
+import i_phone from "./svg/i-phone";
+import i_plus_fill from "./svg/i-plus-fill";
+import i_play_fill from "./svg/i-play-fill";
+import i_plus from "./svg/i-plus";
 import i_play_stop from "./svg/i-play-stop";
-import i_device_mobile from "./svg/i-device-mobile";
-import i_rss from "./svg/i-rss";
-import i_close_2 from "./svg/i-close-2";
-import i_cake from "./svg/i-cake";
-import i_row from "./svg/i-row";
-import i_drag_horizontal from "./svg/i-drag-horizontal";
-import i_chat_support from "./svg/i-chat-support";
-import i_webhook from "./svg/i-webhook";
-import i_recipe from "./svg/i-recipe";
-import i_customer_support from "./svg/i-customer-support";
-import i_star_outline from "./svg/i-star-outline";
-import i_xls from "./svg/i-xls";
-import i_bucket from "./svg/i-bucket";
-import i_add_below from "./svg/i-add-below";
-import i_add_above from "./svg/i-add-above";
-import i_checkerboard from "./svg/i-checkerboard";
-import i_service from "./svg/i-service";
-import i_network from "./svg/i-network";
-import i_cloud_landing from "./svg/i-cloud-landing";
-import i_org_fill from "./svg/i-org-fill";
-import i_generate from "./svg/i-generate";
-import i_file_upload from "./svg/i-file-upload";
+import i_pipe from "./svg/i-pipe";
+import i_play from "./svg/i-play";
+import i_pointer_right from "./svg/i-pointer-right";
+import i_plus_sm from "./svg/i-plus-sm";
+import i_pin from "./svg/i-pin";
 import i_plug from "./svg/i-plug";
-import i_collapse_3 from "./svg/i-collapse-3";
-import i_lambda from "./svg/i-lambda";
-import i_document_preview from "./svg/i-document-preview";
-import i_workflow from "./svg/i-workflow";
+import i_presentation_chart_line from "./svg/i-presentation-chart-line";
+import i_receipt_tax from "./svg/i-receipt-tax";
+import i_prod from "./svg/i-prod";
+import i_project_shape from "./svg/i-project-shape";
+import i_printer from "./svg/i-printer";
+import i_question_filled from "./svg/i-question-filled";
+import i_presentation_chart_bar from "./svg/i-presentation-chart-bar";
+import i_receipt_refund from "./svg/i-receipt-refund";
+import i_puzzle from "./svg/i-puzzle";
+import i_qrcode from "./svg/i-qrcode";
+import i_refresh from "./svg/i-refresh";
+import i_row from "./svg/i-row";
+import i_reply from "./svg/i-reply";
+import i_rss from "./svg/i-rss";
+import i_required from "./svg/i-required";
+import i_recipe from "./svg/i-recipe";
+import i_reload from "./svg/i-reload";
+import i_rewind from "./svg/i-rewind";
+import i_save from "./svg/i-save";
+import i_reset from "./svg/i-reset";
+import i_selector from "./svg/i-selector";
+import i_service from "./svg/i-service";
+import i_save_test from "./svg/i-save-test";
+import i_scale from "./svg/i-scale";
+import i_search from "./svg/i-search";
+import i_save_as from "./svg/i-save-as";
+import i_search_fill from "./svg/i-search-fill";
+import i_separator from "./svg/i-separator";
+import i_server from "./svg/i-server";
+import i_shrink from "./svg/i-shrink";
+import i_setting from "./svg/i-setting";
+import i_shield_success from "./svg/i-shield-success";
+import i_shield_alert from "./svg/i-shield-alert";
+import i_shield from "./svg/i-shield";
+import i_software from "./svg/i-software";
+import i_shopping_bag from "./svg/i-shopping-bag";
+import i_gears from "./svg/i-gears";
+import i_share_2 from "./svg/i-share-2";
+import i_sort_desc from "./svg/i-sort-desc";
+import i_sort_asc from "./svg/i-sort-asc";
+import i_staging from "./svg/i-staging";
+import i_sort from "./svg/i-sort";
+import i_star_outline from "./svg/i-star-outline";
+import i_sparkles from "./svg/i-sparkles";
+import i_status_offline from "./svg/i-status-offline";
+import i_star from "./svg/i-star";
+import i_speakerphone from "./svg/i-speakerphone";
+import i_support from "./svg/i-support";
+import i_summary from "./svg/i-summary";
+import i_stopwatch from "./svg/i-stopwatch";
+import i_stop from "./svg/i-stop";
+import i_subline_of_business from "./svg/i-subline-of-business";
 import i_super_admin from "./svg/i-super-admin";
-import i_export from "./svg/i-export";
-import i_node_connector from "./svg/i-node-connector";
-import i_edit_fill from "./svg/i-edit-fill";
-import i_dataset from "./svg/i-dataset";
+import i_sun from "./svg/i-sun";
+import i_status_online from "./svg/i-status-online";
+import i_terminal_fill from "./svg/i-terminal-fill";
+import i_table from "./svg/i-table";
+import i_switch_vertical from "./svg/i-switch-vertical";
 import i_table_edit from "./svg/i-table-edit";
-import i_import from "./svg/i-import";
+import i_table_1 from "./svg/i-table-1";
+import i_tenant from "./svg/i-tenant";
+import i_switch_horizontal from "./svg/i-switch-horizontal";
+import i_tag from "./svg/i-tag";
+import i_template from "./svg/i-template";
+import i_tick_thick from "./svg/i-tick-thick";
+import i_thumb_down from "./svg/i-thumb-down";
+import i_text from "./svg/i-text";
+import i_thumb_up from "./svg/i-thumb-up";
+import i_tick_2 from "./svg/i-tick-2";
+import i_terminal_outline from "./svg/i-terminal-outline";
+import i_theme from "./svg/i-theme";
+import i_tick_double from "./svg/i-tick-double";
+import i_tick_fill from "./svg/i-tick-fill";
+import i_tick from "./svg/i-tick";
+import i_triangle_right from "./svg/i-triangle-right";
+import i_trending_down from "./svg/i-trending-down";
+import i_triangle_left from "./svg/i-triangle-left";
+import i_tree from "./svg/i-tree";
+import i_tree_chart from "./svg/i-tree-chart";
+import i_trending_up from "./svg/i-trending-up";
+import i_ticket from "./svg/i-ticket";
+import i_transfer from "./svg/i-transfer";
+import i_triangle_down from "./svg/i-triangle-down";
+import i_transform from "./svg/i-transform";
+import i_user_add from "./svg/i-user-add";
+import i_user from "./svg/i-user";
+import i_unlock from "./svg/i-unlock";
+import i_triangle_up from "./svg/i-triangle-up";
+import i_user_tick from "./svg/i-user-tick";
+import i_unlink from "./svg/i-unlink";
+import i_type from "./svg/i-type";
+import i_truck from "./svg/i-truck";
+import i_upload from "./svg/i-upload";
+import i_variable from "./svg/i-variable";
+import i_verified from "./svg/i-verified";
+import i_user_filled from "./svg/i-user-filled";
+import i_user_double from "./svg/i-user-double";
+import i_user_equity from "./svg/i-user-equity";
+import i_user_stop from "./svg/i-user-stop";
+import i_user_cross from "./svg/i-user-cross";
+import i_user_remove from "./svg/i-user-remove";
+import i_user_time from "./svg/i-user-time";
+import i_user_info from "./svg/i-user-info";
+import i_view_grid_add from "./svg/i-view-grid-add";
+import i_volume_off from "./svg/i-volume-off";
+import i_view_off_fill from "./svg/i-view-off-fill";
+import i_volume_up from "./svg/i-volume-up";
+import i_webhook from "./svg/i-webhook";
+import i_view_fill from "./svg/i-view-fill";
+import i_view from "./svg/i-view";
+import i_workflow from "./svg/i-workflow";
+import i_xls from "./svg/i-xls";
+import i_wifi from "./svg/i-wifi";
+import i_zoom_out from "./svg/i-zoom-out";
+import i_zoom_in from "./svg/i-zoom-in";
 const IconPack = {
+	"i-adjustments": i_adjustments,
+	"i-academic-cap": i_academic_cap,
+	"i-add-above": i_add_above,
+	"i-alarm-snooze": i_alarm_snooze,
+	"i-alert": i_alert,
+	"i-alarm": i_alarm,
+	"i-ai": i_ai,
+	"i-add-below": i_add_below,
+	"i-admin": i_admin,
+	"i-alarm-off": i_alarm_off,
+	"i-arrow-circle-left": i_arrow_circle_left,
+	"i-alert-fill": i_alert_fill,
+	"i-app-shape": i_app_shape,
+	"i-archive": i_archive,
+	"i-arrange": i_arrange,
+	"i-alert-2": i_alert_2,
+	"i-area": i_area,
+	"i-annotation": i_annotation,
+	"i-app": i_app,
+	"i-arrow-circle-down": i_arrow_circle_down,
+	"i-arrow-circle-right": i_arrow_circle_right,
+	"i-arrow-down-left": i_arrow_down_left,
+	"i-arrow-rotate": i_arrow_rotate,
+	"i-arrow-down-right": i_arrow_down_right,
+	"i-arrow-right": i_arrow_right,
+	"i-arrow-sm-left": i_arrow_sm_left,
+	"i-arrow-circle-up": i_arrow_circle_up,
+	"i-arrow-down": i_arrow_down,
+	"i-arrow-left": i_arrow_left,
+	"i-arrow-sm-down": i_arrow_sm_down,
+	"i-arrow-up": i_arrow_up,
+	"i-ascending": i_ascending,
+	"i-arrow-split": i_arrow_split,
 	"i-arrow-up-left": i_arrow_up_left,
 	"i-arrow-up-right": i_arrow_up_right,
-	"i-zoom-out": i_zoom_out,
-	"i-view": i_view,
-	"i-arrow-up": i_arrow_up,
-	"i-arrow-down-right": i_arrow_down_right,
-	"i-pointer-right": i_pointer_right,
-	"i-user-add": i_user_add,
-	"i-arrow-down-left": i_arrow_down_left,
-	"i-user-double": i_user_double,
-	"i-star": i_star,
-	"i-alarm": i_alarm,
-	"i-tag": i_tag,
-	"i-close": i_close,
-	"i-terminal-outline": i_terminal_outline,
-	"i-clock-outline": i_clock_outline,
-	"i-arrow-left": i_arrow_left,
-	"i-arrow-right": i_arrow_right,
-	"i-clock-fill": i_clock_fill,
-	"i-arrow-down": i_arrow_down,
-	"i-org": i_org,
-	"i-lock": i_lock,
-	"i-pause-fill": i_pause_fill,
-	"i-paragraph": i_paragraph,
-	"i-info-fill": i_info_fill,
-	"i-play-fill": i_play_fill,
-	"i-refresh": i_refresh,
-	"i-plus": i_plus,
-	"i-search": i_search,
-	"i-box": i_box,
-	"i-sort-asc": i_sort_asc,
-	"i-sort-desc": i_sort_desc,
-	"i-home": i_home,
-	"i-flag": i_flag,
-	"i-sort": i_sort,
-	"i-globe": i_globe,
-	"i-folder": i_folder,
-	"i-link": i_link,
-	"i-unlock": i_unlock,
-	"i-grid-view": i_grid_view,
-	"i-calendar": i_calendar,
-	"i-download": i_download,
-	"i-hamburger": i_hamburger,
-	"i-minus": i_minus,
-	"i-flash": i_flash,
-	"i-view-fill": i_view_fill,
-	"i-zoom-in": i_zoom_in,
-	"i-key": i_key,
-	"i-filter": i_filter,
-	"i-terminal-fill": i_terminal_fill,
-	"i-tick-fill": i_tick_fill,
-	"i-view-off-fill": i_view_off_fill,
-	"i-stop": i_stop,
-	"i-shield": i_shield,
-	"i-delete": i_delete,
-	"i-tick-thick": i_tick_thick,
-	"i-tick": i_tick,
-	"i-cut": i_cut,
-	"i-code": i_code,
-	"i-user": i_user,
-	"i-variable": i_variable,
-	"i-upload": i_upload,
-	"i-setting": i_setting,
-	"i-chevron-left": i_chevron_left,
-	"i-chevron-up": i_chevron_up,
-	"i-alert": i_alert,
-	"i-chevron-right": i_chevron_right,
-	"i-cloud": i_cloud,
-	"i-hashtag": i_hashtag,
-	"i-chevron-down": i_chevron_down,
-	"i-question-filled": i_question_filled,
-	"i-dropper": i_dropper,
-	"i-ascending": i_ascending,
-	"i-descending": i_descending,
-	"i-edit": i_edit,
-	"i-fingerprint": i_fingerprint,
-	"i-database": i_database,
-	"i-tick-2": i_tick_2,
-	"i-puzzle": i_puzzle,
-	"i-text": i_text,
-	"i-plus-fill": i_plus_fill,
-	"i-location": i_location,
-	"i-expand-2": i_expand_2,
-	"i-cloud-upload": i_cloud_upload,
-	"i-circle-small": i_circle_small,
-	"i-cloud-download": i_cloud_download,
-	"i-bulb": i_bulb,
-	"i-circle": i_circle,
-	"i-bookmark": i_bookmark,
-	"i-table": i_table,
-	"i-dollar-filled": i_dollar_filled,
-	"i-cli": i_cli,
-	"i-camera": i_camera,
-	"i-mail": i_mail,
-	"i-more-filled": i_more_filled,
-	"i-alert-2": i_alert_2,
-	"i-chip": i_chip,
-	"i-search-fill": i_search_fill,
-	"i-more": i_more,
-	"i-fire": i_fire,
-	"i-shield-success": i_shield_success,
-	"i-file": i_file,
-	"i-music": i_music,
-	"i-date-time": i_date_time,
-	"i-shield-alert": i_shield_alert,
-	"i-copy": i_copy,
-	"i-chat": i_chat,
-	"i-movie": i_movie,
-	"i-book": i_book,
-	"i-share-2": i_share_2,
-	"i-info-solo": i_info_solo,
-	"i-equal": i_equal,
-	"i-caret-up": i_caret_up,
-	"i-user-remove": i_user_remove,
-	"i-admin": i_admin,
-	"i-logout": i_logout,
-	"i-caret-down": i_caret_down,
-	"i-hide": i_hide,
-	"i-login": i_login,
-	"i-column": i_column,
-	"i-user-stop": i_user_stop,
-	"i-stopwatch": i_stopwatch,
-	"i-drag-vertical": i_drag_vertical,
-	"i-enter": i_enter,
-	"i-expand-3": i_expand_3,
-	"i-not-equal": i_not_equal,
-	"i-arrow-rotate": i_arrow_rotate,
-	"i-shrink": i_shrink,
-	"i-git-account": i_git_account,
-	"i-env-shape": i_env_shape,
-	"i-app-shape": i_app_shape,
-	"i-scale": i_scale,
-	"i-user-info": i_user_info,
-	"i-triangle-up": i_triangle_up,
-	"i-generic": i_generic,
-	"i-project-shape": i_project_shape,
-	"i-triangle-right": i_triangle_right,
-	"i-infinity": i_infinity,
-	"i-pentagram": i_pentagram,
-	"i-destroy": i_destroy,
-	"i-issue-1": i_issue_1,
-	"i-launch": i_launch,
-	"i-expand_1": i_expand_1,
-	"i-triangle-down": i_triangle_down,
-	"i-icon": i_icon,
-	"i-dev": i_dev,
-	"i-indent": i_indent,
-	"i-triangle-left": i_triangle_left,
-	"i-expand": i_expand,
-	"i-collapse": i_collapse,
-	"i-health-1": i_health_1,
-	"i-reload": i_reload,
-	"i-cloud-off": i_cloud_off,
-	"i-cart": i_cart,
-	"i-separator": i_separator,
-	"i-history": i_history,
-	"i-letter": i_letter,
-	"i-play": i_play,
-	"i-prod": i_prod,
-	"i-reset": i_reset,
-	"i-arrange": i_arrange,
-	"i-app": i_app,
-	"i-user-time": i_user_time,
-	"i-transform": i_transform,
-	"i-theme": i_theme,
-	"i-tree": i_tree,
-	"i-tick-double": i_tick_double,
-	"i-film": i_film,
-	"i-pause": i_pause,
-	"i-clock-warn": i_clock_warn,
-	"i-incremental": i_incremental,
-	"i-line": i_line,
-	"i-integration": i_integration,
-	"i-alarm-off": i_alarm_off,
-	"i-dollar": i_dollar,
-	"i-crown": i_crown,
-	"i-arrow-split": i_arrow_split,
-	"i-pipe": i_pipe,
-	"i-health-2": i_health_2,
-	"i-new-tab": i_new_tab,
-	"i-bar": i_bar,
-	"i-staging": i_staging,
-	"i-alarm-snooze": i_alarm_snooze,
+	"i-arrow-sm-right": i_arrow_sm_right,
+	"i-assets": i_assets,
+	"i-arrow-sm-up": i_arrow_sm_up,
 	"i-arrow-tab": i_arrow_tab,
-	"i-minus-2": i_minus_2,
-	"i-pin": i_pin,
-	"i-cloud-remove": i_cloud_remove,
-	"i-transfer": i_transfer,
-	"i-git-branch": i_git_branch,
-	"i-git-commit": i_git_commit,
-	"i-hamburger-close": i_hamburger_close,
-	"i-percentage": i_percentage,
+	"i-backspace": i_backspace,
+	"i-bar": i_bar,
+	"i-attachment-2": i_attachment_2,
+	"i-book": i_book,
+	"i-book-open": i_book_open,
+	"i-beaker": i_beaker,
+	"i-bookmark": i_bookmark,
+	"i-bolt": i_bolt,
+	"i-at-symbol": i_at_symbol,
+	"i-box": i_box,
+	"i-calendar": i_calendar,
+	"i-bulb": i_bulb,
+	"i-bot": i_bot,
+	"i-cake": i_cake,
+	"i-bucket": i_bucket,
+	"i-camera": i_camera,
+	"i-bookmark-alt": i_bookmark_alt,
 	"i-bug": i_bug,
+	"i-calculator": i_calculator,
+	"i-chart-bar": i_chart_bar,
+	"i-cart": i_cart,
+	"i-category": i_category,
+	"i-caret-down": i_caret_down,
+	"i-canonical": i_canonical,
+	"i-catalog": i_catalog,
+	"i-caret-up": i_caret_up,
+	"i-chevron-double-right": i_chevron_double_right,
+	"i-chevron-double-down": i_chevron_double_down,
+	"i-chart-square-bar": i_chart_square_bar,
+	"i-chat-3": i_chat_3,
+	"i-chat": i_chat,
+	"i-checkerboard": i_checkerboard,
+	"i-chat-2": i_chat_2,
+	"i-chat-support": i_chat_support,
+	"i-chart-pie": i_chart_pie,
+	"i-chevron-double-left": i_chevron_double_left,
+	"i-circle-small": i_circle_small,
+	"i-class": i_class,
+	"i-chevron-left": i_chevron_left,
+	"i-circle": i_circle,
+	"i-chevron-double-up": i_chevron_double_up,
+	"i-chevron-right": i_chevron_right,
+	"i-chip": i_chip,
+	"i-chevron-down": i_chevron_down,
+	"i-chevron-up": i_chevron_up,
+	"i-classification": i_classification,
+	"i-clock-outline": i_clock_outline,
+	"i-clipboard-copy-in": i_clipboard_copy_in,
+	"i-clock-warn": i_clock_warn,
+	"i-clipboard-copy": i_clipboard_copy,
+	"i-close": i_close,
+	"i-cli": i_cli,
+	"i-clock-fill": i_clock_fill,
+	"i-clipboard-check": i_clipboard_check,
+	"i-cloud-download": i_cloud_download,
+	"i-cloud-upload": i_cloud_upload,
+	"i-cloud-landing": i_cloud_landing,
+	"i-close-circle": i_close_circle,
+	"i-cloud-off": i_cloud_off,
 	"i-cloud-add": i_cloud_add,
 	"i-cloud-iac": i_cloud_iac,
-	"i-email-sent": i_email_sent,
-	"i-git": i_git,
-	"i-table-1": i_table_1,
-	"i-pdf": i_pdf,
-	"i-file-SFTP": i_file_SFTP,
-	"i-file-code": i_file_code,
-	"i-java": i_java,
-	"i-area": i_area,
-	"i-unlink": i_unlink,
-	"i-git-repo": i_git_repo,
-	"i-bot": i_bot,
-	"i-file-csv": i_file_csv,
-	"i-user-filled": i_user_filled,
-	"i-column-right": i_column_right,
-	"i-notch-right": i_notch_right,
+	"i-close-2": i_close_2,
+	"i-cloud": i_cloud,
+	"i-cloud-remove": i_cloud_remove,
 	"i-column-left": i_column_left,
-	"i-loader-success": i_loader_success,
-	"i-loader": i_loader,
-	"i-loader-danger": i_loader_danger,
-	"i-loader-warning": i_loader_warning,
-	"i-hamburger-open": i_hamburger_open,
-	"i-fallback": i_fallback,
-	"i-tree-chart": i_tree_chart,
+	"i-component": i_component,
+	"i-collapse": i_collapse,
+	"i-collapse-3": i_collapse_3,
+	"i-code": i_code,
+	"i-column-right": i_column_right,
+	"i-column": i_column,
+	"i-color-swatch": i_color_swatch,
+	"i-collection": i_collection,
+	"i-currency-euro": i_currency_euro,
+	"i-copy-classification": i_copy_classification,
+	"i-copy": i_copy,
+	"i-cube-transparent": i_cube_transparent,
+	"i-currency-bangladeshi": i_currency_bangladeshi,
+	"i-credit-card": i_credit_card,
+	"i-crown": i_crown,
 	"i-computer": i_computer,
+	"i-currency-pound": i_currency_pound,
+	"i-cursor-click": i_cursor_click,
+	"i-customer-support": i_customer_support,
+	"i-dataset": i_dataset,
+	"i-database": i_database,
+	"i-date-time": i_date_time,
+	"i-cut": i_cut,
 	"i-data-lake": i_data_lake,
-	"i-user-equity": i_user_equity,
+	"i-currency-yen": i_currency_yen,
+	"i-currency-rupee": i_currency_rupee,
+	"i-destroy": i_destroy,
+	"i-division": i_division,
+	"i-delete": i_delete,
+	"i-document": i_document,
+	"i-dev": i_dev,
+	"i-device-mobile": i_device_mobile,
+	"i-description": i_description,
+	"i-descending": i_descending,
+	"i-domain": i_domain,
+	"i-document-search": i_document_search,
+	"i-document-preview": i_document_preview,
+	"i-dollar": i_dollar,
+	"i-document-remove": i_document_remove,
+	"i-dollar-filled": i_dollar_filled,
+	"i-document-duplicate": i_document_duplicate,
+	"i-document-add": i_document_add,
+	"i-document-report": i_document_report,
+	"i-email-sent": i_email_sent,
 	"i-drag-corner": i_drag_corner,
+	"i-edit": i_edit,
+	"i-drag-vertical": i_drag_vertical,
+	"i-download": i_download,
+	"i-dots-vertical": i_dots_vertical,
+	"i-dropper": i_dropper,
+	"i-edit-fill": i_edit_fill,
+	"i-drag-horizontal": i_drag_horizontal,
+	"i-download-cart": i_download_cart,
+	"i-evidence-approved": i_evidence_approved,
+	"i-enter": i_enter,
+	"i-env-shape": i_env_shape,
+	"i-equal": i_equal,
+	"i-evidence": i_evidence,
+	"i-emoji-happy": i_emoji_happy,
+	"i-emoji-sad": i_emoji_sad,
+	"i-email-tick": i_email_tick,
+	"i-external-link": i_external_link,
+	"i-expand": i_expand,
+	"i-evidence-rejected": i_evidence_rejected,
+	"i-expand-3": i_expand_3,
+	"i-export": i_export,
+	"i-expand-4": i_expand_4,
+	"i-evidence-missing": i_evidence_missing,
+	"i-expand-2": i_expand_2,
+	"i-file-upload": i_file_upload,
+	"i-file-download": i_file_download,
+	"i-file-csv": i_file_csv,
+	"i-family": i_family,
+	"i-file-SFTP": i_file_SFTP,
+	"i-fallback": i_fallback,
+	"i-fast-forward": i_fast_forward,
+	"i-file-code": i_file_code,
+	"i-file": i_file,
+	"i-folder-add": i_folder_add,
+	"i-folder-open": i_folder_open,
+	"i-flag": i_flag,
+	"i-flash": i_flash,
+	"i-filter": i_filter,
+	"i-folder": i_folder,
+	"i-folder-download": i_folder_download,
+	"i-film": i_film,
+	"i-fire": i_fire,
+	"i-fingerprint": i_fingerprint,
+	"i-generate": i_generate,
+	"i-folder-remove": i_folder_remove,
+	"i-git-commit": i_git_commit,
+	"i-function": i_function,
+	"i-git-account": i_git_account,
+	"i-generic": i_generic,
+	"i-git": i_git,
+	"i-gift-hamper": i_gift_hamper,
+	"i-git-branch": i_git_branch,
+	"i-git-repo": i_git_repo,
+	"i-hand": i_hand,
+	"i-hamburger-open": i_hamburger_open,
+	"i-grid-view": i_grid_view,
+	"i-hamburger": i_hamburger,
+	"i-globe-2": i_globe_2,
+	"i-hamburger-close": i_hamburger_close,
+	"i-health-1": i_health_1,
+	"i-globe": i_globe,
+	"i-hashtag": i_hashtag,
+	"i-hide": i_hide,
+	"i-inbox": i_inbox,
+	"i-home": i_home,
+	"i-health-2": i_health_2,
+	"i-heart": i_heart,
+	"i-id-card": i_id_card,
+	"i-import": i_import,
+	"i-icon": i_icon,
+	"i-inbox-in": i_inbox_in,
+	"i-history": i_history,
+	"i-issue-1": i_issue_1,
+	"i-java": i_java,
+	"i-incremental": i_incremental,
+	"i-indent": i_indent,
+	"i-justification": i_justification,
+	"i-infinity": i_infinity,
+	"i-info-solo": i_info_solo,
+	"i-info-fill": i_info_fill,
+	"i-integration": i_integration,
+	"i-line-of-business": i_line_of_business,
+	"i-link": i_link,
+	"i-launch": i_launch,
+	"i-line": i_line,
+	"i-library-fill": i_library_fill,
+	"i-letter": i_letter,
+	"i-key": i_key,
+	"i-lambda": i_lambda,
+	"i-mail-open": i_mail_open,
+	"i-loader-success": i_loader_success,
+	"i-loader-warning": i_loader_warning,
+	"i-loader": i_loader,
+	"i-location": i_location,
+	"i-loader-danger": i_loader_danger,
+	"i-lock": i_lock,
+	"i-mail": i_mail,
+	"i-logout": i_logout,
+	"i-login": i_login,
+	"i-map": i_map,
+	"i-menu-alt-2": i_menu_alt_2,
+	"i-microphone": i_microphone,
+	"i-menu-alt-4": i_menu_alt_4,
+	"i-minus-2": i_minus_2,
+	"i-map-1": i_map_1,
+	"i-menu-alt-3": i_menu_alt_3,
+	"i-minus": i_minus,
+	"i-menu-alt-1": i_menu_alt_1,
+	"i-more": i_more,
+	"i-moon": i_moon,
+	"i-movie": i_movie,
+	"i-name": i_name,
+	"i-more-filled": i_more_filled,
 	"i-minus-fill": i_minus_fill,
-	"i-notch-up": i_notch_up,
+	"i-music": i_music,
+	"i-minus-sm": i_minus_sm,
+	"i-network": i_network,
+	"i-notarization": i_notarization,
+	"i-node-connector": i_node_connector,
+	"i-newspaper": i_newspaper,
+	"i-notch-right": i_notch_right,
 	"i-notch-left": i_notch_left,
-	"i-office-building": i_office_building,
+	"i-not-equal": i_not_equal,
 	"i-notch-down": i_notch_down,
-	"i-phone-outgoing": i_phone_outgoing,
+	"i-new-tab": i_new_tab,
+	"i-notch-up": i_notch_up,
+	"i-pause": i_pause,
+	"i-onboarding": i_onboarding,
+	"i-paper-airplane": i_paper_airplane,
+	"i-paragraph": i_paragraph,
+	"i-paper-clip-not-found": i_paper_clip_not_found,
+	"i-org": i_org,
+	"i-office-building": i_office_building,
+	"i-paper-clip": i_paper_clip,
+	"i-org-fill": i_org_fill,
 	"i-pencil-alt": i_pencil_alt,
 	"i-phone-incoming": i_phone_incoming,
 	"i-photo": i_photo,
-	"i-inbox": i_inbox,
-	"i-color-swatch": i_color_swatch,
-	"i-archive": i_archive,
-	"i-inbox-in": i_inbox_in,
-	"i-phone": i_phone,
-	"i-document": i_document,
-	"i-menu-alt-1": i_menu_alt_1,
-	"i-chart-pie": i_chart_pie,
-	"i-file-download": i_file_download,
-	"i-switch-horizontal": i_switch_horizontal,
-	"i-menu-alt-3": i_menu_alt_3,
-	"i-switch-vertical": i_switch_vertical,
-	"i-menu-alt-2": i_menu_alt_2,
-	"i-menu-alt-4": i_menu_alt_4,
-	"i-document-add": i_document_add,
-	"i-credit-card": i_credit_card,
-	"i-mail-open": i_mail_open,
-	"i-heart": i_heart,
-	"i-volume-off": i_volume_off,
-	"i-adjustments": i_adjustments,
-	"i-document-remove": i_document_remove,
-	"i-volume-up": i_volume_up,
-	"i-document-duplicate": i_document_duplicate,
-	"i-paper-clip-not-found": i_paper_clip_not_found,
-	"i-trending-up": i_trending_up,
-	"i-dots-vertical": i_dots_vertical,
-	"i-paper-clip": i_paper_clip,
-	"i-alert-fill": i_alert_fill,
-	"i-arrow-circle-down": i_arrow_circle_down,
-	"i-close-circle": i_close_circle,
-	"i-arrow-circle-right": i_arrow_circle_right,
-	"i-trending-down": i_trending_down,
-	"i-at-symbol": i_at_symbol,
-	"i-receipt-refund": i_receipt_refund,
-	"i-currency-rupee": i_currency_rupee,
-	"i-selector": i_selector,
-	"i-currency-euro": i_currency_euro,
-	"i-currency-pound": i_currency_pound,
-	"i-currency-yen": i_currency_yen,
-	"i-printer": i_printer,
-	"i-emoji-sad": i_emoji_sad,
-	"i-emoji-happy": i_emoji_happy,
-	"i-ticket": i_ticket,
-	"i-clipboard-copy-in": i_clipboard_copy_in,
-	"i-moon": i_moon,
-	"i-qrcode": i_qrcode,
-	"i-arrow-circle-left": i_arrow_circle_left,
-	"i-arrow-circle-up": i_arrow_circle_up,
-	"i-sun": i_sun,
-	"i-external-link": i_external_link,
-	"i-clipboard-copy": i_clipboard_copy,
-	"i-clipboard-check": i_clipboard_check,
-	"i-template": i_template,
-	"i-microphone": i_microphone,
-	"i-chat-alt": i_chat_alt,
-	"i-cursor-click": i_cursor_click,
-	"i-document-report": i_document_report,
-	"i-book-open": i_book_open,
-	"i-annotation": i_annotation,
-	"i-sparkles": i_sparkles,
-	"i-download-cart": i_download_cart,
-	"i-collection": i_collection,
-	"i-academic-cap": i_academic_cap,
-	"i-plus-sm": i_plus_sm,
-	"i-calculator": i_calculator,
-	"i-speakerphone": i_speakerphone,
+	"i-pause-fill": i_pause_fill,
+	"i-pentagram": i_pentagram,
+	"i-percentage": i_percentage,
 	"i-phone-missed-call": i_phone_missed_call,
-	"i-reply": i_reply,
-	"i-verified": i_verified,
-	"i-chevron-double-down": i_chevron_double_down,
-	"i-chevron-double-right": i_chevron_double_right,
-	"i-folder-download": i_folder_download,
-	"i-gift-hamper": i_gift_hamper,
-	"i-receipt-tax": i_receipt_tax,
-	"i-document-search": i_document_search,
-	"i-chevron-double-left": i_chevron_double_left,
-	"i-server": i_server,
-	"i-chart-square-bar": i_chart_square_bar,
-	"i-minus-sm": i_minus_sm,
-	"i-support": i_support,
-	"i-beaker": i_beaker,
-	"i-folder-remove": i_folder_remove,
-	"i-currency-bangladeshi": i_currency_bangladeshi,
-	"i-bookmark-alt": i_bookmark_alt,
-	"i-chart-bar": i_chart_bar,
-	"i-wifi": i_wifi,
-	"i-truck": i_truck,
-	"i-status-online": i_status_online,
-	"i-folder-add": i_folder_add,
-	"i-chevron-double-up": i_chevron_double_up,
-	"i-newspaper": i_newspaper,
-	"i-shopping-bag": i_shopping_bag,
-	"i-presentation-chart-line": i_presentation_chart_line,
-	"i-folder-open": i_folder_open,
-	"i-library-fill": i_library_fill,
-	"i-arrow-sm-down": i_arrow_sm_down,
-	"i-arrow-sm-left": i_arrow_sm_left,
-	"i-arrow-sm-up": i_arrow_sm_up,
-	"i-arrow-sm-right": i_arrow_sm_right,
-	"i-view-grid-add": i_view_grid_add,
-	"i-status-offline": i_status_offline,
-	"i-fast-forward": i_fast_forward,
-	"i-save-as": i_save_as,
-	"i-thumb-up": i_thumb_up,
-	"i-cube-transparent": i_cube_transparent,
-	"i-presentation-chart-bar": i_presentation_chart_bar,
-	"i-backspace": i_backspace,
-	"i-id-card": i_id_card,
-	"i-paper-airplane": i_paper_airplane,
-	"i-map": i_map,
-	"i-save": i_save,
-	"i-thumb-down": i_thumb_down,
-	"i-hand": i_hand,
-	"i-rewind": i_rewind,
-	"i-email-tick": i_email_tick,
+	"i-pdf": i_pdf,
+	"i-phone-outgoing": i_phone_outgoing,
+	"i-phone": i_phone,
+	"i-plus-fill": i_plus_fill,
+	"i-play-fill": i_play_fill,
+	"i-plus": i_plus,
 	"i-play-stop": i_play_stop,
-	"i-device-mobile": i_device_mobile,
-	"i-rss": i_rss,
-	"i-close-2": i_close_2,
-	"i-cake": i_cake,
-	"i-row": i_row,
-	"i-drag-horizontal": i_drag_horizontal,
-	"i-chat-support": i_chat_support,
-	"i-webhook": i_webhook,
-	"i-recipe": i_recipe,
-	"i-customer-support": i_customer_support,
-	"i-star-outline": i_star_outline,
-	"i-xls": i_xls,
-	"i-bucket": i_bucket,
-	"i-add-below": i_add_below,
-	"i-add-above": i_add_above,
-	"i-checkerboard": i_checkerboard,
-	"i-service": i_service,
-	"i-network": i_network,
-	"i-cloud-landing": i_cloud_landing,
-	"i-org-fill": i_org_fill,
-	"i-generate": i_generate,
-	"i-file-upload": i_file_upload,
+	"i-pipe": i_pipe,
+	"i-play": i_play,
+	"i-pointer-right": i_pointer_right,
+	"i-plus-sm": i_plus_sm,
+	"i-pin": i_pin,
 	"i-plug": i_plug,
-	"i-collapse-3": i_collapse_3,
-	"i-lambda": i_lambda,
-	"i-document-preview": i_document_preview,
-	"i-workflow": i_workflow,
+	"i-presentation-chart-line": i_presentation_chart_line,
+	"i-receipt-tax": i_receipt_tax,
+	"i-prod": i_prod,
+	"i-project-shape": i_project_shape,
+	"i-printer": i_printer,
+	"i-question-filled": i_question_filled,
+	"i-presentation-chart-bar": i_presentation_chart_bar,
+	"i-receipt-refund": i_receipt_refund,
+	"i-puzzle": i_puzzle,
+	"i-qrcode": i_qrcode,
+	"i-refresh": i_refresh,
+	"i-row": i_row,
+	"i-reply": i_reply,
+	"i-rss": i_rss,
+	"i-required": i_required,
+	"i-recipe": i_recipe,
+	"i-reload": i_reload,
+	"i-rewind": i_rewind,
+	"i-save": i_save,
+	"i-reset": i_reset,
+	"i-selector": i_selector,
+	"i-service": i_service,
+	"i-save-test": i_save_test,
+	"i-scale": i_scale,
+	"i-search": i_search,
+	"i-save-as": i_save_as,
+	"i-search-fill": i_search_fill,
+	"i-separator": i_separator,
+	"i-server": i_server,
+	"i-shrink": i_shrink,
+	"i-setting": i_setting,
+	"i-shield-success": i_shield_success,
+	"i-shield-alert": i_shield_alert,
+	"i-shield": i_shield,
+	"i-software": i_software,
+	"i-shopping-bag": i_shopping_bag,
+	"i-gears": i_gears,
+	"i-share-2": i_share_2,
+	"i-sort-desc": i_sort_desc,
+	"i-sort-asc": i_sort_asc,
+	"i-staging": i_staging,
+	"i-sort": i_sort,
+	"i-star-outline": i_star_outline,
+	"i-sparkles": i_sparkles,
+	"i-status-offline": i_status_offline,
+	"i-star": i_star,
+	"i-speakerphone": i_speakerphone,
+	"i-support": i_support,
+	"i-summary": i_summary,
+	"i-stopwatch": i_stopwatch,
+	"i-stop": i_stop,
+	"i-subline-of-business": i_subline_of_business,
 	"i-super-admin": i_super_admin,
-	"i-export": i_export,
-	"i-node-connector": i_node_connector,
-	"i-edit-fill": i_edit_fill,
-	"i-dataset": i_dataset,
+	"i-sun": i_sun,
+	"i-status-online": i_status_online,
+	"i-terminal-fill": i_terminal_fill,
+	"i-table": i_table,
+	"i-switch-vertical": i_switch_vertical,
 	"i-table-edit": i_table_edit,
-	"i-import": i_import
+	"i-table-1": i_table_1,
+	"i-tenant": i_tenant,
+	"i-switch-horizontal": i_switch_horizontal,
+	"i-tag": i_tag,
+	"i-template": i_template,
+	"i-tick-thick": i_tick_thick,
+	"i-thumb-down": i_thumb_down,
+	"i-text": i_text,
+	"i-thumb-up": i_thumb_up,
+	"i-tick-2": i_tick_2,
+	"i-terminal-outline": i_terminal_outline,
+	"i-theme": i_theme,
+	"i-tick-double": i_tick_double,
+	"i-tick-fill": i_tick_fill,
+	"i-tick": i_tick,
+	"i-triangle-right": i_triangle_right,
+	"i-trending-down": i_trending_down,
+	"i-triangle-left": i_triangle_left,
+	"i-tree": i_tree,
+	"i-tree-chart": i_tree_chart,
+	"i-trending-up": i_trending_up,
+	"i-ticket": i_ticket,
+	"i-transfer": i_transfer,
+	"i-triangle-down": i_triangle_down,
+	"i-transform": i_transform,
+	"i-user-add": i_user_add,
+	"i-user": i_user,
+	"i-unlock": i_unlock,
+	"i-triangle-up": i_triangle_up,
+	"i-user-tick": i_user_tick,
+	"i-unlink": i_unlink,
+	"i-type": i_type,
+	"i-truck": i_truck,
+	"i-upload": i_upload,
+	"i-variable": i_variable,
+	"i-verified": i_verified,
+	"i-user-filled": i_user_filled,
+	"i-user-double": i_user_double,
+	"i-user-equity": i_user_equity,
+	"i-user-stop": i_user_stop,
+	"i-user-cross": i_user_cross,
+	"i-user-remove": i_user_remove,
+	"i-user-time": i_user_time,
+	"i-user-info": i_user_info,
+	"i-view-grid-add": i_view_grid_add,
+	"i-volume-off": i_volume_off,
+	"i-view-off-fill": i_view_off_fill,
+	"i-volume-up": i_volume_up,
+	"i-webhook": i_webhook,
+	"i-view-fill": i_view_fill,
+	"i-view": i_view,
+	"i-workflow": i_workflow,
+	"i-xls": i_xls,
+	"i-wifi": i_wifi,
+	"i-zoom-out": i_zoom_out,
+	"i-zoom-in": i_zoom_in
 } as Record<string, string>;
 export default IconPack;

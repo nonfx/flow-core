@@ -1,16 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_983_716)">
-        <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M1 3.2C1 1.43269 2.43269 0 4.2 0H20.2C21.9673 0 23.4 1.43269 23.4 3.2V16C23.4 17.7673 21.9673 19.2 20.2 19.2H16.6493L16.8448 19.982L18.1314 21.2686C18.589 21.7262 18.7259 22.4144 18.4783 23.0123C18.2306 23.6102 17.6472 24 17.0001 24H7.40005C6.75291 24 6.16949 23.6102 5.92184 23.0123C5.67419 22.4144 5.81108 21.7262 6.26868 21.2686L7.55531 19.982L7.7508 19.2H4.2C2.43269 19.2 1 17.7673 1 16V3.2ZM10.2341 14.4C10.2105 14.3995 10.187 14.3995 10.1636 14.4H4.2V3.2H20.2V14.4H14.2365C14.2131 14.3995 14.1896 14.3995 14.166 14.4H10.2341Z"
-            fill="white"
-        />
-    </g>
-    <defs>
-        <clipPath id="clip0_983_716">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path fill="white" fill-rule="evenodd" d="M1 3.2A3.2 3.2 0 0 1 4.2 0h16a3.2 3.2 0 0 1 3.2 3.2V16a3.2 3.2 0 0 1-3.2 3.2h-3.55l.195.782 1.286 1.287A1.6 1.6 0 0 1 17.001 24H7.4a1.6 1.6 0 0 1-1.131-2.731l1.286-1.287.196-.782H4.2A3.2 3.2 0 0 1 1 16zm9.234 11.2H4.2V3.2h16v11.2z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="white" d="M0 0h24v24H0z"/></clipPath></defs></svg>`;

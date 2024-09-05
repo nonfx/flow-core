@@ -1,10 +1,8 @@
 import { html } from "lit-html";
 import flowAwsIcon from "@nonfx/flow-icons/src/flow-aws-icon/icon-pack";
-import flowEngineeringIcon from "@nonfx/flow-icons/src/flow-engineering-icon/icon-pack";
 import flowGCPIcon from "@nonfx/flow-icons/src/flow-gcp-icon/icon-pack";
 import flowProductIcon from "@nonfx/flow-icons/src/flow-product-icon/icon-pack";
 import flowSystemIcon from "@nonfx/flow-icons/src/flow-system-icon/icon-pack";
-import saasSystemIcon from "@nonfx/flow-icons/src/saas-system-icon/icon-pack";
 import { customElement, property } from "lit/decorators.js";
 import { LitElement } from "lit";
 
@@ -104,16 +102,6 @@ export const Aws = {
 	name: "aws"
 };
 
-export const Engineering = {
-	render: () => {
-		const searchTerm = "";
-		return html`
-			<icon-pack .packName=${"engineering"} .icons=${flowEngineeringIcon}> </icon-pack>
-		`;
-	},
-
-	name: "engineering"
-};
 export const Gcp = {
 	render: () => {
 		const searchTerm = "";
@@ -130,12 +118,4 @@ export const Product = {
 	},
 
 	name: "product"
-};
-export const SaasSystem = {
-	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"saas-system"} .icons=${saasSystemIcon}> </icon-pack> `;
-	},
-
-	name: "saas-system"
 };

@@ -1,9 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M12 4C12.8837 4 13.6 4.71634 13.6 5.6V10.4L18.4 10.4C19.2837 10.4 20 11.1163 20 12C20 12.8837 19.2837 13.6 18.4 13.6H13.6V18.4C13.6 19.2837 12.8837 20 12 20C11.1163 20 10.4 19.2837 10.4 18.4V13.6H5.6C4.71634 13.6 4 12.8837 4 12C4 11.1163 4.71634 10.4 5.6 10.4L10.4 10.4V5.6C10.4 4.71634 11.1163 4 12 4Z"
-        fill="white"
-    />
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="M12 4a1.6 1.6 0 0 1 1.6 1.6v4.8h4.8a1.6 1.6 0 1 1 0 3.2h-4.8v4.8a1.6 1.6 0 1 1-3.2 0v-4.8H5.6a1.6 1.6 0 1 1 0-3.2h4.8V5.6A1.6 1.6 0 0 1 12 4" clip-rule="evenodd"/></svg>`;

@@ -1,10 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 3C1.34315 3 0 4.34315 0 6V7.5H24V6C24 4.34315 22.6569 3 21 3H3Z" fill="white" />
-    <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M24 10.5H0V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V10.5ZM3 16.5C3 15.6716 3.67157 15 4.5 15H6C6.82843 15 7.5 15.6716 7.5 16.5C7.5 17.3284 6.82843 18 6 18H4.5C3.67157 18 3 17.3284 3 16.5ZM10.5 15C9.67157 15 9 15.6716 9 16.5C9 17.3284 9.67157 18 10.5 18H12C12.8284 18 13.5 17.3284 13.5 16.5C13.5 15.6716 12.8284 15 12 15H10.5Z"
-        fill="white"
-    />
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="white" d="M3 3a3 3 0 0 0-3 3v1.5h24V6a3 3 0 0 0-3-3z"/><path fill="white" fill-rule="evenodd" d="M24 10.5H0V18a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3zm-21 6A1.5 1.5 0 0 1 4.5 15H6a1.5 1.5 0 0 1 0 3H4.5A1.5 1.5 0 0 1 3 16.5m7.5-1.5a1.5 1.5 0 0 0 0 3H12a1.5 1.5 0 0 0 0-3z" clip-rule="evenodd"/></svg>`;

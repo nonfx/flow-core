@@ -1,17 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_1504_70)">
-        <path d="M24 0H0V24H24V0Z" fill="#ED7100" />
-        <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M6.00001 17.4H17.4V5.99998H6.00001V17.4ZM19.8 7.19998V6.59998H18V5.69998C18 5.53438 17.8656 5.39998 17.7 5.39998H16.8V3.59998H16.2V5.39998H14.4V3.59998H13.8V5.39998H12V3.59998H11.4V5.39998H9.60001V3.59998H9.00001V5.39998H7.20001V3.59998H6.60001V5.39998H5.70001C5.53441 5.39998 5.40001 5.53438 5.40001 5.69998V6.59998H3.60001V7.19998H5.40001V8.99998H3.60001V9.59998H5.40001V11.4H3.60001V12H5.40001V13.8H3.60001V14.4H5.40001V16.2H3.60001V16.8H5.40001V17.7C5.40001 17.8656 5.53441 18 5.70001 18H6.60001V19.8H7.20001V18H9.00001V19.8H9.60001V18H11.4V19.8H12V18H13.8V19.8H14.4V18H16.2V19.8H16.8V18H17.7C17.8656 18 18 17.8656 18 17.7V16.8H19.8V16.2H18V14.4H19.8V13.8H18V12H19.8V11.4H18V9.59998H19.8V8.99998H18V7.19998H19.8Z"
-            fill="white"
-        />
-    </g>
-    <defs>
-        <clipPath id="clip0_1504_70">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path fill="#ED7100" d="M24 0H0v24h24z"/><path fill="#fff" fill-rule="evenodd" d="M6 17.4h11.4V6H6zM19.8 7.2v-.6H18v-.9a.3.3 0 0 0-.3-.3h-.9V3.6h-.6v1.8h-1.8V3.6h-.6v1.8H12V3.6h-.6v1.8H9.6V3.6H9v1.8H7.2V3.6h-.6v1.8h-.9a.3.3 0 0 0-.3.3v.9H3.6v.6h1.8V9H3.6v.6h1.8v1.8H3.6v.6h1.8v1.8H3.6v.6h1.8v1.8H3.6v.6h1.8v.9a.3.3 0 0 0 .3.3h.9v1.8h.6V18H9v1.8h.6V18h1.8v1.8h.6V18h1.8v1.8h.6V18h1.8v1.8h.6V18h.9a.3.3 0 0 0 .3-.3v-.9h1.8v-.6H18v-1.8h1.8v-.6H18V12h1.8v-.6H18V9.6h1.8V9H18V7.2z" clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>`;

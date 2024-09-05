@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-icons",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Flow icons package",
   "module": "dist/flow-icons.es.js",
   "main": "dist/flow-icons.cjs.js",
@@ -28,7 +28,8 @@
     "ts-node": "^10.9.1",
     "axios": "^0.27.2",
     "dotenv": "^16.4.5",
-    "@types/node": "^22.1.0"
+    "@types/node": "^22.1.0",
+    "svgo": "3.3.2"
   },
   "peerDependencies": {
     "@nonfx/flow-core": "*",

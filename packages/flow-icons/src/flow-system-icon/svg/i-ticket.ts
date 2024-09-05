@@ -1,7 +1,1 @@
-export default `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M0 6C0 4.34315 1.34315 3 3 3H21C22.6569 3 24 4.34315 24 6V9C22.3431 9 21 10.3431 21 12C21 13.6569 22.3431 15 24 15V18C24 19.6569 22.6569 21 21 21H3C1.34315 21 0 19.6569 0 18V15C1.65685 15 3 13.6569 3 12C3 10.3431 1.65685 9 0 9V6Z"
-        fill="white"
-    />
-</svg>
-`;
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="white" d="M0 6a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3v3a3 3 0 1 0 0 6v3a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3v-3a3 3 0 1 0 0-6z"/></svg>`;

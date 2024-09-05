@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.10] - 2024-09-04
+
+### Patch Changes
+
+- colors updated
+
 ## [2.10.9] - 2024-08-29
 
 ### Patch Changes

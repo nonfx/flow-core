@@ -13,10 +13,6 @@ const config: FigmaPackageConfig = {
 			nodeId: "0:1"
 		},
 		{
-			name: "saas-system-icon",
-			nodeId: "55:612"
-		},
-		{
 			name: "flow-product-icon",
 			nodeId: "1:2"
 		},
@@ -29,8 +25,8 @@ const config: FigmaPackageConfig = {
 			nodeId: "1:4"
 		},
 		{
-			name: "flow-engineering-icon",
-			nodeId: "1270:641"
+			name: "flow-policy-icon",
+			nodeId: "47:71"
 		}
 	]
 };
