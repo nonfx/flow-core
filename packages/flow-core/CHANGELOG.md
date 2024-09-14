@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.12] - 2024-09-14
+
+### Patch Changes
+
+- `f-button` click event and action event issue fixed.
+
 ## [2.10.11] - 2024-09-04
 
 ### Patch Changes

@@ -19,7 +19,7 @@ export const Playground = {
 		const fieldRef = createRef<FButton>();
 
 		const handleClick = (event: Event) => {
-			console.log(event);
+			console.log("click event", event);
 		};
 
 		setTimeout(() => {
@@ -29,6 +29,7 @@ export const Playground = {
 		}, 2000);
 
 		const handleAction = (event: CustomEvent) => {
+			console.log("action event", event);
 			if (fieldRef.value) {
 				fieldRef.value.label = event.detail.action;
 			}
