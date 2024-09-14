@@ -408,7 +408,7 @@ export class FButton extends FRoot {
 										align="middle-left"
 										gap="auto"
 										clickable
-										@click=${() => this.selectAction(a)}
+										@click=${(event: PointerEvent) => this.selectAction(event, a)}
 									>
 										${typeof a === "function"
 											? a()
@@ -425,7 +425,8 @@ export class FButton extends FRoot {
 				: nothing} `;
 	}
 
-	selectAction(action: FButtonAction) {
+	selectAction(e: PointerEvent, action: FButtonAction) {
+		e.stopPropagation();
 		this.selectedAction = action;
 		this.closeButtonActions();
 
@@ -438,7 +439,8 @@ export class FButton extends FRoot {
 		});
 		this.dispatchEvent(event);
 	}
-	handleButtonActions() {
+	handleButtonActions(event: PointerEvent) {
+		event.stopPropagation();
 		if (this.buttonActionsPopover) {
 			this.buttonActionsPopover.target = this;
 			this.buttonActionsPopover.offset = {
