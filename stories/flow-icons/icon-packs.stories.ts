@@ -3,6 +3,7 @@ import flowAwsIcon from "@nonfx/flow-icons/src/flow-aws-icon/icon-pack";
 import flowGCPIcon from "@nonfx/flow-icons/src/flow-gcp-icon/icon-pack";
 import flowProductIcon from "@nonfx/flow-icons/src/flow-product-icon/icon-pack";
 import flowSystemIcon from "@nonfx/flow-icons/src/flow-system-icon/icon-pack";
+import flowPolicyIcon from "@nonfx/flow-icons/src/flow-policy-icon/icon-pack";
 import { customElement, property } from "lit/decorators.js";
 import { LitElement } from "lit";
 
@@ -118,4 +119,12 @@ export const Product = {
 	},
 
 	name: "product"
+};
+export const Policy = {
+	render: () => {
+		const searchTerm = "";
+		return html` <icon-pack .packName=${"policy"} .icons=${flowPolicyIcon}> </icon-pack> `;
+	},
+
+	name: "policy"
 };

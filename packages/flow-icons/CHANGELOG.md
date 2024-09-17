@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.0.2] - 2024-09-17
+
+### Patch
+
+- Icons updated
+
 ## [1.0.1] - 2024-09-05
 
 ### Patch
