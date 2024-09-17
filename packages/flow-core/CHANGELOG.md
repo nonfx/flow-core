@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.13] - 2024-09-17
+
+### Patch Changes
+
+- `f-accordion` height issue in export in pdf
+
 ## [2.10.12] - 2024-09-14
 
 ### Patch Changes
