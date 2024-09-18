@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.14] - 2024-09-18
+
+### Patch Changes
+
+- color tokens updated
+
 ## [2.10.13] - 2024-09-17
 
 ### Patch Changes
