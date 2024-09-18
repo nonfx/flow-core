@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.15] - 2024-09-18
+
+### Patch Changes
+
+- `f-icon` allow custom state with color variable
+
 ## [2.10.14] - 2024-09-18
 
 ### Patch Changes
