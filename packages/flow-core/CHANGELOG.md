@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.16] - 2024-09-18
+
+### Patch Changes
+
+- `f-accordion` scroll isssue fixed
+
 ## [2.10.15] - 2024-09-18
 
 ### Patch Changes
