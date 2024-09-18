@@ -108,13 +108,15 @@ export class FIcon extends FRoot {
 		if (!this.source) {
 			throw new Error("f-icon : source is mandatory field");
 		}
-		if (
-			this.state?.includes("custom") &&
-			this.fill &&
-			!validateHTMLColor(this.fill) &&
-			!validateHTMLColorName(this.fill)
-		) {
-			throw new Error("f-icon : enter correct color-name or hex-color-code");
+		if (!this.state?.includes("custom, var(")) {
+			if (
+				this.state?.includes("custom") &&
+				this.fill &&
+				!validateHTMLColor(this.fill) &&
+				!validateHTMLColorName(this.fill)
+			) {
+				throw new Error("f-icon : enter correct color-name or hex-color-code");
+			}
 		}
 	}
 
