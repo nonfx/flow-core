@@ -174,7 +174,7 @@ export class FAccordion extends FRoot {
 		</f-div>`;
 
 		return html`
-			<f-div direction="column" width="100%" height="hug-content">
+			<f-div direction="column" width="100%" part="accordion-header-wrapper">
 				<f-div
 					id="${this.headerId}"
 					height="hug-content"
@@ -193,7 +193,7 @@ export class FAccordion extends FRoot {
 					aria-controls="${this.contentId}"
 				>
 					${this.icon !== "none" && this.iconPlacement === "left" ? accordionIcon : nothing}
-					<f-div height="hug-content">
+					<f-div>
 						<slot></slot>
 					</f-div>
 					${this.icon !== "none" && this.iconPlacement === "right" ? accordionIcon : nothing}
@@ -205,7 +205,6 @@ export class FAccordion extends FRoot {
 					direction="column"
 					.padding=${this.bodyPadding}
 					overflow="hidden"
-					height="hug-content"
 					id="${this.contentId}"
 					role="region"
 					aria-labelledby="${this.headerId}"
