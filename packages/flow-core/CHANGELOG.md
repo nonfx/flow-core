@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [2.10.17] - 2024-09-20
+
+### Patch Changes
+
+- `f-select` auto-complete removed from search input
+- `f-select` group search issue fixed.
+
 ## [2.10.16] - 2024-09-18
 
 ### Patch Changes
