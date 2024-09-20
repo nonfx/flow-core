@@ -251,26 +251,28 @@ export function handleInput(this: FSelect, e: InputEvent) {
 
 		if (Array.isArray(this.options)) {
 			this.filteredOptions = (this.options as FSelectArrayOfObjects)?.filter(
-				(item: FSelectSingleOption) =>
-					typeof item === "string"
+				(item: FSelectSingleOption) => {
+					return typeof item === "string"
 						? item.toLowerCase().includes((e.target as HTMLInputElement)?.value.toLowerCase())
 						: (item as FSelectOptionObject).title
 								.toLowerCase()
-								.includes((e.target as HTMLInputElement)?.value.toLowerCase())
+								.includes((e.target as HTMLInputElement)?.value.toLowerCase());
+				}
 			);
 		} else {
-			const filteredOptionsCloned = cloneDeep(this.filteredOptions);
+			const filteredOptionsCloned = cloneDeep(this.options);
 			Object.keys(this.options).forEach(item => {
 				(filteredOptionsCloned as FSelectOptionsGroup)[item] = (
 					(this.options as FSelectOptionsGroup)[item] as FSelectArrayOfObjects
-				)?.filter((obj: FSelectSingleOption) =>
-					typeof obj === "string"
+				)?.filter((obj: FSelectSingleOption) => {
+					return typeof obj === "string"
 						? obj.toLowerCase().includes((e.target as HTMLInputElement)?.value.toLowerCase())
 						: (obj as FSelectOptionObject).title
 								.toLowerCase()
-								.includes((e.target as HTMLInputElement)?.value.toLowerCase())
-				);
+								.includes((e.target as HTMLInputElement)?.value.toLowerCase());
+				});
 			});
+
 			this.filteredOptions = filteredOptionsCloned;
 		}
 		this.requestUpdate();

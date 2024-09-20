@@ -115,6 +115,7 @@ export default function render(this: FSelect) {
 					: ""
 				: this.placeholder}
 			size=${this.size}
+			autocomplete="off"
 			?readonly=${!this.searchable}
 			.value=${this.searchValue}
 			@input=${this.handleInput}
@@ -294,7 +295,7 @@ export default function render(this: FSelect) {
 			 * Check if options is object of groups
 			 */
 			Object.keys(this.filteredOptions)?.length > 0 &&
-			Object.keys(this.filteredOptions)?.every(
+			Object.keys(this.filteredOptions)?.some(
 				groupName => (this.filteredOptions as FSelectOptionsGroup)[groupName].length > 0
 			)
 		) {
