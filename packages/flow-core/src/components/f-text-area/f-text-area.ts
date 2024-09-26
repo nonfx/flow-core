@@ -109,6 +109,11 @@ export class FTextArea extends FRoot {
 		}
 	}
 
+	// We don't want textarea events to bubble up to parent as users can type enters/contrls etc.
+	handleKeyUp(e: KeyboardEvent) {
+		e.stopImmediatePropagation();
+	}
+
 	/**
 	 * emit event
 	 */
@@ -196,6 +201,7 @@ export class FTextArea extends FRoot {
 		this.ariaMultiLine = "true";
 		if (this.placeholder) this.setAttribute("aria-placeholder", this.placeholder);
 	}
+
 	render() {
 		const parentDiv = this.parentElement?.tagName === "F-DIV" ? this.parentElement : "";
 		/**
@@ -256,6 +262,7 @@ export class FTextArea extends FRoot {
 						?mask-value=${this.maskValue}
 						spellcheck=${this.maskValue ? "false" : "true"}
 						@input=${this.handleInput}
+						@keyup=${this.handleKeyUp}
 					></span>
 					${this.clear && Boolean(this.value) && !this.readOnly
 						? html` <f-icon

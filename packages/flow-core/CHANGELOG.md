@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.19] - 2024-09-26
+
+### Patch Changes
+
+- `f-text-area` keyup events should not bubble up to parent. Fixes f-form-builder from submitting itself when pressing enter.
+
 ## [2.10.18] - 2024-09-26
 
 ### Patch Changes
