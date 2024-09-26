@@ -91,6 +91,7 @@ in this case it is `f-button`
 		flex: 1 0 auto;
 		vertical-align: top;
 		width: fit-content;
+		position: relative;
 
 		&.custom-loader {
 			&[loading] {
@@ -233,6 +234,7 @@ in this case it is `f-button`
 
 			svg {
 				position: absolute;
+				top: unset;
 			}
 		}
 	}
