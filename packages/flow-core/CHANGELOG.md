@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.10.18] - 2024-09-26
+
+### Patch Changes
+
+- `f-button` loader getting out of element.
+
 ## [2.10.17] - 2024-09-20
 
 ### Patch Changes
