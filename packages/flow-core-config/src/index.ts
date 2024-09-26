@@ -63,7 +63,7 @@ export const ConfigUtil = {
 const cssSet = new Set<string>();
 
 export function injectCss(id: string, css: string) {
-	if (cssSet.has(id) || !document) {
+	if (cssSet.has(id) || typeof document === "undefined") {
 		return;
 	}
 

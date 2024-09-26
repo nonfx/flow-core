@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.1.7] - 2024-09-26
+
+### Patch changes
+
+- Make `flow-core-config` SSR friendly
+
 ## [1.1.6] - 2023-08-20
 
 ### Patch changes
