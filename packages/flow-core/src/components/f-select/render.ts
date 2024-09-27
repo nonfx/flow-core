@@ -12,7 +12,7 @@ import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 import loader from "../../mixins/svg/loader";
 import { map } from "lit/directives/map.js";
 
-if (!customElements.get("lit-virtualizer")) {
+if (typeof document !== "undefined" && !customElements.get("lit-virtualizer")) {
 	import("@lit-labs/virtualizer").catch(err => {
 		console.error("Failed to load lit-virtualizer:", err);
 	});

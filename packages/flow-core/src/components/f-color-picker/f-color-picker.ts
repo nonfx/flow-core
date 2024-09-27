@@ -6,7 +6,6 @@ import { FRoot } from "../../mixins/components/f-root/f-root";
 import { flowElement } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 
-import "vanilla-colorful";
 import { FPopover } from "../f-popover/f-popover";
 import { FDiv } from "../f-div/f-div";
 import { FInput } from "../f-input/f-input";
@@ -18,6 +17,10 @@ export type FColorPickerState = "primary" | "default" | "success" | "warning" | 
 export type FColorPickerInputEvent = {
 	value?: string;
 };
+
+if (typeof document !== "undefined") {
+	import("vanilla-colorful");
+}
 
 @flowElement("f-color-picker")
 export class FColorPicker extends FRoot {

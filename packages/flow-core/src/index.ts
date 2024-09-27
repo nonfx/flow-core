@@ -52,26 +52,28 @@ export * from "./components/f-countdown/f-countdown";
 
 export { html } from "lit";
 
-if (document.readyState !== "loading") {
-	ConfigUtil.initTheme();
-} else {
-	document.addEventListener("DOMContentLoaded", function () {
+if (typeof document !== "undefined") {
+	if (document.readyState !== "loading") {
 		ConfigUtil.initTheme();
-	});
-}
-
-document.addEventListener("keyup", (event: KeyboardEvent) => {
-	event.preventDefault();
-
-	if (event.key && event.key.toLowerCase() === "x" && event.shiftKey && event.ctrlKey) {
-		// console.log("Changing theme");
-		const currentTheme = ConfigUtil.getConfig().theme;
-
-		ConfigUtil.setConfig({
-			theme: currentTheme === "f-dark" ? "f-light" : "f-dark"
+	} else {
+		document.addEventListener("DOMContentLoaded", function () {
+			ConfigUtil.initTheme();
 		});
 	}
-});
+
+	document.addEventListener("keyup", (event: KeyboardEvent) => {
+		event.preventDefault();
+
+		if (event.key && event.key.toLowerCase() === "x" && event.shiftKey && event.ctrlKey) {
+			// console.log("Changing theme");
+			const currentTheme = ConfigUtil.getConfig().theme;
+
+			ConfigUtil.setConfig({
+				theme: currentTheme === "f-dark" ? "f-light" : "f-dark"
+			});
+		}
+	});
+}
 
 console.log(
 	`%c@nonfx/flow-core%cv${version}`,
