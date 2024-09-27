@@ -10,7 +10,7 @@ export default defineConfig({
 			entry: "src/index.ts",
 			name: "flow-lineage",
 			fileName: format => `flow-lineage.${format}.js`,
-			formats: ["es", "cjs"]
+			formats: ["es"]
 		},
 		rollupOptions: {
 			external: ["@nonfx/flow-core-config", "@nonfx/flow-core", /^lit/],

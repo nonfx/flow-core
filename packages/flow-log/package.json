@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-log",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Code editor component for flow library",
+  "type": "module",
   "module": "dist/flow-log.es.js",
-  "main": "dist/flow-log.es.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",

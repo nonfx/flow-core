@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-lineage",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "description": "Lineage dependency for flow design system",
+  "type": "module",
   "module": "dist/flow-lineage.es.js",
-  "main": "dist/flow-lineage.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",
