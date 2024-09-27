@@ -10,7 +10,7 @@ export default defineConfig({
 			entry: "src/index.ts",
 			name: "index",
 			fileName: format => `index.${format}.js`,
-			formats: ["es", "cjs"]
+			formats: ["es"]
 		},
 		rollupOptions: {
 			external: ["rxjs"]

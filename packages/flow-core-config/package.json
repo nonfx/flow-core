@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-core-config",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "Shared configuration for the Flow UI library",
+  "type": "module",
   "module": "dist/index.es.js",
-  "main": "dist/index.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "vite build --emptyOutDir"

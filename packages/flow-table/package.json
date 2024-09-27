@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-table",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Table component for flow library",
+  "type": "module",
   "module": "dist/flow-table.es.js",
-  "main": "dist/flow-table.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",

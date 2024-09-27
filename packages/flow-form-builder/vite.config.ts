@@ -10,7 +10,7 @@ export default defineConfig({
 			entry: "src/index.ts",
 			name: "flow-form-builder",
 			fileName: format => `flow-form-builder.${format}.js`,
-			formats: ["es", "cjs"]
+			formats: ["es"]
 		},
 		rollupOptions: {
 			external: ["@nonfx/flow-core-config", "@nonfx/flow-core", /^lit/, "rxjs", "lodash-es"],

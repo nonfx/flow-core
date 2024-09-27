@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-form-builder",
-  "version": "2.4.5",
+  "version": "2.5.0",
   "description": "Form builder for the flow design system",
+  "type": "module",
   "module": "dist/flow-form-builder.es.js",
-  "main": "dist/flow-form-builder.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "./compile.sh",

@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-core",
-  "version": "2.10.20",
+  "version": "2.11.0",
   "description": "Core package of flow design system",
+  "type": "module",
   "module": "dist/flow-core.es.js",
-  "main": "dist/flow-core.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",

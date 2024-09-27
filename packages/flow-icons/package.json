@@ -1,11 +1,10 @@
 {
   "name": "@nonfx/flow-icons",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Flow icons package",
-  "module": "dist/flow-icons.es.js",
-  "main": "dist/flow-icons.cjs.js",
-  "types": "dist/src/index.d.ts",
   "type": "module",
+  "module": "dist/flow-icons.es.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "download-icons": "node --no-warnings=ExperimentalWarning --loader ts-node/esm package-builder/download-icons.ts",
     "build": "bash ./compile.sh",

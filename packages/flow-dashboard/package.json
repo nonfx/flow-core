@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-dashboard",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Dashboard as code",
+  "type": "module",
   "module": "dist/flow-dashboard.es.js",
-  "main": "dist/flow-dashboard.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",

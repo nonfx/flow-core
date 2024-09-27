@@ -1,9 +1,9 @@
 {
   "name": "@nonfx/flow-text-editor",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Code editor component for flow library",
+  "type": "module",
   "module": "dist/flow-text-editor.es.js",
-  "main": "dist/flow-text-editor.cjs.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",

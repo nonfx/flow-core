@@ -10,7 +10,7 @@ export default defineConfig({
 			entry: "src/index.ts",
 			name: "flow-table",
 			fileName: format => `flow-table.${format}.js`,
-			formats: ["es", "cjs"]
+			formats: ["es"]
 		},
 		rollupOptions: {
 			// If we want to publish standalone components we don't externalize lit,

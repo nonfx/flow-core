@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.0] - 2024-09-27
+
+### Minor changes
+
+- Only exports an ESM build. Any modern bundler in 2024 will work with it.
+
 ## [2.10.20] - 2024-09-26
 
 ### Patch Changes
