@@ -60,9 +60,6 @@ importers:
       '@ollion/prettier-config':
         specifier: ^2.1.0
         version: 2.1.0(prettier@3.0.3)
-      '@storybook/addon-a11y':
-        specifier: ^7.6.12
-        version: 7.6.12
       '@storybook/addon-actions':
         specifier: ^7.5.3
         version: 7.6.7
@@ -2590,9 +2587,6 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@storybook/addon-a11y@7.6.12':
-    resolution: {integrity: sha512-Y4vGTI7VslAt/PSpZZsFieceOkXHLagTsz9Zba4s1cw7Dd8KFB1+NcjkMmo6BhGq7K17JQljosXSbGhOoqrMVg==}
-
   '@storybook/addon-actions@7.6.7':
     resolution: {integrity: sha512-+6EZvhIeKEqG/RNsU3R5DxOrd60BL5GEvmzE2w60s2eKaNNxtyilDjiO1g4z2s2zDNyr7JL/Ft03pJ0Jgo0lew==}
 
@@ -2613,9 +2607,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-
-  '@storybook/addon-highlight@7.6.12':
-    resolution: {integrity: sha512-rWNEyBhwncXEDd9z7l67BLBIPqn0SRI/CJpZvCSF5KLWrVaoSEDF8INavmbikd1JBMcajJ28Ur6NsGj+eJjJiw==}
 
   '@storybook/addon-highlight@7.6.7':
     resolution: {integrity: sha512-2F/tJdn45d4zrvf/cmE1vsczl99wK8+I+kkj0G7jLsrJR0w1zTgbgjy6T9j86HBTBvWcnysNFNIRWPAOh5Wdbw==}
@@ -10032,11 +10023,6 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.0
 
-  '@storybook/addon-a11y@7.6.12':
-    dependencies:
-      '@storybook/addon-highlight': 7.6.12
-      axe-core: 4.8.3
-
   '@storybook/addon-actions@7.6.7':
     dependencies:
       '@storybook/core-events': 7.6.7
@@ -10117,10 +10103,6 @@ snapshots:
       - '@types/react-dom'
       - encoding
       - supports-color
-
-  '@storybook/addon-highlight@7.6.12':
-    dependencies:
-      '@storybook/global': 5.0.0
 
   '@storybook/addon-highlight@7.6.7':
     dependencies:
