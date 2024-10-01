@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.2.0] - 2024-10-01
+
+### Minor changes
+
+- New icons added
+
 ## [1.1.0] - 2024-09-27
 
 ### Minor changes
