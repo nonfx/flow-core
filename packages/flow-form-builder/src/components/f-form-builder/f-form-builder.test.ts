@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { html, fixture, expect, oneEvent } from "@open-wc/testing";
 
 // import flow-core elements
