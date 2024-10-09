@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.1] - 2024-10-09
+
+### patch changes
+
+- prepending overlay instead of append for f-popover
+
 ## [2.11.0] - 2024-09-27
 
 ### Minor changes
