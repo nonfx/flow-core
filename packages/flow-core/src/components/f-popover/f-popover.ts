@@ -405,7 +405,7 @@ export class FPopover extends FRoot {
 					this.overlayElement = document.createElement("div");
 					this.overlayElement.classList.add("f-overlay");
 					this.overlayElement.dataset.qaOverlay = "true";
-					document.body.append(this.overlayElement);
+					document.body.prepend(this.overlayElement);
 					this.overlayElement.onclick = () => {
 						this.overlayClick();
 					};
