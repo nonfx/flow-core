@@ -124,9 +124,6 @@ f-popover {
 			right: 0px;
 			left: 0px;
 			z-index: 1;
-			&[data-transparent="true"] {
-				background-color: transparent;
-			}
 		}
 	}
 }
