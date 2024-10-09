@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.2] - 2024-10-09
+
+### patch changes
+
+- overlay element converted to pseudo element
+
 ## [2.11.1] - 2024-10-09
 
 ### patch changes

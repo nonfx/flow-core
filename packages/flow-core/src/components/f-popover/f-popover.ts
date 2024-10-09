@@ -147,8 +147,6 @@ export class FPopover extends FRoot {
 
 	isTooltip = false;
 
-	overlayElement?: HTMLDivElement;
-
 	reqAniFrame?: number;
 
 	offset: FPopOverOffset | null = null;
@@ -334,16 +332,17 @@ export class FPopover extends FRoot {
 		if (this.targetElement) {
 			this.targetElement.style.removeProperty("z-index");
 		}
-		if (this.overlayElement) {
-			this.overlayElement.remove();
-			this.overlayElement = undefined;
-		}
+		window.removeEventListener("mouseup", this.outsideClick);
 	}
 
 	connectedCallback() {
 		super.connectedCallback();
 		document.addEventListener("keydown", this.escapeHandler);
 		this.addEventListener("click", this.dispatchEsc);
+		/**
+		 * click outside the f-popover area
+		 */
+		window.addEventListener("mouseup", this.outsideClick);
 	}
 	dispatchEsc() {
 		if (this.isEscapeClicked && this.closeOnEscape) {
@@ -377,6 +376,21 @@ export class FPopover extends FRoot {
 		this.dispatchEvent(event);
 	}
 
+	outsideClick = (e: MouseEvent) => {
+		if (this.open) {
+			const rect = this.getBoundingClientRect();
+			const isInsideClick =
+				e.clientX > rect.left &&
+				e.clientX < rect.left + rect.width &&
+				e.clientY > rect.top &&
+				e.clientY < rect.top + rect.height;
+
+			if (!isInsideClick) {
+				this.overlayClick();
+			}
+		}
+	};
+
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
 
@@ -400,33 +414,13 @@ export class FPopover extends FRoot {
 			}
 		});
 		if (this.open) {
-			if (!this.isTooltip) {
-				if (!this.overlayElement) {
-					this.overlayElement = document.createElement("div");
-					this.overlayElement.classList.add("f-overlay");
-					this.overlayElement.dataset.qaOverlay = "true";
-					document.body.prepend(this.overlayElement);
-					this.overlayElement.onclick = () => {
-						this.overlayClick();
-					};
-				}
-
-				if (!this.overlay) {
-					this.overlayElement.dataset.transparent = "true";
-				} else {
-					delete this.overlayElement.dataset.transparent;
-				}
-			}
 			this.computePosition(this.isTooltip);
-			return html`<slot></slot>`;
+			return html`<slot @mouseup=${(e: MouseEvent) => e.stopPropagation()}></slot>`;
 		} else {
 			if (this.targetElement) {
 				this.targetElement.style.removeProperty("z-index");
 			}
-			if (this.overlayElement) {
-				this.overlayElement.remove();
-				this.overlayElement = undefined;
-			}
+
 			if (this.size && this.size?.includes("custom")) {
 				this.classList.remove("f-popover-custom-size");
 				this.style.setProperty("--custom-width", null);

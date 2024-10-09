@@ -56,7 +56,7 @@ f-popover {
 	background-color: var(--color-surface-tertiary);
 	border-radius: 4px;
 	overflow: auto;
-	z-index: 202;
+	z-index: 2;
 	@each $state, $value in $states {
 		&[state^="#{$state}"] {
 			// include mixin for inheritance rules
@@ -106,20 +106,27 @@ f-popover {
 	}
 
 	> * {
-		z-index: 2;
+		z-index: 3;
 	}
-}
 
-.f-overlay {
-	background-color: #000;
-	opacity: 0.5;
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
-	z-index: 200;
-	&[data-transparent="true"] {
-		background-color: transparent;
+	> f-div[state="transparent"] {
+		background-color: var(--color-surface-tertiary);
+	}
+
+	&[open][overlay] {
+		&::after {
+			content: "";
+			background-color: #000;
+			opacity: 0.5;
+			position: fixed;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			z-index: 1;
+			&[data-transparent="true"] {
+				background-color: transparent;
+			}
+		}
 	}
 }
