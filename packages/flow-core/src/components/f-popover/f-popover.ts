@@ -332,7 +332,7 @@ export class FPopover extends FRoot {
 		if (this.targetElement) {
 			this.targetElement.style.removeProperty("z-index");
 		}
-		window.removeEventListener("mouseup", this.outsideClick);
+		window.removeEventListener("click", this.outsideClick);
 	}
 
 	connectedCallback() {
@@ -342,7 +342,7 @@ export class FPopover extends FRoot {
 		/**
 		 * click outside the f-popover area
 		 */
-		window.addEventListener("mouseup", this.outsideClick);
+		window.addEventListener("click", this.outsideClick);
 	}
 	dispatchEsc() {
 		if (this.isEscapeClicked && this.closeOnEscape) {
@@ -415,7 +415,7 @@ export class FPopover extends FRoot {
 		});
 		if (this.open) {
 			this.computePosition(this.isTooltip);
-			return html`<slot @mouseup=${(e: MouseEvent) => e.stopPropagation()}></slot>`;
+			return html`<slot @click=${(e: PointerEvent) => e.stopPropagation()}></slot>`;
 		} else {
 			if (this.targetElement) {
 				this.targetElement.style.removeProperty("z-index");
