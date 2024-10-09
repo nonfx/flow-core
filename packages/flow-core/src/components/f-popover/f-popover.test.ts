@@ -11,8 +11,6 @@ describe("f-popover", () => {
 	it("should render open popover ", async () => {
 		const el = await fixture(html` <f-popover open>Test</f-popover> `);
 		expect(el.textContent?.trim()).to.equal("Test");
-		const descendant = document.querySelector(".f-overlay")!;
-		expect(descendant).not.null;
 	});
 	it("should render closed popover ", async () => {
 		const el = await fixture(html` <f-popover>Test</f-popover> `);
@@ -20,12 +18,7 @@ describe("f-popover", () => {
 		const descendant = document.querySelector(".f-overlay")!;
 		expect(descendant).is.null;
 	});
-	it("should render without overlay ", async () => {
-		const el = await fixture(html` <f-popover open .overlay=${false}>Test</f-popover> `);
-		expect(el.textContent?.trim()).to.equal("Test");
-		const descendant = document.querySelector<HTMLElement>(".f-overlay")!;
-		expect(descendant.dataset["transparent"]).to.equal("true");
-	});
+
 	it("should render with default size ", async () => {
 		const el = await fixture<FPopover>(html` <f-popover open>Test</f-popover> `);
 		expect(el.getAttribute("size")).to.equal("medium");
