@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.5] - 2024-10-10
+
+### patch changes
+
+- overlay-click event behavior updated
+
 ## [2.11.4] - 2024-10-10
 
 ### patch changes
