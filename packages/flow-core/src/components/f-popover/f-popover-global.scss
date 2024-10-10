@@ -56,7 +56,7 @@ f-popover {
 	background-color: var(--color-surface-tertiary);
 	border-radius: 4px;
 	overflow: auto;
-	z-index: 2;
+	z-index: 200;
 	@each $state, $value in $states {
 		&[state^="#{$state}"] {
 			// include mixin for inheritance rules
