@@ -113,7 +113,7 @@ f-popover {
 		background-color: var(--color-surface-tertiary);
 	}
 
-	&[open] {
+	&[open]:not(.tooltip) {
 		&::after {
 			content: "";
 			background-color: transparent;
