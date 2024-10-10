@@ -113,10 +113,10 @@ f-popover {
 		background-color: var(--color-surface-tertiary);
 	}
 
-	&[open][overlay] {
+	&[open] {
 		&::after {
 			content: "";
-			background-color: #000;
+			background-color: transparent;
 			opacity: 0.5;
 			position: fixed;
 			top: 0px;
@@ -124,6 +124,12 @@ f-popover {
 			right: 0px;
 			left: 0px;
 			z-index: 1;
+		}
+
+		&[overlay] {
+			&::after {
+				background-color: #000;
+			}
 		}
 	}
 }
