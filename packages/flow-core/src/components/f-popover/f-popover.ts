@@ -377,7 +377,7 @@ export class FPopover extends FRoot {
 	}
 
 	outsideClick = (e: MouseEvent) => {
-		if (this.open) {
+		if (this.open && e?.target !== this.targetElement) {
 			const rect = this.getBoundingClientRect();
 			const isInsideClick =
 				e.clientX > rect.left &&

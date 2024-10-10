@@ -31,6 +31,7 @@ export const Playground = {
 		const popoverRef = createRef<FPopover>();
 		const handlePopover = (_e: CustomEvent) => {
 			if (popoverRef.value) {
+				console.log("in handle popover");
 				popoverRef.value.open = !popoverRef.value.open;
 			}
 		};
