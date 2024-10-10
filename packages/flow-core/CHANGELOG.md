@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.6] - 2024-10-10
+
+### patch changes
+
+- f-popover z-index bug fixed
+
 ## [2.11.5] - 2024-10-10
 
 ### patch changes
