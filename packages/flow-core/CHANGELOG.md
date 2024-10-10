@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.11.7] - 2024-10-10
+
+### patch changes
+
+- tooltip flickering issue
+
 ## [2.11.6] - 2024-10-10
 
 ### patch changes
