@@ -89,6 +89,52 @@ $states: (
 		"color": var(--color-text-default)
 	)
 );
+
+$border-widths: "small", "medium", "large";
+$border-styles: solid, dashed, dotted;
+$border-colors: "default", "secondary", "subtle";
+$border-positions: "bottom", "top", "left", "right", "around";
+
+// Define border width values
+$border-width-values: (
+	small: 1px,
+	medium: 2px,
+	large: 4px
+);
+
+// Define border color values
+$border-color-values: (
+	default: var(--color-border-default),
+	subtle: var(--color-border-subtle),
+	secondary: var(--color-border-secondary)
+);
+
+// Define padding values
+$padding-values: (
+	x-large: 24px,
+	large: 16px,
+	medium: 12px,
+	small: 8px,
+	x-small: 4px,
+	none: 0px
+);
+
+// Default border settings
+$default-border: (
+	border-width: small,
+	border-style: solid,
+	border-color: default,
+	border-position: around
+);
+
+// Border position mapping
+$border-position-css: (
+	bottom: border-bottom,
+	top: border-top,
+	left: border-left,
+	right: border-right,
+	around: border
+);
 /**
 applies styles on f-div
 **/
@@ -107,7 +153,62 @@ f-div {
 			gap: $value;
 		}
 	}
+	@each $border-width in $border-widths {
+		@each $border-style in $border-styles {
+			@each $border-color in $border-colors {
+				@each $border-position in $border-positions {
+					&[border="#{$border-width} #{$border-style} #{$border-color} #{$border-position}"] {
+						@if $border-position == "left" {
+							border-left: map.get($border-width-values, $border-width)
+								$border-style
+								map.get($border-color-values, $border-color);
+						}
+						@if $border-position == "right" {
+							border-right: map.get($border-width-values, $border-width)
+								$border-style
+								map.get($border-color-values, $border-color);
+						}
+						@if $border-position == "top" {
+							border-top: map.get($border-width-values, $border-width)
+								$border-style
+								map.get($border-color-values, $border-color);
+						}
+						@if $border-position == "bottom" {
+							border-bottom: map.get($border-width-values, $border-width)
+								$border-style
+								map.get($border-color-values, $border-color);
+						}
+						@if $border-position == "around" {
+							border: map.get($border-width-values, $border-width)
+								$border-style
+								map.get($border-color-values, $border-color);
+						}
+					}
+				}
+			}
+		}
+	}
 
+	@each $padding, $value in $padding-values {
+		&[padding="#{$padding}"] {
+			padding: $value;
+		}
+		@each $padding2, $value2 in $padding-values {
+			&[padding="#{$padding} #{$padding2}"] {
+				padding: $value $value2;
+			}
+			@each $padding3, $value3 in $padding-values {
+				&[padding="#{$padding} #{$padding2} #{$padding3}"] {
+					padding: $value $value2 $value3;
+				}
+				@each $padding4, $value4 in $padding-values {
+					&[padding="#{$padding} #{$padding2} #{$padding3} #{$padding4}"] {
+						padding: $value $value2 $value3 $value4;
+					}
+				}
+			}
+		}
+	}
 	&.f-div-custom-width {
 		--max-width: none; /* Define a CSS variable */
 		max-width: var(--max-width) !important;
@@ -548,6 +649,9 @@ f-div {
 
 	&[variant="curved"] {
 		border-radius: 4px;
+	}
+	&[variant="round"] {
+		border-radius: 50%;
 	}
 }
 
