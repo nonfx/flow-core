@@ -3,10 +3,7 @@ import { property, state } from "lit/decorators.js";
 import { FRoot } from "../../mixins/components/f-root/f-root";
 import eleStyle from "./f-text.scss?inline";
 import globalStyle from "./f-text-global.scss?inline";
-import getCustomFillColor from "../../utils/get-custom-fill-color";
-import { validateHTMLColor } from "validate-color";
-import { validateHTMLColorName } from "validate-color";
-import { flowElement } from "./../../utils";
+import { flowElement, getCustomColor } from "./../../utils";
 import { FIcon } from "../f-icon/f-icon";
 import { injectCss } from "@nonfx/flow-core-config";
 injectCss("f-text", globalStyle);
@@ -36,7 +33,7 @@ export class FText extends FRoot {
 	 * @attribute local state for managing custom fill.
 	 */
 	@state()
-	fill = "";
+	fill?: string;
 
 	/**
 	 * @attribute Variants of text component are use cases such as Heading, paragraph, and code.
@@ -96,20 +93,6 @@ export class FText extends FRoot {
 		return this.size === "x-small" ? "x-small" : "small";
 	}
 
-	/**
-	 * validation for all atrributes
-	 */
-	validateProperties() {
-		if (
-			this.state?.includes("custom") &&
-			this.fill &&
-			!validateHTMLColor(this.fill) &&
-			!validateHTMLColorName(this.fill)
-		) {
-			throw new Error("f-text : enter correct color-name or color-code");
-		}
-	}
-
 	get headerLevel() {
 		switch (this.size) {
 			case "x-large":
@@ -129,14 +112,6 @@ export class FText extends FRoot {
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
-		if (!this.role) {
-			if (this.variant === "heading") {
-				this.role = "heading";
-				this.setAttribute("aria-level", this.headerLevel);
-			} else {
-				this.role = "paragraph";
-			}
-		}
 
 		/**
 		 * set default weight according to variant
@@ -159,12 +134,7 @@ export class FText extends FRoot {
 		/**
 		 * creating local fill variable out of state prop.
 		 */
-		this.fill = getCustomFillColor(this.state ?? "");
-
-		/**
-		 * validate
-		 */
-		this.validateProperties();
+		this.fill = getCustomColor(this.state);
 
 		/**
 		 * Final html to render

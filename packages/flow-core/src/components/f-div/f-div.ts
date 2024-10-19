@@ -5,8 +5,7 @@ import eleStyle from "./f-div.scss?inline";
 import globalStyle from "./f-div-global.scss?inline";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 import loader from "../../mixins/svg/loader";
-import getCustomFillColor from "../../utils/get-custom-fill-color";
-import { flowElement } from "./../../utils";
+import { flowElement, getCustomColor } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 
 export type FDivBorderWidth = "small" | "medium" | "large";
@@ -77,7 +76,7 @@ export class FDiv extends FRoot {
 	 * @attribute local state for managing custom fill.
 	 */
 	@state()
-	fill = "";
+	fill?: string;
 
 	/**
 	 * @attribute Variants are various representations of a f-div.
@@ -176,12 +175,6 @@ export class FDiv extends FRoot {
 	clickable?: boolean = false;
 
 	/**
-	 * @attribute is highlighted
-	 */
-	@property({ reflect: true, type: Boolean })
-	highlight?: boolean = false;
-
-	/**
 	 * @attribute set true when to hide scrollbar
 	 */
 	@property({ reflect: true, type: Boolean, attribute: "show-scrollbar" })
@@ -232,22 +225,7 @@ export class FDiv extends FRoot {
 		}
 	}
 
-	checkHighlight() {
-		const highlights = document.querySelectorAll("f-div[highlight]");
-		const overlayEl = document.querySelector(".f-div-highlight-overlay");
-		if (highlights.length > 0 && !overlayEl) {
-			const overlay = `<div class="f-div-highlight-overlay"></div>`;
-			document.body?.insertAdjacentHTML("afterbegin", overlay);
-		}
-		if (highlights.length === 0) {
-			overlayEl?.remove();
-		}
-	}
-
 	disconnectedCallback() {
-		if (this.highlight) {
-			this.checkHighlight();
-		}
 		super.disconnectedCallback();
 	}
 
@@ -255,16 +233,10 @@ export class FDiv extends FRoot {
 		super.willUpdate(changedProperties);
 		this.applySize();
 
-		if (
-			changedProperties.has("highlight") &&
-			(changedProperties.get("highlight") === true || this.highlight)
-		) {
-			this.checkHighlight();
-		}
 		/**
 		 * creating local fill variable out of state prop.
 		 */
-		this.fill = getCustomFillColor(this.state ?? "");
+		this.fill = getCustomColor(this.state);
 
 		/**
 		 * START :  apply inline styles based on attribute values
@@ -275,7 +247,6 @@ export class FDiv extends FRoot {
 		} else {
 			this.style.backgroundColor = "";
 		}
-		if (!this.role) this.role = "none";
 	}
 
 	render() {
