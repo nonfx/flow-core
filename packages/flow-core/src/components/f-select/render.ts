@@ -3,7 +3,6 @@ import {
 	FSelectArray,
 	FSelectOptionObject,
 	FSelectOptionsGroup,
-	FSelectOptionsProp,
 	FSelectSingleOption
 } from "./f-select";
 import { html, nothing } from "lit";
