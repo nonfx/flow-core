@@ -30,7 +30,7 @@ function getCustomColor(state?: string) {
 		});
 		return croppedValues[1];
 	}
-	return state;
+	return;
 }
 
 export {

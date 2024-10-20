@@ -245,7 +245,7 @@ export class FDiv extends FRoot {
 		if (this.state?.includes("custom") && this.fill) {
 			this.style.backgroundColor = this.fill;
 		} else {
-			this.style.backgroundColor = "";
+			this.style.removeProperty("background-color");
 		}
 	}
 

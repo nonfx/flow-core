@@ -112,7 +112,10 @@ export class FText extends FRoot {
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
-
+		/**
+		 * creating local fill variable out of state prop.
+		 */
+		this.fill = getCustomColor(this.state);
 		/**
 		 * set default weight according to variant
 		 */
@@ -131,11 +134,6 @@ export class FText extends FRoot {
 	}
 
 	render() {
-		/**
-		 * creating local fill variable out of state prop.
-		 */
-		this.fill = getCustomColor(this.state);
-
 		/**
 		 * Final html to render
 		 */
