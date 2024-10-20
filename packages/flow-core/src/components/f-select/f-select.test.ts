@@ -70,7 +70,7 @@ describe("f-select", () => {
 				?searchable=${true}
 			></f-select>
 		`);
-		const descendant = el.shadowRoot!.querySelector(".f-select-searchable")!;
+		const descendant = el.shadowRoot!.querySelector(".f-select-wrapper f-div")!;
 		const input = descendant.children[1];
 		expect(input.tagName.toLowerCase()).to.equal("input");
 	});
