@@ -9,11 +9,12 @@ import { configSubject, themeSubject, injectCss } from "@nonfx/flow-core-config"
 import { classMap } from "lit-html/directives/class-map.js";
 import loader from "../../mixins/svg/loader";
 import notFound from "../../mixins/svg/not-found";
-import { flowElement, isValidHttpUrl } from "./../../utils";
+import { flowElement } from "./../../utils";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import getCustomFillColor from "../../utils/get-custom-fill-color";
 import { validateHTMLColor, validateHTMLColorName } from "validate-color";
 import { Subscription } from "rxjs";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 injectCss("f-icon", globalStyle);
 
@@ -44,12 +45,6 @@ export class FIcon extends FRoot {
 
 	private _source!: string;
 	private _originalSource?: string;
-
-	/**
-	 * @internal
-	 * @property set it to true if source value is url
-	 */
-	private isURLSource = false;
 
 	private _themeSubscription?: Subscription;
 	private _configSubscription?: Subscription;
@@ -98,6 +93,12 @@ export class FIcon extends FRoot {
 	 */
 	@property({ type: Boolean })
 	clickable?: boolean = false;
+
+	/**
+	 * @attribute is given source is url
+	 */
+	@property({ type: Boolean, reflect: true })
+	url?: boolean = false;
 
 	readonly required = ["source"];
 
@@ -155,8 +156,7 @@ export class FIcon extends FRoot {
 
 	computeSource(value: string) {
 		const emojiRegex = /\p{Extended_Pictographic}/u;
-		if (isValidHttpUrl(value)) {
-			this.isURLSource = true;
+		if (this.url) {
 			this._source = `<img src="${value}"/>`;
 		} else if (emojiRegex.test(value)) {
 			this._source = value;
@@ -215,15 +215,15 @@ export class FIcon extends FRoot {
 		return html`<div
 			class=${classMap(classes)}
 			style=${this.applyStyles()}
-			state=${this.state}
-			size=${this.size}
+			state=${ifDefined(this.state)}
+			size=${ifDefined(this.size)}
 			?disabled=${this.disabled}
 			?loading=${this.loading}
 			?clickable=${this.clickable}
 		>
 			${this.loading
 				? html`${unsafeSVG(loader)}`
-				: html`${this.isURLSource ? unsafeHTML(this.source) : unsafeSVG(this.source)}`}
+				: html`${this.url ? unsafeHTML(this.source) : unsafeSVG(this.source)}`}
 		</div>`;
 	}
 

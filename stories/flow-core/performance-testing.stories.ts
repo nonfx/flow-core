@@ -13,7 +13,7 @@ export default {
 
 export const Test = {
 	render: () => {
-		const elements = Array.from({ length: 10 }, (_, index) => index + 1);
+		const elements = Array.from({ length: 1000 }, (_, index) => index + 1);
 
 		return html`
 			${repeat(
@@ -24,10 +24,15 @@ export const Test = {
 							style="display:flex;background:var(--color-primary-default);width:600px;padding:12px"
 						>
 							<p>${item}</p>
+							<select>
+								<option><f-icon source="i-plus"></f-icon>option 1</option>
+								<option>option 2</option>
+								<option>option 3</option>
+							</select>
 						</div-->
 						<f-div
 							state="primary"
-							width="200px"
+							width="300px"
 							padding="medium"
 							border="small solid default around"
 							gap="medium"
@@ -42,7 +47,6 @@ export const Test = {
 								.value=${["option1"]}
 								searchable
 								icon-left="i-plus"
-								icon-right="i-delete"
 								type="multiple"
 							></f-select>
 						</f-div>`
