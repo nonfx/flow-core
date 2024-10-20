@@ -745,8 +745,10 @@ export const Width = {
 				state="subtle"
 				align="middle-center"
 			>
-				<f-div width="hug-content" height="hug-content" padding="x-large">
-					<f-text variant="para" size="large" weight="medium">width="fill-container"</f-text>
+				<f-div id="test" width="hug-content" height="hug-content" padding="x-large">
+					<f-text id="test-text" variant="para" size="large" weight="medium"
+						>width="fill-container"</f-text
+					>
 				</f-div>
 			</f-div>
 			<f-div

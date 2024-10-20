@@ -23,8 +23,19 @@ function generateId(length = 5) {
 	return randomString;
 }
 
+function getCustomColor(state?: string) {
+	if (state && state.includes("custom")) {
+		const croppedValues = state.split(",").map(function (value) {
+			return value.trim();
+		});
+		return croppedValues[1];
+	}
+	return state;
+}
+
 export {
 	isValidHttpUrl,
+	getCustomColor,
 	getTextContrast,
 	getColourNameToHex,
 	isValidEmail,

@@ -29,7 +29,7 @@ import {
 	handleOptionMouseOver
 } from "./handlers";
 import { FIconButton } from "../f-icon-button/f-icon-button";
-import { flowElement, generateId } from "./../../utils";
+import { flowElement } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 injectCss("f-select", globalStyle);
 
@@ -297,16 +297,18 @@ export class FSelect extends FRoot {
 		else return undefined;
 	}
 	outsideClick = (e: MouseEvent) => {
-		const rect = this.getBoundingClientRect();
-		const optionsRect = this.optionElement.getBoundingClientRect();
-		const isInsideClick =
-			e.clientX > rect.left &&
-			e.clientX < rect.left + rect.width &&
-			e.clientY > optionsRect.top &&
-			e.clientY < optionsRect.top + optionsRect.height;
+		if (this.openDropdown) {
+			const rect = this.getBoundingClientRect();
+			const optionsRect = this.optionElement.getBoundingClientRect();
+			const isInsideClick =
+				e.clientX > rect.left &&
+				e.clientX < rect.left + rect.width &&
+				e.clientY > optionsRect.top &&
+				e.clientY < optionsRect.top + optionsRect.height;
 
-		if (!isInsideClick && this.openDropdown) {
-			this.handleDropDownClose(e, true);
+			if (!isInsideClick) {
+				this.handleDropDownClose(e, true);
+			}
 		}
 	};
 	containerScroll = () => {
@@ -344,6 +346,22 @@ export class FSelect extends FRoot {
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
 		this.role = "combobox";
+		/**
+		 * moved from updated: since it was triggerring rednewr cycle
+		 */
+		if (changedProperties.has("options")) {
+			this.filteredOptions = this.options;
+		}
+
+		if (changedProperties.has("value")) {
+			if (this.value && this.type === "single") {
+				this.selectedOptions = [this.value as FSelectSingleOption];
+			} else if (this.value && this.type === "multiple") {
+				this.selectedOptions = this.value as FSelectOptionsProp;
+			} else {
+				this.selectedOptions = [];
+			}
+		}
 
 		this.setAttribute("aria-expanded", String(this.openDropdown));
 		this.setAttribute("aria-haspopup", "true");
@@ -353,7 +371,7 @@ export class FSelect extends FRoot {
 	 */
 	applyOptionsStyle(width: number) {
 		let right = ``;
-		if (this.wrapperElement) {
+		if (this.wrapperElement && this.openDropdown) {
 			const spaceOnRight =
 				document.body.offsetWidth - this.wrapperElement.getBoundingClientRect().right;
 
@@ -514,13 +532,11 @@ export class FSelect extends FRoot {
 	 * change width of input inside f-select according to searchable prop
 	 */
 	applyInputStyle() {
-		return this.searchable
-			? `${
-					this.openDropdown
-						? "width:75%;"
-						: "width:0px; transition: width var(--transition-time-rapid) ease-in 0s;"
-			  }`
-			: `max-width:0px`;
+		return `${
+			this.openDropdown
+				? "width:75%;"
+				: "width:0px; transition: width var(--transition-time-rapid) ease-in 0s;height:0px;"
+		}`;
 	}
 
 	/**
@@ -601,7 +617,7 @@ export class FSelect extends FRoot {
 	 * options wrapper dimentions update on the basis of window screen
 	 */
 	updateDimentions() {
-		if (this.wrapperElement) {
+		if (this.wrapperElement && this.openDropdown) {
 			const spaceAbove = this.wrapperElement.getBoundingClientRect().top;
 			const spaceBelow = window.innerHeight - this.wrapperElement.getBoundingClientRect().bottom;
 			const hasEnoughSpaceBelow = spaceBelow > this.height;
@@ -631,43 +647,27 @@ export class FSelect extends FRoot {
 		this._hasHelperText = this._helpNodes.length > 0;
 	}
 
-	get singleSelectionStyle() {
-		return `max-width:${`${this.offsetWidth - this.rightOffset}px`}`;
-	}
-	get rightOffset() {
-		return this.clear ? 74 : 54;
-	}
-
 	protected updated(changedProperties: PropertyValues) {
 		super.updated(changedProperties);
+		// removing this accessibility due to performamnce for now
+		// if (!this.getAttribute("aria-labelledby") && !this.getAttribute("aria-label")) {
+		// 	const labelElement = this.querySelector<HTMLElement>("[slot='label']");
+		// 	if (labelElement) {
+		// 		if (!labelElement.id) {
+		// 			labelElement.id = generateId();
+		// 		}
+		// 		this.setAttribute("aria-labelledby", labelElement.id);
+		// 	}
+		// }
 
-		if (this.openDropdown) {
-			this.updateDimentions();
-		}
-
-		if (changedProperties.has("value")) {
-			if (this.value && this.type === "single") {
-				this.selectedOptions = [this.value as FSelectSingleOption];
-			} else if (this.value && this.type === "multiple") {
-				this.selectedOptions = this.value as FSelectOptionsProp;
-			} else {
-				this.selectedOptions = [];
+		void this.updateComplete.then(() => {
+			if (this.openDropdown) {
+				this.inputElement?.focus();
 			}
-		}
-
-		if (changedProperties.has("options")) {
-			this.filteredOptions = this.options;
-		}
-
-		if (!this.getAttribute("aria-labelledby") && !this.getAttribute("aria-label")) {
-			const labelElement = this.querySelector<HTMLElement>("[slot='label']");
-			if (labelElement) {
-				if (!labelElement.id) {
-					labelElement.id = generateId();
-				}
-				this.setAttribute("aria-labelledby", labelElement.id);
+			if (this.openDropdown) {
+				this.updateDimentions();
 			}
-		}
+		});
 		this.addEventListener("keyup", (e: KeyboardEvent) => {
 			if (e.key === "Enter") this.handleDropDownOpen(e);
 		});

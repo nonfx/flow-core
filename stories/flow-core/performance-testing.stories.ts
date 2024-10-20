@@ -13,7 +13,7 @@ export default {
 
 export const Test = {
 	render: () => {
-		const elements = Array.from({ length: 10000 }, (_, index) => index + 1);
+		const elements = Array.from({ length: 10 }, (_, index) => index + 1);
 
 		return html`
 			${repeat(
@@ -30,7 +30,21 @@ export const Test = {
 							width="200px"
 							padding="medium"
 							border="small solid default around"
-							><f-text state="danger">${item}</f-text>
+							gap="medium"
+							align="middle-left"
+							><f-text state="danger" inline>${item}</f-text>
+							<f-select
+								.options=${[
+									"A length unit, or percentage, specifying the initial length of the flexible item(s)",
+									"option2",
+									"option3"
+								]}
+								.value=${["option1"]}
+								searchable
+								icon-left="i-plus"
+								icon-right="i-delete"
+								type="multiple"
+							></f-select>
 						</f-div>`
 			)}
 		`;
