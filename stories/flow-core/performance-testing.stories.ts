@@ -32,7 +32,7 @@ export const Test = {
 						</div-->
 						<f-div
 							state="primary"
-							width="300px"
+							width="200px"
 							padding="medium"
 							border="small solid default around"
 							gap="medium"
@@ -44,10 +44,9 @@ export const Test = {
 									"option2",
 									"option3"
 								]}
-								.value=${["option1"]}
+								.value=${"option1"}
 								searchable
-								icon-left="i-plus"
-								type="multiple"
+								icon-left="i-org"
 							></f-select>
 						</f-div>`
 			)}

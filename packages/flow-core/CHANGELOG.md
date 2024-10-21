@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [3.0.1] - 2024-10-24
+
+### patch changes
+
+- f-div `variant="round"` fixed
+- f-select selected option ellipsis fixed
+
 ## [3.0.0] - 2024-10-20
 
 ### Major/Breaking Changes
