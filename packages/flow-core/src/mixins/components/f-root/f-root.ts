@@ -1,4 +1,4 @@
-import { LitElement, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
+import { LitElement, PropertyValues, unsafeCSS } from "lit";
 import { property, query } from "lit/decorators.js";
 
 import globalStyle from "./f-root-global.scss?inline";
@@ -59,46 +59,14 @@ export class FRoot extends LitElement {
 
 	mouseLeave?: () => void;
 
-	isMouseOver = false;
-
 	disconnectedCallback() {
-		const tooltipElement = document.querySelector<TooltipElement>("#flow-tooltip");
-		if (this.tooltip && tooltipElement?.target === this && tooltipElement) {
-			tooltipElement.open = false;
+		if (this.tooltip) {
+			const tooltipElement = document.querySelector<TooltipElement>("#flow-tooltip");
+			if (tooltipElement?.target === this && tooltipElement) tooltipElement.open = false;
 		}
 		super.disconnectedCallback();
 	}
-	/**
-	 * To track isMouseOver
-	 * @param changedProperties
-	 */
-	protected firstUpdated(
-		changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
-	): void {
-		super.firstUpdated(changedProperties);
-		this.addEventListener("mouseleave", () => {
-			this.isMouseOver = false;
-		});
-		this.addEventListener("mouseenter", () => {
-			this.isMouseOver = true;
-		});
-	}
 
-	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-		super.willUpdate(changedProperties);
-
-		if (this.tooltip) {
-			if (typeof this.tooltip === "string" && this.tooltip.startsWith("#")) {
-				this.setAttribute("aria-describedby", this.tooltip.substring(1));
-			} else {
-				this.setAttribute("aria-describedby", "flow-tooltip");
-			}
-		}
-
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		//@ts-ignore
-		this.setAttribute("aria-disabled", this.disabled ? "true" : "false");
-	}
 	protected updated(changedProperties: PropertyValues) {
 		super.updated(changedProperties);
 		/**
@@ -120,7 +88,7 @@ export class FRoot extends LitElement {
 				if (extTooltip) {
 					extTooltip.open = false;
 				}
-			} else if (changedProperties.get("tooltip") && tooltipElement && this.isMouseOver) {
+			} else if (changedProperties.get("tooltip") && tooltipElement) {
 				tooltipElement.open = false;
 			}
 
@@ -200,11 +168,6 @@ export class FRoot extends LitElement {
 
 				this.addEventListener("mouseenter", this.mouseEnter);
 				this.addEventListener("mouseleave", this.mouseLeave);
-
-				// if mouse cursor is still on element
-				if (this.isMouseOver) {
-					this.mouseEnter();
-				}
 			} else {
 				if (this.mouseLeave !== undefined && tooltipElement && tooltipElement.target === this) {
 					this.mouseLeave();

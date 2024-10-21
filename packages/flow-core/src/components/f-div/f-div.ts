@@ -5,8 +5,7 @@ import eleStyle from "./f-div.scss?inline";
 import globalStyle from "./f-div-global.scss?inline";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 import loader from "../../mixins/svg/loader";
-import getCustomFillColor from "../../utils/get-custom-fill-color";
-import { flowElement } from "./../../utils";
+import { flowElement, getCustomColor } from "./../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 
 export type FDivBorderWidth = "small" | "medium" | "large";
@@ -58,44 +57,6 @@ export type FDivStateProp =
 	| `custom, ${string}`;
 
 /**
- * START :  constant values required for `f-div`
- */
-const BORDER_WIDTH_VALUES = {
-	small: "1px",
-	medium: "2px",
-	large: "4px"
-};
-
-const BORDER_COLOR_VALUES = {
-	default: "var(--color-border-default)",
-	subtle: "var(--color-border-subtle)",
-	secondary: "var(--color-border-secondary)"
-};
-
-const PADDING_VALUES = {
-	"x-large": "24px",
-	large: "16px",
-	medium: "12px",
-	small: "8px",
-	"x-small": "4px",
-	none: "0px"
-};
-
-const DEFAULT_BORDER = {
-	borderWidth: "small",
-	borderStyle: "solid",
-	borderColor: "default",
-	borderPosition: "around"
-};
-const BORDER_POSITION_CSS = {
-	bottom: "border-bottom",
-	top: "border-top",
-	left: "border-left",
-	right: "border-right",
-	around: "border"
-} as Record<string, string>;
-
-/**
  * END :  constant values required for `f-div`
  */
 
@@ -115,7 +76,7 @@ export class FDiv extends FRoot {
 	 * @attribute local state for managing custom fill.
 	 */
 	@state()
-	fill = "";
+	fill?: string;
 
 	/**
 	 * @attribute Variants are various representations of a f-div.
@@ -214,12 +175,6 @@ export class FDiv extends FRoot {
 	clickable?: boolean = false;
 
 	/**
-	 * @attribute is highlighted
-	 */
-	@property({ reflect: true, type: Boolean })
-	highlight?: boolean = false;
-
-	/**
 	 * @attribute set true when to hide scrollbar
 	 */
 	@property({ reflect: true, type: Boolean, attribute: "show-scrollbar" })
@@ -242,46 +197,6 @@ export class FDiv extends FRoot {
 	 */
 	@property({ reflect: true, type: String })
 	sticky?: "none" | "top" | "bottom" | "left" | "right" = "none";
-
-	/**
-	 * Applying border related style, based on value
-	 */
-	applyBorder() {
-		if (this.border) {
-			const [borderWidth, borderStyle, borderColor, borderPosition] = this.border.split(" ") || [];
-			const meta = {
-				width: BORDER_WIDTH_VALUES[(borderWidth || DEFAULT_BORDER.borderWidth) as FDivBorderWidth],
-				style: borderStyle || DEFAULT_BORDER.borderStyle,
-				color: BORDER_COLOR_VALUES[(borderColor || DEFAULT_BORDER.borderColor) as FDivBorderColor],
-				position: borderPosition || DEFAULT_BORDER.borderPosition
-			};
-
-			this.style.setProperty(
-				BORDER_POSITION_CSS[meta.position],
-				`${meta.width} ${meta.style} ${meta.color}`
-			);
-		}
-	}
-
-	/**
-	 * Applying padding related style, based on value
-	 */
-	applyPadding() {
-		if (this.padding) {
-			const paddingValues = (this.padding.split(" ") || []) as FDivPadding[];
-
-			let paddingCSS = PADDING_VALUES[`none`];
-			if (paddingValues) {
-				paddingCSS = paddingValues
-					.slice(0, 4)
-					.map(val => {
-						return PADDING_VALUES[val];
-					})
-					.join(" ");
-			}
-			this.style.padding = paddingCSS;
-		}
-	}
 
 	/**
 	 * Applying height,width related style, based on value
@@ -310,35 +225,18 @@ export class FDiv extends FRoot {
 		}
 	}
 
-	checkHighlight() {
-		const highlights = document.querySelectorAll("f-div[highlight]");
-		const overlayEl = document.querySelector(".f-div-highlight-overlay");
-		if (highlights.length > 0 && !overlayEl) {
-			const overlay = `<div class="f-div-highlight-overlay"></div>`;
-			document.body?.insertAdjacentHTML("afterbegin", overlay);
-		}
-		if (highlights.length === 0) {
-			overlayEl?.remove();
-		}
-	}
-
 	disconnectedCallback() {
-		if (this.highlight) {
-			this.checkHighlight();
-		}
 		super.disconnectedCallback();
 	}
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
-		if (!this.role) this.role = "none";
-	}
+		this.applySize();
 
-	render() {
 		/**
 		 * creating local fill variable out of state prop.
 		 */
-		this.fill = getCustomFillColor(this.state ?? "");
+		this.fill = getCustomColor(this.state);
 
 		/**
 		 * START :  apply inline styles based on attribute values
@@ -347,41 +245,15 @@ export class FDiv extends FRoot {
 		if (this.state?.includes("custom") && this.fill) {
 			this.style.backgroundColor = this.fill;
 		} else {
-			this.style.backgroundColor = "";
+			this.style.removeProperty("background-color");
 		}
-		this.applyBorder();
-		this.applyPadding();
-		this.applySize();
+	}
 
-		/**
-		 * END :  apply inline styles based on attribute values
-		 */
-
+	render() {
 		/**
 		 * Final html to render
 		 */
 		return html` <slot></slot>${this.loading === "loader" ? html`${unsafeSVG(loader)}` : ""}`;
-	}
-
-	protected updated(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>) {
-		super.updated(changedProperties);
-
-		if (
-			changedProperties.has("highlight") &&
-			(changedProperties.get("highlight") === true || this.highlight)
-		) {
-			this.checkHighlight();
-		}
-
-		void this.updateComplete.then(() => {
-			if (this.variant === "round") {
-				this.style.borderRadius = `${this.offsetHeight / 2}px`;
-			} else if (this.variant === "curved") {
-				this.style.borderRadius = `4px`;
-			} else {
-				this.style.borderRadius = "0px";
-			}
-		});
 	}
 }
 

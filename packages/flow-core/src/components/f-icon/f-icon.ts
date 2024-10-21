@@ -1,19 +1,18 @@
-import { html, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
+import { html, unsafeCSS } from "lit";
 import { property, state } from "lit/decorators.js";
 import eleStyle from "./f-icon.scss?inline";
 import globalStyle from "./f-icon-global.scss?inline";
 import { FRoot } from "../../mixins/components/f-root/f-root";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
 // themeSubject will used to listen theme update
-import { configSubject, themeSubject, injectCss } from "@nonfx/flow-core-config";
+import { configSubject, injectCss } from "@nonfx/flow-core-config";
 import { classMap } from "lit-html/directives/class-map.js";
 import loader from "../../mixins/svg/loader";
 import notFound from "../../mixins/svg/not-found";
-import { flowElement, isValidHttpUrl } from "./../../utils";
+import { flowElement, getCustomColor } from "./../../utils";
 import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
-import getCustomFillColor from "../../utils/get-custom-fill-color";
 import { validateHTMLColor, validateHTMLColorName } from "validate-color";
-import { Subscription } from "rxjs";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 injectCss("f-icon", globalStyle);
 
@@ -40,19 +39,9 @@ export class FIcon extends FRoot {
 	 * @attribute local state for managing custom fill.
 	 */
 	@state()
-	fill = "";
+	fill?: string;
 
 	private _source!: string;
-	private _originalSource?: string;
-
-	/**
-	 * @internal
-	 * @property set it to true if source value is url
-	 */
-	private isURLSource = false;
-
-	private _themeSubscription?: Subscription;
-	private _configSubscription?: Subscription;
 
 	/**
 	 * @attribute The small size is the default.
@@ -77,7 +66,6 @@ export class FIcon extends FRoot {
 	}
 	// source computed based on value given by user
 	set source(value) {
-		this._originalSource = value;
 		this.computeSource(value);
 	}
 
@@ -98,6 +86,12 @@ export class FIcon extends FRoot {
 	 */
 	@property({ type: Boolean })
 	clickable?: boolean = false;
+
+	/**
+	 * @attribute is given source is url
+	 */
+	@property({ type: Boolean, reflect: true })
+	url?: boolean = false;
 
 	readonly required = ["source"];
 
@@ -120,25 +114,6 @@ export class FIcon extends FRoot {
 		}
 	}
 
-	connectedCallback() {
-		super.connectedCallback();
-
-		// whenever theme changes this subscription runs
-		this._themeSubscription = themeSubject.subscribe(() => {
-			this.requestUpdate();
-		});
-
-		this._configSubscription = configSubject.subscribe(() => {
-			this.computeSource(this._originalSource!);
-		});
-	}
-
-	disconnectedCallback(): void {
-		super.disconnectedCallback();
-		this._themeSubscription?.unsubscribe();
-		this._configSubscription?.unsubscribe();
-	}
-
 	/**
 	 * apply inline styles to shadow-dom for custom fill.
 	 */
@@ -155,8 +130,7 @@ export class FIcon extends FRoot {
 
 	computeSource(value: string) {
 		const emojiRegex = /\p{Extended_Pictographic}/u;
-		if (isValidHttpUrl(value)) {
-			this.isURLSource = true;
+		if (this.url) {
 			this._source = `<img src="${value}"/>`;
 		} else if (emojiRegex.test(value)) {
 			this._source = value;
@@ -183,18 +157,11 @@ export class FIcon extends FRoot {
 		this.requestUpdate();
 	}
 
-	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-		super.willUpdate(changedProperties);
-		this.role = "img";
-
-		this.setAttribute("aria-disabled", this.disabled ? "true" : "false");
-	}
-
 	render() {
 		/**
 		 * creating local fill variable out of state prop.
 		 */
-		this.fill = getCustomFillColor(this.state ?? "");
+		this.fill = getCustomColor(this.state);
 		// validating properties
 		this.validateProperties();
 		// if state prop is inherit, this would inherit color properties of its latest parent f-div.
@@ -215,20 +182,16 @@ export class FIcon extends FRoot {
 		return html`<div
 			class=${classMap(classes)}
 			style=${this.applyStyles()}
-			state=${this.state}
-			size=${this.size}
+			state=${ifDefined(this.state)}
+			size=${ifDefined(this.size)}
 			?disabled=${this.disabled}
 			?loading=${this.loading}
 			?clickable=${this.clickable}
 		>
 			${this.loading
 				? html`${unsafeSVG(loader)}`
-				: html`${this.isURLSource ? unsafeHTML(this.source) : unsafeSVG(this.source)}`}
+				: html`${this.url ? unsafeHTML(this.source) : unsafeSVG(this.source)}`}
 		</div>`;
-	}
-
-	protected updated(changedProperties: PropertyValues) {
-		super.updated(changedProperties);
 	}
 }
 

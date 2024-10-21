@@ -364,20 +364,6 @@ export class FTag extends FRoot {
 			</div>`
 		);
 	}
-	protected async updated(
-		changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
-	): Promise<void> {
-		super.updated(changedProperties);
-		await this.updateComplete;
-		if (this.labelDiv.value) {
-			const isEllipsis = this.labelDiv.value.offsetWidth < this.labelDiv.value.scrollWidth;
-			if (isEllipsis) {
-				this.labelDiv.value.tooltip = this.label;
-			} else {
-				this.labelDiv.value.tooltip = undefined;
-			}
-		}
-	}
 }
 
 /**

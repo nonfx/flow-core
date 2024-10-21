@@ -28,7 +28,8 @@ applies styles on f-select
 		.f-select-wrapper {
 			// Important :  always include base mixins
 			@include base();
-			display: flex;
+			display: grid;
+			grid-template-columns: 1fr 42px;
 			flex-shrink: 1;
 			position: relative;
 			min-height: var(--form-input-div-size);
@@ -149,6 +150,8 @@ applies styles on f-select
 				gap: 12px;
 				align-items: center;
 				flex-grow: 1;
+				width: 100%;
+				box-sizing: border-box;
 				.icon-left-padding {
 					align-items: center;
 					display: flex;
@@ -161,6 +164,7 @@ applies styles on f-select
 					flex-wrap: wrap;
 					width: 100%;
 					align-items: center;
+					width: calc(100% - 20px);
 				}
 				.placeholder-text {
 					font-style: normal;
@@ -220,6 +224,8 @@ applies styles on f-select
 				line-height: 18px;
 				color: var(--color-text-default);
 				color-scheme: dark;
+				width: 100%;
+				padding: 4px 8px;
 
 				@each $category, $value in $categories {
 					&[category^="#{$category}"] {

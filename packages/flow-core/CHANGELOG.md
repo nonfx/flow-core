@@ -2,6 +2,24 @@
 
 # Change Log
 
+## [3.0.0] - 2024-10-20
+
+### Major/Breaking Changes
+
+- All ARIA attributes must now be provided by the consumer, rather than being automatically added by the component itself.
+- `f-div`: The `highlight` attribute has been removed due to performance concerns and infrequent use by consumers.
+- `f-icon`: The `isValidHttpUrl` method has been removed. We now accept a `url` flag. Set it to `true` when the source is a URL.
+- `f-tag`: The dynamic tooltip logic has been removed as it caused performance issues.
+- `f-text`: The `highlight` and `editable` attributes have been removed, making `f-text` more lightweight with reduced JavaScript overhead.
+- `f-root`: The `mouseHover` flag has been removed as it was used in very specific use cases.
+
+### Minor Changes
+
+- `f-div`: The `applyBorder` and `applyPadding` JavaScript functions have been converted to CSS for better performance.
+- `f-select`: The `updateDimensions` logic has been updated and will now only calculate dimensions when the dropdown is open.
+- A lightweight `getCustomColor` function has been added to retrieve custom colors without validation, improving performance.
+- `f-select` templates have been updated.
+
 ## [2.11.7] - 2024-10-10
 
 ### patch changes
