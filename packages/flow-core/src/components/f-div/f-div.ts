@@ -1,4 +1,4 @@
-import { html, PropertyValueMap, unsafeCSS } from "lit";
+import { html, PropertyValueMap, PropertyValues, unsafeCSS } from "lit";
 import { property, state } from "lit/decorators.js";
 import { FRoot } from "../../mixins/components/f-root/f-root";
 import eleStyle from "./f-div.scss?inline";
@@ -254,6 +254,16 @@ export class FDiv extends FRoot {
 		 * Final html to render
 		 */
 		return html` <slot></slot>${this.loading === "loader" ? html`${unsafeSVG(loader)}` : ""}`;
+	}
+	protected updated(changedProperties: PropertyValues): void {
+		super.updated(changedProperties);
+
+		/**
+		 * Haven't found css alternative, hence js is the only way
+		 */
+		if (this.variant === "round") {
+			this.style.borderRadius = `${this.offsetHeight / 2}px`;
+		}
 	}
 }
 

@@ -29,7 +29,7 @@ applies styles on f-select
 			// Important :  always include base mixins
 			@include base();
 			display: grid;
-			grid-template-columns: 1fr 42px;
+			grid-template-columns: 1fr auto;
 			flex-shrink: 1;
 			position: relative;
 			min-height: var(--form-input-div-size);
@@ -164,7 +164,7 @@ applies styles on f-select
 					flex-wrap: wrap;
 					width: 100%;
 					align-items: center;
-					width: calc(100% - 20px);
+					// width: calc(100% - 20px);
 				}
 				.placeholder-text {
 					font-style: normal;
@@ -179,6 +179,8 @@ applies styles on f-select
 				position: relative;
 				display: flex;
 				align-items: center;
+				justify-content: flex-end;
+				width: fit-content;
 				.chevron {
 					padding: 0px 12px;
 					height: 100%;

@@ -133,7 +133,11 @@ export default function render(this: FSelect) {
 				  >`
 				: nothing}
 			${Array.isArray(this.selectedOptions) && selectedOptionsLength > 0
-				? html` <div class="f-select-searchable" data-type="${this.type ?? "single"}">
+				? html` <div
+						class="f-select-searchable"
+						.style=${this.iconLeft ? "width:calc(100% - 20px)" : "width:100%"}
+						data-type="${this.type ?? "single"}"
+				  >
 						${this.type === "single"
 							? this.selectedOptions.map(option => this.renderSingleSelection(option))
 							: html`${this.selectedOptions
