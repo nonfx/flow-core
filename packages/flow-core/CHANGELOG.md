@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.2] - 2024-10-23
+
+### patch changes
+
+- colors updated
+
 ## [3.0.1] - 2024-10-24
 
 ### patch changes
