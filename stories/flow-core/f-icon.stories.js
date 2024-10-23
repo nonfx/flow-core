@@ -37,7 +37,7 @@ export const Playground = {
 	argTypes: {
 		size: {
 			control: "select",
-			options: ["x-large", "large", "medium", "small", "x-small"]
+			options: ["x-large", "large", "medium", "small", "x-small", "xx-small"]
 		},
 
 		state: {
