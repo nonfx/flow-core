@@ -7,6 +7,7 @@
 ### patch changes
 
 - colors updated
+- `xx-small` icon size added
 
 ## [3.0.1] - 2024-10-24
 

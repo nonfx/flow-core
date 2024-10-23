@@ -47,7 +47,7 @@ export class FIcon extends FRoot {
 	 * @attribute The small size is the default.
 	 */
 	@property({ type: String })
-	size?: "x-large" | "large" | "medium" | "small" | "x-small" = "small";
+	size?: "x-large" | "large" | "medium" | "small" | "x-small" | "xx-small" = "small";
 
 	/**
 	 * @attribute The state of an Icon helps in indicating the degree of emphasis. The Icon component inherits the state from the parent component. By default it is subtle.
