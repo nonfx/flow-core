@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.2.2] - 2024-10-9
+
+### Improvement
+
+- Register function loads icons in parallel and returns the icon bundle as well
+
 ## [1.2.1] - 2024-10-23
 
 ### Minor changes
