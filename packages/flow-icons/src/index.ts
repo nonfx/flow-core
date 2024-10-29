@@ -1,20 +1,31 @@
-export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy";
-const ICON_PACK_MAP: Record<IconPackNames, Promise<unknown>> = {
-	aws: import("./flow-aws-icon"),
-	gcp: import("./flow-gcp-icon"),
-	product: import("./flow-product-icon"),
-	system: import("./flow-system-icon"),
-	policy: import("./flow-policy-icon")
-};
-
 import { ConfigUtil } from "@nonfx/flow-core-config";
 
+const ICON_PACK_MAP: Record<IconPackNames, () => Promise<Record<string, string>>> = {
+	aws: async () => (await import("./flow-aws-icon")).default,
+	gcp: async () => (await import("./flow-gcp-icon")).default,
+	product: async () => (await import("./flow-product-icon")).default,
+	system: async () => (await import("./flow-system-icon")).default,
+	policy: async () => (await import("./flow-policy-icon")).default
+};
+
 export async function register(iconPacks: IconPackNames[]) {
-	for (let index = 0; index < iconPacks.length; index++) {
-		const iconPackName = iconPacks[index];
-		const iconsMap = (await ICON_PACK_MAP[iconPackName]) as Record<string, string>;
-		ConfigUtil.setConfig({
-			iconPack: { ...iconsMap, ...ConfigUtil.getConfig().iconPack }
-		});
-	}
+	const iconPackBundle = await Promise.all(
+		iconPacks.map(async iconPackName => {
+			return {
+				packName: iconPackName,
+				pack: await ICON_PACK_MAP[iconPackName]()
+			};
+		})
+	);
+
+	const mergedIconPacks = iconPackBundle.reduce(
+		(acc, { pack }) => ({ ...acc, ...pack }),
+		{} as Record<string, string>
+	);
+
+	ConfigUtil.setConfig({ iconPack: { ...ConfigUtil.getConfig().iconPack, ...mergedIconPacks } });
+
+	return iconPackBundle;
 }
+
+export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy";
