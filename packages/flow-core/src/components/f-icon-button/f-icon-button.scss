@@ -59,6 +59,11 @@ $states: (
 		"hover": var(--color-danger-default-hover),
 		"loading": var(--color-danger-surface)
 	),
+	"highlight": (
+		"background": var(--color-highlight-default),
+		"hover": var(--color-highlight-default-hover),
+		"loading": var(--color-highlight-surface)
+	),
 	"inherit": (
 		"background": var(--color-inherit-button),
 		"hover": var(--color-inherit-button-hover),

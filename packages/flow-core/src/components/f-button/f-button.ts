@@ -34,6 +34,7 @@ export type FButtonState =
 	| "warning"
 	| "danger"
 	| "inherit"
+	| "highlight"
 	| `custom, ${string}`;
 
 injectCss("f-button", globalStyle);

@@ -84,6 +84,7 @@ export const Playground = {
 				"success",
 				"warning",
 				"danger",
+				"highlight",
 				"inherit",
 				"custom, #0000FF",
 				"custom, gray",
@@ -218,6 +219,11 @@ export const State = {
 				<f-button category="fill" label="inherit" state="inherit"></f-button>
 				<f-button category="outline" label="inherit" state="inherit"></f-button>
 				<f-button category="transparent" label="inherit" state="inherit"></f-button>
+			</f-div>
+			<f-div padding="none" gap="x-large" state="highlight">
+				<f-button category="fill" label="highlight" state="highlight"></f-button>
+				<f-button category="outline" label="highlight" state="highlight"></f-button>
+				<f-button category="transparent" label="highlight" state="highlight"></f-button>
 			</f-div>
 			<f-div padding="none" gap="x-large">
 				<f-button category="fill" label="custom" state="custom, pink"></f-button>

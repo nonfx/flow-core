@@ -89,7 +89,7 @@ export class FAccordion extends FRoot {
 		return this.icon === "caret"
 			? "i-caret-down"
 			: this.icon === "chevron"
-			? "i-chevron-down"
+			? "i-chevron-right"
 			: this.open
 			? "i-minus"
 			: "i-plus";

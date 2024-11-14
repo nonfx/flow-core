@@ -31,6 +31,7 @@ export type FIconButtonState =
 	| "warning"
 	| "success"
 	| "neutral"
+	| "highlight"
 	| "inherit"
 	| `custom, ${string}`;
 
