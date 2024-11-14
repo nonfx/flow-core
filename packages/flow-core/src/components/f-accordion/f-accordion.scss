@@ -10,7 +10,7 @@
 		}
 
 		.f-accordion-icon[data-accordion-open] {
-			transform: rotate(180deg);
+			transform: rotate(90deg);
 			transition: transform var(--transition-time-default) linear;
 		}
 	}

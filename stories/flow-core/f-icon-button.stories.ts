@@ -55,6 +55,7 @@ export const Playground = {
 				"danger",
 				"warning",
 				"neutral",
+				"highlight",
 				"inherit",
 				"custom, #0000FF",
 				"custom, gray",
@@ -189,6 +190,12 @@ export const State = {
 				<f-icon-button icon="i-plus" category="fill" state="danger"></f-icon-button>
 				<f-icon-button icon="i-plus" category="outline" state="danger"></f-icon-button>
 				<f-icon-button icon="i-plus" category="transparent" state="danger"></f-icon-button>
+			</f-div>
+			<f-text variant="para" weight="regular" size="medium">state="highlight"</f-text>
+			<f-div padding="none" gap="x-large">
+				<f-icon-button icon="i-plus" category="fill" state="highlight"></f-icon-button>
+				<f-icon-button icon="i-plus" category="outline" state="highlight"></f-icon-button>
+				<f-icon-button icon="i-plus" category="transparent" state="highlight"></f-icon-button>
 			</f-div>
 			<f-text variant="para" weight="regular" size="medium">state="inherit"</f-text>
 			<f-div padding="none" gap="x-large" state="warning">

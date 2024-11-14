@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [3.0.3] - 2024-11-14
+
+### patch changes
+
+- `highlight` state added to `f-button` and `f-icon-button`
+- `f-accordion` chevron direction updated
+
 ## [3.0.2] - 2024-10-23
 
 ### patch changes

@@ -31,6 +31,10 @@ $states: (
 		"fill": var(--color-primary-default),
 		"hover-fill": var(--color-primary-default-hover)
 	),
+	"highlight": (
+		"fill": var(--color-highlight-default),
+		"hover-fill": var(--color-highlight-default-hover)
+	),
 	"success": (
 		"fill": var(--color-success-default),
 		"hover-fill": var(--color-success-default-hover)
