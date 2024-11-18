@@ -34,6 +34,7 @@ export const Playground = {
 				.size=${args.size}
 				.state=${args.state}
 				.width=${args.width}
+				.animation=${args.animation}
 			></f-progress-bar>
 		</f-div>`;
 	},
@@ -72,6 +73,9 @@ export const Playground = {
 				"custom, #607B9F"
 			]
 		},
+		animation: {
+			control: "boolean"
+		},
 
 		width: {
 			control: "select",
@@ -84,7 +88,8 @@ export const Playground = {
 		variant: "block",
 		size: "medium",
 		state: "default",
-		width: "fill-container"
+		width: "fill-container",
+		animation: true
 	}
 };
 

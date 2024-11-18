@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.4] - 2024-11-18
+
+### patch changes
+
+- `f-progress-bar` animation added
+
 ## [3.0.3] - 2024-11-14
 
 ### patch changes
