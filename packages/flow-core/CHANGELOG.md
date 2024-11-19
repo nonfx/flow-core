@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.5] - 2024-11-19
+
+### patch changes
+
+- `f-progress-bar` transition when value changes
+
 ## [3.0.4] - 2024-11-18
 
 ### patch changes

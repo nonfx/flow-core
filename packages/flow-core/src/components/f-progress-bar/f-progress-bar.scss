@@ -23,6 +23,7 @@
 		}
 		.f-progress-bar-fill[data-animation="true"] {
 			position: relative;
+			transition: width 0.6s linear;
 			&::before {
 				content: " ";
 				position: absolute;
