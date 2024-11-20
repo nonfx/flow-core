@@ -1,0 +1,1 @@
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path fill="#4285F4" d="M12 14h10v-4H12zm0 8h10v-4H12z"/><path fill="#669DF6" d="M8 22h4v-4H8zM8 2H2v4h6zm4 8H2v4h10z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>`;

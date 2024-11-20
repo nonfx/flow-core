@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.3.0] - 2024-11-20
+
+### Minor changes
+
+- new GCP icons added
+
 ## [1.2.2] - 2024-10-9
 
 ### Improvement
