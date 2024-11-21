@@ -7,11 +7,30 @@
 :host {
 	.f-progress-bar {
 		@include base();
-		background-color: var(--color-neutral-subtle) !important;
+		// background-color: var(--color-neutral-subtle) !important;
 		&[data-variant="curved"] {
 			border-radius: 12px !important;
 		}
+		position: relative;
+		&[state="default"] {
+			background: var(--color-neutral-default) !important;
+		}
+
+		&::before {
+			content: "";
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			position: absolute;
+			background-color: white;
+			opacity: 0.5;
+		}
+
 		@each $state, $color in $states {
+			&[state="#{$state}"] {
+				background-color: map.get($color, "background") !important;
+			}
 			[data-state="#{$state}"] {
 				background-color: map.get($color, "background") !important;
 			}

@@ -2,6 +2,13 @@
 
 # Change Log
 
+## [3.0.6] - 2024-11-21
+
+### patch changes
+
+- dark theme colors updated
+- `f-progress-bar` background colcor logic updated
+
 ## [3.0.5] - 2024-11-19
 
 ### patch changes

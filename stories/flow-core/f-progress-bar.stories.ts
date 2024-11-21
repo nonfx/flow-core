@@ -70,7 +70,8 @@ export const Playground = {
 				"custom, #fff",
 				"custom, white",
 				"custom, black",
-				"custom, #607B9F"
+				"custom, #607B9F",
+				"custom, var(--color-highlight-default)"
 			]
 		},
 		animation: {

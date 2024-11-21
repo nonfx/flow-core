@@ -4,10 +4,7 @@ import eleStyle from "./f-progress-bar.scss?inline";
 import globalStyle from "./f-progress-bar-global.scss?inline";
 import { FRoot } from "../../mixins/components/f-root/f-root";
 import { FDiv } from "../f-div/f-div";
-import getCustomFillColor from "../../utils/get-custom-fill-color";
-import { validateHTMLColor } from "validate-color";
-import { validateHTMLColorName } from "validate-color";
-import { flowElement } from "../../utils";
+import { flowElement, getCustomColor } from "../../utils";
 import { injectCss } from "@nonfx/flow-core-config";
 import { classMap } from "lit-html/directives/class-map.js";
 import { keyed } from "lit/directives/keyed.js";
@@ -115,20 +112,6 @@ export class FProgressBar extends FRoot {
 		}
 	}
 
-	/**
-	 * validation for all atrributes
-	 */
-	validateProperties() {
-		if (
-			this.state?.includes("custom") &&
-			this.fill &&
-			!validateHTMLColor(this.fill) &&
-			!validateHTMLColorName(this.fill)
-		) {
-			throw new Error("f-progress-bar : enter correct color-name or color-code");
-		}
-	}
-
 	fill = "";
 
 	/**
@@ -179,20 +162,17 @@ export class FProgressBar extends FRoot {
 		/**
 		 * creating local fill variable out of state prop.
 		 */
-		this.fill = getCustomFillColor(this.state ?? "");
+		this.fill = getCustomColor(this.state) ?? "";
 
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		//@ts-ignore
 		this.style.setProperty("--f-circle-progress-outline", this.fill);
 
-		/**
-		 * validate
-		 */
-		this.validateProperties();
 		if (this.variant !== "circle") {
 			return html`
 				<f-div
 					class="f-progress-bar"
+					state=${ifDefined(this.state)}
 					.width=${this.computedWidth}
 					height=${this.computedHeight}
 					data-variant=${ifDefined(this.variant)}
@@ -201,6 +181,7 @@ export class FProgressBar extends FRoot {
 						.width=${this.value}
 						data-animation=${ifDefined(this.animation)}
 						data-state=${ifDefined(this.state)}
+						state=${ifDefined(this.state)}
 						class="f-progress-bar-fill"
 					></f-div>
 					<f-div width="fill-container"></f-div>
@@ -220,12 +201,6 @@ export class FProgressBar extends FRoot {
 				style="${this.circleProgressStyle}"
 			></div>`
 		);
-	}
-	protected updated(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>) {
-		super.updated(changedProperties);
-		if (this.fill && this.state?.includes("custom") && this.fProgressBarFill) {
-			this.fProgressBarFill.style.background = this.fill;
-		}
 	}
 }
 
