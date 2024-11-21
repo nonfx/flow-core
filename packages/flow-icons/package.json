@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-icons",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Flow icons package",
   "type": "module",
   "module": "dist/flow-icons.es.js",

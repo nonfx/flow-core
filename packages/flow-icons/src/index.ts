@@ -5,7 +5,8 @@ const ICON_PACK_MAP: Record<IconPackNames, () => Promise<Record<string, string>>
 	gcp: async () => (await import("./flow-gcp-icon")).default,
 	product: async () => (await import("./flow-product-icon")).default,
 	system: async () => (await import("./flow-system-icon")).default,
-	policy: async () => (await import("./flow-policy-icon")).default
+	policy: async () => (await import("./flow-policy-icon")).default,
+	azure: async () => (await import("./flow-azure-icon")).default
 };
 
 export async function register(iconPacks: IconPackNames[]) {
@@ -28,4 +29,4 @@ export async function register(iconPacks: IconPackNames[]) {
 	return iconPackBundle;
 }
 
-export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy";
+export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy" | "azure";
