@@ -20,7 +20,7 @@ import { Preview } from "@storybook/web-components";
 import "./storybook.css";
 
 (async () => {
-	await register(["aws", "gcp", "product", "system", "policy"]);
+	await register(["aws", "gcp", "product", "system", "policy", "azure"]);
 })();
 
 const preview: Preview = {

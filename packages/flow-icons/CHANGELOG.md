@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.4.0] - 2024-11-21
+
+### Minor changes
+
+- new AZURE icons added
+
 ## [1.3.0] - 2024-11-20
 
 ### Minor changes
