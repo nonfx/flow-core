@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.7] - 2024-11-25
+
+### patch changes
+
+- `f-progress-bar` shimmer not displaying for custom state
+
 ## [3.0.6] - 2024-11-21
 
 ### patch changes
