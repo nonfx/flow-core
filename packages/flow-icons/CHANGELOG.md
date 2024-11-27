@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.4.1] - 2024-11-27
+
+### Patch changes
+
+- star icon updated
+
 ## [1.4.0] - 2024-11-21
 
 ### Minor changes
