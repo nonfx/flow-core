@@ -132,6 +132,9 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 											});
 											if (pkg === "flow-system-icon") {
 												formattedIcon = formattedIcon.replace(/fill="#fff"/g, `fill="white"`);
+												formattedIcon = formattedIcon.replace(/fill="#ffffff"/g, `fill="white"`);
+												formattedIcon = formattedIcon.replace(/fill="#FFF"/g, `fill="white"`);
+												formattedIcon = formattedIcon.replace(/fill="#FFFFFF"/g, `fill="white"`);
 											}
 
 											const svgToJS = `export default \`${formattedIcon}\`;`;
