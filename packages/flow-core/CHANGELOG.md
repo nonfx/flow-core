@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.8] - 2024-12-04
+
+### patch changes
+
+- `f-icon-button` counter position updated
+
 ## [3.0.7] - 2024-11-25
 
 ### patch changes
