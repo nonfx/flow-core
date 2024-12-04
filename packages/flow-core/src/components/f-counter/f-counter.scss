@@ -89,21 +89,21 @@ in this case it is `f-counter`
 				}
 				// used in `f-icon-button` for special case
 				&.absolute-counter {
-					transform: translateX(-50%) translateY(10%);
+					transform: translateX(-20%) translateY(-120%);
 					&.packed-large {
-						transform: translateX(-50%) translateY(-18%);
+						transform: translateX(-20%) translateY(-110%);
 					}
 
 					&.size-small {
-						transform: translateX(-50%) translateY(-13%);
+						transform: translateX(-20%) translateY(-115%);
 						&.packed-small {
-							transform: translateX(-50%) translateY(-26%);
+							transform: translateX(-20%) translateY(-110%);
 						}
 					}
 					&.size-medium {
-						transform: translateX(-50%) translateY(13%);
+						transform: translateX(-20%) translateY(-120%);
 						&.packed-medium {
-							transform: translateX(-50%) translateY(-18%);
+							transform: translateX(-20%) translateY(-110%);
 						}
 					}
 					&.size-x-small {
