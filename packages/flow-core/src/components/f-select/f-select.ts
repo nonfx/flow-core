@@ -375,7 +375,7 @@ export class FSelect extends FRoot {
 			const spaceOnRight =
 				document.body.offsetWidth - this.wrapperElement.getBoundingClientRect().right;
 
-			if (spaceOnRight < this.wrapperElement.offsetWidth) {
+			if (spaceOnRight < this.optionElement.offsetWidth) {
 				right = `right:${spaceOnRight}px;`;
 			}
 		}

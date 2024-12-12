@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.9] - 2024-12-12
+
+### patch changes
+
+- `f-select` options opening direction fixed
+
 ## [3.0.8] - 2024-12-04
 
 ### patch changes
