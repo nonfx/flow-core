@@ -112,7 +112,7 @@ export const decorators = [
 
 		document.head.appendChild(monolink);
 
-		register(["aws", "gcp", "product", "system", "saas-system", "engineering"]);
+		register(["aws", "gcp", "product", "system", "policy", "azure"]);
 		ConfigUtil.setConfig({
 			theme: "f-light",
 			customFont: {

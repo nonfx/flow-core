@@ -75,6 +75,8 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 			)) {
 				iconNameMapping[id] = (component[1] as componentMeta).name;
 			}
+
+			const eascapeWhitelist = ["s-malaysia-gov"];
 			/**
 			 * async/await removed to download asynchronously
 			 */
@@ -117,19 +119,24 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 								promises.push(
 									getIconContent(url[1] as string).then(
 										icon => {
-											let { data: formattedIcon } = optimize(icon.data, {
-												multipass: true,
-												plugins: [
-													{
-														name: "preset-default",
-														params: {
-															overrides: {
-																removeViewBox: false
+											let formattedIcon = icon.data;
+											try {
+												formattedIcon = optimize(icon.data, {
+													multipass: true,
+													plugins: [
+														{
+															name: "preset-default",
+															params: {
+																overrides: {
+																	removeViewBox: false
+																}
 															}
 														}
-													}
-												]
-											});
+													]
+												}).data;
+											} catch (e) {
+												console.warn("\nWarn: error in formatting icon", iconNameMapping[id]);
+											}
 											if (pkg === "flow-system-icon") {
 												formattedIcon = formattedIcon.replace(/fill="#fff"/g, `fill="white"`);
 												formattedIcon = formattedIcon.replace(/fill="#ffffff"/g, `fill="white"`);
@@ -137,6 +144,9 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 												formattedIcon = formattedIcon.replace(/fill="#FFFFFF"/g, `fill="white"`);
 											}
 
+											if (eascapeWhitelist.includes(iconNameMapping[id])) {
+												formattedIcon = formattedIcon.replace(/fill="white"/g, `fill="#fff"`);
+											}
 											const svgToJS = `export default \`${formattedIcon}\`;`;
 											//@ts-ignore
 											const iconNameAsVariable = iconNameMapping[id].replaceAll("-", "_");
@@ -153,12 +163,12 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 													svgToJS
 												);
 											} catch (err) {
-												console.error("Invalid path " + iconNameMapping[id]);
+												console.error("\nInvalid path " + iconNameMapping[id]);
 											}
 										},
 										error => {
-											console.log(
-												`Failed to load svg ${iconNameMapping[id]} - ${url[1]}`,
+											console.error(
+												`\nError : Failed to load svg ${iconNameMapping[id]} - ${url[1]}`,
 												error.code
 											);
 										}
