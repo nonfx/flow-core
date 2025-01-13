@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.4.4] - 2025-01-13
+
+### Patch changes
+
+- `s-malysia-gov` icon updated
+
 ## [1.4.3] - 2025-01-13
 
 ### Patch changes
