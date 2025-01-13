@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.4.3] - 2025-01-13
+
+### Patch changes
+
+- icons updated
+
 ## [1.4.2] - 2024-11-28
 
 ### Patch changes
