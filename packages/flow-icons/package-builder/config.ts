@@ -31,6 +31,10 @@ const config: FigmaPackageConfig = {
 		{
 			name: "flow-azure-icon",
 			nodeId: "154:174"
+		},
+		{
+			name: "flow-nonfx-icon",
+			nodeId: "199:38"
 		}
 	]
 };

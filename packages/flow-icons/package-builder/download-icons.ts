@@ -137,7 +137,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 											} catch (e) {
 												console.warn("\nWarn: error in formatting icon", iconNameMapping[id]);
 											}
-											if (pkg === "flow-system-icon") {
+											if (pkg === "flow-system-icon" || pkg === "flow-nonfx-icon") {
 												formattedIcon = formattedIcon.replace(/fill="#fff"/g, `fill="white"`);
 												formattedIcon = formattedIcon.replace(/fill="#ffffff"/g, `fill="white"`);
 												formattedIcon = formattedIcon.replace(/fill="#FFF"/g, `fill="white"`);

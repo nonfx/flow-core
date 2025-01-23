@@ -5,6 +5,7 @@ import flowProductIcon from "@nonfx/flow-icons/src/flow-product-icon/icon-pack";
 import flowSystemIcon from "@nonfx/flow-icons/src/flow-system-icon/icon-pack";
 import flowPolicyIcon from "@nonfx/flow-icons/src/flow-policy-icon/icon-pack";
 import flowAzureIcon from "@nonfx/flow-icons/src/flow-azure-icon/icon-pack";
+import flowNonfxIcon from "@nonfx/flow-icons/src/flow-nonfx-icon/icon-pack";
 import { customElement, property } from "lit/decorators.js";
 import { LitElement } from "lit";
 
@@ -137,4 +138,13 @@ export const Azure = {
 	},
 
 	name: "azure"
+};
+
+export const Nonfx = {
+	render: () => {
+		const searchTerm = "";
+		return html` <icon-pack .packName=${"nonfx"} .icons=${flowNonfxIcon}> </icon-pack> `;
+	},
+
+	name: "nonfx"
 };

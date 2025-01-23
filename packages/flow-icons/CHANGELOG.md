@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.5.0] - 2025-01-23
+
+### Minor changes
+
+- `nonfx` icon pack added
+
 ## [1.4.4] - 2025-01-13
 
 ### Patch changes
