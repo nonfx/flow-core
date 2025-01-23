@@ -70,10 +70,7 @@ f-input-light {
 					}
 				}
 				&[variant="block"][category="transparent"] {
-					border-bottom: 1px solid map.get($color, "border");
-					border-top: none;
-					border-right: none;
-					border-left: none;
+					border: none;
 					&:focus-within {
 						border-bottom: 1px solid map.get($color, "focus");
 						outline: none;

@@ -78,10 +78,7 @@
 						}
 					}
 					&[category="transparent"] {
-						border-bottom: 1px solid map.get($value, "border");
-						border-top: none;
-						border-left: none;
-						border-right: none;
+						border: none;
 						&:focus {
 							outline: none;
 							border-bottom: 1px solid map.get($value, "focus");
