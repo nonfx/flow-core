@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.10] - 2025-01-23
+
+### patch changes
+
+- `f-select` , 'f-input' ,`f-text-area` transprent category updated
+
 ## [3.0.9] - 2024-12-12
 
 ### patch changes
