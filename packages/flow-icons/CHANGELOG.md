@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.5.1] - 2025-01-23
+
+### Patch changes
+
+- `i-sort-asc` `i-sort-desc` added
+
 ## [1.5.0] - 2025-01-23
 
 ### Minor changes
