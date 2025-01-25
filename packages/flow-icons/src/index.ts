@@ -1,4 +1,5 @@
 import { ConfigUtil } from "@nonfx/flow-core-config";
+import { version } from "./../package.json";
 
 const ICON_PACK_MAP: Record<IconPackNames, () => Promise<Record<string, string>>> = {
 	aws: async () => (await import("./flow-aws-icon")).default,
@@ -31,3 +32,9 @@ export async function register(iconPacks: IconPackNames[]) {
 }
 
 export type IconPackNames = "aws" | "gcp" | "product" | "system" | "policy" | "azure" | "nonfx";
+
+console.log(
+	`%c@nonfx/flow-icons%cv${version}`,
+	"background:#161616;color:white;padding:4px 6px 4px 6px;border-radius:4px 0px 0px 4px",
+	"background:#AAFF00;color:black;padding:4px 6px 4px 6px;border-radius:0px 4px 4px 0px;"
+);

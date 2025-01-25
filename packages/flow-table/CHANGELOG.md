@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [2.6.1] - 2025-01-25
+
+### Patch changes
+
+- undefined bug fixed
+
 ## [2.6.0] - 2024-09-27
 
 ### Minor changes
