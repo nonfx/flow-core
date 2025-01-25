@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-table",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Table component for flow library",
   "type": "module",
   "module": "dist/flow-table.es.js",

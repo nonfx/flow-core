@@ -426,7 +426,7 @@ export class FTableSchema extends FRoot {
 	}
 
 	search(event: CustomEvent) {
-		this.tableSearchElement.loading = true;
+		if (this.tableSearchElement) this.tableSearchElement.loading = true;
 		if (this.searchTimeout) {
 			clearTimeout(this.searchTimeout);
 		}
@@ -545,7 +545,7 @@ export class FTableSchema extends FRoot {
 			if (this.tableElement) {
 				await this.tableElement.updateHeaderSelectionCheckboxState();
 			}
-			this.tableSearchElement.loading = false;
+			if (this.tableSearchElement) this.tableSearchElement.loading = false;
 		});
 	}
 
