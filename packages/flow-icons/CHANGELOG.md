@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.5.4] - 2025-01-27
+
+### Patch changes
+
+- hsbc icon added
+
 ## [1.5.3] - 2025-01-23
 
 ### Patch changes
