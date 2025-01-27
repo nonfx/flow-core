@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [1.5.3] - 2025-01-23
+
+### Patch changes
+
+- policy icons updated
+
 ## [1.5.1] - 2025-01-23
 
 ### Patch changes
