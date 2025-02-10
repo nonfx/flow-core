@@ -2,6 +2,12 @@
 
 # Change Log
 
+## [3.0.10] - 2025-02-10
+
+### patch changes
+
+- `f-button` option click bug fixed.
+
 ## [3.0.10] - 2025-01-23
 
 ### patch changes
