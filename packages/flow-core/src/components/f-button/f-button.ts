@@ -394,6 +394,7 @@ export class FButton extends FRoot {
 							size="small"
 							id="f-button-actions"
 							placement="bottom-start"
+							@click=${(e: PointerEvent) => this.closeButtonActions(e)}
 							.overlay=${false}
 						>
 							<f-div direction="column" stat="secondary" overflow="scroll">
@@ -453,7 +454,8 @@ export class FButton extends FRoot {
 		}
 	}
 
-	closeButtonActions() {
+	closeButtonActions(e?: Event) {
+		e?.stopPropagation();
 		if (this.buttonActionsPopover) {
 			this.buttonActionsPopover.open = false;
 		}
