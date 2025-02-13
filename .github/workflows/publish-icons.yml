@@ -36,7 +36,7 @@ jobs:
 
       - name: Run icon download script
         working-directory: packages/flow-icons
-        run: pnpm exec download-icons
+        run: pnpm run download-icons
 
       - name: Check for changes
         id: git-status
