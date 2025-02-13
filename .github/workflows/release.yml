@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Update Flow Icons"] # Name of the first workflow
+    types:
+      - completed
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
