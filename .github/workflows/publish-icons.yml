@@ -66,12 +66,12 @@ jobs:
           jq --arg version "$NEW_VERSION" '.version = $version' package.json > temp.json && mv temp.json package.json
           echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
-      - name: Update CHANGELOGS.md
+      - name: Update CHANGELOG.md
         if: env.changes == 'true'
         run: |
-          echo "## Version $NEW_VERSION - $(date +'%Y-%m-%d')" >> packages/flow-icons/CHANGELOGS.md
-          echo "- Updated icons from Figma" >> packages/flow-icons/CHANGELOGS.md
-          echo "" >> packages/flow-icons/CHANGELOGS.md
+          echo "## [$NEW_VERSION] - $(date +'%Y-%m-%d')" >> packages/flow-icons/CHANGELOG.md
+          echo "- Updated icons from Figma" >> packages/flow-icons/CHANGELOG.md
+          echo "" >> packages/flow-icons/CHANGELOG.md
 
       - name: Commit and push changes
         if: env.changes == 'true'
@@ -82,5 +82,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore(flow-icons): update icons, bump version, and update CHANGELOGS.md" || echo "No changes to commit"
+          git commit -m "chore(flow-icons): update icons, bump version, and update CHANGELOG.md" || echo "No changes to commit"
           git push origin main
