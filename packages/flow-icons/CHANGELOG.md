@@ -164,3 +164,7 @@
 ### Patch
 
 - first release.
+
+## [1.7.0] - 2025-02-13
+
+- Updated icons from Figma
