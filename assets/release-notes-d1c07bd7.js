@@ -1,0 +1,89 @@
+import{j as n}from"./jsx-runtime-1a9d9a93.js";import"./blocks-2646952b.js";import{M as r,e as a}from"./index-95faca17.js";import{u as i}from"./index-4811e648.js";import"./index-8b3efc3f.js";import"./_commonjsHelpers-de833af9.js";import"./iframe-c10e5ca6.js";import"../sb-preview/runtime.js";import"./chunk-6E673XPF-debcdbe9.js";import"./index-a0a7be28.js";import"./_defineProperty-094902f6.js";import"./index-385d94e7.js";import"./index-356e4a49.js";import"./index-1605002a.js";const d=`<h4 className="margin-btm-8">Release Notes</h4>
+
+# Change Log
+
+## [1.2.0] - 2024-09-27
+
+### Minor changes
+
+- Only exports an ESM build. Any modern bundler in 2024 will work with it.
+
+## [1.1.1] - 2024-07-08
+
+### Patch Changes
+
+- \`vue\` component types updated.
+
+## [1.1.0] - 2023-11-27
+
+### Minor Changes
+
+- \`lit\` upgraded to v3.
+
+## [1.0.3] - 2023-10-12
+
+### Patch Changes
+
+- Remove sideEffects because the components require registration via import
+- Updated dependencies
+- \`@nonfx/flow-core-config@1.1.3\`
+- \`@nonfx/flow-core@2.0.3\`
+
+## [1.0.2] - 2023-10-10
+
+### Patch Changes
+
+- a2de106: Fix platform types
+- Updated dependencies [a2de106]
+- \`@nonfx/flow-core-config@1.1.1\`
+- \`@nonfx/flow-core@2.0.1\`
+
+## [1.0.1-beta.0] - 2023-10-10
+
+### Patch Changes
+
+- Fix platform types
+- Updated dependencies
+- \`@nonfx/flow-core-config@1.1.1-beta.0\`
+- \`@nonfx/flow-core@2.0.1-beta.0\`
+
+## [1.0.0] - 2023-10-10
+
+### Minor Changes
+
+- Migrated to monorepo structure and removed the need for custom CSS
+
+### Patch Changes
+
+- Updated dependencies
+- \`@nonfx/flow-core@2.0.0\`
+<hr className="margin-btm-32" />
+
+## [0.2.0] - 2023-08-03
+
+### Features
+
+- \`title\` prop added to display title in the header.
+- \`comments\` prop added to display comment toggling button in the header.
+- \`copy-button\` prop added to display copy button in the header, which on click copies the entire code.
+- \`show-line-numbers\` prop added to toggle line no.'s'.
+- \`state\` prop introduced, for changing the background-color of the code-editor.
+- \`read-only\` prop added for edit and read-only mode in code-editor.
+
+## [0.1.0] - 2023-06-09
+
+### Features
+
+- \`content-change\` event added to listen on updates in editor.
+
+## [0.0.9] - 2023-05-30
+
+### Note
+
+- This package uses \`Workers\` so please go though installation instruction from [README](https://github.com/ollionorg/flow-core/blob/main/packages/flow-code-editor/README.md)
+
+### Improvements
+
+- First release
+`;function t(e){return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"@nonfx/flow-code-editor/Release Notes"}),`
+`,n.jsx(a,{children:d})]})}function C(e={}){const{wrapper:o}=Object.assign({},i(),e.components);return o?n.jsx(o,Object.assign({},e,{children:n.jsx(t,e)})):t()}export{C as default};
