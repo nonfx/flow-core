@@ -15,7 +15,8 @@ jobs:
 
       - name: Enable corepack (pnpm support)
         run: corepack enable
-
+      - name: Set `npm` to use `pnpm`
+        run: npm config set engine-strict true
       - name: Set up Node.js and pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -35,7 +36,7 @@ jobs:
 
       - name: Run icon download script
         working-directory: packages/flow-icons
-        run: pnpm run download-icons
+        run: pnpm exec download-icons
 
       - name: Check for changes
         id: git-status

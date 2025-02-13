@@ -49,5 +49,6 @@
   },
   "homepage": "https://github.com/ollionorg/flow-core",
   "author": "@nonfx",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "pnpm@8"
 }
