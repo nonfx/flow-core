@@ -2,6 +2,8 @@ name: Update Flow Icons
 
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   update-icons:
@@ -74,6 +76,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add packages/flow-icons
-          git commit -m "chore(flow-icons): update icons, bump version to $NEW_VERSION, and update CHANGELOGS.md"
-          git push origin main
+          git add -A
+          git commit -m "chore(flow-icons): update icons, bump version, and update CHANGELOGS.md" || echo "No changes to commit"
+          git pull --rebase origin main  # Prevents conflicts
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
