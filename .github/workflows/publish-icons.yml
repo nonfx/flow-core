@@ -31,7 +31,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: Create .env file
         run: |
@@ -78,6 +78,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          pnpm run prettify
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "vikas@nonfx.com"
           git add -A
