@@ -13,7 +13,6 @@ build-lib: install
 	cp README.md packages/flow-core
 	bun run --cwd packages/flow-core-config build
 	bun run --cwd packages/flow-core build
-	sleep 1
 	bun run --bun --filter "!flow-core" --elide-lines 0 build
 	bun run tsc -b
 	bun generate-types.ts

@@ -67,7 +67,6 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@nonfx/tsconfig": "workspace:*",
     "@nonfx/flow-code-editor": "workspace:*",
     "@nonfx/flow-core": "workspace:*",
     "@nonfx/flow-dashboard": "workspace:*",
@@ -78,6 +77,8 @@
     "@nonfx/flow-md-editor": "workspace:*",
     "@nonfx/flow-table": "workspace:*",
     "@nonfx/flow-text-editor": "workspace:*",
+    "@nonfx/tsconfig": "workspace:*",
+    "@storybook/client-api": "^7.6.17",
     "d3": "^7.9.0",
     "jspdf": "^2.5.1",
     "lit": "^3.2.1"

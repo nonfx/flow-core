@@ -9,4 +9,5 @@ bun run analyze
 
 echo "building library..."
 bun vite build --emptyOutDir
-bun vite build --emptyOutDir --config vite.umd.config.ts
+# This seems to fail, need to debug later
+# bun vite build --emptyOutDir --config vite.umd.config.ts
