@@ -1,1 +1,1 @@
-./node_modules/.bin/lint-staged --no-stash --diff="origin/main...HEAD"
+bun ./node_modules/.bin/lint-staged --no-stash --diff="origin/main...HEAD"
