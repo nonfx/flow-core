@@ -5,7 +5,7 @@
 
 Flow-core is the base library required by any flow dependecies. It consists mostly of building blocks such design + system tokens, atoms, molecules, base themes, etc.
 
-- [Website](https://flow.ollion.com/)
+- [Website](https://nonfx.github.io/flow-core/)
 - [Learn More](https://github.com/nonfx/flow-core/blob/main/ABOUT.md)
 
 ## Table of contents
@@ -13,7 +13,7 @@ Flow-core is the base library required by any flow dependecies. It consists most
 - [Starter-kits](#starter-kits)
 - [Install for an existing project](#existing-project)
 - [VScode Plugin and debuggers](#vscode-plugin-and-debuggers)
-- [Components](https://flow.ollion.com/v2/index.html)
+- [Components](https://nonfx.github.io/flow-core/)
 - [Templates](https://flow.ollion.com/templates/index.html)
 - [Resources](#resources)
 - [Figma for designers](https://www.figma.com/community/file/1240565037876928288/Flow-UI-Kit)
@@ -23,7 +23,7 @@ Flow-core is the base library required by any flow dependecies. It consists most
 
 ### Starter kits
 
-For a new project, Flow has put together starter kits with basic dependencies to get you going. Each starter kit will contain Flow core, [Flow system icons](https://github.com/ollionorg/flow-icon), Default google fonts and fully functional Flow templates (eg: top navigation, profile, left navigation, etc)
+For a new project, Flow has put together starter kits with basic dependencies to get you going. Each starter kit will contain Flow core, [Flow system icons](https://nonfx.github.io/flow-core/?path=/story/nonfx-flow-icons--system), Default google fonts and fully functional Flow templates (eg: top navigation, profile, left navigation, etc)
 
 #### Kits
 
@@ -104,7 +104,7 @@ register(["system"]);
 ```
 
 - [Icons Github repo](https://github.com/ollionorg/flow-icon)
-- [View icons](https://flow.ollion.com/icons/index.html)
+- [View icons](https://nonfx.github.io/flow-core/?path=/story/nonfx-flow-icons--system)
 
 ## VScode Plugin and debuggers
 
@@ -114,7 +114,7 @@ register(["system"]);
 
 ## Components
 
-Visit the [Flow components Storybook](https://flow.ollion.com/v2/index.html)
+Visit the [Flow components Storybook](https://nonfx.github.io/flow-core/)
 
 ## Templates
 

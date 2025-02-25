@@ -143,7 +143,7 @@ export class FEmojiPicker extends FRoot {
 	["close-on-select"]?: boolean = false;
 
 	/**
-	 * @attribute show/remove clear icon
+	 * @attribute show or remove clear icon
 	 */
 	@property({ reflect: true, type: Boolean })
 	clear?: boolean = true;

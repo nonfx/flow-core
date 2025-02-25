@@ -11,10 +11,12 @@ install:
 .PHONY: build-lib
 build-lib: install
 	cp README.md packages/flow-core
-	bun run --cwd packages/custom-elements-manifest-to-types build
-	bun run --bun --filter "*" --elide-lines 0 build
+	bun run --cwd packages/flow-core-config build
+	bun run --cwd packages/flow-core build
+	sleep 1
+	bun run --bun --filter "!flow-core" --elide-lines 0 build
 	bun run tsc -b
-	bun generate-types.cjs
+	bun generate-types.ts
 
 .PHONY: build-storybook
 build-storybook: install
@@ -26,7 +28,3 @@ build: build-lib build-storybook
 .PHONY: test
 test: build-lib
 	bun run --bun --filter "*" --elide-lines 0 test
-
-.PHONY: publish
-publish: build-lib
-	bun run --bun --filter "*" --elide-lines 0 publish --dry-run --no-git-checks

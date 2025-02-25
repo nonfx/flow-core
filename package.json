@@ -67,6 +67,7 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "@nonfx/tsconfig": "workspace:*",
     "@nonfx/flow-code-editor": "workspace:*",
     "@nonfx/flow-core": "workspace:*",
     "@nonfx/flow-dashboard": "workspace:*",

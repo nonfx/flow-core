@@ -2,7 +2,6 @@ import { html } from "lit-html";
 import flowAwsIcon from "@nonfx/flow-icons/src/flow-aws-icon/icon-pack";
 import flowGCPIcon from "@nonfx/flow-icons/src/flow-gcp-icon/icon-pack";
 import flowProductIcon from "@nonfx/flow-icons/src/flow-product-icon/icon-pack";
-import flowSystemIcon from "@nonfx/flow-icons/src/flow-system-icon/icon-pack";
 import flowPolicyIcon from "@nonfx/flow-icons/src/flow-policy-icon/icon-pack";
 import flowAzureIcon from "@nonfx/flow-icons/src/flow-azure-icon/icon-pack";
 import flowNonfxIcon from "@nonfx/flow-icons/src/flow-nonfx-icon/icon-pack";
@@ -86,15 +85,6 @@ export class IconPackElement extends LitElement {
 		`;
 	}
 }
-
-export const System = {
-	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"system"} .icons=${flowSystemIcon}> </icon-pack> `;
-	},
-
-	name: "system"
-};
 
 export const Aws = {
 	render: () => {

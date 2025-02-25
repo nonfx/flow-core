@@ -1,7 +1,9 @@
 {
 	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
+		"rootDir": ".",
 		"outDir": "./dist"
 	},
-	"include": ["src/**/*", "package.json"]
+	"include": ["src/**/*", "package.json"],
+	"exclude": ["**/*.test.ts", "**/dist", "dist"]
 }

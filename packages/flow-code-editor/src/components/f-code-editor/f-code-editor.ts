@@ -93,7 +93,7 @@ export class FCodeEditor extends FRoot {
 	copyButton?: boolean = false;
 
 	/**
-	 * @attribute show/hide line no.
+	 * @attribute show line no.
 	 */
 	@property({ type: Boolean, reflect: true, attribute: "show-line-numbers" })
 	showLineNumbers?: boolean = true;

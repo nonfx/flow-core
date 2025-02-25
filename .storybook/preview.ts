@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import { register } from "@nonfx/flow-icons";
+import { register } from "@nonfx/flow-icons/src";
 import { ConfigUtil } from "@nonfx/flow-core-config";
 import { changeRoute } from "./utils";
 import "@nonfx/flow-core";
@@ -19,7 +19,7 @@ import { Preview } from "@storybook/web-components";
 import "./storybook.css";
 
 (async () => {
-	await register(["aws", "gcp", "product", "system", "policy", "azure", "nonfx"]);
+	await register(["aws", "gcp", "product", "policy", "azure", "nonfx"]);
 })();
 
 const preview: Preview = {
@@ -111,7 +111,6 @@ export const decorators = [
 
 		document.head.appendChild(monolink);
 
-		register(["aws", "gcp", "product", "system", "policy", "azure"]);
 		ConfigUtil.setConfig({
 			theme: "f-light",
 			customFont: {

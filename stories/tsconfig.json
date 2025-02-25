@@ -1,5 +1,5 @@
 {
-	"name": "@nonfx/tsconfig",
+	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
 		"emitDeclarationOnly": false,
 		"noEmit": true,
