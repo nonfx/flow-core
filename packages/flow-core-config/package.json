@@ -9,11 +9,11 @@
     "build": "vite build --emptyOutDir"
   },
   "dependencies": {
-    "rxjs": "^7.5.7"
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^4.4.11"
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
   },
   "repository": {
     "type": "git",

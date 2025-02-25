@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
 import { html } from "lit-html";
 import fAccordionAnatomy from "../svg/i-faccordion-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
@@ -216,4 +216,4 @@ The small size is the default and recommended option.
 	<Story of={FAccordionStories.Flags} />
 </Canvas>
 
-<ArgsTable of={"f-accordion"} />
+<PureArgsTable of={"f-accordion"} />

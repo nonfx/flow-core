@@ -1,5 +1,5 @@
 {
-	"extends": "../../tsconfig.json",
+	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
 		"outDir": "./dist",
 		"types": ["@types/node", "@types/jest"]

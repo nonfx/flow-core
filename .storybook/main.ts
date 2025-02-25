@@ -1,5 +1,5 @@
 import { mergeConfig } from "vite";
-import path from "path";
+import { resolve } from "path";
 
 const alias = [
 	"flow-code-editor",
@@ -14,7 +14,7 @@ const alias = [
 	"flow-dashboard"
 ].map(pkg => ({
 	find: `@nonfx/${pkg}`,
-	replacement: path.resolve(__dirname, "../packages", pkg, "src")
+	replacement: resolve(import.meta.dirname, "../packages", pkg, "src")
 }));
 
 export default {
@@ -26,7 +26,7 @@ export default {
 
 	async viteFinal(config) {
 		return mergeConfig(config, {
-			base: "",
+			// base: resolve(import.meta.dirname, "../"),
 			resolve: {
 				alias
 			}

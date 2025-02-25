@@ -1,4 +1,1 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-./node_modules/.bin/lint-staged --diff="origin/main...HEAD" -v
+./node_modules/.bin/lint-staged --no-stash --diff="origin/main...HEAD"

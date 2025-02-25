@@ -22,24 +22,24 @@
   "dependencies": {
     "@nonfx/flow-core": "workspace:*",
     "@nonfx/flow-core-config": "workspace:*",
-    "d3": "^7.6.1",
-    "lit": "^3.1.0"
+    "d3": "^7.9.0",
+    "lit": "^3.2.1"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.5.7",
-    "@open-wc/testing": "^3.1.5",
-    "@types/d3": "^7.4.0",
-    "@types/jest": "29.5.5",
-    "@web/dev-server-esbuild": "^0.3.0",
-    "@web/test-runner": "^0.13.30",
-    "concurrently": "^8.2.1",
-    "esbuild-sass-plugin": "2.2.6",
-    "lit-html": "^3.1.0",
-    "sass": "^1.52.3",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.11",
+    "@custom-elements-manifest/analyzer": "^0.10.4",
+    "@open-wc/testing": "^4.0.0",
+    "@types/d3": "^7.4.3",
+    "@types/jest": "29.5.14",
+    "@web/dev-server-esbuild": "^1.0.4",
+    "@web/test-runner": "^0.20.0",
+    "concurrently": "^9.1.2",
+    "esbuild-sass-plugin": "3.3.1",
+    "lit-html": "^3.2.1",
+    "sass": "^1.85.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
     "vue": "3.5.13",
-    "web-component-analyzer": "^2.0.0-next.4"
+    "web-component-analyzer": "^2.0.0"
   },
   "peerDependencies": {
     "@nonfx/flow-core": "^2.0.3",
