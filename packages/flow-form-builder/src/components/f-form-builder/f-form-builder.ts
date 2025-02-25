@@ -149,7 +149,7 @@ export class FFormBuilder extends FRoot {
 											state="subtle"
 											.tooltip="${this.label?.iconTooltip}"
 											clickable
-									  ></f-icon>`
+										></f-icon>`
 									: ""}
 							</f-div>
 							${this.label?.description
@@ -157,9 +157,9 @@ export class FFormBuilder extends FRoot {
 										<f-text variant="para" size="small" weight="regular">
 											${this.label.description}
 										</f-text>
-								  </f-div>`
+									</f-div>`
 								: ""}
-					  </f-div>`
+						</f-div>`
 					: ``}
 				${this.field
 					? fieldRenderer[this.field.type](this.name, this.field, this.fieldRef, this.values)

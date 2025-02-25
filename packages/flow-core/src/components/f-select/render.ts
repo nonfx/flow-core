@@ -61,7 +61,7 @@ export default function render(this: FSelect) {
 					.size=${this.iconSize}
 					class=${!this.size ? "f-input-icons-size" : ""}
 				></f-icon>
-		  `
+			`
 		: "";
 
 	/**
@@ -75,7 +75,7 @@ export default function render(this: FSelect) {
 				class="chevron"
 				clickable
 				@click=${this.handleDropDownOpen}
-		  ></f-icon>`
+			></f-icon>`
 		: html`<f-icon
 				data-qa-caret="i-chevron-up"
 				source="i-chevron-up"
@@ -83,7 +83,7 @@ export default function render(this: FSelect) {
 				class="chevron"
 				clickable
 				@click=${this.handleDropDownClose}
-		  ></f-icon>`;
+			></f-icon>`;
 
 	/**
 	 * input text area with alternate f-text placeholder when not searchable
@@ -111,7 +111,7 @@ export default function render(this: FSelect) {
 					.value=${this.searchValue}
 					@input=${this.handleInput}
 					@blur=${this.handleBlur}
-			  />`
+				/>`
 			: nothing}
 	`;
 
@@ -130,20 +130,20 @@ export default function render(this: FSelect) {
 						weight="regular"
 						state="subtle"
 						>${this.placeholder}</f-text
-				  >`
+					>`
 				: nothing}
 			${Array.isArray(this.selectedOptions) && selectedOptionsLength > 0
 				? html` <div
 						class="f-select-searchable"
 						.style=${this.iconLeft ? "width:calc(100% - 20px)" : "width:100%"}
 						data-type="${this.type ?? "single"}"
-				  >
+					>
 						${this.type === "single"
 							? this.selectedOptions.map(option => this.renderSingleSelection(option))
 							: html`${this.selectedOptions
 									.slice(0, this.getSlicedSelections(this.selectedOptions))
 									.map(option => this.renderMultipleSelectionTag(option))}
-							  ${this.selectedOptions.length > this.selectionLimit
+								${this.selectedOptions.length > this.selectionLimit
 									? !this.viewMoreTags
 										? html` <f-div height="hug-content" width="hug-content" padding="none">
 												<f-text
@@ -157,7 +157,7 @@ export default function render(this: FSelect) {
 														>+${this.selectedOptions.length - this.selectionLimit} more</a
 													></f-text
 												></f-div
-										  >`
+											>`
 										: html`<f-div height="hug-content" width="hug-content" padding="none"
 												><f-text
 													data-qa-less
@@ -170,9 +170,9 @@ export default function render(this: FSelect) {
 														>show less</a
 													></f-text
 												></f-div
-										  >`
+											>`
 									: ""} `}
-				  </div>`
+					</div>`
 				: nothing}
 		</div>
 		${inputAppend}
@@ -196,10 +196,10 @@ export default function render(this: FSelect) {
 										: this.clearSelectionInGroups(e)}
 								class=${!this.size ? "f-input-icons-size" : ""}
 							></f-icon>
-					  `
+						`
 					: ""}
 				${iconRight}
-		  </div>`
+			</div>`
 		: html`<div class="loader-suffix" data-qa-loader>${unsafeSVG(loader)}</div>`;
 
 	/**
@@ -239,7 +239,7 @@ export default function render(this: FSelect) {
 							size="x-small"
 						></f-icon-button>
 					</f-div>
-			  `
+				`
 			: ""}
 	</f-div>`;
 
@@ -368,12 +368,12 @@ export function renderArrayOptions(this: FSelect) {
 						@input=${(e: MouseEvent) => {
 							this.handleCheckboxInput(option, e);
 						}}
-				  ></f-checkbox>`
+					></f-checkbox>`
 				: nothing}
 			${(option as FSelectOptionObject)?.icon && !this.optionTemplate
 				? html` <f-div padding="none" gap="none" height="hug-content" width="hug-content"
 						><f-icon size="medium" source=${(option as FSelectOptionObject)!.icon!}></f-icon
-				  ></f-div>`
+					></f-div>`
 				: nothing}
 			${this.optionTemplate ? this.optionTemplate(option) : nothing}
 			${!this.optionTemplate
@@ -381,12 +381,12 @@ export function renderArrayOptions(this: FSelect) {
 						><f-text variant="para" size="small" weight="regular"
 							>${(option as FSelectOptionObject)?.title ?? option}</f-text
 						></f-div
-				  >`
+					>`
 				: nothing}
 			${this.isSelected(option) && !this.checkbox
 				? html` <f-div padding="none" gap="none" height="hug-content" width="hug-content"
 						><f-icon size="small" source="i-tick"></f-icon
-				  ></f-div>`
+					></f-div>`
 				: nothing}
 		</f-div>`;
 
@@ -436,7 +436,7 @@ export function renderGroupOptions(this: FSelect) {
 					size=${ifDefined(this.size)}
 					.value="${this.getCheckedValue(group)}"
 					@input=${(e: MouseEvent) => this.handleSelectAll(e, group)}
-			  ></f-checkbox>`
+				></f-checkbox>`
 			: nothing
 	}
 	<f-text variant="para" size="small" weight="regular" state="secondary"
@@ -474,12 +474,12 @@ export function renderGroupOptions(this: FSelect) {
 							@input=${(e: MouseEvent) => {
 								this.handleCheckboxGroup(option, group, e);
 							}}
-					  ></f-checkbox>`
+						></f-checkbox>`
 					: nothing}
 				${(option as FSelectOptionObject)?.icon && !this.optionTemplate
 					? html` <f-div padding="none" gap="none" height="hug-content" width="hug-content"
 							><f-icon size="medium" .source=${(option as FSelectOptionObject)!.icon!}></f-icon
-					  ></f-div>`
+						></f-div>`
 					: nothing}
 				${this.optionTemplate ? this.optionTemplate(option) : ""}
 				${!this.optionTemplate
@@ -487,12 +487,12 @@ export function renderGroupOptions(this: FSelect) {
 							><f-text variant="para" size="small" weight="regular"
 								>${(option as FSelectOptionObject)?.title ?? option}</f-text
 							></f-div
-					  >`
+						>`
 					: nothing}
 				${this.isGroupSelection(option, group) && !this.checkbox
 					? html` <f-div padding="none" gap="none" height="hug-content" width="hug-content"
 							><f-icon size="small" source="i-tick"></f-icon
-					  ></f-div>`
+						></f-div>`
 					: nothing}
 			</f-div>
 		`
@@ -555,7 +555,7 @@ export function renderMultipleSelectionTag(this: FSelect, option: FSelectSingleO
 						}}
 						category="packed"
 					></f-icon-button>
-			  </f-div>`
+				</f-div>`
 			: withoutTemplate();
 	};
 	return getTemplate();

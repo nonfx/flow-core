@@ -101,7 +101,7 @@ export const Actions = {
 												icon: "i-launch",
 												onClick: () => console.log("i-launch clicked")
 											}
-									  ]
+										]
 									: []}
 							>
 								<f-text> Column ${cellNumber} </f-text>

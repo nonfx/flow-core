@@ -165,7 +165,7 @@ export class FToast extends FRoot {
 			${this["close-button"]
 				? html` <div class="f-toast-close" @click=${this.remove}>
 						<f-icon source="i-close" size="x-small" clickable></f-icon>
-				  </div>`
+					</div>`
 				: ""}
 			${this.state !== "default"
 				? html` <div class="f-toast-border" state=${this.state}></div>`

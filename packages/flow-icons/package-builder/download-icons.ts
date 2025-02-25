@@ -180,11 +180,11 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 
 						process.stdout.write(`\x1b[36m \r${pkg} Creating index.ts for packaging... \n \n `);
 
-						const iconPackFile = `${Array.from(iconPackImports).join(
-							"\n"
-						)} \n const IconPack= { ${Array.from(iconPackExports).join(
-							","
-						)} } as Record<string,string>;
+						const iconPackFile = `${Array.from(iconPackImports)
+							.sort((import1, import2) => import1.localeCompare(import2))
+							.join("\n")} \n const IconPack= { ${Array.from(iconPackExports)
+							.sort((import1, import2) => import1.localeCompare(import2))
+							.join(",")} } as Record<string,string>;
 		  export default IconPack;
 		   `;
 						const indexFile = `

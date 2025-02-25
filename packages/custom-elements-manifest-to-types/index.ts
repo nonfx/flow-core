@@ -21,9 +21,7 @@ export async function transformSchema(
 ) {
 	const options = await validateOptions({});
 
-	if (framework === "vue2") {
-		return transformSchemaVue2(schema, options, modulePath);
-	} else if (framework === "vue3") {
+	if (framework === "vue3") {
 		return transformSchemaVue3(schema, options, modulePath);
 	} else if (framework === "react") {
 		return transformSchemaReact(schema, options, modulePath);
@@ -62,35 +60,7 @@ declare global {
 
 	return output;
 }
-function transformSchemaVue2(schema: Package, options: UserOptions, modulePath?: string) {
-	const components: string[] = [];
 
-	schema.modules.forEach(module => {
-		module.declarations?.forEach(declaration => {
-			const component = getComponentCodeFromDeclarationVue2(declaration);
-
-			if (component) {
-				components.push(component);
-			}
-		});
-	});
-	const allImports = getComponentPropTypeImports(schema, modulePath);
-	const output = prettier.format(
-		`
-        /* eslint-disable */
-        import type { VueConstructor } from "vue";
-		${allImports.join("\n")}
-        declare module "vue" {
-            export interface GlobalComponents {
-                ${components.join("\n")}
-            }
-        }
-    `,
-		{ ...options.prettierConfig, parser: "typescript" }
-	);
-
-	return output;
-}
 function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?: string) {
 	const components: string[] = [];
 
@@ -107,7 +77,7 @@ function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?:
 	const output = prettier.format(
 		`
         /* eslint-disable */
-        import { DefineComponent } from "vue";
+        import type { DefineComponent } from "vue";
 		${allImports.join("\n")}
 		declare module "vue" {
 			export interface GlobalComponents {

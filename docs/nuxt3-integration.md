@@ -32,7 +32,7 @@ export default defineNuxtPlugin({
 });
 ```
 
-**Note:** You can check out the details about Flow Core [here](https://github.com/ollionorg/flow-core).
+**Note:** You can check out the details about Flow Core [here](https://github.com/nonfx/flow-core).
 
 ### Step 3: Update `nuxt.config.ts`
 

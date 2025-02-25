@@ -282,7 +282,7 @@ export class FCodeEditor extends FRoot {
 					<f-text variant="code" size="small" weight="regular" state="secondary"
 						>${this.title}</f-text
 					>
-			  </f-div>`
+				</f-div>`
 			: null;
 
 		const copyButtonSection = this.copyButton
@@ -294,7 +294,7 @@ export class FCodeEditor extends FRoot {
 					label="COPY"
 					icon-left="i-copy"
 					@click=${this.copyCodeToClipboard}
-			  ></f-button>`
+				></f-button>`
 			: null;
 		const commentsToggleSection = this.comments
 			? html` <f-div gap="small" align="middle-left" width="hug-content">
@@ -302,14 +302,14 @@ export class FCodeEditor extends FRoot {
 					<f-div width="hug-content" overflow="hidden">
 						<f-switch size="small" @input=${this.handleChange} .value=${true}></f-switch>
 					</f-div>
-			  </f-div>`
+				</f-div>`
 			: null;
 
 		const actionSection =
 			this.copyButton || this.comments
 				? html` <f-div gap="medium" align="middle-right" width=${this.dymanicWidth}>
 						${commentsToggleSection} ${copyButtonSection}
-				  </f-div>`
+					</f-div>`
 				: null;
 
 		if (this.comments || this.copyButton || this.title) {

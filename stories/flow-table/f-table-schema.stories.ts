@@ -210,7 +210,7 @@ export const Data = {
 					<f-text
 						>Sample data used to display table.
 						<a
-							href="https://github.com/ollionorg/flow-core/blob/main/packages/flow-table/f-table-schema.doc.md"
+							href="https://github.com/nonfx/flow-core/blob/main/packages/flow-table/f-table-schema.doc.md"
 							>Learn more</a
 						></f-text
 					>
@@ -245,7 +245,7 @@ export const HeaderCellTemplate = {
 					<f-text
 						>Sample data used to display table.
 						<a
-							href="https://github.com/ollionorg/flow-core/blob/main/packages/flow-table/f-table-schema.doc.md"
+							href="https://github.com/nonfx/flow-core/blob/main/packages/flow-table/f-table-schema.doc.md"
 							>Learn more</a
 						></f-text
 					>

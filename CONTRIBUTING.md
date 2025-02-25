@@ -2,9 +2,9 @@
 
 Thank you for your interest in contributing! 🎉👍
 
-Flow is a framework that is made up of multiple dependencies / templates. Visit the [about.md](https://github.com/ollionorg/flow-core/blob/main/ABOUT.md) on the [flow-core repo](https://github.com/ollionorg/flow-core/) to learn more.
+Flow is a framework that is made up of multiple dependencies / templates. Visit the [about.md](https://github.com/nonfx/flow-core/blob/main/ABOUT.md) on the [flow-core repo](https://github.com/nonfx/flow-core/) to learn more.
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the [owners](https://github.com/ollionorg/flow-core/blob/main/CODEOWNERS) of this repository before making a change. You can expect a response from a maintainer within a week. If you haven’t heard anything by then, write to flow@nonfx.com.
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the [owners](https://github.com/nonfx/flow-core/blob/main/CODEOWNERS) of this repository before making a change. You can expect a response from a maintainer within a week. If you haven’t heard anything by then, write to flow@nonfx.com.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 

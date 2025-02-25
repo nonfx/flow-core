@@ -547,14 +547,14 @@ export const Flags = {
 							item === 0
 								? "Loader"
 								: item === 1
-								? "Disabled"
-								: item === 2
-								? "Clear Icon on Type"
-								: item === 3
-								? "Range Calendar"
-								: item === 4
-								? "Week Numbers Display"
-								: "Inline"
+									? "Disabled"
+									: item === 2
+										? "Clear Icon on Type"
+										: item === 3
+											? "Range Calendar"
+											: item === 4
+												? "Week Numbers Display"
+												: "Inline"
 						}</f-div>
             <f-text slot="help" variant="para" size="small">This is a Subtext (Helper Text)</f-text>
           </f-date-time-picker></f-div

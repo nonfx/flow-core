@@ -87,7 +87,7 @@ export class FTooltip extends LitElement {
 									clickable
 									@click=${() => (this.open = false)}
 								></f-icon
-						  ></f-div>`
+							></f-div>`
 						: ""}
 				</f-div>
 			</f-popover>`;

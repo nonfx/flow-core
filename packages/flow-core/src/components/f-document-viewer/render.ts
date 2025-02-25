@@ -79,7 +79,7 @@ export function jumplinksSection(this: FDocumentViewer) {
 							clickable
 							@click=${this.toggleLeftColumn}
 							overflow="hidden"
-					  >
+						>
 							<f-icon
 								source="i-notch-left"
 								size="small"
@@ -87,7 +87,7 @@ export function jumplinksSection(this: FDocumentViewer) {
 								class="notch-icon"
 								data-column-open=${true}
 							></f-icon>
-					  </f-div>`
+						</f-div>`
 					: nothing}`
 		: nothing;
 }

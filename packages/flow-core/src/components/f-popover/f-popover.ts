@@ -208,7 +208,7 @@ export class FPopover extends FRoot {
 									],
 									crossAxis: false,
 									boundary: document.body
-							  }),
+								}),
 						shift({ padding: isTooltip ? 0 : 16 })
 					]
 				})

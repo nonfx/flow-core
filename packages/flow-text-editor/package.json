@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ollionorg/flow-core.git",
+    "url": "https://github.com/nonfx/flow-core.git",
     "directory": "packages/flow-text-editor"
   },
   "publishConfig": {
@@ -53,9 +53,9 @@
   },
   "customElements": "custom-elements.json",
   "bugs": {
-    "url": "https://github.com/ollionorg/flow-core/issues"
+    "url": "https://github.com/nonfx/flow-core/issues"
   },
-  "homepage": "https://github.com/ollionorg/flow-core",
+  "homepage": "https://github.com/nonfx/flow-core",
   "author": "@nonfx",
   "license": "MIT"
 }

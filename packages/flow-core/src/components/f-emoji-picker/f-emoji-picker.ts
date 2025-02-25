@@ -259,8 +259,8 @@ export class FEmojiPicker extends FRoot {
 		return this.include && this.include.length > 0
 			? this.include
 			: this.excludeCategories.length > 0
-			? this.excludeCategories
-			: this.categories;
+				? this.excludeCategories
+				: this.categories;
 	}
 
 	/**
@@ -308,12 +308,12 @@ export class FEmojiPicker extends FRoot {
 		 */
 		const event = new CustomEvent("input", {
 			detail: {
-				value: valuePicked ? valuePicked.native ?? valuePicked.src : ""
+				value: valuePicked ? (valuePicked.native ?? valuePicked.src) : ""
 			},
 			bubbles: true,
 			composed: true
 		});
-		this.value = valuePicked ? valuePicked.native ?? valuePicked.src : "";
+		this.value = valuePicked ? (valuePicked.native ?? valuePicked.src) : "";
 		this.dispatchEvent(event);
 		if (this["close-on-select"]) {
 			this.toggleEmojiPicker(false);
@@ -438,9 +438,9 @@ export class FEmojiPicker extends FRoot {
 									clickable
 									@click=${this.clearValue}
 								></f-icon
-						  ></f-div>`
+							></f-div>`
 						: ""}
-			  `
+				`
 			: "";
 
 		/**
@@ -452,7 +452,7 @@ export class FEmojiPicker extends FRoot {
 					.source=${this.placeholder ?? "i-icon"}
 					state="secondary"
 					.size=${this.size}
-			  ></f-icon>`;
+				></f-icon>`;
 
 		// render empty string, since there no need of any child element
 		return html`

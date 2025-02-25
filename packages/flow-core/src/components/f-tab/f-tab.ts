@@ -143,7 +143,7 @@ For vertical f-tab, content can align to top, middle, or bottom.
 						.width=${this.direction === "horizontal" ? "hug-content" : "100%"}
 						.height=${this.direction === "horizontal" ? "100%" : "hug-content"}
 						align="middle-center"
-				  >
+					>
 						${this.direction === "horizontal"
 							? html` <f-icon-button
 									data-qa-chevron-left
@@ -151,15 +151,15 @@ For vertical f-tab, content can align to top, middle, or bottom.
 									state="neutral"
 									size="x-small"
 									@click=${(e: MouseEvent) => this.handleScroll(e, "left", -150)}
-							  ></f-icon-button>`
+								></f-icon-button>`
 							: html` <f-icon-button
 									data-qa-chevron-up
 									icon="i-chevron-up"
 									state="neutral"
 									size="x-small"
 									@click=${(e: MouseEvent) => this.handleScroll(e, "top", -150)}
-							  ></f-icon-button>`}</f-div
-				  >`
+								></f-icon-button>`}</f-div
+					>`
 				: "";
 
 		const lastScrollButton =
@@ -171,7 +171,7 @@ For vertical f-tab, content can align to top, middle, or bottom.
 						.width=${this.direction === "horizontal" ? "hug-content" : "100%"}
 						.height=${this.direction === "horizontal" ? "100%" : "hug-content"}
 						align="middle-center"
-				  >
+					>
 						${this.direction === "horizontal"
 							? html` <f-icon-button
 									data-qa-chevron-right
@@ -179,15 +179,15 @@ For vertical f-tab, content can align to top, middle, or bottom.
 									state="neutral"
 									size="x-small"
 									@click=${(e: MouseEvent) => this.handleScroll(e, "left", 150)}
-							  ></f-icon-button>`
+								></f-icon-button>`
 							: html` <f-icon-button
 									data-qa-chevron-down
 									icon="i-chevron-down"
 									state="neutral"
 									size="x-small"
 									@click=${(e: MouseEvent) => this.handleScroll(e, "top", 150)}
-							  ></f-icon-button>`}
-				  </f-div> `
+								></f-icon-button>`}
+					</f-div> `
 				: "";
 
 		const getBorder = () => {

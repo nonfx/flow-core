@@ -86,7 +86,7 @@ export class FField extends FRoot {
 						><f-text variant="heading" size="x-small" weight="regular" .state=${this.state}
 							>${this.description}</f-text
 						></f-div
-				  >`
+					>`
 				: null}
 		</f-div>`;
 	}

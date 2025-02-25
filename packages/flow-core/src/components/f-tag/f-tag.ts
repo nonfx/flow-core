@@ -267,7 +267,7 @@ export class FTag extends FRoot {
 					})}
 					.size=${this.iconSize}
 					?clickable=${true}
-			  ></f-icon>`
+				></f-icon>`
 			: nothing;
 		/**
 		 * create iconRight if available
@@ -286,7 +286,7 @@ export class FTag extends FRoot {
 					})}
 					.size=${this.iconSize}
 					?clickable=${true}
-			  ></f-icon>`
+				></f-icon>`
 			: nothing;
 
 		let counterClasses = {};
@@ -311,7 +311,7 @@ export class FTag extends FRoot {
 						.size=${this.size}
 						.label=${Number(this.counter)}
 						class=${classMap(counterClasses)}
-				  ></f-counter>`
+					></f-counter>`
 				: nothing;
 		/**
 		 * render loading if required

@@ -133,7 +133,7 @@ export class FRadioGroup extends FRoot {
 												data-qa-label-for=${item.title ?? item.id}
 												size="small"
 												>${item.title ?? item.id}</f-text
-										  >`}
+											>`}
 								</f-div>
 								${item.description
 									? html` <f-div
@@ -142,7 +142,7 @@ export class FRadioGroup extends FRoot {
 											padding="none"
 											gap="none"
 											>${item.description}</f-div
-									  >`
+										>`
 									: ""}
 								${item.iconTooltip
 									? html`
@@ -155,14 +155,14 @@ export class FRadioGroup extends FRoot {
 												.tooltip="${item.iconTooltip}"
 												clickable
 											></f-icon>
-									  `
+										`
 									: ""}
 								${item?.subTitle
 									? html`
 											<f-text size="small" slot="subtitle" align="right" state="secondary"
 												>${item?.subTitle}</f-text
 											>
-									  `
+										`
 									: ""}
 							</f-radio>
 						`
@@ -176,7 +176,7 @@ export class FRadioGroup extends FRoot {
 							data-qa-help-for=${this.getAttribute("data-qa-element-id")}
 							.state=${this.state}
 							>${this?.helperText}</f-text
-					  >`
+						>`
 					: html`<slot name="help"></slot>`}
 			</f-div>
 		`;

@@ -301,7 +301,7 @@ export class FPictogram extends FRoot {
 									/>
 								</clipPath>
 							</defs>
-					  </svg>`
+						</svg>`
 					: null}
 			</div>
 		`;

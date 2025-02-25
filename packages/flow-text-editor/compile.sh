@@ -5,7 +5,7 @@ HERE=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd "$HERE"
 
-pnpm run analyze
+bun run analyze
 
 echo "building library..."
-pnpm vite build --emptyOutDir
+bun vite build --emptyOutDir

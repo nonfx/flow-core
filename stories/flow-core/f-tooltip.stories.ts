@@ -65,7 +65,7 @@ export const PlaygroundRichTooltipComponent = {
 			: html`<f-div padding="large" height="200px" align="middle-center" gap="large">
 					<f-icon-button icon="i-plus" .tooltip=${args.tooltip}></f-icon-button>
 					<f-button label="Submit" .tooltip=${args.tooltip}></f-button>
-			  </f-div>`}`,
+				</f-div>`}`,
 
 	name: "Playground - Rich Tooltip Component",
 

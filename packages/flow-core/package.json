@@ -8,13 +8,13 @@
   "scripts": {
     "build": "bash ./compile.sh",
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",
-    "sync-colors": "node ./figma/sync-colors.js",
-    "sync-md-file": "node ./figma/sync-md-file.js",
+    "sync-colors": "bun ./figma/sync-colors.js",
+    "sync-md-file": "bun ./figma/sync-md-file.js",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\" && wca analyze src --format vscode --outFile html.html-data.json",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "test": "web-test-runner ./src/**/*.test.ts --node-resolve --port 8090 --concurrency 1",
-    "test:file": " web-test-runner --node-resolve --port 8090 --concurrency 1",
-    "test:watch": "pnpm run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8090 --concurrency 1"
+    "test": "web-test-runner ./src/**/*.test.ts --bun-resolve --port 8090 --concurrency 1",
+    "test:file": "web-test-runner --node-resolve --port 8090 --concurrency 1",
+    "test:watch": "bun run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8090 --concurrency 1"
   },
   "keywords": [
     "web-components",
@@ -50,11 +50,11 @@
     "esbuild-sass-plugin": "2.2.6",
     "fs-extra": "^11.1.1",
     "lit-html": "^3.1.0",
-    "prettier": "2.6.2",
+    "prettier": "3.5.2",
     "sass": "^1.52.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.11",
-    "vue": "2.6.14",
+    "vue": "3.5.13",
     "web-component-analyzer": "^2.0.0-next.4"
   },
   "peerDependencies": {
@@ -62,7 +62,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ollionorg/flow-core.git",
+    "url": "https://github.com/nonfx/flow-core.git",
     "directory": "packages/flow-core"
   },
   "publishConfig": {
@@ -71,9 +71,9 @@
   },
   "customElements": "custom-elements.json",
   "bugs": {
-    "url": "https://github.com/ollionorg/flow-core/issues"
+    "url": "https://github.com/nonfx/flow-core/issues"
   },
-  "homepage": "https://github.com/ollionorg/flow-core#readme",
+  "homepage": "https://github.com/nonfx/flow-core#readme",
   "author": "@nonfx",
   "license": "MIT"
 }

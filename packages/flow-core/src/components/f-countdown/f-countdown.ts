@@ -233,7 +233,7 @@ export class FCountdown extends FRoot {
 			this.labelPlacement === "left" || this.labelPlacement === "top"
 				? html`<f-div width=${this.countdownWidth} align=${this.countdownAlignment}>
 						<f-text weight="regular" .size=${this.labelSize} ${ref(this.timerRef)} inline></f-text>
-				  </f-div>`
+					</f-div>`
 				: nothing;
 
 		//bottom and right label placemet
@@ -241,7 +241,7 @@ export class FCountdown extends FRoot {
 			this.labelPlacement === "right" || this.labelPlacement === "bottom"
 				? html`<f-div align="middle-center">
 						<f-text weight="regular" .size=${this.labelSize} ${ref(this.timerRef)} inline> </f-text>
-				  </f-div>`
+					</f-div>`
 				: nothing;
 
 		//fill category timer structure

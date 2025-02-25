@@ -141,7 +141,7 @@ export class FBreadcrumb extends FRoot {
 						size="x-small"
 						state="secondary"
 						class="system-icon-size"
-				  ></f-icon>`
+					></f-icon>`
 				: null}`;
 	}
 
@@ -263,7 +263,7 @@ export class FBreadcrumb extends FRoot {
 						${this.endingCrumbs?.map((crumb, index) =>
 							this.crumbLoop(crumb, index, this.endingCrumbs)
 						)}
-				  `}
+					`}
 		</f-div>`;
 
 		const iconBreadcrumb = html`<f-div class="f-breadcrumbs" overflow="visible">
@@ -280,9 +280,9 @@ export class FBreadcrumb extends FRoot {
 							tooltip=${item.title}
 							clickable
 							@click=${(event: MouseEvent) => this.handleDispatchEvent(event, item)}
-					  >
+						>
 							<f-icon source=${item.icon} .size=${this.iconSize}></f-icon>
-					  </f-div>`
+						</f-div>`
 					: html`
 							<f-div gap="large" align="middle-center">
 								<div
@@ -300,7 +300,7 @@ export class FBreadcrumb extends FRoot {
 									${item.title}</f-text
 								>
 							</f-div>
-					  `
+						`
 			)}
 		</f-div>`;
 		return this.variant === "text" ? textBreadcrumb : iconBreadcrumb;

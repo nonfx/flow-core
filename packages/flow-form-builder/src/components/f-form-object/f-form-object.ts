@@ -148,7 +148,7 @@ export class FFormObject extends FRoot {
 							data-qa-help-for=${ifDefined(this.config.qaId || this.config.id)}
 							.state=${this.config.state ?? "secondary"}
 							>${this.config?.helperText}</f-text
-					  >`
+						>`
 					: nothing}
 			</slot>
 		</f-div>`;

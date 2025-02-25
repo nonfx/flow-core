@@ -4,8 +4,8 @@ HERE=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd "$HERE"
 
-pnpm run analyze
+bun run analyze
 
 echo "building library..."
-pnpm vite build --emptyOutDir
-pnpm vite build --emptyOutDir --config vite.umd.config.ts
+bun vite build --emptyOutDir
+bun vite build --emptyOutDir --config vite.umd.config.ts

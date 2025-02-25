@@ -487,7 +487,7 @@ export class FSelect extends FRoot {
 					? []
 					: Object.keys(this.selectedOptions).forEach(group => {
 							(this.selectedOptions as FSelectOptionsGroup)[group] = [];
-					  })
+						})
 			},
 			bubbles: true,
 			composed: true
@@ -496,7 +496,7 @@ export class FSelect extends FRoot {
 			? []
 			: Object.keys(this.selectedOptions).forEach(group => {
 					(this.selectedOptions as FSelectOptionsGroup)[group] = [];
-			  });
+				});
 		this.clearFilterSearchString();
 		this.dispatchEvent(event);
 		this.requestUpdate();

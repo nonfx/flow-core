@@ -80,7 +80,7 @@
 
 ### Note
 
-- This package uses `Workers` so please go though installation instruction from [README](https://github.com/ollionorg/flow-core/blob/main/packages/flow-code-editor/README.md)
+- This package uses `Workers` so please go though installation instruction from [README](https://github.com/nonfx/flow-core/blob/main/packages/flow-code-editor/README.md)
 
 ### Improvements
 

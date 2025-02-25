@@ -245,7 +245,7 @@ export class FIconButton extends FRoot {
 						.size=${this.counterSize}
 						.label=${this.counter}
 						class=${classMap(counterClasses)}
-				  ></f-counter>`
+					></f-counter>`
 				: "";
 
 		// classes to apply on inner element

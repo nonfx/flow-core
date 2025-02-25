@@ -328,10 +328,10 @@ export class FLineage extends FRoot {
 						width="80px"
 						class="degree-selector even"
 						id="progress"
-				  >
+					>
 						<f-icon source="i-tick" loading></f-icon>
 						<f-text id="page-number">${this.page}%</f-text>
-				  </f-div>`
+					</f-div>`
 				: html`<f-div
 						align="middle-center"
 						gap="x-small"
@@ -341,10 +341,10 @@ export class FLineage extends FRoot {
 						width="80px"
 						class="degree-selector odd"
 						id="progress"
-				  >
+					>
 						<f-icon source="i-tick" loading></f-icon>
 						<f-text id="page-number">${this.page}%</f-text>
-				  </f-div>`}
+					</f-div>`}
 			<f-popover ${ref(this.popoverRef)} ?open=${false}
 				><f-div height="100%"
 					><f-icon-button

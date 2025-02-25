@@ -11,8 +11,8 @@
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\" && wca analyze src --format vscode --outFile html.html-data.json",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
     "test": "web-test-runner ./src/**/*.test.ts --node-resolve --port 8095",
-    "test:file": "pnpm run build && web-test-runner --node-resolve --port 8095",
-    "test:watch": "pnpm run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8095"
+    "test:file": "bun run build && web-test-runner --node-resolve --port 8095",
+    "test:watch": "bun run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8095"
   },
   "keywords": [
     "web-components",
@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ollionorg/flow-core.git",
+    "url": "https://github.com/nonfx/flow-core.git",
     "directory": "packages/flow-dashboard"
   },
   "publishConfig": {
@@ -59,9 +59,9 @@
   },
   "customElements": "custom-elements.json",
   "bugs": {
-    "url": "https://github.com/ollionorg/flow-core/issues"
+    "url": "https://github.com/nonfx/flow-core/issues"
   },
-  "homepage": "https://github.com/ollionorg/flow-core/packages/flow-dashboard#readme",
+  "homepage": "https://github.com/nonfx/flow-core/packages/flow-dashboard#readme",
   "author": "@nonfx",
   "license": "MIT"
 }

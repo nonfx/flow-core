@@ -145,7 +145,7 @@ export class FFormGroup extends FRoot {
 															}
 														}}
 														>${this.label.title}</a
-												  >`
+													>`
 												: html`${this.label.title}`}
 										</f-text>
 									</f-div>
@@ -157,7 +157,7 @@ export class FFormGroup extends FRoot {
 												data-qa-info-icon-for=${ifDefined(this.dataset["qaId"])}
 												.tooltip="${this.label?.iconTooltip}"
 												clickable
-										  ></f-icon>`
+											></f-icon>`
 										: nothing}
 								</f-div>
 								${this.label?.description
@@ -165,7 +165,7 @@ export class FFormGroup extends FRoot {
 											<f-text variant="para" size="small" weight="regular">
 												${this.label.description}
 											</f-text>
-									  </f-div>`
+										</f-div>`
 									: nothing}
 							</f-div>
 							<f-div
@@ -182,7 +182,7 @@ export class FFormGroup extends FRoot {
 											state="default"
 											clickable
 											@click=${this.duplicationClick}
-									  ></f-icon>`
+										></f-icon>`
 									: nothing}
 								${this.collapse === "accordion"
 									? html` <f-icon
@@ -190,11 +190,11 @@ export class FFormGroup extends FRoot {
 											size="small"
 											state="default"
 											clickable
-									  ></f-icon>`
+										></f-icon>`
 									: nothing}
 							</f-div>
 						</f-div>
-				  `
+					`
 				: nothing}
 			${!this.isCollapsed || this.collapse === "none"
 				? html`
@@ -210,7 +210,7 @@ export class FFormGroup extends FRoot {
 							</f-div>
 							<slot name="action"></slot>
 						</f-div>
-				  `
+					`
 				: nothing}
 		</f-div>`;
 	}

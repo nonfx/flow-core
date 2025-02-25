@@ -99,24 +99,24 @@ export const Playground = {
 											<f-text variant="para" size="small" weight="regular"
 												>${value.value}</f-text
 											></f-div
-									  >`
+										>`
 									: value.type === "text"
-									? html` <f-div
-											><f-text variant="para" size="small" weight="regular"
-												>${value.value}</f-text
-											></f-div
-									  >`
-									: html` <f-div direction="column" gap="small" align="middle-center">
-											${value.value.map(
-												item =>
-													html` <f-div gap="x-small">
-														<f-icon .source=${item.icon} size="small" clickable></f-icon>
-														<f-text ?inline=${true} variant="para" size="small" weight="medium"
-															>${item.name}</f-text
-														>
-													</f-div>`
-											)}
-									  </f-div>`}
+										? html` <f-div
+												><f-text variant="para" size="small" weight="regular"
+													>${value.value}</f-text
+												></f-div
+											>`
+										: html` <f-div direction="column" gap="small" align="middle-center">
+												${value.value.map(
+													item =>
+														html` <f-div gap="x-small">
+															<f-icon .source=${item.icon} size="small" clickable></f-icon>
+															<f-text ?inline=${true} variant="para" size="small" weight="medium"
+																>${item.name}</f-text
+															>
+														</f-div>`
+												)}
+											</f-div>`}
 							</f-div>
 						`
 					)}

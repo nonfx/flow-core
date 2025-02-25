@@ -18,13 +18,13 @@ Clone and install the [Flow Lineage demo](https://github.com/ollionorg/flow-line
 
 # Getting started
 
-Flow Lineage is been built on [Flow](https://flow.ollion.com/), an open source design framework. To run lineage, please make sure that you have [Flow core](https://github.com/ollionorg/flow-core) as part of your project.
+Flow Lineage is been built on [Flow](https://flow.ollion.com/), an open source design framework. To run lineage, please make sure that you have [Flow core](https://github.com/nonfx/flow-core) as part of your project.
 
-While installation if you run into any issues, head over to our [known issues + solutions document](https://github.com/ollionorg/flow-core/blob/main/packages/flow-lineage/KNOWN_SOLUTIONS.md) to see if a solution already exists.
+While installation if you run into any issues, head over to our [known issues + solutions document](https://github.com/nonfx/flow-core/blob/main/packages/flow-lineage/KNOWN_SOLUTIONS.md) to see if a solution already exists.
 
 **Note:** If you already have Flow packages installed, please update to the latest versions
 
-**Note:** If you do not have an existing front-end project, you can quickly create one from a [flow starter kit](https://github.com/ollionorg/flow-core#starter-kits).
+**Note:** If you do not have an existing front-end project, you can quickly create one from a [flow starter kit](https://github.com/nonfx/flow-core#starter-kits).
 
 <br>
 

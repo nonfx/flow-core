@@ -108,7 +108,7 @@ export function handleSelectionGroup(
 				? (this.selectedOptions = {
 						...this.selectedOptions,
 						[group]: [option as FSelectOptionObject]
-				  })
+					})
 				: (selectedOptionsInGroup as FSelectArrayOfObjects).push(option as FSelectOptionObject)
 			: selectedOptionsInGroup.splice(this.getIndexInGroup(option, group), 1);
 	}

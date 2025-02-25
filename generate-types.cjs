@@ -24,12 +24,10 @@ Promise.all(
 		fs.mkdirpSync(`${dirPath}/dist/types`);
 
 		Promise.all([
-			transformSchema(customElementsJSON, "vue2", "../src/index"),
 			transformSchema(customElementsJSON, "vue3", "../src/index"),
 			transformSchema(customElementsJSON, "react", "../src/index")
-		]).then(([vue2Types, vue3Types, reactTypes]) => {
+		]).then(([vue3Types, reactTypes]) => {
 			try {
-				fs.writeFileSync(`${dirPath}/dist/types/vue2.ts`, vue2Types);
 				fs.writeFileSync(`${dirPath}/dist/types/vue3.ts`, vue3Types);
 				fs.writeFileSync(`${dirPath}/dist/types/react.ts`, reactTypes);
 				console.log(`\x1b[32m \r ${dirPath} types generated  \u2705 \x1b[0m`);

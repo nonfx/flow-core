@@ -57,7 +57,7 @@ export function getAccordionPanel(
 							${value.title}</f-text
 						></f-div
 					>
-			  </f-div>`}
+				</f-div>`}
 
 		<f-div slot="body" direction="column" width="100%">${innerHtml}</f-div>
 	</f-accordion>`;
@@ -101,7 +101,7 @@ export function getTextPanel(
 							>${value.title || value}</f-text
 						></f-div
 					>
-			  </f-div>`}
+				</f-div>`}
 	</f-div>`;
 }
 

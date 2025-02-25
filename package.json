@@ -4,28 +4,24 @@
   "description": "Storybook project for flow-core component development",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "tests/*"
   ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "interactive-update": "bunx npm-check-updates --workspaces --root --format group -i",
     "storybook": "storybook dev -p 6007",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider pnpm run storybook",
-    "build-storybook": "export NODE_OPTIONS='--max_old_space_size=8192' && storybook build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider bun run storybook",
+    "build-storybook": "storybook build",
     "build-packages": "make build",
-    "lint": "pnpm lint:files .",
+    "lint": "bun lint:files .",
     "lint:fix": "env TIMING=1 eslint --ext .js,.ts --fix .",
     "lint:files": "env TIMING=1 eslint --ext .js,.ts --quiet --cache --cache-location .cache/ --",
-    "release": "make build-lib && pnpm changeset publish",
-    "prettify": "prettier --config .prettierrc.cjs --write './**/*.{js,ts,md,mdx,scss,json,mjs,cjs}'",
-    "prettier:lint": "prettier --config .prettierrc.cjs --check",
-    "prettier:lint-all": "prettier --config .prettierrc.cjs --check .",
+    "release": "make build-lib && bun changeset publish",
+    "prettify": "prettier --config .prettierrc.cjs --cache --cache-location .cache/prettier --write .",
+    "prettier:lint": "prettier --config .prettierrc.cjs --cache --cache-location .cache/prettier --check .",
     "prepare": "husky install",
-    "test": "pnpm run loki test",
+    "test": "bun run loki test",
     "postinstall": "tsc -b"
-  },
-  "engines": {
-    "node": "^20.16.0",
-    "pnpm": ">=8.9.0"
   },
   "keywords": [
     "web-components",
@@ -61,7 +57,7 @@
     "lint-staged": "^14.0.1",
     "lit-html": "^3.1.0",
     "loki": "^0.32.0",
-    "prettier": "^3.0.3",
+    "prettier": "3.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.52.3",
@@ -94,6 +90,5 @@
         "mobile": false
       }
     }
-  },
-  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+  }
 }

@@ -72,7 +72,7 @@ export class FFieldSeparator extends FRoot {
 						inline
 						class="f-field-separator-label"
 						>${this.label}</f-text
-				  >`
+					>`
 				: nothing}
 
 			<f-div

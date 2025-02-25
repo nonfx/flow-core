@@ -1,6 +1,6 @@
 Follow these steps to create flow theme in your project.
 
-1. Download the theme template file with the .scss extension from [here](https://github.com/ollionorg/flow-core/blob/main/packages/flow-core/custom-theme.scss).
+1. Download the theme template file with the .scss extension from [here](https://github.com/nonfx/flow-core/blob/main/packages/flow-core/custom-theme.scss).
 
 2. Open the downloaded file and replace the `<your-theme-name>` keyword with your desired theme name.
 
