@@ -189,8 +189,8 @@ export class FDateTimePicker extends FRoot {
 			this.mode === "date-time"
 				? "DD/MM/YYYY HH:ii"
 				: this.mode === "date-only"
-				? "DD/MM/YYYY"
-				: "HH:ii"
+					? "DD/MM/YYYY"
+					: "HH:ii"
 		}`;
 	}
 

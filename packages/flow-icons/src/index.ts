@@ -22,7 +22,21 @@ export async function register(iconPacks: IconPackNames[]) {
 	);
 
 	const mergedIconPacks = iconPackBundle.reduce(
-		(acc, { pack }) => ({ ...acc, ...pack }),
+		(acc, { pack }) => {
+			// Enable to check for duplicates
+			// if (import.meta.env.DEV) {
+			// 	const packKeys = Object.keys(pack);
+			// 	const accKeys = Object.keys(acc);
+
+			// 	if (packKeys.some(key => accKeys.includes(key))) {
+			// 		console.error(
+			// 			`Duplicate icon key found in icon pack: ${packKeys.filter(key => accKeys.includes(key)).join(", ")}`
+			// 		);
+			// 	}
+			// }
+
+			return { ...acc, ...pack };
+		},
 		{} as Record<string, string>
 	);
 

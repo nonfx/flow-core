@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FLineage } from "../f-lineage";
 import {
 	LevelLinkGap,

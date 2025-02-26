@@ -1,5 +1,11 @@
 <h4 class="margin-btm-8">Release Notes</h4>
 
+## 1.3.0
+
+### Minor Changes
+
+- Migrate to latest lit and general refactoring
+
 # Change Log
 
 ## [1.2.0] - 2024-09-27

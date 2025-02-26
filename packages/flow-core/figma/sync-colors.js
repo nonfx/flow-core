@@ -1,6 +1,4 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* global require */
 
 const { getStyles, getNode } = require("./api");
 const prettier = require("prettier");
@@ -18,7 +16,7 @@ const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toStr
  * @param {*} colorTokens Json object of theme and color variables
  */
 function generateTokenScss(colorTokens) {
-	const tokenFileName = `${__dirname}/../src/mixins/scss/_color-tokens.scss`;
+	const tokenFileName = `${import.meta.dirname}/../src/mixins/scss/_color-tokens.scss`;
 
 	//   let scss = `@layer default,custom;
 	// @layer default { `;
@@ -29,7 +27,7 @@ function generateTokenScss(colorTokens) {
 	  $hover-color: darken($value, 3%);
 	}
 	@return $hover-color;
-  } 
+  }
   @function getSelected($value) {
     $hover-color: lighten($value, 10%);
     @if lightness($value) > 50 {
@@ -84,9 +82,10 @@ function generateTokenScss(colorTokens) {
  * This will generate /src/shared/_text-tokens.scss file and it is consumed in `f-root.scss and one more file to consume this tokens dynamically i.e f-text-variables-dynamic.scss`
  * @param {*} textTokens Json object of variants, weights and size for text.
  */
+// eslint-disable-next-line no-unused-vars
 function generateTextScss(textTokens) {
-	const tokenTextFileName = `${__dirname}/../src/components/f-text/_f-text-variables-dynamic.scss`;
-	const scssFile = `${__dirname}/../src/mixins/scss/_text-tokens.scss`;
+	const tokenTextFileName = `${import.meta.dirname}/../src/components/f-text/_f-text-variables-dynamic.scss`;
+	const scssFile = `${import.meta.dirname}/../src/mixins/scss/_text-tokens.scss`;
 	let scss = "";
 
 	let scssContent = "";
@@ -140,13 +139,17 @@ function generateTextTokens(textStyle, textTokens) {
 	} = textStyle;
 	const [theme, tokenName, size, weight] = name.split("/");
 
-	textTokens[theme] ??= {
+	textTokens[theme] = textTokens[theme] ?? {
 		variants: {},
 		weights: { medium: null, bold: null, regular: null },
 		fontFamily: { general: null, code: null }
 	};
-	textTokens[theme].variants[tokenName] ??= {};
-	textTokens[theme].variants[tokenName][size] ??= {
+
+	if (!textTokens[theme].variants[tokenName]) {
+		textTokens[theme].variants[tokenName] = {};
+	}
+
+	textTokens[theme].variants[tokenName][size] = textTokens[theme].variants[tokenName][size] ?? {
 		fontSize,
 		lineHeight: lineHeightPx,
 		fontFamily: fontFamily
@@ -160,7 +163,8 @@ function generateTextTokens(textStyle, textTokens) {
 		};
 	}
 
-	textTokens[theme].variants[tokenName][size].weight[weight] ??= fontWeight;
+	textTokens[theme].variants[tokenName][size].weight[weight] =
+		textTokens[theme].variants[tokenName][size].weight[weight] ?? fontWeight;
 }
 
 function fontTokenString(category, size) {
@@ -311,7 +315,7 @@ async function processStyles(nodeIds, colorTokens, textTokens) {
 	try {
 		const nodes = await getNode(nodeIds.join(","));
 
-		for (const [_id, obj] of Object.entries(nodes.data.nodes)) {
+		for (const [, obj] of Object.entries(nodes.data.nodes)) {
 			const textTheme = obj.document.name.split("/")[0];
 			if (
 				obj.document.type === "TEXT" &&

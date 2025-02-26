@@ -132,7 +132,7 @@ export class FTcell extends FRoot {
 							?disabled=${this.isDisabled}
 							@click=${(event: PointerEvent) => event.stopPropagation()}
 							@input=${this.handleSelection}
-					  ></f-checkbox>`
+						></f-checkbox>`
 					: nothing}
 				${this.selectable === "single"
 					? html`<f-radio
@@ -140,7 +140,7 @@ export class FTcell extends FRoot {
 							@input=${this.handleSelection}
 							@click=${(event: PointerEvent) => event.stopPropagation()}
 							class="cell-radio"
-					  ></f-radio>`
+						></f-radio>`
 					: nothing}
 				${this.expandIcon && this.expandIconPosition === "left"
 					? html`
@@ -152,7 +152,7 @@ export class FTcell extends FRoot {
 								@click=${this.toggleDetails}
 								icon="i-chevron-down"
 							></f-icon-button>
-					  `
+						`
 					: nothing}
 				<f-div .align=${this.align}><slot></slot></f-div>
 			</f-div>
@@ -174,7 +174,7 @@ export class FTcell extends FRoot {
 								@click=${this.toggleDetails}
 								icon="i-chevron-down"
 							></f-icon-button>
-					  `
+						`
 					: nothing}
 			</f-div>
 		</div>`;

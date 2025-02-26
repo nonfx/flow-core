@@ -1,11 +1,11 @@
 import {
+	CustomElementMixinDeclaration,
 	Declaration,
-	Package,
-	PropertyLike,
-	MixinDeclaration
+	MixinDeclaration,
+	Package
 } from "custom-elements-manifest/schema";
-import { UserOptions, validateOptions } from "./options";
 import * as prettier from "prettier";
+import { UserOptions, validateOptions } from "./options";
 
 const camelToSnakeCase = (str: string) => {
 	if (str === "FMDEditor") {
@@ -21,9 +21,7 @@ export async function transformSchema(
 ) {
 	const options = await validateOptions({});
 
-	if (framework === "vue2") {
-		return transformSchemaVue2(schema, options, modulePath);
-	} else if (framework === "vue3") {
+	if (framework === "vue3") {
 		return transformSchemaVue3(schema, options, modulePath);
 	} else if (framework === "react") {
 		return transformSchemaReact(schema, options, modulePath);
@@ -47,67 +45,39 @@ function transformSchemaReact(schema: Package, options: UserOptions, modulePath?
 	const allImports = getComponentPropTypeImports(schema, modulePath);
 	const output = prettier.format(
 		`
-		${allImports.join("\n")}
-declare global {
-	namespace JSX {
-	   interface IntrinsicElements {
+			${allImports.join("\n")}
+	declare global {
+		namespace JSX {
+		   interface IntrinsicElements {
 
-                ${components.join("\n")}
-            }
-        }
-	}
-    `,
+	                ${components.join("\n")}
+	            }
+	        }
+		}
+	    `,
 		{ ...options.prettierConfig, parser: "typescript" }
 	);
 
 	return output;
 }
-function transformSchemaVue2(schema: Package, options: UserOptions, modulePath?: string) {
-	const components: string[] = [];
 
-	schema.modules.forEach(module => {
-		module.declarations?.forEach(declaration => {
-			const component = getComponentCodeFromDeclarationVue2(declaration);
-
-			if (component) {
-				components.push(component);
-			}
-		});
-	});
-	const allImports = getComponentPropTypeImports(schema, modulePath);
-	const output = prettier.format(
-		`
-        /* eslint-disable */
-        import type { VueConstructor } from "vue";
-		${allImports.join("\n")}
-        declare module "vue" {
-            export interface GlobalComponents {
-                ${components.join("\n")}
-            }
-        }
-    `,
-		{ ...options.prettierConfig, parser: "typescript" }
-	);
-
-	return output;
-}
 function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?: string) {
 	const components: string[] = [];
 
 	schema.modules.forEach(module => {
 		module.declarations?.forEach(declaration => {
-			const component = getComponentCodeFromDeclarationVue3(declaration as MixinDeclaration);
-
+			const component = getComponentCodeFromDeclarationVue3(declaration);
 			if (component) {
 				components.push(component);
 			}
 		});
 	});
+
 	const allImports = getComponentPropTypeImports(schema, modulePath);
 	const output = prettier.format(
 		`
         /* eslint-disable */
-        import { DefineComponent } from "vue";
+        import type { DefineComponent } from "vue";
 		${allImports.join("\n")}
 		declare module "vue" {
 			export interface GlobalComponents {
@@ -121,34 +91,31 @@ function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?:
 	return output;
 }
 function getComponentCodeFromDeclarationReact(declaration: Declaration) {
-	declaration = declaration as MixinDeclaration;
-	if (!isSuperClassDeclaration(declaration)) {
+	// declaration = declaration as CustomElementMixinDeclaration;
+	if (!("members" in declaration)) {
+		return;
+	}
+
+	const newDeclaration = declaration as CustomElementMixinDeclaration;
+	if (!isSuperClassDeclaration(newDeclaration)) {
 		return null;
 	}
 
 	let componentDeclaration = `
-        ["${camelToSnakeCase(declaration.name).substring(1)}"]:{
+        ["${camelToSnakeCase(newDeclaration.name).substring(1)}"]:{
     `;
-	let requiredAttributes: string[] = [];
-	if (declaration.members) {
-		const requiredDeclaration = declaration.members.find(
-			d => d.name === "required"
-		) as PropertyLike;
-		if (requiredDeclaration && requiredDeclaration.default) {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			requiredAttributes = JSON.parse(requiredDeclaration.default);
+
+	declaration.members?.forEach(member => {
+		if (member.kind === "method") {
+			return;
 		}
-	}
-	if (declaration.attributes) {
-		declaration.attributes.forEach(attribute => {
-			componentDeclaration = `
+
+		componentDeclaration = `
                 ${componentDeclaration}
-                ${attribute.name.includes("-") ? attribute.fieldName : attribute.name}${
-									requiredAttributes.includes(attribute.name) ? "" : "?"
-								}: ${attribute.type?.text};
+                ${member.name}${member.default ? "" : "?"}: ${member.type?.text};
             `;
-		});
-	}
+	});
+
 	componentDeclaration = `
                 ${componentDeclaration}
 				children?:any;["class"]?:string;`;
@@ -157,82 +124,33 @@ function getComponentCodeFromDeclarationReact(declaration: Declaration) {
 
 	return componentDeclaration;
 }
-function getComponentCodeFromDeclarationVue3(declaration: MixinDeclaration) {
-	if (!isSuperClassDeclaration(declaration)) {
-		return null;
+
+function getComponentCodeFromDeclarationVue3(declaration: Declaration) {
+	if (!("members" in declaration)) {
+		return;
 	}
 
 	let componentDeclaration = `
         ["${camelToSnakeCase(declaration.name).substring(1)}"]: DefineComponent<
             {
-
     `;
-	let requiredAttributes: string[] = [];
-	if (declaration.members) {
-		const requiredDeclaration = declaration.members.find(
-			d => d.name === "required"
-		) as PropertyLike;
-		if (requiredDeclaration && requiredDeclaration.default) {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			requiredAttributes = JSON.parse(requiredDeclaration.default);
+
+	declaration.members?.forEach(member => {
+		if (member.kind === "method") {
+			return;
 		}
-	}
-	if (declaration.attributes) {
-		declaration.attributes.forEach(attribute => {
-			componentDeclaration = `
+
+		componentDeclaration = `
                 ${componentDeclaration}
-                ${attribute.name.includes("-") ? attribute.fieldName : attribute.name}${
-									requiredAttributes.includes(attribute.name) ? "" : "?"
-								}: ${attribute.type?.text};
+                ${member.name}${member.default ? "" : "?"}: ${member.type?.text};
             `;
-		});
-	}
+	});
 
-	componentDeclaration = `${componentDeclaration}
-
- } >;`;
+	componentDeclaration = `${componentDeclaration}} >;`;
 
 	return componentDeclaration;
 }
-function getComponentCodeFromDeclarationVue2(declaration: Declaration) {
-	declaration = declaration as MixinDeclaration;
-	if (!isSuperClassDeclaration(declaration)) {
-		return null;
-	}
 
-	let componentDeclaration = `
-        "${camelToSnakeCase(declaration.name).substring(1)}": VueConstructor<
-            {
-				$props: {
-    `;
-	let requiredAttributes: string[] = [];
-	if (declaration.members) {
-		const requiredDeclaration = declaration.members.find(
-			d => d.name === "required"
-		) as PropertyLike;
-		if (requiredDeclaration && requiredDeclaration.default) {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			requiredAttributes = JSON.parse(requiredDeclaration.default);
-		}
-	}
-	if (declaration.attributes) {
-		declaration.attributes.forEach(attribute => {
-			componentDeclaration = `
-                ${componentDeclaration}
-                ${attribute.name.includes("-") ? attribute.fieldName : attribute.name}${
-									requiredAttributes.includes(attribute.name) ? "" : "?"
-								}: ${attribute.type?.text};
-            `;
-		});
-	}
-
-	componentDeclaration = `${componentDeclaration}
-	};
-        } & Vue
-    >;`;
-
-	return componentDeclaration;
-}
 function isSuperClassDeclaration(declaration: MixinDeclaration) {
 	return (
 		declaration.superclass &&
@@ -257,6 +175,7 @@ function getComponentPropTypeImports(schema: Package, modulePath?: string): stri
 	const moduleTypeImports: string[] = [];
 	const extractedTypes: Set<string> = new Set();
 	const moduleName = modulePath || "./src";
+
 	schema.modules.forEach(module => {
 		module.declarations?.forEach(declaration => {
 			declaration = declaration as MixinDeclaration;
@@ -265,12 +184,19 @@ function getComponentPropTypeImports(schema: Package, modulePath?: string): stri
 				return;
 			}
 
-			if (declaration.attributes) {
+			if ((declaration as CustomElementMixinDeclaration).attributes) {
+				//@ts-expect-error xxx
 				declaration.attributes.forEach(attribute => {
 					if (attribute.type?.text) {
 						const typesToImport: string[] = attribute.type.text.split(" ");
 						typesToImport.forEach(t => {
-							if (!builtInTypes.includes(t) && t.charAt(0) !== "'" && t.charAt(0) !== '"' && t) {
+							if (
+								!builtInTypes.includes(t) &&
+								t.charAt(0) !== "'" &&
+								t.charAt(0) !== '"' &&
+								!t.includes("<") &&
+								t
+							) {
 								extractedTypes.add(t);
 							}
 						});
@@ -281,10 +207,8 @@ function getComponentPropTypeImports(schema: Package, modulePath?: string): stri
 	});
 
 	if (extractedTypes.size > 0) {
-		let importStatement = `import type { `;
-		Array.from(extractedTypes).forEach((et, idx) => {
-			importStatement += `${et}${idx < extractedTypes.size - 1 ? "," : ""}`;
-		});
+		let importStatement = `import type {
+            ${Array.from(extractedTypes).join(",\n")}`;
 		importStatement += `} from '${moduleName}';`;
 		moduleTypeImports.push(importStatement);
 	}

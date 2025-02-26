@@ -302,8 +302,8 @@ export class FSearch extends FRoot {
 				? "f-search-border-button"
 				: "f-search-border"
 			: this["search-button"]
-			? "f-search-suggest-button"
-			: "f-search-suggest";
+				? "f-search-suggest-button"
+				: "f-search-suggest";
 	}
 
 	/**
@@ -379,7 +379,7 @@ export class FSearch extends FRoot {
 								.value=${this.selectedScope}
 								@input=${this.handleScopeSelection}
 							></f-select
-					  ></f-div>`
+						></f-div>`
 					: ""}
 				<f-div>
 					<f-suggest
@@ -413,7 +413,7 @@ export class FSearch extends FRoot {
 							.size=${this.size}
 							.state=${this.state === "default" ? "primary" : this.state}
 							@click=${this.handleSearchClick}
-					  ></f-icon-button>`
+						></f-icon-button>`
 					: ""}
 			</f-div>
 			<f-div direction="column" id="helper-text-section"><slot name="help"></slot> </f-div>

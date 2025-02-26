@@ -57,39 +57,34 @@ $states: (
 );
 
 $loadingStates: (
-	"primary":
-		linear-gradient(
+	"primary": linear-gradient(
 			var(--color-primary-subtle),
 			var(--color-primary-default),
 			var(--color-primary-secondary),
 			var(--color-primary-text),
 			#fff
 		),
-	"default":
-		linear-gradient(
+	"default": linear-gradient(
 			var(--color-neutral-surface),
 			var(--color-neutral-default),
 			var(--color-neutral-secondary),
 			var(--color-neutral-text)
 		),
-	"success":
-		linear-gradient(
+	"success": linear-gradient(
 			var(--color-success-subtle),
 			var(--color-success-default),
 			var(--color-success-secondary),
 			var(--color-success-text),
 			#fff
 		),
-	"warning":
-		linear-gradient(
+	"warning": linear-gradient(
 			var(--color-warning-subtle),
 			var(--color-warning-default),
 			var(--color-warning-secondary),
 			var(--color-warning-text),
 			#fff
 		),
-	"danger":
-		linear-gradient(
+	"danger": linear-gradient(
 			var(--color-danger-subtle),
 			var(--color-danger-default),
 			var(--color-danger-secondary),

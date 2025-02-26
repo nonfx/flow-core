@@ -25,7 +25,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 export type ObjectValueType = Record<
 	string,
-	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	string | string[] | number | number[] | unknown | unknown[] | undefined
 >;
 @customElement("f-form-object")
@@ -148,7 +147,7 @@ export class FFormObject extends FRoot {
 							data-qa-help-for=${ifDefined(this.config.qaId || this.config.id)}
 							.state=${this.config.state ?? "secondary"}
 							>${this.config?.helperText}</f-text
-					  >`
+						>`
 					: nothing}
 			</slot>
 		</f-div>`;

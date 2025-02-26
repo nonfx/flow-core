@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { html, nothing, PropertyValueMap, unsafeCSS } from "lit";
 import { customElement, property, queryAll } from "lit/decorators.js";
 import { FDiv, FRoot, injectCss } from "@nonfx/flow-core";
@@ -28,7 +27,6 @@ export type ArrayValueType = (
 	| string[]
 	| number
 	| number[]
-	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	| unknown
 	| unknown[]
 	| undefined
@@ -128,7 +126,7 @@ export class FFormArray extends FRoot {
 								size="x-small"
 								state="neutral"
 								@click=${this.addField}
-						  />`
+							/>`
 						: html` <f-icon-button
 								data-qa-minus
 								data-qa-minus-for=${ifDefined(this.getAttribute("name") || undefined)}
@@ -139,7 +137,7 @@ export class FFormArray extends FRoot {
 								@click=${() => {
 									this.removeField(i);
 								}}
-						  />`}
+							/>`}
 				</f-div>`
 			);
 		}
@@ -174,7 +172,7 @@ export class FFormArray extends FRoot {
 										data-qa-info-icon-for=${ifDefined(this.config.qaId || this.config.id)}
 										.tooltip="${this.config.label?.iconTooltip}"
 										clickable
-								  ></f-icon>`
+									></f-icon>`
 								: ""}
 							${!this.isRequired
 								? html`<f-icon-button
@@ -184,16 +182,16 @@ export class FFormArray extends FRoot {
 										size="x-small"
 										state="neutral"
 										@click=${this.addField}
-								  />`
+									/>`
 								: ``}
 						</f-div>
 						<!--field description-->
 						${this.config.label?.description
 							? html` <f-text variant="para" state="secondary" size="small" weight="regular"
 									>${this.config.label?.description}</f-text
-							  >`
+								>`
 							: ""}
-				  </f-div>`
+					</f-div>`
 				: ``}
 			${fieldTemplates.length > 0
 				? html`<f-div .gap=${this.gap} direction="column"> ${fieldTemplates} </f-div>`
@@ -207,7 +205,7 @@ export class FFormArray extends FRoot {
 							weight="regular"
 							.state=${this.config.state}
 							>${this.config?.helperText}</f-text
-					  >`
+						>`
 					: nothing}
 			</slot>
 		</f-div>`;

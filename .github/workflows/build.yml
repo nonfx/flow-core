@@ -25,13 +25,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js 20.x
-        uses: actions/setup-node@v2
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20.x
-
-      - name: Install pnpm
-        run: corepack enable && corepack prepare pnpm@8.9.0 --activate
+          bun-version: latest
 
       - name: Install Dependencies and Build
         run: make build

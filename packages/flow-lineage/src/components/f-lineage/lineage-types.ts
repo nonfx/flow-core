@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { FPopover } from "@nonfx/flow-core";
 import { FLineage } from "./f-lineage";
 import { Ref } from "lit-html/directives/ref.js";
 import { HTMLTemplateResult } from "lit";
+import d3 from "d3";
 
 export type LineageNodeTemplate = (node: LineageNodeElement) => HTMLTemplateResult;
 

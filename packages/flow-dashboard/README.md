@@ -1,6 +1,6 @@
 # Flow Dashboard
 
-The Flow dashboard is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/ollionorg/flow-core))
+The Flow dashboard is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/nonfx/flow-core))
 
 # Installation
 

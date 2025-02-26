@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-form-builder",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "description": "Form builder for the flow design system",
   "type": "module",
   "module": "dist/flow-form-builder.es.js",
@@ -10,8 +10,8 @@
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\" && wca analyze src --format vscode --outFile html.html-data.json",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "test": "pnpm run build && web-test-runner ./src/**/*.test.ts --node-resolve --port 8091",
-    "test:watch": "pnpm run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8091"
+    "test": "web-test-runner ./src/**/*.test.ts --node-resolve --port 8091",
+    "test:watch": "web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8091"
   },
   "keywords": [
     "web-components",
@@ -22,24 +22,24 @@
   "dependencies": {
     "@nonfx/flow-core": "workspace:*",
     "@nonfx/flow-core-config": "workspace:*",
-    "lit": "^3.1.0",
+    "lit": "^3.2.1",
     "lodash-es": "^4.17.21",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.5.7",
-    "@open-wc/testing": "^3.1.5",
-    "@types/jest": "29.5.5",
-    "@types/lodash-es": "^4.17.6",
-    "@web/dev-server-esbuild": "^0.4.1",
-    "@web/test-runner": "^0.17.1",
+    "@custom-elements-manifest/analyzer": "^0.10.4",
+    "@open-wc/testing": "^4.0.0",
+    "@types/jest": "29.5.14",
+    "@types/lodash-es": "^4.17.12",
+    "@web/dev-server-esbuild": "^1.0.4",
+    "@web/test-runner": "^0.20.0",
     "concurrently": "^8.2.1",
-    "esbuild-sass-plugin": "2.2.6",
-    "lit-html": "^3.1.0",
-    "sass": "^1.52.3",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.11",
-    "web-component-analyzer": "^2.0.0-next.4"
+    "esbuild-sass-plugin": "3.3.1",
+    "lit-html": "^3.2.1",
+    "sass": "^1.85.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "web-component-analyzer": "^2.0.0"
   },
   "peerDependencies": {
     "@nonfx/flow-core": "*",
@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ollionorg/flow-core.git",
+    "url": "https://github.com/nonfx/flow-core.git",
     "directory": "packages/flow-form-builder"
   },
   "publishConfig": {
@@ -56,9 +56,9 @@
   },
   "customElements": "custom-elements.json",
   "bugs": {
-    "url": "https://github.com/ollionorg/flow-core/issues"
+    "url": "https://github.com/nonfx/flow-core/issues"
   },
-  "homepage": "https://github.com/ollionorg/flow-core#readme",
+  "homepage": "https://github.com/nonfx/flow-core#readme",
   "author": "@nonfx",
   "license": "MIT"
 }

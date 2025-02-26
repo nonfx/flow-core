@@ -77,11 +77,11 @@ export const Playground = {
 													category="outline"
 													variant="round"
 												></f-button>
-										  </f-div>`
+											</f-div>`
 										: ""}
 								</f-div>
 							</f-toast>`;
-					  })
+						})
 					: ""}
 			</f-div>
 		`;

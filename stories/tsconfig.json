@@ -1,5 +1,5 @@
 {
-	"extends": "../tsconfig.base.json",
+	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
 		"emitDeclarationOnly": false,
 		"noEmit": true,

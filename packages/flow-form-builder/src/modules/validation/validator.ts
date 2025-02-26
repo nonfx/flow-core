@@ -149,8 +149,6 @@ export async function validateField(
 	silent = false,
 	filter?: (r: FormBuilderGenericValidationRule) => boolean
 ): FormBuilderValidationPromise {
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
 	let rulesToValidate = field.validationRules?.filter(filter ? filter : () => true);
 	if (!rulesToValidate) {
 		rulesToValidate = [];

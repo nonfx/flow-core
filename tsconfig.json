@@ -1,5 +1,5 @@
 {
-	"extends": "./tsconfig.base.json",
+	"extends": "@nonfx/tsconfig",
 	"files": [],
 	"exclude": ["**/*.test.ts", "**/dist", "dist"],
 	"references": [

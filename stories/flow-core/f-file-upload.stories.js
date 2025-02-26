@@ -25,7 +25,7 @@ export const Playground = {
 						value: e.detail.value
 							? {
 									name: e.detail.value.name
-							  }
+								}
 							: e.detail.value
 					});
 				} else {

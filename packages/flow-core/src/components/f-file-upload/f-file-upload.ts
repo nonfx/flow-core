@@ -19,7 +19,6 @@ export type FFileUploadState = "primary" | "default" | "success" | "warning" | "
 
 export type FFileUploadValueType = File | File[];
 
-// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export type FFileUploadFileType = string | "all";
 
 export type FFileUploadSizeProp =
@@ -471,7 +470,7 @@ export class FFileUpload extends FRoot {
 							? html` <f-text variant="para" size="small" weight="regular" state="secondary"
 									>${this.type === "single" ? "Max Size: " : "Max Size/file: "}${this
 										.maxSize}</f-text
-							  >`
+								>`
 							: null}
 					</f-div>
 				</f-div>
@@ -503,7 +502,7 @@ export class FFileUpload extends FRoot {
 											id="overflow-text"
 											>${(this.value as File)?.name}</f-text
 										></f-div
-								  >`
+									>`
 								: html`<div class="f-file-upload-placeholder" size=${ifDefined(this.size)}>
 										<f-text variant="para" size="small" weight="regular"
 											>${this.placeholder}</f-text
@@ -513,7 +512,7 @@ export class FFileUpload extends FRoot {
 												? `(All formats supported)`
 												: `(${getExtensionsFromMimeType(this.fileType)})`}</f-text
 										>
-								  </div>`
+									</div>`
 							: html`<div class="f-file-upload-placeholder" size=${ifDefined(this.size)}>
 									<f-text variant="para" size="small" weight="regular">${this.placeholder}</f-text>
 									<f-text variant="para" size="small" weight="regular" state="secondary"
@@ -521,19 +520,19 @@ export class FFileUpload extends FRoot {
 											? `(All formats supported)`
 											: `(${getExtensionsFromMimeType(this.fileType)})`}</f-text
 									>
-							  </div>`}
+								</div>`}
 						${this.loading
 							? html`<div class="loader-suffix" state=${ifDefined(this.state)}>
 									${unsafeSVG(loader)}
-							  </div>`
+								</div>`
 							: this.type === "single" && this.value
-							? html`<f-icon
-									source="i-close"
-									size="small"
-									@click=${this.handleRemoveFile}
-									clickable
-							  ></f-icon>`
-							: html`<f-icon source="i-upload" size="medium" clickable></f-icon>`}
+								? html`<f-icon
+										source="i-close"
+										size="small"
+										@click=${this.handleRemoveFile}
+										clickable
+									></f-icon>`
+								: html`<f-icon source="i-upload" size="medium" clickable></f-icon>`}
 						<input
 							${ref(this.fileInputRef)}
 							data-qa-id=${ifDefined(this.getAttribute("data-qa-element-id") ?? undefined)}
@@ -567,9 +566,9 @@ export class FFileUpload extends FRoot {
 														@click=${(e: MouseEvent) => this.handleRemoveRespectiveFile(e, item)}
 													></f-icon>
 												</f-div>`
-									  )}`
+										)}`
 									: ""}
-						  </f-div>`
+							</f-div>`
 						: ""}
 				</f-div>
 			</f-div>

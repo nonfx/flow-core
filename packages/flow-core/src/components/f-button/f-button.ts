@@ -288,7 +288,7 @@ export class FButton extends FRoot {
 					class=${classMap({ "left-icon": true, ...iconClasses })}
 					.size=${this.iconSize}
 					clickable
-			  ></f-icon>`
+				></f-icon>`
 			: nothing;
 		/**
 		 * create iconRight if available
@@ -301,7 +301,7 @@ export class FButton extends FRoot {
 					class=${classMap({ "right-icon": true, ...iconClasses })}
 					.size=${this.iconSize}
 					clickable
-			  ></f-icon>`
+				></f-icon>`
 			: "";
 
 		/**
@@ -325,7 +325,7 @@ export class FButton extends FRoot {
 					.size=${this.counterSize}
 					.label=${this.counter}
 					class=${classMap(counterClasses)}
-			  ></f-counter>`
+				></f-counter>`
 			: nothing;
 		/**
 		 * render loading if required
@@ -416,7 +416,7 @@ export class FButton extends FRoot {
 											? a()
 											: html`<f-div padding="medium" align="middle-left"
 													><f-text>${a}</f-text></f-div
-											  >`}
+												>`}
 										${this.selectedAction === a
 											? html`<f-icon source="i-tick" style="margin-right:12px;"></f-icon>`
 											: nothing}

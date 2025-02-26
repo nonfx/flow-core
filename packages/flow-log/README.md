@@ -1,6 +1,6 @@
 # Flow Log
 
-The Flow Log is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/ollionorg/flow-core)) using [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+The Flow Log is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/nonfx/flow-core)) using [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 
 # Installation
 

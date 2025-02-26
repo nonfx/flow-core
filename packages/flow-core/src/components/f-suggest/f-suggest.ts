@@ -469,7 +469,7 @@ export class FSuggest extends FRoot {
 								? this.getSuggestionHtml(this.filteredSuggestions)
 								: html`<slot name="no-data"></slot>`}
 						</f-div>
-				  </f-popover>`
+					</f-popover>`
 				: nothing}
 		</f-div>`;
 	}

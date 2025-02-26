@@ -1,5 +1,11 @@
 # @nonfx/custom-elements-manifest-to-types
 
+## 2.1.0
+
+### Minor Changes
+
+- Migrate to latest lit and general refactoring
+
 ## [2.0.5] - 2024-07-08
 
 ### Bug fixes

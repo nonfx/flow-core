@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { FButton, FDiv, flowElement, FRoot, FSearch, FText } from "@nonfx/flow-core";
 import { html, HTMLTemplateResult, nothing, PropertyValueMap, unsafeCSS } from "lit";
 import { property, query, state } from "lit/decorators.js";
@@ -258,7 +258,7 @@ export class FTableSchema extends FRoot {
 							></f-tcell
 						>`;
 					})}
-			  </f-trow>`
+				</f-trow>`
 			: nothing;
 	}
 
@@ -464,7 +464,7 @@ export class FTableSchema extends FRoot {
 							padding="medium none"
 							style="position: sticky;left: 0px;z-index:3;"
 							.width=${this.offsetWidth ? `${this.offsetWidth}px` : `100%`}
-					  >
+						>
 							<f-search
 								id="f-table-search"
 								.scope=${["all", ...Object.keys(this.data.header)]}
@@ -473,7 +473,7 @@ export class FTableSchema extends FRoot {
 								variant="round"
 								@input=${this.search}
 							></f-search>
-					  </f-div>`
+						</f-div>`
 					: nothing}
 			</slot>
 			<div class="f-table-schema-wrapper" ?show-scrollbar=${this.showScrollbar}>

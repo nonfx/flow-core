@@ -1,19 +1,19 @@
 # Flow-core
 
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-core%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-core) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-form-builder%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-form-builder) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-table%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-table) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-lineage%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-lineage) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-log%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-log) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-code-editor%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-code-editor) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-md-editor%2Fpackage.json&query=%24.version&prefix=v&logo=npm&label=%40ollion%2Fflow-md-editor)
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-core%2Fpackage.json&query=%24.license&label=license) ![build](https://github.com/ollionorg/flow-core/actions/workflows/build.yml/badge.svg) ![release](https://github.com/ollionorg/flow-core/actions/workflows/release.yml/badge.svg) ![CodeQL](https://github.com/ollionorg/flow-core/workflows/CodeQL/badge.svg) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=bugs)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Follionorg%2Fflow-core%2Fmain%2Fpackages%2Fflow-core%2Fpackage.json&query=%24.license&label=license) ![build](https://github.com/nonfx/flow-core/actions/workflows/build.yml/badge.svg) ![release](https://github.com/nonfx/flow-core/actions/workflows/release.yml/badge.svg) ![CodeQL](https://github.com/nonfx/flow-core/workflows/CodeQL/badge.svg) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=cldcvr_flow-core&metric=bugs)](https://sonarcloud.io/summary/new_code?id=cldcvr_flow-core)
 
 Flow-core is the base library required by any flow dependecies. It consists mostly of building blocks such design + system tokens, atoms, molecules, base themes, etc.
 
-- [Website](https://flow.ollion.com/)
-- [Learn More](https://github.com/ollionorg/flow-core/blob/main/ABOUT.md)
+- [Website](https://nonfx.github.io/flow-core/)
+- [Learn More](https://github.com/nonfx/flow-core/blob/main/ABOUT.md)
 
 ## Table of contents
 
 - [Starter-kits](#starter-kits)
 - [Install for an existing project](#existing-project)
 - [VScode Plugin and debuggers](#vscode-plugin-and-debuggers)
-- [Components](https://flow.ollion.com/v2/index.html)
+- [Components](https://nonfx.github.io/flow-core/)
 - [Templates](https://flow.ollion.com/templates/index.html)
 - [Resources](#resources)
 - [Figma for designers](https://www.figma.com/community/file/1240565037876928288/Flow-UI-Kit)
@@ -23,7 +23,7 @@ Flow-core is the base library required by any flow dependecies. It consists most
 
 ### Starter kits
 
-For a new project, Flow has put together starter kits with basic dependencies to get you going. Each starter kit will contain Flow core, [Flow system icons](https://github.com/ollionorg/flow-icon), Default google fonts and fully functional Flow templates (eg: top navigation, profile, left navigation, etc)
+For a new project, Flow has put together starter kits with basic dependencies to get you going. Each starter kit will contain Flow core, [Flow system icons](https://nonfx.github.io/flow-core/?path=/story/nonfx-flow-icons--system), Default google fonts and fully functional Flow templates (eg: top navigation, profile, left navigation, etc)
 
 #### Kits
 
@@ -104,7 +104,7 @@ register(["system"]);
 ```
 
 - [Icons Github repo](https://github.com/ollionorg/flow-icon)
-- [View icons](https://flow.ollion.com/icons/index.html)
+- [View icons](https://nonfx.github.io/flow-core/?path=/story/nonfx-flow-icons--system)
 
 ## VScode Plugin and debuggers
 
@@ -114,7 +114,7 @@ register(["system"]);
 
 ## Components
 
-Visit the [Flow components Storybook](https://flow.ollion.com/v2/index.html)
+Visit the [Flow components Storybook](https://nonfx.github.io/flow-core/)
 
 ## Templates
 

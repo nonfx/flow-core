@@ -1,5 +1,17 @@
 <h4 class="margin-btm-8">Release Notes</h4>
 
+## 3.4.0
+
+### Minor Changes
+
+- Migrate to latest lit and general refactoring
+
+### Patch Changes
+
+- Updated dependencies
+  - @nonfx/flow-core-config@1.3.0
+  - @nonfx/flow-core@4.0.0
+
 # Change Log
 
 ## [3.3.0] - 2024-09-27
@@ -93,7 +105,7 @@
 ### BREAKING CHANGES :alert: :alert:
 
 - We have recently addressed a security hotspot that had the potential for Code Injection. In our previous implementation, we were utilizing eval for the node template functionality. As a result, we strongly recommend that you update your existing node template APIs to the latest version.
-- By updating to the latest version, you will benefit from the security improvements we have implemented, mitigating the risk of Code Injection vulnerabilities. Please refer (here)[https://github.com/ollionorg/flow-core#script] to update `node-template`.
+- By updating to the latest version, you will benefit from the security improvements we have implemented, mitigating the risk of Code Injection vulnerabilities. Please refer (here)[https://github.com/nonfx/flow-core#script] to update `node-template`.
 
 ## [1.4.6] - 2023-07-04
 

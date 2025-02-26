@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
+
+/* global process */
+
 // @ts-nocheck
 import { getAllSvgImageUrl, getIconContent, getNode } from "./api.js";
 import * as fs from "fs";
@@ -135,7 +135,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 													]
 												}).data;
 											} catch (e) {
-												console.warn("\nWarn: error in formatting icon", iconNameMapping[id]);
+												console.warn(e, "\nWarn: error in formatting icon", iconNameMapping[id]);
 											}
 											if (pkg === "flow-system-icon" || pkg === "flow-nonfx-icon") {
 												formattedIcon = formattedIcon.replace(/fill="#fff"/g, `fill="white"`);
@@ -163,7 +163,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 													svgToJS
 												);
 											} catch (err) {
-												console.error("\nInvalid path " + iconNameMapping[id]);
+												console.error(err, "\nInvalid path " + iconNameMapping[id]);
 											}
 										},
 										error => {
@@ -180,11 +180,11 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 
 						process.stdout.write(`\x1b[36m \r${pkg} Creating index.ts for packaging... \n \n `);
 
-						const iconPackFile = `${Array.from(iconPackImports).join(
-							"\n"
-						)} \n const IconPack= { ${Array.from(iconPackExports).join(
-							","
-						)} } as Record<string,string>;
+						const iconPackFile = `${Array.from(iconPackImports)
+							.sort((import1, import2) => import1.localeCompare(import2))
+							.join("\n")} \n const IconPack= { ${Array.from(iconPackExports)
+							.sort((import1, import2) => import1.localeCompare(import2))
+							.join(",")} } as Record<string,string>;
 		  export default IconPack;
 		   `;
 						const indexFile = `

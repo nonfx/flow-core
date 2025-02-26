@@ -240,7 +240,7 @@ export class FTextArea extends FRoot {
 						${this.maxLength
 							? html` <f-text variant="para" size="small" weight="regular" state="secondary"
 									>${this.value?.length ?? 0} / ${this.maxLength}</f-text
-							  >`
+								>`
 							: null}
 					</f-div>
 				</f-div>
@@ -271,7 +271,7 @@ export class FTextArea extends FRoot {
 								clickable
 								size="x-small"
 								@click=${this.clearValue}
-						  ></f-icon>`
+							></f-icon>`
 						: null}
 				</div>
 				<slot name="help"></slot>
@@ -285,7 +285,7 @@ export class FTextArea extends FRoot {
 
 	protected updated(changedProperties: PropertyValues): void {
 		super.updated(changedProperties);
-		const computedValue = this.maskValue ? this.getDots() : this.value ?? ""!;
+		const computedValue = this.maskValue ? this.getDots() : (this.value ?? ""!);
 
 		if (this.textareaElement!.textContent !== computedValue) {
 			this.textareaElement!.textContent = computedValue;

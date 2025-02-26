@@ -255,7 +255,7 @@ export const NodeDetails = {
 												</f-div></f-tab-node
 											>`
 									)}</f-tab
-							  >`
+								>`
 							: ""}
 						<!--End : node-details tab-bar section  -->
 						<!--Start : node-details content section  -->
@@ -278,17 +278,17 @@ export const NodeDetails = {
 																	${configValue?.type === "text"
 																		? html` <f-text variant="para" size="small" weight="regular"
 																				>${configValue?.value}</f-text
-																		  >`
+																			>`
 																		: configValue?.type === "tag"
-																		? html`<f-tag size="small" label=${configValue?.value} state="primary" icon-left=${configValue?.iconLeft}></f-tab>`
-																		: html`<f-text variant="para" size="small" weight="regular"
-																				><a>${configValue?.value} +8 more</a></f-text
-																		  >`}</f-div
+																			? html`<f-tag size="small" label=${configValue?.value} state="primary" icon-left=${configValue?.iconLeft}></f-tab>`
+																			: html`<f-text variant="para" size="small" weight="regular"
+																					><a>${configValue?.value} +8 more</a></f-text
+																				>`}</f-div
 																>
 															</f-div>
 														`
 													)}</f-div
-											  >`
+												>`
 											: html`
 													<f-div padding="medium" direction="column">
 														${Object.entries(config).map(
@@ -303,25 +303,28 @@ export const NodeDetails = {
 																				><f-text variant="para" size="small" weight="bold"
 																					>${configName}</f-text
 																				></f-div
-																		  >`
+																			>`
 																		: ""}
 																	<f-div width="fill-container">
 																		${configValue?.type === "text"
 																			? html` <f-text variant="para" size="small" weight="regular"
 																					>${configValue?.value}</f-text
-																			  >`
+																				>`
 																			: configValue?.type === "tag"
-																			? html`<f-tag size="small" label=${configValue?.value} state="primary" icon-left=${configValue?.iconLeft}></f-tab>`
-																			: configValue?.type === "code"
-																			? html`${configValue.value}`
-																			: html`<f-text variant="para" size="small" weight="regular"
-																					><a>${configValue?.value} +8 more</a></f-text
-																			  >`}</f-div
+																				? html`<f-tag size="small" label=${configValue?.value} state="primary" icon-left=${configValue?.iconLeft}></f-tab>`
+																				: configValue?.type === "code"
+																					? html`${configValue.value}`
+																					: html`<f-text
+																							variant="para"
+																							size="small"
+																							weight="regular"
+																							><a>${configValue?.value} +8 more</a></f-text
+																						>`}</f-div
 																	>
 																</f-div>`
 														)}
 													</f-div>
-											  `}
+												`}
 									</f-tab-content>`
 							)}
 						</f-div>

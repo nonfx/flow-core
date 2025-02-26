@@ -920,10 +920,10 @@ export const Flags = {
 							item === 0
 								? "Loader"
 								: item === 1
-								? "Disabled"
-								: item === 2
-								? "Clear Icon on Type"
-								: "Readonly"
+									? "Disabled"
+									: item === 2
+										? "Clear Icon on Type"
+										: "Readonly"
 						}</f-div>
             <f-text slot="help" variant="para" size="small">This is a Subtext (Helper Text)</f-text>
           </f-suggest></f-div

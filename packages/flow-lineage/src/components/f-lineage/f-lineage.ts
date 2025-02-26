@@ -235,7 +235,7 @@ export class FLineage extends FRoot {
 			this.pageNumberElement.innerText = `${((maxLevel * 100) / this.maxAvailableLevels).toFixed(
 				0
 			)}%`;
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+
 			drawLineage({
 				...this.lineageDrawParams,
 				levelsToPlot: this.levelsToPlot,
@@ -328,10 +328,10 @@ export class FLineage extends FRoot {
 						width="80px"
 						class="degree-selector even"
 						id="progress"
-				  >
+					>
 						<f-icon source="i-tick" loading></f-icon>
 						<f-text id="page-number">${this.page}%</f-text>
-				  </f-div>`
+					</f-div>`
 				: html`<f-div
 						align="middle-center"
 						gap="x-small"
@@ -341,10 +341,10 @@ export class FLineage extends FRoot {
 						width="80px"
 						class="degree-selector odd"
 						id="progress"
-				  >
+					>
 						<f-icon source="i-tick" loading></f-icon>
 						<f-text id="page-number">${this.page}%</f-text>
-				  </f-div>`}
+					</f-div>`}
 			<f-popover ${ref(this.popoverRef)} ?open=${false}
 				><f-div height="100%"
 					><f-icon-button
@@ -481,7 +481,6 @@ export class FLineage extends FRoot {
 			/**
 			 * Creates hierarchy based on nodes and links provided by user
 			 */
-			// eslint-disable-next-line @typescript-eslint/no-this-alias
 
 			/**
 			 * template data proxy for hot reload
@@ -578,13 +577,13 @@ export class FLineage extends FRoot {
 			drawLineage(this.lineageDrawParams).catch(error => {
 				console.error(error);
 			});
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 			const handleZoom = (e: any) => {
 				/**
 				 * store transform and it is used to apply on update
 				 */
 				this.currentTransform = e.transform;
-				// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
 				lineageContainer.attr("transform", e.transform);
 				if (this.isSafari()) {
 					const scale = e.transform.k;
@@ -598,10 +597,9 @@ export class FLineage extends FRoot {
 						});
 				}
 			};
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 			const zoom = d3.zoom().scaleExtent([0.3, 4]).on("zoom", handleZoom) as any;
 
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 			svgElement.call(zoom).on("dblclick.zoom", null);
 
 			svgElement.on("click", (event: MouseEvent) => {

@@ -8,4 +8,4 @@ cd "$HERE"
 
 
 echo "building library..."
-pnpm vite build --emptyOutDir
+bun vite build --emptyOutDir

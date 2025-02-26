@@ -70,7 +70,7 @@ export const Playground = {
 							${args.state === "inherit"
 								? html` <f-text variant="para" size="large" weight="regular" state="inherit"
 										>Inherited "success" state from its parent f-div
-								  </f-text>`
+									</f-text>`
 								: null}
 							<f-div
 								padding="large"

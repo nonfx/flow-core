@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 # Extract issue number from branch name.
 branch_issue_number=$(git symbolic-ref HEAD | sed -Ee 's|^refs/heads/||' | sed -Ee 's|^[A-Za-z]+/||')
 message=$(cat $1)

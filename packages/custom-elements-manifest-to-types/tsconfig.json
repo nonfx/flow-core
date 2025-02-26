@@ -1,8 +1,10 @@
 {
-	"extends": "../../tsconfig.json",
+	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
+		"rootDir": ".",
 		"outDir": "./dist",
 		"types": ["@types/node", "@types/jest"]
 	},
-	"include": ["./index.ts", "./options.ts"]
+	"include": ["./index.ts", "./options.ts"],
+	"exclude": ["**/*.test.ts", "**/dist", "dist"]
 }

@@ -1,6 +1,6 @@
 # Flow Table
 
-The Flow table is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/ollionorg/flow-core))
+The Flow table is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/nonfx/flow-core))
 
 # Installation
 

@@ -2,7 +2,7 @@
 
 ![npm](https://badgen.net/npm/v/@nonfx/flow-form-builder) ![license](https://badgen.net/npm/license/@nonfx/flow-form-builder) ![types](https://badgen.net/npm/types/@nonfx/flow-form-builder) ![downloads](https://badgen.net//npm/dw/@nonfx/flow-form-builder)
 
-The Flow form builder is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/ollionorg/flow-core))
+The Flow form builder is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/nonfx/flow-core))
 
 ## Benefits / Features
 
@@ -34,7 +34,7 @@ You can pass custom markup to render custom designs for titles, actions, help te
 
 #### 🍭 Flow components and themes
 
-Built on [flow-core](https://github.com/ollionorg/flow-core) gives you accesss to all themes and components like emoji-picker, datetime-picker , suggestions ,file-upload,multi-select etc.
+Built on [flow-core](https://github.com/nonfx/flow-core) gives you accesss to all themes and components like emoji-picker, datetime-picker , suggestions ,file-upload,multi-select etc.
 
 #### 🛠️ Structural API co-relation
 
@@ -50,13 +50,13 @@ Head over to [Flow form builder Storybook](https://flow.ollion.com/v2/index.html
 
 # Getting started
 
-Flow form builder is built on [Flow](https://flow.ollion.com/), an open source design framework. To run form builder, please make sure that you have [Flow core](https://github.com/ollionorg/flow-core) as part of your project.
+Flow form builder is built on [Flow](https://flow.ollion.com/), an open source design framework. To run form builder, please make sure that you have [Flow core](https://github.com/nonfx/flow-core) as part of your project.
 
-<!-- During installation if you run into any issues, head over to our [known issues + solutions document](https://github.com/ollionorg/flow-core/blob/main/packages/flow-form-builder/KNOWN_SOLUTIONS.md) to see if a solution already exists. -->
+<!-- During installation if you run into any issues, head over to our [known issues + solutions document](https://github.com/nonfx/flow-core/blob/main/packages/flow-form-builder/KNOWN_SOLUTIONS.md) to see if a solution already exists. -->
 
 **Note:** If you already have Flow packages installed, please update to the latest versions
 
-**Note:** If you do not have an existing front-end project, you can quickly create one from a [flow starter kit](https://github.com/ollionorg/flow-core#starter-kits).
+**Note:** If you do not have an existing front-end project, you can quickly create one from a [flow starter kit](https://github.com/nonfx/flow-core#starter-kits).
 
 <br/>
 

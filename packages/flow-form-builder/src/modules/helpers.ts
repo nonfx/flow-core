@@ -122,16 +122,16 @@ export function getSlots(
 				gap="none"
 				data-qa-label-for=${ifDefined(field.qaId || field.id)}
 				>${field.label.title}</f-div
-		  >`
+			>`
 		: name
-		? html`<f-div
-				slot="label"
-				padding="none"
-				gap="none"
-				data-qa-label-for=${ifDefined(field.qaId || field.id)}
-				>${name}</f-div
-		  >`
-		: nothing;
+			? html`<f-div
+					slot="label"
+					padding="none"
+					gap="none"
+					data-qa-label-for=${ifDefined(field.qaId || field.id)}
+					>${name}</f-div
+				>`
+			: nothing;
 
 	const description = field.label?.description
 		? html` <f-div slot="description" padding="none" gap="none">${field.label.description}</f-div>`
@@ -147,7 +147,7 @@ export function getSlots(
 					.tooltip="${field.label?.iconTooltip}"
 					clickable
 				></f-icon>
-		  `
+			`
 		: nothing;
 	const subTitle = getSubTitle(field);
 	let label = html`${title}${description}${iconTooltip}`;
@@ -158,7 +158,7 @@ export function getSlots(
 	${field.helperText
 		? html`<f-div slot="help" data-qa-help-for=${ifDefined(field.qaId || field.id)}
 				>${field.helperText}
-		  </f-div>`
+			</f-div>`
 		: nothing}`;
 }
 
@@ -182,7 +182,7 @@ export function getLabelLeftLayout(
 					.tooltip="${field.label?.iconTooltip}"
 					clickable
 				></f-icon>
-		  `
+			`
 		: nothing;
 	const title =
 		typeof field.label?.title === "object"
@@ -191,7 +191,7 @@ export function getLabelLeftLayout(
 					<f-text data-qa-label-for=${ifDefined(field.qaId || field.id)}
 						>${field.label?.title}</f-text
 					>
-			  </f-div>`;
+				</f-div>`;
 
 	const label = html`<f-div width="hug-content" padding="none small none none" direction="column">
 		<f-div width="hug-content" gap="small">${title}${iconTooltip} </f-div>

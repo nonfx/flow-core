@@ -1,6 +1,6 @@
 # Flow Text Editor
 
-The Flow text editor is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/ollionorg/flow-core)) using [Quill](https://github.com/slab/quill?tab=readme-ov-file)
+The Flow text editor is built on the Flow design framework ([website](https://flow.ollion.com/) / [github](https://github.com/nonfx/flow-core)) using [Quill](https://github.com/slab/quill?tab=readme-ov-file)
 
 # Installation
 
