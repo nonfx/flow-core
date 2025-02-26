@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "\"./components/f-text-editor/f-text-editor\""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/f-text-editor/f-text-editor.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "FTextEditor",
+          "members": [
+            {
+              "kind": "field",
+              "name": "key",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "To force re-render"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "placeholder",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "read-only",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "[\"read-only\"]"
+            },
+            {
+              "kind": "field",
+              "name": "toolbar",
+              "type": {
+                "text": "FTextEditorToolbar | undefined"
+              },
+              "default": "[\"bold\", \"italic\", \"underline\", \"strike\", \"link\"]",
+              "attribute": "toolbar",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "editorRoot"
+            },
+            {
+              "kind": "field",
+              "name": "quillInstance",
+              "type": {
+                "text": "Quill | undefined"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "value",
+              "description": "to be inserted in text-area.",
+              "attribute": "value"
+            },
+            {
+              "name": "to",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "readOnly",
+              "description": "make read-only"
+            },
+            {
+              "name": "toolbar",
+              "type": {
+                "text": "FTextEditorToolbar | undefined"
+              },
+              "default": "[\"bold\", \"italic\", \"underline\", \"strike\", \"link\"]",
+              "fieldName": "toolbar",
+              "description": "to be displayed on top",
+              "attribute": "toolbar"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "value",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "read-only",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "to",
+              "fieldName": "readOnly"
+            }
+          ],
+          "superclass": {
+            "name": "FRoot",
+            "package": "@nonfx/flow-core"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FTextEditor",
+          "declaration": {
+            "name": "FTextEditor",
+            "module": "src/components/f-text-editor/f-text-editor.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,0 @@
-try{
-(()=>{var m=__STORYBOOK_ADDONS__,{addons:t,types:O,mockChannel:h}=__STORYBOOK_ADDONS__;var g=__STORYBOOK_THEMING__,{CacheProvider:x,ClassNames:S,Global:u,ThemeProvider:k,background:y,color:C,convert:N,create:a,createCache:R,createGlobal:B,createReset:D,css:G,darken:K,ensure:Y,ignoreSsrWarning:v,isPropValid:w,jsx:P,keyframes:A,lighten:E,styled:H,themes:I,typography:M,useTheme:j,withTheme:F}=__STORYBOOK_THEMING__;var s=a({base:"dark",brandTitle:"Flow",brandUrl:"https://github.com/nonfx/flow-core"});t.setConfig({theme:s});})();
-}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
