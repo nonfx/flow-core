@@ -188,3 +188,7 @@
 ## [1.9.0] - 2025-02-25
 
 - Updated icons from Figma
+
+## [2.1.0] - 2025-02-26
+
+- Updated icons from Figma
