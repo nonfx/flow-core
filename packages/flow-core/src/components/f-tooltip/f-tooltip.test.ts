@@ -11,6 +11,7 @@ describe("f-tooltip", () => {
 	it("should render open tooltip ", async () => {
 		await fixture(html` <f-button label="add" tooltip="This is a tooltip"></f-button> `);
 		const tooltip = document.querySelector<FTooltip>("#flow-tooltip");
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 		expect(tooltip).not.null;
 	});
 });

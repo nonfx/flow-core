@@ -8,7 +8,6 @@ export default function getProxies(element: FLineage) {
 	const templateDataProxy = {
 		get: (target: Record<string, any>, key: string) => {
 			if (key !== "__isProxy") {
-				// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 				return target[key];
 			}
 
@@ -43,7 +42,6 @@ export default function getProxies(element: FLineage) {
 	const nodeDataProxy = {
 		get: (target: Record<string, any>, key: string) => {
 			if (key !== "__isProxy") {
-				// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 				return target[key];
 			}
 

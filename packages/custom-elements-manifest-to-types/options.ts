@@ -1,3 +1,5 @@
+/* global process */
+
 import * as prettier from "prettier";
 
 export async function validateOptions(options?: UserOptions): Promise<ProtoGenOptions> {

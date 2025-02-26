@@ -15,7 +15,7 @@ describe("f-log", () => {
 	it("shouldn't render tool bar by default", async () => {
 		const el = await fixture(html` <f-log .logs=${samplelogs}></f-log> `);
 		const topBar = el.shadowRoot!.querySelector<FDiv>(".top-bar");
-		expect(topBar).is.null;
+		expect(topBar).to.be.null();
 	});
 	it("should render tool bar", async () => {
 		const el = await fixture(html` <f-log show-toolbar .logs=${samplelogs}></f-log> `);

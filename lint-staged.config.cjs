@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
 	"**/*.{ts?(x),js?(x)}": () => "bun run tsc",
 	"**/*.{js,ts,mjs,cjs,jsx,tsx}": "bun run lint:files",

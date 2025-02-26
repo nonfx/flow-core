@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
 
 const { getStyles, getNode } = require("./api");
 const prettier = require("prettier");
@@ -359,8 +358,7 @@ getStyles()
 		});
 		await getNode(nodeids.join(",")).then(async response => {
 			const colorTokens = {};
-			// eslint-disable-next-line @typescript-eslint/no-unused-vars
-			for (const [_id, obj] of Object.entries(response.data.nodes)) {
+			for (const [, obj] of Object.entries(response.data.nodes)) {
 				if (obj.document.fills[0].color) {
 					const { r, g, b } = obj.document.fills[0].color;
 

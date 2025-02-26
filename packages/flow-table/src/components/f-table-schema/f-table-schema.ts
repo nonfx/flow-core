@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { FButton, FDiv, flowElement, FRoot, FSearch, FText } from "@nonfx/flow-core";
 import { html, HTMLTemplateResult, nothing, PropertyValueMap, unsafeCSS } from "lit";
 import { property, query, state } from "lit/decorators.js";

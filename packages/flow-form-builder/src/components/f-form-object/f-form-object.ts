@@ -25,7 +25,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 export type ObjectValueType = Record<
 	string,
-	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	string | string[] | number | number[] | unknown | unknown[] | undefined
 >;
 @customElement("f-form-object")

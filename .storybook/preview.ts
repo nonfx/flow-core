@@ -114,7 +114,8 @@ export const decorators = [
 		ConfigUtil.setConfig({
 			theme: "f-light",
 			customFont: {
-				default: `"Montserrat", "Montserrat", sans-serif`,
+				header: `"Montserrat", "Montserrat", sans-serif`,
+				para: `"Montserrat", "Montserrat", sans-serif`,
 				mono: `"Operator Mono", monospace`
 			}
 		});
@@ -178,8 +179,8 @@ run();
 
 // 404 error state --start--
 const el = document.body.querySelector(".sb-errordisplay.sb-wrapper")!;
-const errorMessage = el.querySelector<HTMLElement>("#error-message.sb-heading")!;
-const codeMessage = el.querySelector<HTMLElement>(".sb-errordisplay_code")!;
+// const errorMessage = el.querySelector<HTMLElement>("#error-message.sb-heading")!;
+// const codeMessage = el.querySelector<HTMLElement>(".sb-errordisplay_code")!;
 const url = new URL(window.location.href);
 const url_id = url.searchParams.get("id");
 

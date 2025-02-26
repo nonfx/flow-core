@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { html, nothing, PropertyValueMap, unsafeCSS } from "lit";
 import { customElement, property, queryAll } from "lit/decorators.js";
 import { FDiv, FRoot, injectCss } from "@nonfx/flow-core";
@@ -28,7 +27,6 @@ export type ArrayValueType = (
 	| string[]
 	| number
 	| number[]
-	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	| unknown
 	| unknown[]
 	| undefined

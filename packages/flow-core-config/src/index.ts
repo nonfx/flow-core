@@ -6,7 +6,6 @@ export type CustomFontConfig = {
 	mono?: string;
 };
 export type FlowCoreConfig = {
-	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	theme: "f-dark" | "f-light" | string;
 	iconPack: Record<string, string> | null;
 	customFont?: CustomFontConfig;

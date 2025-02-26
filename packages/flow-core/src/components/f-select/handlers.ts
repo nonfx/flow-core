@@ -61,9 +61,11 @@ export function handleOptionSelection(this: FSelect, option: FSelectSingleOption
 			}
 			this.handleDropDownClose(e);
 		} else {
-			!this.isSelected(option)
-				? (this.selectedOptions as FSelectArrayOfObjects).push(option as FSelectOptionObject)
-				: (this.selectedOptions as FSelectArrayOfObjects).splice(this.getIndex(option), 1);
+			if (!this.isSelected(option)) {
+				(this.selectedOptions as FSelectArrayOfObjects).push(option as FSelectOptionObject);
+			} else {
+				(this.selectedOptions as FSelectArrayOfObjects).splice(this.getIndex(option), 1);
+			}
 		}
 	}
 	const event = new CustomEvent<FSelectCustomEvent>("input", {
@@ -103,14 +105,18 @@ export function handleSelectionGroup(
 		};
 		this.handleDropDownClose(e);
 	} else {
-		!this.isGroupSelection(option, group)
-			? !selectedOptionsInGroup
-				? (this.selectedOptions = {
-						...this.selectedOptions,
-						[group]: [option as FSelectOptionObject]
-					})
-				: (selectedOptionsInGroup as FSelectArrayOfObjects).push(option as FSelectOptionObject)
-			: selectedOptionsInGroup.splice(this.getIndexInGroup(option, group), 1);
+		if (!this.isGroupSelection(option, group)) {
+			if (!selectedOptionsInGroup) {
+				this.selectedOptions = {
+					...this.selectedOptions,
+					[group]: [option as FSelectOptionObject]
+				};
+			} else {
+				(selectedOptionsInGroup as FSelectArrayOfObjects).push(option as FSelectOptionObject);
+			}
+		} else {
+			selectedOptionsInGroup.splice(this.getIndexInGroup(option, group), 1);
+		}
 	}
 	const event = new CustomEvent<FSelectCustomEvent>("input", {
 		detail: {

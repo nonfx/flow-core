@@ -185,7 +185,7 @@ function getComponentPropTypeImports(schema: Package, modulePath?: string): stri
 			}
 
 			if ((declaration as CustomElementMixinDeclaration).attributes) {
-				//@ts-expect-error
+				//@ts-expect-error xxx
 				declaration.attributes.forEach(attribute => {
 					if (attribute.type?.text) {
 						const typesToImport: string[] = attribute.type.text.split(" ");

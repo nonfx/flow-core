@@ -1,3 +1,4 @@
+/* global process */
 import fs from "fs-extra";
 import path from "path";
 import { execSync } from "child_process";

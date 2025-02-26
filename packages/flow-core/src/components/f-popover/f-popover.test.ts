@@ -16,6 +16,7 @@ describe("f-popover", () => {
 		const el = await fixture(html` <f-popover>Test</f-popover> `);
 		expect(el.textContent?.trim()).to.equal("Test");
 		const descendant = document.querySelector(".f-overlay")!;
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 		expect(descendant).is.null;
 	});
 

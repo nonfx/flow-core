@@ -19,7 +19,6 @@ export type FFileUploadState = "primary" | "default" | "success" | "warning" | "
 
 export type FFileUploadValueType = File | File[];
 
-// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export type FFileUploadFileType = string | "all";
 
 export type FFileUploadSizeProp =
