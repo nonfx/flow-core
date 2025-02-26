@@ -10,8 +10,8 @@
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\" && wca analyze src --format vscode --outFile html.html-data.json",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "test": "bun run build && web-test-runner ./src/**/*.test.ts --node-resolve --port 8091",
-    "test:watch": "bun run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8091"
+    "test": "web-test-runner ./src/**/*.test.ts --node-resolve --port 8091",
+    "test:watch": "web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8091"
   },
   "keywords": [
     "web-components",

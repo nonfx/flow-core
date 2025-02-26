@@ -14,12 +14,10 @@
     "@types/node": "^22.13.5",
     "@types/prettier": "3.0.0",
     "esbuild": "^0.25.0",
-    "jest": "^29.7.0",
     "ts-jest": "^29.2.6",
     "typescript": "^5.7.3"
   },
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "build": "rm -rf dist && esbuild index.ts --outdir=dist --platform=node --packages=external --bundle"
   },
   "repository": {

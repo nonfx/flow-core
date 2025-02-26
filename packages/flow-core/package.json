@@ -12,7 +12,7 @@
     "sync-md-file": "bun ./figma/sync-md-file.js",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\" && wca analyze src --format vscode --outFile html.html-data.json",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "test": "web-test-runner ./src/**/*.test.ts --bun-resolve --port 8090 --concurrency 1",
+    "test": "web-test-runner ./src/**/*.test.ts --node-resolve --port 8090 --concurrency 1",
     "test:file": "web-test-runner --node-resolve --port 8090 --concurrency 1",
     "test:watch": "bun run build && web-test-runner ./src/**/*.test.ts --node-resolve --watch --port 8090 --concurrency 1"
   },
