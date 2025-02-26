@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-dashboard",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Dashboard as code",
   "type": "module",
   "module": "dist/flow-dashboard.es.js",
