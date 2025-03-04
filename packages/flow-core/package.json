@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-core",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Core package of flow design system",
   "type": "module",
   "module": "dist/flow-core.es.js",

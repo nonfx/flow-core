@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-md-editor",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Code editor component for flow library",
   "type": "module",
   "module": "dist/flow-md-editor.es.js",
