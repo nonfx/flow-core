@@ -904,7 +904,7 @@
 	--color-highlight-text: #{$color-highlight-text} !important;
 	--color-highlight-text-hover: #{getHover($color-highlight-text)} !important;
 	--color-highlight-text-selected: #{getSelected($color-highlight-text)} !important;
-	$color-primary-default: #5c6df0;
+	$color-primary-default: #18c0c0;
 	--color-primary-default: #{$color-primary-default} !important;
 	--color-primary-default-hover: #{getHover($color-primary-default)} !important;
 	--color-primary-default-selected: #{getSelected($color-primary-default)} !important;
@@ -1187,7 +1187,7 @@
 	--color-primary-surface: #{$color-primary-surface} !important;
 	--color-primary-surface-hover: #{getHover($color-primary-surface)} !important;
 	--color-primary-surface-selected: #{getSelected($color-primary-surface)} !important;
-	$color-primary-default: #4151c8;
+	$color-primary-default: #18c0c0;
 	--color-primary-default: #{$color-primary-default} !important;
 	--color-primary-default-hover: #{getHover($color-primary-default)} !important;
 	--color-primary-default-selected: #{getSelected($color-primary-default)} !important;
