@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 4.0.2
+
+### Patch Changes
+
+- fix the text theme
+
 ## 4.0.1
 
 ### Patch Changes
