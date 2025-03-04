@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-form-builder",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Form builder for the flow design system",
   "type": "module",
   "module": "dist/flow-form-builder.es.js",
