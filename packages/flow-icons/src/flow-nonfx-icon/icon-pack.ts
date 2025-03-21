@@ -100,6 +100,7 @@ import i_description from "./svg/i-description";
 import i_description_remove from "./svg/i-description-remove";
 import i_dev from "./svg/i-dev";
 import i_device_mobile from "./svg/i-device-mobile";
+import i_doc_create from "./svg/i-doc-create";
 import i_document from "./svg/i-document";
 import i_document_1 from "./svg/i-document-1";
 import i_document_add from "./svg/i-document-add";
@@ -151,9 +152,12 @@ import i_flag from "./svg/i-flag";
 import i_flash from "./svg/i-flash";
 import i_folder from "./svg/i-folder";
 import i_folder_add from "./svg/i-folder-add";
+import i_folder_create from "./svg/i-folder-create";
 import i_folder_download from "./svg/i-folder-download";
+import i_folder_logical from "./svg/i-folder-logical";
 import i_folder_open from "./svg/i-folder-open";
 import i_folder_remove from "./svg/i-folder-remove";
+import i_folder_scope from "./svg/i-folder-scope";
 import i_function from "./svg/i-function";
 import i_gears from "./svg/i-gears";
 import i_generic from "./svg/i-generic";
@@ -243,10 +247,9 @@ import i_play_fill from "./svg/i-play-fill";
 import i_play_stop from "./svg/i-play-stop";
 import i_playlist from "./svg/i-playlist";
 import i_playlist_add from "./svg/i-playlist-add";
-import i_playlist_check from "./svg/i-playlist-check";
-import i_playlist_cross from "./svg/i-playlist-cross";
 import i_playlist_edit from "./svg/i-playlist-edit";
 import i_playlist_remove from "./svg/i-playlist-remove";
+import i_playlist_save from "./svg/i-playlist-save";
 import i_plug from "./svg/i-plug";
 import i_plus from "./svg/i-plus";
 import i_plus_fill from "./svg/i-plus-fill";
@@ -299,6 +302,10 @@ import i_sort_asc from "./svg/i-sort-asc";
 import i_sort_desc from "./svg/i-sort-desc";
 import i_sparkles from "./svg/i-sparkles";
 import i_speakerphone from "./svg/i-speakerphone";
+import i_stance_all from "./svg/i-stance-all";
+import i_stance_create from "./svg/i-stance-create";
+import i_stance_global from "./svg/i-stance-global";
+import i_stance_solo from "./svg/i-stance-solo";
 import i_star from "./svg/i-star";
 import i_star_outline from "./svg/i-star-outline";
 import i_starmap from "./svg/i-starmap";
@@ -468,6 +475,7 @@ const IconPack = {
 	"i-description": i_description,
 	"i-dev": i_dev,
 	"i-device-mobile": i_device_mobile,
+	"i-doc-create": i_doc_create,
 	"i-document-1": i_document_1,
 	"i-document-add": i_document_add,
 	"i-document-duplicate": i_document_duplicate,
@@ -518,9 +526,12 @@ const IconPack = {
 	"i-flag": i_flag,
 	"i-flash": i_flash,
 	"i-folder-add": i_folder_add,
+	"i-folder-create": i_folder_create,
 	"i-folder-download": i_folder_download,
+	"i-folder-logical": i_folder_logical,
 	"i-folder-open": i_folder_open,
 	"i-folder-remove": i_folder_remove,
+	"i-folder-scope": i_folder_scope,
 	"i-folder": i_folder,
 	"i-function": i_function,
 	"i-gears": i_gears,
@@ -610,10 +621,9 @@ const IconPack = {
 	"i-play-stop": i_play_stop,
 	"i-play": i_play,
 	"i-playlist-add": i_playlist_add,
-	"i-playlist-check": i_playlist_check,
-	"i-playlist-cross": i_playlist_cross,
 	"i-playlist-edit": i_playlist_edit,
 	"i-playlist-remove": i_playlist_remove,
+	"i-playlist-save": i_playlist_save,
 	"i-playlist": i_playlist,
 	"i-plug": i_plug,
 	"i-plus-fill": i_plus_fill,
@@ -667,6 +677,10 @@ const IconPack = {
 	"i-sort": i_sort,
 	"i-sparkles": i_sparkles,
 	"i-speakerphone": i_speakerphone,
+	"i-stance-all": i_stance_all,
+	"i-stance-create": i_stance_create,
+	"i-stance-global": i_stance_global,
+	"i-stance-solo": i_stance_solo,
 	"i-star-outline": i_star_outline,
 	"i-star": i_star,
 	"i-starmap": i_starmap,

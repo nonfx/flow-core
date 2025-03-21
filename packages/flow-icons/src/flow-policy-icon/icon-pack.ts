@@ -11,8 +11,10 @@ import i_policy_ojk from "./svg/i-policy-ojk";
 import i_policy_pci from "./svg/i-policy-pci";
 import i_policy_sama from "./svg/i-policy-sama";
 import i_policy_soc2 from "./svg/i-policy-soc2";
+import p_acme from "./svg/p-acme";
 import p_aicpa from "./svg/p-aicpa";
 import p_cyber_risk_institute from "./svg/p-cyber-risk-institute";
+import p_dora from "./svg/p-dora";
 import p_european_parliament from "./svg/p-european-parliament";
 import p_ffiec from "./svg/p-ffiec";
 import p_hsbc from "./svg/p-hsbc";
@@ -34,8 +36,10 @@ const IconPack = {
 	"i-policy-pci": i_policy_pci,
 	"i-policy-sama": i_policy_sama,
 	"i-policy-soc2": i_policy_soc2,
+	"p-acme": p_acme,
 	"p-aicpa": p_aicpa,
 	"p-cyber-risk-institute": p_cyber_risk_institute,
+	"p-dora": p_dora,
 	"p-european-parliament": p_european_parliament,
 	"p-ffiec": p_ffiec,
 	"p-hsbc": p_hsbc,
