@@ -1338,7 +1338,7 @@
 	--color-warning-default: #{$color-warning-default} !important;
 	--color-warning-default-hover: #{getHover($color-warning-default)} !important;
 	--color-warning-default-selected: #{getSelected($color-warning-default)} !important;
-	$color-surface-default: #ebeeef;
+	$color-surface-default: #f9fafb;
 	--color-surface-default: #{$color-surface-default} !important;
 	--color-surface-default-hover: #{getHover($color-surface-default)} !important;
 	--color-surface-default-selected: #{getSelected($color-surface-default)} !important;
