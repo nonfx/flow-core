@@ -1,5 +1,17 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 4.0.3
+
+### Patch Changes
+
+- added new theme `f-stance-light` & `f-stance-dark`
+
+## 4.0.2
+
+### Patch Changes
+
+- fix the text theme variables
+
 ## 4.0.2
 
 ### Patch Changes
