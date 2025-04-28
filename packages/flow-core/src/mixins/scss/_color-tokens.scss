@@ -1330,7 +1330,7 @@
 	--color-border-secondary: #{$color-border-secondary} !important;
 	--color-border-secondary-hover: #{getHover($color-border-secondary)} !important;
 	--color-border-secondary-selected: #{getSelected($color-border-secondary)} !important;
-	$color-border-subtle: #dce0e4;
+	$color-border-subtle: #d1d6dc;
 	--color-border-subtle: #{$color-border-subtle} !important;
 	--color-border-subtle-hover: #{getHover($color-border-subtle)} !important;
 	--color-border-subtle-selected: #{getSelected($color-border-subtle)} !important;
@@ -1733,7 +1733,7 @@
 	--color-success-surface: #{$color-success-surface} !important;
 	--color-success-surface-hover: #{getHover($color-success-surface)} !important;
 	--color-success-surface-selected: #{getSelected($color-success-surface)} !important;
-	$color-surface-default: #45a163;
+	$color-surface-default: #171a1c;
 	--color-surface-default: #{$color-surface-default} !important;
 	--color-surface-default-hover: #{getHover($color-surface-default)} !important;
 	--color-surface-default-selected: #{getSelected($color-surface-default)} !important;
