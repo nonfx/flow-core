@@ -21,6 +21,7 @@ import i_arrow_circle_up from "./svg/i-arrow-circle-up";
 import i_arrow_down from "./svg/i-arrow-down";
 import i_arrow_left from "./svg/i-arrow-left";
 import i_arrow_right from "./svg/i-arrow-right";
+import i_arrow_right_long from "./svg/i-arrow-right-long";
 import i_arrow_sm_down from "./svg/i-arrow-sm-down";
 import i_arrow_sm_left from "./svg/i-arrow-sm-left";
 import i_arrow_sm_right from "./svg/i-arrow-sm-right";
@@ -60,6 +61,7 @@ import i_circle from "./svg/i-circle";
 import i_circle_small from "./svg/i-circle-small";
 import i_class from "./svg/i-class";
 import i_classification from "./svg/i-classification";
+import i_clause from "./svg/i-clause";
 import i_cli from "./svg/i-cli";
 import i_clipboard_copy from "./svg/i-clipboard-copy";
 import i_clock_fill from "./svg/i-clock-fill";
@@ -68,6 +70,7 @@ import i_clone from "./svg/i-clone";
 import i_close from "./svg/i-close";
 import i_close_2 from "./svg/i-close-2";
 import i_close_circle from "./svg/i-close-circle";
+import i_close_nodes from "./svg/i-close-nodes";
 import i_cloud from "./svg/i-cloud";
 import i_cloud_add from "./svg/i-cloud-add";
 import i_cloud_download from "./svg/i-cloud-download";
@@ -88,6 +91,7 @@ import i_copy from "./svg/i-copy";
 import i_credit_card from "./svg/i-credit-card";
 import i_customer_support from "./svg/i-customer-support";
 import i_cut from "./svg/i-cut";
+import i_dash from "./svg/i-dash";
 import i_dash_grid from "./svg/i-dash-grid";
 import i_dash_list from "./svg/i-dash-list";
 import i_dashboard from "./svg/i-dashboard";
@@ -100,7 +104,12 @@ import i_description from "./svg/i-description";
 import i_description_remove from "./svg/i-description-remove";
 import i_dev from "./svg/i-dev";
 import i_device_mobile from "./svg/i-device-mobile";
+import i_direct_match from "./svg/i-direct-match";
+import i_distributed_match from "./svg/i-distributed-match";
 import i_doc_create from "./svg/i-doc-create";
+import i_doc_draft from "./svg/i-doc-draft";
+import i_doc_published from "./svg/i-doc-published";
+import i_doc_vacatio_legis from "./svg/i-doc-vacatio-legis";
 import i_document from "./svg/i-document";
 import i_document_1 from "./svg/i-document-1";
 import i_document_add from "./svg/i-document-add";
@@ -158,6 +167,7 @@ import i_folder_logical from "./svg/i-folder-logical";
 import i_folder_open from "./svg/i-folder-open";
 import i_folder_remove from "./svg/i-folder-remove";
 import i_folder_scope from "./svg/i-folder-scope";
+import i_full_match from "./svg/i-full-match";
 import i_function from "./svg/i-function";
 import i_gears from "./svg/i-gears";
 import i_generic from "./svg/i-generic";
@@ -224,6 +234,9 @@ import i_more from "./svg/i-more";
 import i_more_filled from "./svg/i-more-filled";
 import i_name from "./svg/i-name";
 import i_network from "./svg/i-network";
+import i_no_match from "./svg/i-no-match";
+import i_node_collapse from "./svg/i-node-collapse";
+import i_node_expand from "./svg/i-node-expand";
 import i_not_equal from "./svg/i-not-equal";
 import i_office_building from "./svg/i-office-building";
 import i_org_fill from "./svg/i-org-fill";
@@ -233,6 +246,7 @@ import i_paper_airplane from "./svg/i-paper-airplane";
 import i_paper_clip from "./svg/i-paper-clip";
 import i_paper_clip_not_found from "./svg/i-paper-clip-not-found";
 import i_paragraph from "./svg/i-paragraph";
+import i_partial_match from "./svg/i-partial-match";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
 import i_pdf from "./svg/i-pdf";
@@ -328,6 +342,7 @@ import i_terminal_outline from "./svg/i-terminal-outline";
 import i_testing from "./svg/i-testing";
 import i_text from "./svg/i-text";
 import i_theme from "./svg/i-theme";
+import i_three_col from "./svg/i-three-col";
 import i_thumb_down from "./svg/i-thumb-down";
 import i_thumb_up from "./svg/i-thumb-up";
 import i_tick from "./svg/i-tick";
@@ -344,6 +359,7 @@ import i_triangle_down from "./svg/i-triangle-down";
 import i_triangle_left from "./svg/i-triangle-left";
 import i_triangle_right from "./svg/i-triangle-right";
 import i_triangle_up from "./svg/i-triangle-up";
+import i_two_col from "./svg/i-two-col";
 import i_type from "./svg/i-type";
 import i_unlink from "./svg/i-unlink";
 import i_unlock from "./svg/i-unlock";
@@ -395,6 +411,7 @@ const IconPack = {
 	"i-arrow-circle-up": i_arrow_circle_up,
 	"i-arrow-down": i_arrow_down,
 	"i-arrow-left": i_arrow_left,
+	"i-arrow-right-long": i_arrow_right_long,
 	"i-arrow-right": i_arrow_right,
 	"i-arrow-sm-down": i_arrow_sm_down,
 	"i-arrow-sm-left": i_arrow_sm_left,
@@ -435,6 +452,7 @@ const IconPack = {
 	"i-circle": i_circle,
 	"i-class": i_class,
 	"i-classification": i_classification,
+	"i-clause": i_clause,
 	"i-cli": i_cli,
 	"i-clipboard-copy": i_clipboard_copy,
 	"i-clock-fill": i_clock_fill,
@@ -442,6 +460,7 @@ const IconPack = {
 	"i-clone": i_clone,
 	"i-close-2": i_close_2,
 	"i-close-circle": i_close_circle,
+	"i-close-nodes": i_close_nodes,
 	"i-close": i_close,
 	"i-cloud-add": i_cloud_add,
 	"i-cloud-download": i_cloud_download,
@@ -465,6 +484,7 @@ const IconPack = {
 	"i-cut": i_cut,
 	"i-dash-grid": i_dash_grid,
 	"i-dash-list": i_dash_list,
+	"i-dash": i_dash,
 	"i-dashboard": i_dashboard,
 	"i-database": i_database,
 	"i-dataset": i_dataset,
@@ -475,7 +495,12 @@ const IconPack = {
 	"i-description": i_description,
 	"i-dev": i_dev,
 	"i-device-mobile": i_device_mobile,
+	"i-direct-match": i_direct_match,
+	"i-distributed-match": i_distributed_match,
 	"i-doc-create": i_doc_create,
+	"i-doc-draft": i_doc_draft,
+	"i-doc-published": i_doc_published,
+	"i-doc-vacatio-legis": i_doc_vacatio_legis,
 	"i-document-1": i_document_1,
 	"i-document-add": i_document_add,
 	"i-document-duplicate": i_document_duplicate,
@@ -533,6 +558,7 @@ const IconPack = {
 	"i-folder-remove": i_folder_remove,
 	"i-folder-scope": i_folder_scope,
 	"i-folder": i_folder,
+	"i-full-match": i_full_match,
 	"i-function": i_function,
 	"i-gears": i_gears,
 	"i-generic": i_generic,
@@ -599,6 +625,9 @@ const IconPack = {
 	"i-more": i_more,
 	"i-name": i_name,
 	"i-network": i_network,
+	"i-no-match": i_no_match,
+	"i-node-collapse": i_node_collapse,
+	"i-node-expand": i_node_expand,
 	"i-not-equal": i_not_equal,
 	"i-office-building": i_office_building,
 	"i-org-fill": i_org_fill,
@@ -608,6 +637,7 @@ const IconPack = {
 	"i-paper-clip-not-found": i_paper_clip_not_found,
 	"i-paper-clip": i_paper_clip,
 	"i-paragraph": i_paragraph,
+	"i-partial-match": i_partial_match,
 	"i-pause-fill": i_pause_fill,
 	"i-pause": i_pause,
 	"i-pdf": i_pdf,
@@ -703,6 +733,7 @@ const IconPack = {
 	"i-testing": i_testing,
 	"i-text": i_text,
 	"i-theme": i_theme,
+	"i-three-col": i_three_col,
 	"i-thumb-down": i_thumb_down,
 	"i-thumb-up": i_thumb_up,
 	"i-tick-2": i_tick_2,
@@ -719,6 +750,7 @@ const IconPack = {
 	"i-triangle-left": i_triangle_left,
 	"i-triangle-right": i_triangle_right,
 	"i-triangle-up": i_triangle_up,
+	"i-two-col": i_two_col,
 	"i-type": i_type,
 	"i-unlink": i_unlink,
 	"i-unlock": i_unlock,
