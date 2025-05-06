@@ -50,6 +50,7 @@ import p_sonarqube_dark from "./svg/p-sonarqube-dark";
 import p_sonarqube_light from "./svg/p-sonarqube-light";
 import p_sonatype from "./svg/p-sonatype";
 import p_sql_server from "./svg/p-sql-server";
+import p_stance_mark_white from "./svg/p-stance-mark-white";
 import p_starchitect_full_dark from "./svg/p-starchitect-full-dark";
 import p_starchitect_full_dark_app from "./svg/p-starchitect-full-dark-app";
 import p_starchitect_full_light from "./svg/p-starchitect-full-light";
@@ -115,6 +116,7 @@ const IconPack = {
 	"p-sonarqube-light": p_sonarqube_light,
 	"p-sonatype": p_sonatype,
 	"p-sql-server": p_sql_server,
+	"p-stance-mark-white": p_stance_mark_white,
 	"p-starchitect-full-dark-app": p_starchitect_full_dark_app,
 	"p-starchitect-full-dark": p_starchitect_full_dark,
 	"p-starchitect-full-light-app": p_starchitect_full_light_app,

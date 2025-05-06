@@ -1,0 +1,1 @@
+export default `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="white" d="m21.53 10.472.153.008a1.5 1.5 0 0 1 0 2.985l-.154.007H2.465a1.5 1.5 0 0 1 0-3z"/></svg>`;

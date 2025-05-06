@@ -235,6 +235,7 @@ import i_more_filled from "./svg/i-more-filled";
 import i_name from "./svg/i-name";
 import i_network from "./svg/i-network";
 import i_no_match from "./svg/i-no-match";
+import i_no_match_1 from "./svg/i-no-match-1";
 import i_node_collapse from "./svg/i-node-collapse";
 import i_node_expand from "./svg/i-node-expand";
 import i_not_equal from "./svg/i-not-equal";
@@ -247,6 +248,7 @@ import i_paper_clip from "./svg/i-paper-clip";
 import i_paper_clip_not_found from "./svg/i-paper-clip-not-found";
 import i_paragraph from "./svg/i-paragraph";
 import i_partial_match from "./svg/i-partial-match";
+import i_partial_match_1 from "./svg/i-partial-match-1";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
 import i_pdf from "./svg/i-pdf";
@@ -625,6 +627,7 @@ const IconPack = {
 	"i-more": i_more,
 	"i-name": i_name,
 	"i-network": i_network,
+	"i-no-match-1": i_no_match_1,
 	"i-no-match": i_no_match,
 	"i-node-collapse": i_node_collapse,
 	"i-node-expand": i_node_expand,
@@ -637,6 +640,7 @@ const IconPack = {
 	"i-paper-clip-not-found": i_paper_clip_not_found,
 	"i-paper-clip": i_paper_clip,
 	"i-paragraph": i_paragraph,
+	"i-partial-match-1": i_partial_match_1,
 	"i-partial-match": i_partial_match,
 	"i-pause-fill": i_pause_fill,
 	"i-pause": i_pause,
