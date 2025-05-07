@@ -1,5 +1,11 @@
 <h4 class="margin-btm-8">Release Notes</h4>
 
+## 1.3.1
+
+### Patch Changes
+
+- Fixes to Typescript types
+
 ## 1.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @nonfx/custom-elements-manifest-to-types
 
+## 2.1.1
+
+### Patch Changes
+
+- Fixes to Typescript types
+
 ## 2.1.0
 
 ### Minor Changes
