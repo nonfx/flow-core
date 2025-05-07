@@ -148,7 +148,7 @@ export class FSearch extends FRoot {
 	 * to customize result
 	 */
 	@property({ reflect: false, type: Function, attribute: "result-when" })
-	resultWhen: FSearchResultWhen = (sg, value) => {
+	resultWhen?: FSearchResultWhen = (sg, value) => {
 		if (typeof sg === "object") {
 			return sg
 				.toString()
