@@ -63,7 +63,7 @@ jobs:
               "@nonfx/flow-form-builder":"packages/flow-form-builder/CHANGELOG.md",
               "@nonfx/flow-lineage":"packages/flow-lineage/CHANGELOG.md",
               "@nonfx/flow-dashboard":"packages/flow-dashboard/CHANGELOG.md",
-              "@nonfx/flow-tsconfig":"packages/tsconfig/CHANGELOG.md",
+              "@nonfx/tsconfig":"packages/tsconfig/CHANGELOG.md",
               "@nonfx/custom-elements-manifest-to-types":"packages/custom-elements-manifest-to-types/CHANGELOG.md"
             }
 
