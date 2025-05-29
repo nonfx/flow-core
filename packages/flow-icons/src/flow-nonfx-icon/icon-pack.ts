@@ -1,3 +1,4 @@
+import i_evidence_missing from "./svg/ i-evidence-missing";
 import i_access from "./svg/i-access";
 import i_actor from "./svg/i-actor";
 import i_adjustments from "./svg/i-adjustments";
@@ -102,12 +103,14 @@ import i_delete from "./svg/i-delete";
 import i_descending from "./svg/i-descending";
 import i_description from "./svg/i-description";
 import i_description_remove from "./svg/i-description-remove";
-import i_dev from "./svg/i-dev";
 import i_device_mobile from "./svg/i-device-mobile";
 import i_direct_match from "./svg/i-direct-match";
 import i_distributed_match from "./svg/i-distributed-match";
 import i_doc_create from "./svg/i-doc-create";
+import i_doc_current from "./svg/i-doc-current";
+import i_doc_decommissioned from "./svg/i-doc-decommissioned";
 import i_doc_draft from "./svg/i-doc-draft";
+import i_doc_expired from "./svg/i-doc-expired";
 import i_doc_published from "./svg/i-doc-published";
 import i_doc_vacatio_legis from "./svg/i-doc-vacatio-legis";
 import i_document from "./svg/i-document";
@@ -137,10 +140,16 @@ import i_emoji_sad from "./svg/i-emoji-sad";
 import i_employment from "./svg/i-employment";
 import i_enter from "./svg/i-enter";
 import i_enter_reverse from "./svg/i-enter-reverse";
+import i_env_dev from "./svg/i-env-dev";
+import i_env_production from "./svg/i-env-production";
+import i_env_staging from "./svg/i-env-staging";
 import i_equal from "./svg/i-equal";
 import i_escalation from "./svg/i-escalation";
 import i_evidence from "./svg/i-evidence";
 import i_evidence_2 from "./svg/i-evidence-2";
+import i_evidence_approved from "./svg/i-evidence-approved";
+import i_evidence_no from "./svg/i-evidence-no";
+import i_evidence_rejected from "./svg/i-evidence-rejected";
 import i_expand from "./svg/i-expand";
 import i_expand_2 from "./svg/i-expand-2";
 import i_expand_3 from "./svg/i-expand-3";
@@ -234,6 +243,7 @@ import i_more from "./svg/i-more";
 import i_more_filled from "./svg/i-more-filled";
 import i_name from "./svg/i-name";
 import i_network from "./svg/i-network";
+import i_no_logo from "./svg/i-no-logo";
 import i_no_match from "./svg/i-no-match";
 import i_no_match_1 from "./svg/i-no-match-1";
 import i_node_collapse from "./svg/i-node-collapse";
@@ -251,6 +261,14 @@ import i_partial_match from "./svg/i-partial-match";
 import i_partial_match_1 from "./svg/i-partial-match-1";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
+import i_pb_audio from "./svg/i-pb-audio";
+import i_pb_document from "./svg/i-pb-document";
+import i_pb_image from "./svg/i-pb-image";
+import i_pb_integration from "./svg/i-pb-integration";
+import i_pb_postbox from "./svg/i-pb-postbox";
+import i_pb_query from "./svg/i-pb-query";
+import i_pb_text from "./svg/i-pb-text";
+import i_pb_video from "./svg/i-pb-video";
 import i_pdf from "./svg/i-pdf";
 import i_pencil_alt from "./svg/i-pencil-alt";
 import i_pentagram from "./svg/i-pentagram";
@@ -319,6 +337,7 @@ import i_sort_desc from "./svg/i-sort-desc";
 import i_sparkles from "./svg/i-sparkles";
 import i_speakerphone from "./svg/i-speakerphone";
 import i_stance_all from "./svg/i-stance-all";
+import i_stance_circle from "./svg/i-stance-circle";
 import i_stance_create from "./svg/i-stance-create";
 import i_stance_global from "./svg/i-stance-global";
 import i_stance_solo from "./svg/i-stance-solo";
@@ -328,6 +347,7 @@ import i_starmap from "./svg/i-starmap";
 import i_status from "./svg/i-status";
 import i_stop from "./svg/i-stop";
 import i_stopwatch from "./svg/i-stopwatch";
+import i_sub_clause from "./svg/i-sub-clause";
 import i_summary from "./svg/i-summary";
 import i_super_admin from "./svg/i-super-admin";
 import i_superivison from "./svg/i-superivison";
@@ -391,6 +411,7 @@ import i_zoom_in from "./svg/i-zoom-in";
 import i_zoom_out from "./svg/i-zoom-out";
 import p_starchitect_small_dark from "./svg/p-starchitect-small-dark";
 const IconPack = {
+	" i-evidence-missing": i_evidence_missing,
 	"i-access": i_access,
 	"i-actor": i_actor,
 	"i-adjustments": i_adjustments,
@@ -495,12 +516,14 @@ const IconPack = {
 	"i-descending": i_descending,
 	"i-description-remove": i_description_remove,
 	"i-description": i_description,
-	"i-dev": i_dev,
 	"i-device-mobile": i_device_mobile,
 	"i-direct-match": i_direct_match,
 	"i-distributed-match": i_distributed_match,
 	"i-doc-create": i_doc_create,
+	"i-doc-current": i_doc_current,
+	"i-doc-decommissioned": i_doc_decommissioned,
 	"i-doc-draft": i_doc_draft,
+	"i-doc-expired": i_doc_expired,
 	"i-doc-published": i_doc_published,
 	"i-doc-vacatio-legis": i_doc_vacatio_legis,
 	"i-document-1": i_document_1,
@@ -530,9 +553,15 @@ const IconPack = {
 	"i-employment": i_employment,
 	"i-enter-reverse": i_enter_reverse,
 	"i-enter": i_enter,
+	"i-env-dev": i_env_dev,
+	"i-env-production": i_env_production,
+	"i-env-staging": i_env_staging,
 	"i-equal": i_equal,
 	"i-escalation": i_escalation,
 	"i-evidence-2": i_evidence_2,
+	"i-evidence-approved": i_evidence_approved,
+	"i-evidence-no": i_evidence_no,
+	"i-evidence-rejected": i_evidence_rejected,
 	"i-evidence": i_evidence,
 	"i-expand-2": i_expand_2,
 	"i-expand-3": i_expand_3,
@@ -627,6 +656,7 @@ const IconPack = {
 	"i-more": i_more,
 	"i-name": i_name,
 	"i-network": i_network,
+	"i-no-logo": i_no_logo,
 	"i-no-match-1": i_no_match_1,
 	"i-no-match": i_no_match,
 	"i-node-collapse": i_node_collapse,
@@ -644,6 +674,14 @@ const IconPack = {
 	"i-partial-match": i_partial_match,
 	"i-pause-fill": i_pause_fill,
 	"i-pause": i_pause,
+	"i-pb-audio": i_pb_audio,
+	"i-pb-document": i_pb_document,
+	"i-pb-image": i_pb_image,
+	"i-pb-integration": i_pb_integration,
+	"i-pb-postbox": i_pb_postbox,
+	"i-pb-query": i_pb_query,
+	"i-pb-text": i_pb_text,
+	"i-pb-video": i_pb_video,
 	"i-pdf": i_pdf,
 	"i-pencil-alt": i_pencil_alt,
 	"i-pentagram": i_pentagram,
@@ -712,6 +750,7 @@ const IconPack = {
 	"i-sparkles": i_sparkles,
 	"i-speakerphone": i_speakerphone,
 	"i-stance-all": i_stance_all,
+	"i-stance-circle": i_stance_circle,
 	"i-stance-create": i_stance_create,
 	"i-stance-global": i_stance_global,
 	"i-stance-solo": i_stance_solo,
@@ -721,6 +760,7 @@ const IconPack = {
 	"i-status": i_status,
 	"i-stop": i_stop,
 	"i-stopwatch": i_stopwatch,
+	"i-sub-clause": i_sub_clause,
 	"i-summary": i_summary,
 	"i-super-admin": i_super_admin,
 	"i-superivison": i_superivison,
