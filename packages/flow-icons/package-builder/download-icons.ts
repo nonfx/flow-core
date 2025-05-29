@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-
 /* global process */
 
 // @ts-nocheck
-import { getAllSvgImageUrl, getIconContent, getNode } from "./api.js";
-import * as fs from "fs";
-import config from "./config.js";
-import prettier from "prettier";
-import path from "path";
 import "dotenv/config";
-import { fileURLToPath } from "url";
+import * as fs from "fs";
+import path from "path";
+import prettier from "prettier";
 import { optimize } from "svgo";
-const __filename = fileURLToPath(import.meta.url);
+import { fileURLToPath } from "url";
+import { getAllSvgImageUrl, getIconContent, getNode } from "./api.js";
+import config from "./config.js";
+import { AxiosError } from "axios";
 
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const packageName = "all";
 const versionType = "minor";
@@ -39,6 +39,7 @@ for (let p = 0; p < config.packages.length; p++) {
 		await downloadIcons(pkg.nodeId, pkg.name);
 	}
 }
+
 export default async function downloadIcons(nodeId: string, pkg: string) {
 	const indexFileImports = new Set();
 	indexFileImports.add('import { ConfigUtil } from "@nonfx/flow-core-config";');
@@ -46,6 +47,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 
 	const iconPackExports = new Set();
 	const iconPackImports = new Set();
+
 	/**
 	 * Get document of specified file Id
 	 */
@@ -232,8 +234,11 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 				});
 		})
 		.catch(error => {
-			console.error(error);
-			return;
+			if (error instanceof AxiosError) {
+				throw error.toJSON();
+			}
+
+			throw error;
 		});
 	return 1;
 }
