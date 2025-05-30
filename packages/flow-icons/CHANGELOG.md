@@ -252,3 +252,7 @@
 ## [2.5.0] - 2025-05-29
 
 - Updated icons from Figma
+
+## [2.6.0] - 2025-05-30
+
+- Updated icons from Figma
