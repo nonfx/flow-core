@@ -1,4 +1,3 @@
-import i_evidence_missing from "./svg/ i-evidence-missing";
 import i_access from "./svg/i-access";
 import i_actor from "./svg/i-actor";
 import i_adjustments from "./svg/i-adjustments";
@@ -148,6 +147,7 @@ import i_escalation from "./svg/i-escalation";
 import i_evidence from "./svg/i-evidence";
 import i_evidence_2 from "./svg/i-evidence-2";
 import i_evidence_approved from "./svg/i-evidence-approved";
+import i_evidence_missing from "./svg/i-evidence-missing";
 import i_evidence_no from "./svg/i-evidence-no";
 import i_evidence_rejected from "./svg/i-evidence-rejected";
 import i_expand from "./svg/i-expand";
@@ -411,7 +411,6 @@ import i_zoom_in from "./svg/i-zoom-in";
 import i_zoom_out from "./svg/i-zoom-out";
 import p_starchitect_small_dark from "./svg/p-starchitect-small-dark";
 const IconPack = {
-	" i-evidence-missing": i_evidence_missing,
 	"i-access": i_access,
 	"i-actor": i_actor,
 	"i-adjustments": i_adjustments,
@@ -560,6 +559,7 @@ const IconPack = {
 	"i-escalation": i_escalation,
 	"i-evidence-2": i_evidence_2,
 	"i-evidence-approved": i_evidence_approved,
+	"i-evidence-missing": i_evidence_missing,
 	"i-evidence-no": i_evidence_no,
 	"i-evidence-rejected": i_evidence_rejected,
 	"i-evidence": i_evidence,
