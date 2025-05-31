@@ -205,7 +205,7 @@ export class FEmojiPicker extends FRoot {
 		"objects",
 		"symbols",
 		"flags"
-	];
+	] as Array<string>;
 
 	/**
 	 * has label slot

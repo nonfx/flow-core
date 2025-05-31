@@ -1,5 +1,14 @@
 <h4 class="margin-btm-8">Release Notes</h4>
 
+## 3.4.1
+
+### Patch Changes
+
+- Fixes to Typescript types
+- Updated dependencies
+  - @nonfx/flow-core@4.0.7
+  - @nonfx/flow-core-config@1.3.1
+
 ## 3.4.0
 
 ### Minor Changes

@@ -1,4 +1,5 @@
 import {
+	Attribute,
 	CustomElementMixinDeclaration,
 	Declaration,
 	MixinDeclaration,
@@ -77,7 +78,7 @@ function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?:
 	const output = prettier.format(
 		`
         /* eslint-disable */
-        import type { DefineComponent } from "vue";
+        import type { DefineComponent, Ref } from "vue";
 		${allImports.join("\n")}
 		declare module "vue" {
 			export interface GlobalComponents {
@@ -90,7 +91,13 @@ function transformSchemaVue3(schema: Package, options: UserOptions, modulePath?:
 
 	return output;
 }
+
 function getComponentCodeFromDeclarationReact(declaration: Declaration) {
+	const attributes = getAttributesFromDeclaration(declaration);
+	if (!attributes) {
+		return;
+	}
+
 	// declaration = declaration as CustomElementMixinDeclaration;
 	if (!("members" in declaration)) {
 		return;
@@ -101,61 +108,76 @@ function getComponentCodeFromDeclarationReact(declaration: Declaration) {
 		return null;
 	}
 
-	let componentDeclaration = `
-        ["${camelToSnakeCase(newDeclaration.name).substring(1)}"]:{
-    `;
-
-	declaration.members?.forEach(member => {
-		if (member.kind === "method") {
-			return;
-		}
-
-		componentDeclaration = `
-                ${componentDeclaration}
-                ${member.name}${member.default ? "" : "?"}: ${member.type?.text};
-            `;
-	});
-
-	componentDeclaration = `
-                ${componentDeclaration}
-				children?:any;["class"]?:string;`;
-	componentDeclaration = `${componentDeclaration}
+	return `
+        ["${camelToSnakeCase(newDeclaration.name).substring(1)}"]:{ ${attributes}
+				children?:any;["class"]?:string;
         }&React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;`;
-
-	return componentDeclaration;
 }
 
 function getComponentCodeFromDeclarationVue3(declaration: Declaration) {
-	if (!("members" in declaration)) {
+	const attributes = getAttributesFromDeclaration(declaration);
+	if (!attributes) {
 		return;
 	}
 
-	let componentDeclaration = `
-        ["${camelToSnakeCase(declaration.name).substring(1)}"]: DefineComponent<
-            {
-    `;
+	return `["${camelToSnakeCase(declaration.name).substring(1)}"]: DefineComponent<{${attributes}}>;\n`;
+}
 
-	declaration.members?.forEach(member => {
-		if (member.kind === "method") {
+function getAttributesFromDeclaration(declaration: Declaration) {
+	if (!("attributes" in declaration)) {
+		return null;
+	}
+
+	const fieldMap = new Map<string, string>();
+
+	declaration.attributes?.forEach(attribute => {
+		if (
+			!attribute.type ||
+			!attribute.fieldName ||
+			attribute.fieldName.startsWith("_") ||
+			SUPER_CLASS_NAMES.includes(attribute.type?.text ?? "")
+		) {
 			return;
 		}
 
-		componentDeclaration = `
-                ${componentDeclaration}
-                ${member.name}${member.default ? "" : "?"}: ${member.type?.text};
-            `;
+		fieldMap.set(
+			attribute.fieldName,
+			`${attribute.fieldName}${isAttributeOptional(attribute) ? "?" : ""}: ${attribute.type?.text}`
+		);
 	});
 
-	componentDeclaration = `${componentDeclaration}} >;`;
-
-	return componentDeclaration;
+	return Array.from(fieldMap.values()).join("\n");
 }
 
+function isAttributeOptional(attribute: Attribute) {
+	if (attribute.default !== undefined) {
+		return true;
+	}
+
+	if (attribute.type?.text.includes("| undefined")) {
+		return true;
+	}
+
+	return false;
+}
+
+const SUPER_CLASS_NAMES = [
+	"FRoot",
+	"LitElement",
+	"FInputBase",
+	"array",
+	"object",
+	"HTMLDivElement",
+	"HTMLInputElement",
+	"HTMLTextAreaElement",
+	"Instance",
+	"object",
+	"Picker",
+	"Instance"
+];
+
 function isSuperClassDeclaration(declaration: MixinDeclaration) {
-	return (
-		declaration.superclass &&
-		["FRoot", "LitElement", "FInputBase"].includes(declaration.superclass.name)
-	);
+	return declaration.superclass && SUPER_CLASS_NAMES.includes(declaration.superclass.name);
 }
 
 function getComponentPropTypeImports(schema: Package, modulePath?: string): string[] {
@@ -184,31 +206,30 @@ function getComponentPropTypeImports(schema: Package, modulePath?: string): stri
 				return;
 			}
 
-			if ((declaration as CustomElementMixinDeclaration).attributes) {
-				//@ts-expect-error xxx
-				declaration.attributes.forEach(attribute => {
-					if (attribute.type?.text) {
-						const typesToImport: string[] = attribute.type.text.split(" ");
-						typesToImport.forEach(t => {
-							if (
-								!builtInTypes.includes(t) &&
-								t.charAt(0) !== "'" &&
-								t.charAt(0) !== '"' &&
-								!t.includes("<") &&
-								t
-							) {
-								extractedTypes.add(t);
-							}
-						});
+			const allTypes = [
+				...((declaration as CustomElementMixinDeclaration).attributes ?? []).map(
+					attribute => attribute.type?.text
+				)
+			].filter(Boolean) as string[];
+
+			allTypes.forEach(attribute => {
+				const typesToImport: string[] = attribute.split(" ");
+				typesToImport.forEach(t => {
+					if (!builtInTypes.includes(t) && /^[a-zA-Z0-9_]+$/.test(t)) {
+						extractedTypes.add(t);
 					}
 				});
-			}
+			});
 		});
 	});
 
 	if (extractedTypes.size > 0) {
 		let importStatement = `import type {
-            ${Array.from(extractedTypes).join(",\n")}`;
+            ${Array.from(extractedTypes)
+							.filter(name => !SUPER_CLASS_NAMES.includes(name))
+							.sort((a, b) => a.localeCompare(b))
+							.join(",\n")}`;
+
 		importStatement += `} from '${moduleName}';`;
 		moduleTypeImports.push(importStatement);
 	}

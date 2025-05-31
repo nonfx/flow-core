@@ -1,5 +1,14 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 2.4.1
+
+### Patch Changes
+
+- Fixes to Typescript types
+- Updated dependencies
+  - @nonfx/flow-core@4.0.7
+  - @nonfx/flow-core-config@1.3.1
+
 ## 2.2.3
 
 ### Patch Changes
@@ -237,5 +246,17 @@
 - Updated icons from Figma
 
 ## [2.4.0] - 2025-05-06
+
+- Updated icons from Figma
+
+## [2.5.0] - 2025-05-29
+
+- Updated icons from Figma
+
+## [2.6.0] - 2025-05-30
+
+- Updated icons from Figma
+
+## [2.7.0] - 2025-05-30
 
 - Updated icons from Figma

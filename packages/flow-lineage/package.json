@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-lineage",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Lineage dependency for flow design system",
   "type": "module",
   "module": "dist/flow-lineage.es.js",

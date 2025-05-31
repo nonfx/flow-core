@@ -33,7 +33,7 @@ export class FRoot extends LitElement {
 	static styles = [unsafeCSS(globalStyle)];
 
 	@query("f-popover")
-	tooltipElement!: HTMLElement;
+	tooltipElement?: HTMLElement;
 
 	/**
 	 * @attribute Value of a switch defines if it is on or off.
