@@ -1,5 +1,12 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @nonfx/flow-core@4.1.0
+
 ## 2.4.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 4.1.0
+
+### Minor Changes
+
+- Update DM sans font weights
+
 ## 4.0.7
 
 ### Patch Changes
