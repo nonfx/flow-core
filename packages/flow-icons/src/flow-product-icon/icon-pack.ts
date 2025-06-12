@@ -34,7 +34,6 @@ import p_nodejs from "./svg/p-nodejs";
 import p_nonfx_full_dark from "./svg/p-nonfx-full-dark";
 import p_nonfx_full_light from "./svg/p-nonfx-full-light";
 import p_nonfx_mark from "./svg/p-nonfx-mark";
-import p_ollion from "./svg/p-ollion";
 import p_opa from "./svg/p-opa";
 import p_oracle from "./svg/p-oracle";
 import p_postgresql from "./svg/p-postgresql";
@@ -100,7 +99,6 @@ const IconPack = {
 	"p-nonfx-full-dark": p_nonfx_full_dark,
 	"p-nonfx-full-light": p_nonfx_full_light,
 	"p-nonfx-mark": p_nonfx_mark,
-	"p-ollion": p_ollion,
 	"p-opa": p_opa,
 	"p-oracle": p_oracle,
 	"p-postgresql": p_postgresql,
