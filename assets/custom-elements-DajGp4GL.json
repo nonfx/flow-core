@@ -1,0 +1,456 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "\"./components/f-code-editor/f-code-editor\""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/f-code-editor/f-code-editor.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "FCodeEditor",
+          "members": [
+            {
+              "kind": "field",
+              "name": "editor",
+              "type": {
+                "text": "monaco.editor.IStandaloneCodeEditor | undefined"
+              },
+              "description": "editor instance"
+            },
+            {
+              "kind": "field",
+              "name": "code",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "actual code to display in editor",
+              "attribute": "code"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "type": {
+                "text": "FCodeEditorStateProp | undefined"
+              },
+              "default": "\"default\"",
+              "attribute": "state",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "FCodeEditorLanguage | undefined"
+              },
+              "default": "\"typescript\"",
+              "description": "language of code",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "height",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "\"100%\"",
+              "description": "height to is required to create editor",
+              "attribute": "height"
+            },
+            {
+              "kind": "field",
+              "name": "width",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "\"100%\"",
+              "description": "width to is required to create editor",
+              "attribute": "width"
+            },
+            {
+              "kind": "field",
+              "name": "settings",
+              "type": {
+                "text": "FCodeEditorSettings | undefined"
+              },
+              "default": "{}",
+              "attribute": "settings"
+            },
+            {
+              "kind": "field",
+              "name": "services",
+              "type": {
+                "text": "FCodeEditorServices | undefined"
+              },
+              "default": "{}",
+              "attribute": "services"
+            },
+            {
+              "kind": "field",
+              "name": "comments",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "comments",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "copyButton",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "copy-button",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "showLineNumbers",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "attribute": "show-line-numbers",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "read-only",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "copyCodeButton",
+              "type": {
+                "text": "FButton | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "removedCommentsMap",
+              "default": "new Map<number, string>()"
+            },
+            {
+              "kind": "field",
+              "name": "dymanicWidth",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "fixedLang",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "multiLineStart",
+              "parameters": [
+                {
+                  "name": "startIndex",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "endIndex",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "line",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "multiLineEnd",
+              "parameters": [
+                {
+                  "name": "endIndex",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "line",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "addNewLine",
+              "parameters": [
+                {
+                  "name": "modifiedLine",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "newLines",
+                  "type": {
+                    "text": "string[]"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "toggleComments"
+            },
+            {
+              "kind": "method",
+              "name": "restoreComments"
+            },
+            {
+              "kind": "method",
+              "name": "errorMessageOnCopy"
+            },
+            {
+              "kind": "method",
+              "name": "successMessageOnCopy"
+            },
+            {
+              "kind": "method",
+              "name": "copyCodeToClipboard"
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "CustomEvent<{ value: unknown }>"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "header",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title",
+              "description": "title"
+            },
+            {
+              "name": "state",
+              "type": {
+                "text": "FCodeEditorStateProp | undefined"
+              },
+              "default": "\"default\"",
+              "fieldName": "state",
+              "description": "property defines the background color.",
+              "attribute": "state"
+            },
+            {
+              "name": "comments",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "comments",
+              "description": "toggle actions",
+              "attribute": "comments"
+            },
+            {
+              "name": "copy",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "copyButton",
+              "description": "on click action"
+            },
+            {
+              "name": "show",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "fieldName": "showLineNumbers",
+              "description": "line no."
+            },
+            {
+              "name": "read-only-mode",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "fieldName": "readOnly"
+            },
+            {
+              "name": "code",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "actual code to display in editor",
+              "fieldName": "code"
+            },
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "header",
+              "fieldName": "title"
+            },
+            {
+              "name": "language",
+              "type": {
+                "text": "FCodeEditorLanguage | undefined"
+              },
+              "default": "\"typescript\"",
+              "description": "language of code",
+              "fieldName": "language"
+            },
+            {
+              "name": "height",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "\"100%\"",
+              "description": "height to is required to create editor",
+              "fieldName": "height"
+            },
+            {
+              "name": "width",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "\"100%\"",
+              "description": "width to is required to create editor",
+              "fieldName": "width"
+            },
+            {
+              "name": "settings",
+              "type": {
+                "text": "FCodeEditorSettings | undefined"
+              },
+              "default": "{}",
+              "fieldName": "settings"
+            },
+            {
+              "name": "services",
+              "type": {
+                "text": "FCodeEditorServices | undefined"
+              },
+              "default": "{}",
+              "fieldName": "services"
+            },
+            {
+              "name": "copy-button",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "copy",
+              "fieldName": "copyButton"
+            },
+            {
+              "name": "show-line-numbers",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "attribute": "show",
+              "fieldName": "showLineNumbers"
+            },
+            {
+              "name": "read-only",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "false",
+              "attribute": "read-only-mode",
+              "fieldName": "readOnly"
+            }
+          ],
+          "superclass": {
+            "name": "FRoot",
+            "package": "@nonfx/flow-core"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "FCodeEditor",
+          "declaration": {
+            "name": "FCodeEditor",
+            "module": "src/components/f-code-editor/f-code-editor.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/lang-comments-map.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "languageCommentsMap",
+          "type": {
+            "text": "Map<string, CommentItem>"
+          },
+          "default": "new Map([ // JavaScript [\"javascript\", commonItem], // TypeScript [\"typescript\", commonItem], // Python [ \"python\", { singleLine: \"#\", multiLine: { start: \"'''\", end: \"'''\" } } ], // Java [\"java\", commonItem], // C++ [\"cpp\", commonItem], // C# [\"csharp\", commonItem], // PHP [\"php\", commonItem], // Ruby [ \"ruby\", { singleLine: \"#\", multiLine: { start: \"=begin\", end: \"=end\" } } ], // Swift [\"swift\", commonItem], // Go [\"go\", commonItem], // Rust [\"rust\", commonItem], // Kotlin [\"kotlin\", commonItem], // Dart [\"dart\", commonItem], // HTML (HTML does not support multi-line comments) [ \"html\", { singleLine: \"<!--\", multiLine: null } ], // CSS (CSS does not support multi-line comments) [ \"css\", { singleLine: \"//\", multiLine: null } ], // SCSS (SCSS does not support multi-line comments) [ \"scss\", { singleLine: \"//\", multiLine: null } ], // Less (Less does not support multi-line comments) [ \"less\", { singleLine: \"//\", multiLine: null } ], // JSON (JSON does not support multi-line comments) [ \"json\", { singleLine: \"//\", multiLine: null } ], // YAML (YAML does not support multi-line comments) [ \"yaml\", { singleLine: \"#\", multiLine: null } ] ])"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "languageCommentsMap",
+          "declaration": {
+            "name": "languageCommentsMap",
+            "module": "src/utils/lang-comments-map.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
