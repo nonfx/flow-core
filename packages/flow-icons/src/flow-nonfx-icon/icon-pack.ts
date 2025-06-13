@@ -1,4 +1,5 @@
 import i_actor_line from "./svg/ i-actor-line";
+import i_no_match_symbol_line from "./svg/ i-no-match-symbol-line";
 import i_playlist_save_line from "./svg/ i-playlist-save-line";
 import i_reliability_line from "./svg/ i-reliability-line";
 import i_access from "./svg/i-access";
@@ -279,6 +280,7 @@ import i_mail_line from "./svg/i-mail-line";
 import i_mail_open from "./svg/i-mail-open";
 import i_map from "./svg/i-map";
 import i_map_1 from "./svg/i-map-1";
+import i_match_symbol_line from "./svg/i-match-symbol-line";
 import i_menu_alt_1 from "./svg/i-menu-alt-1";
 import i_menu_alt_2 from "./svg/i-menu-alt-2";
 import i_menu_alt_3 from "./svg/i-menu-alt-3";
@@ -317,6 +319,7 @@ import i_paragraph from "./svg/i-paragraph";
 import i_partial_match from "./svg/i-partial-match";
 import i_partial_match_1 from "./svg/i-partial-match-1";
 import i_partial_match_line from "./svg/i-partial-match-line";
+import i_partial_match_symbol_line from "./svg/i-partial-match-symbol-line";
 import i_password_line from "./svg/i-password-line";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
@@ -475,7 +478,6 @@ import i_unlink from "./svg/i-unlink";
 import i_unlock from "./svg/i-unlock";
 import i_upload from "./svg/i-upload";
 import i_usage from "./svg/i-usage";
-import i_user from "./svg/i-user";
 import i_user_add from "./svg/i-user-add";
 import i_user_cross from "./svg/i-user-cross";
 import i_user_double from "./svg/i-user-double";
@@ -483,6 +485,8 @@ import i_user_equity from "./svg/i-user-equity";
 import i_user_filled from "./svg/i-user-filled";
 import i_user_line from "./svg/i-user-line";
 import i_user_remove from "./svg/i-user-remove";
+import i_user_solo from "./svg/i-user-solo";
+import i_user_solo_line from "./svg/i-user-solo-line";
 import i_user_stop from "./svg/i-user-stop";
 import i_user_tick from "./svg/i-user-tick";
 import i_user_time from "./svg/i-user-time";
@@ -503,6 +507,7 @@ import i_zoom_out from "./svg/i-zoom-out";
 import p_starchitect_small_dark from "./svg/p-starchitect-small-dark";
 const IconPack = {
 	" i-actor-line": i_actor_line,
+	" i-no-match-symbol-line": i_no_match_symbol_line,
 	" i-playlist-save-line": i_playlist_save_line,
 	" i-reliability-line": i_reliability_line,
 	"i-access": i_access,
@@ -783,6 +788,7 @@ const IconPack = {
 	"i-mail": i_mail,
 	"i-map-1": i_map_1,
 	"i-map": i_map,
+	"i-match-symbol-line": i_match_symbol_line,
 	"i-menu-alt-1": i_menu_alt_1,
 	"i-menu-alt-2": i_menu_alt_2,
 	"i-menu-alt-3": i_menu_alt_3,
@@ -820,6 +826,7 @@ const IconPack = {
 	"i-paragraph": i_paragraph,
 	"i-partial-match-1": i_partial_match_1,
 	"i-partial-match-line": i_partial_match_line,
+	"i-partial-match-symbol-line": i_partial_match_symbol_line,
 	"i-partial-match": i_partial_match,
 	"i-password-line": i_password_line,
 	"i-pause-fill": i_pause_fill,
@@ -986,10 +993,11 @@ const IconPack = {
 	"i-user-filled": i_user_filled,
 	"i-user-line": i_user_line,
 	"i-user-remove": i_user_remove,
+	"i-user-solo-line": i_user_solo_line,
+	"i-user-solo": i_user_solo,
 	"i-user-stop": i_user_stop,
 	"i-user-tick": i_user_tick,
 	"i-user-time": i_user_time,
-	"i-user": i_user,
 	"i-validation": i_validation,
 	"i-variable": i_variable,
 	"i-verified": i_verified,
