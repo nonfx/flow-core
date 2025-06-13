@@ -16,6 +16,7 @@ import i_alarm_snooze from "./svg/i-alarm-snooze";
 import i_alert from "./svg/i-alert";
 import i_alert_2 from "./svg/i-alert-2";
 import i_alert_fill from "./svg/i-alert-fill";
+import i_all_document_line from "./svg/i-all-document-line";
 import i_app from "./svg/i-app";
 import i_app_line from "./svg/i-app-line";
 import i_approver from "./svg/i-approver";
@@ -306,6 +307,7 @@ import i_node_collapse from "./svg/i-node-collapse";
 import i_node_expand from "./svg/i-node-expand";
 import i_not_equal from "./svg/i-not-equal";
 import i_notifiation_line from "./svg/i-notifiation-line";
+import i_notification_line from "./svg/i-notification-line";
 import i_office_building from "./svg/i-office-building";
 import i_operate_line from "./svg/i-operate-line";
 import i_org_fill from "./svg/i-org-fill";
@@ -524,6 +526,7 @@ const IconPack = {
 	"i-alert-2": i_alert_2,
 	"i-alert-fill": i_alert_fill,
 	"i-alert": i_alert,
+	"i-all-document-line": i_all_document_line,
 	"i-app-line": i_app_line,
 	"i-app": i_app,
 	"i-approver": i_approver,
@@ -814,6 +817,7 @@ const IconPack = {
 	"i-node-expand": i_node_expand,
 	"i-not-equal": i_not_equal,
 	"i-notifiation-line": i_notifiation_line,
+	"i-notification-line": i_notification_line,
 	"i-office-building": i_office_building,
 	"i-operate-line": i_operate_line,
 	"i-org-fill": i_org_fill,
