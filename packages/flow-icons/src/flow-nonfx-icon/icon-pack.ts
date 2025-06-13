@@ -107,6 +107,7 @@ import i_compare_1 from "./svg/i-compare-1";
 import i_compare_1_line from "./svg/i-compare-1-line";
 import i_component from "./svg/i-component";
 import i_computer from "./svg/i-computer";
+import i_config_line from "./svg/i-config-line";
 import i_copy from "./svg/i-copy";
 import i_copy_line from "./svg/i-copy-line";
 import i_credit_card from "./svg/i-credit-card";
@@ -272,6 +273,7 @@ import i_location from "./svg/i-location";
 import i_lock from "./svg/i-lock";
 import i_login from "./svg/i-login";
 import i_logout from "./svg/i-logout";
+import i_logout_line from "./svg/i-logout-line";
 import i_mail from "./svg/i-mail";
 import i_mail_line from "./svg/i-mail-line";
 import i_mail_open from "./svg/i-mail-open";
@@ -301,6 +303,7 @@ import i_no_match_line from "./svg/i-no-match-line";
 import i_node_collapse from "./svg/i-node-collapse";
 import i_node_expand from "./svg/i-node-expand";
 import i_not_equal from "./svg/i-not-equal";
+import i_notifiation_line from "./svg/i-notifiation-line";
 import i_office_building from "./svg/i-office-building";
 import i_operate_line from "./svg/i-operate-line";
 import i_org_fill from "./svg/i-org-fill";
@@ -314,6 +317,7 @@ import i_paragraph from "./svg/i-paragraph";
 import i_partial_match from "./svg/i-partial-match";
 import i_partial_match_1 from "./svg/i-partial-match-1";
 import i_partial_match_line from "./svg/i-partial-match-line";
+import i_password_line from "./svg/i-password-line";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
 import i_pb_audio from "./svg/i-pb-audio";
@@ -443,6 +447,7 @@ import i_terminal_outline from "./svg/i-terminal-outline";
 import i_testing from "./svg/i-testing";
 import i_text from "./svg/i-text";
 import i_theme from "./svg/i-theme";
+import i_theme_line from "./svg/i-theme-line";
 import i_three_col from "./svg/i-three-col";
 import i_thumb_down from "./svg/i-thumb-down";
 import i_thumb_up from "./svg/i-thumb-up";
@@ -606,6 +611,7 @@ const IconPack = {
 	"i-compare": i_compare,
 	"i-component": i_component,
 	"i-computer": i_computer,
+	"i-config-line": i_config_line,
 	"i-copy-line": i_copy_line,
 	"i-copy": i_copy,
 	"i-credit-card": i_credit_card,
@@ -770,6 +776,7 @@ const IconPack = {
 	"i-location": i_location,
 	"i-lock": i_lock,
 	"i-login": i_login,
+	"i-logout-line": i_logout_line,
 	"i-logout": i_logout,
 	"i-mail-line": i_mail_line,
 	"i-mail-open": i_mail_open,
@@ -800,6 +807,7 @@ const IconPack = {
 	"i-node-collapse": i_node_collapse,
 	"i-node-expand": i_node_expand,
 	"i-not-equal": i_not_equal,
+	"i-notifiation-line": i_notifiation_line,
 	"i-office-building": i_office_building,
 	"i-operate-line": i_operate_line,
 	"i-org-fill": i_org_fill,
@@ -813,6 +821,7 @@ const IconPack = {
 	"i-partial-match-1": i_partial_match_1,
 	"i-partial-match-line": i_partial_match_line,
 	"i-partial-match": i_partial_match,
+	"i-password-line": i_password_line,
 	"i-pause-fill": i_pause_fill,
 	"i-pause": i_pause,
 	"i-pb-audio": i_pb_audio,
@@ -941,6 +950,7 @@ const IconPack = {
 	"i-terminal-outline": i_terminal_outline,
 	"i-testing": i_testing,
 	"i-text": i_text,
+	"i-theme-line": i_theme_line,
 	"i-theme": i_theme,
 	"i-three-col": i_three_col,
 	"i-thumb-down": i_thumb_down,
