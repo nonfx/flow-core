@@ -100,6 +100,7 @@ import i_cloud_off from "./svg/i-cloud-off";
 import i_cloud_upload from "./svg/i-cloud-upload";
 import i_code from "./svg/i-code";
 import i_code_1 from "./svg/i-code-1";
+import i_code_line from "./svg/i-code-line";
 import i_collapse from "./svg/i-collapse";
 import i_collapse_3 from "./svg/i-collapse-3";
 import i_collection from "./svg/i-collection";
@@ -154,6 +155,7 @@ import i_document_remove from "./svg/i-document-remove";
 import i_document_report from "./svg/i-document-report";
 import i_document_search from "./svg/i-document-search";
 import i_document_upload from "./svg/i-document-upload";
+import i_document_write_line from "./svg/i-document-write-line";
 import i_documentation from "./svg/i-documentation";
 import i_dollar from "./svg/i-dollar";
 import i_dollar_filled from "./svg/i-dollar-filled";
@@ -479,6 +481,7 @@ import i_type from "./svg/i-type";
 import i_unlink from "./svg/i-unlink";
 import i_unlock from "./svg/i-unlock";
 import i_upload from "./svg/i-upload";
+import i_upload_line from "./svg/i-upload-line";
 import i_usage from "./svg/i-usage";
 import i_user_add from "./svg/i-user-add";
 import i_user_cross from "./svg/i-user-cross";
@@ -609,6 +612,7 @@ const IconPack = {
 	"i-cloud-upload": i_cloud_upload,
 	"i-cloud": i_cloud,
 	"i-code-1": i_code_1,
+	"i-code-line": i_code_line,
 	"i-code": i_code,
 	"i-collapse-3": i_collapse_3,
 	"i-collapse": i_collapse,
@@ -663,6 +667,7 @@ const IconPack = {
 	"i-document-report": i_document_report,
 	"i-document-search": i_document_search,
 	"i-document-upload": i_document_upload,
+	"i-document-write-line": i_document_write_line,
 	"i-document": i_document,
 	"i-documentation": i_documentation,
 	"i-dollar-filled": i_dollar_filled,
@@ -988,6 +993,7 @@ const IconPack = {
 	"i-type": i_type,
 	"i-unlink": i_unlink,
 	"i-unlock": i_unlock,
+	"i-upload-line": i_upload_line,
 	"i-upload": i_upload,
 	"i-usage": i_usage,
 	"i-user-add": i_user_add,
