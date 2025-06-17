@@ -261,6 +261,7 @@ import i_incremental from "./svg/i-incremental";
 import i_indent from "./svg/i-indent";
 import i_infinity from "./svg/i-infinity";
 import i_info_fill from "./svg/i-info-fill";
+import i_info_line from "./svg/i-info-line";
 import i_info_solo from "./svg/i-info-solo";
 import i_justification from "./svg/i-justification";
 import i_key from "./svg/i-key";
@@ -774,6 +775,7 @@ const IconPack = {
 	"i-indent": i_indent,
 	"i-infinity": i_infinity,
 	"i-info-fill": i_info_fill,
+	"i-info-line": i_info_line,
 	"i-info-solo": i_info_solo,
 	"i-justification": i_justification,
 	"i-key": i_key,
