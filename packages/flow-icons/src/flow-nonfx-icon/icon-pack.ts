@@ -210,6 +210,7 @@ import i_filter_line from "./svg/i-filter-line";
 import i_fingerprint from "./svg/i-fingerprint";
 import i_fingerprint_line from "./svg/i-fingerprint-line";
 import i_fire from "./svg/i-fire";
+import i_fit_line from "./svg/i-fit-line";
 import i_flag from "./svg/i-flag";
 import i_flag_line from "./svg/i-flag-line";
 import i_flash from "./svg/i-flash";
@@ -724,6 +725,7 @@ const IconPack = {
 	"i-fingerprint-line": i_fingerprint_line,
 	"i-fingerprint": i_fingerprint,
 	"i-fire": i_fire,
+	"i-fit-line": i_fit_line,
 	"i-flag-line": i_flag_line,
 	"i-flag": i_flag,
 	"i-flash": i_flash,
