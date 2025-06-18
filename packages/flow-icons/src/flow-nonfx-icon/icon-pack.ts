@@ -1,4 +1,5 @@
 import i_actor_line from "./svg/ i-actor-line";
+import i_ai_code_line from "./svg/ i-ai-code-line";
 import i_no_match_symbol_line from "./svg/ i-no-match-symbol-line";
 import i_playlist_save_line from "./svg/ i-playlist-save-line";
 import i_reliability_line from "./svg/ i-reliability-line";
@@ -8,8 +9,10 @@ import i_adjustments from "./svg/i-adjustments";
 import i_admin from "./svg/i-admin";
 import i_ai from "./svg/i-ai";
 import i_ai_chat from "./svg/i-ai-chat";
+import i_ai_chat_line from "./svg/i-ai-chat-line";
 import i_ai_line from "./svg/i-ai-line";
 import i_ai_write from "./svg/i-ai-write";
+import i_ai_write_line from "./svg/i-ai-write-line";
 import i_alarm from "./svg/i-alarm";
 import i_alarm_off from "./svg/i-alarm-off";
 import i_alarm_snooze from "./svg/i-alarm-snooze";
@@ -385,6 +388,7 @@ import i_publisher from "./svg/i-publisher";
 import i_puzzle from "./svg/i-puzzle";
 import i_qrcode from "./svg/i-qrcode";
 import i_question_filled from "./svg/i-question-filled";
+import i_recent_line from "./svg/i-recent-line";
 import i_refresh from "./svg/i-refresh";
 import i_refresh_line from "./svg/i-refresh-line";
 import i_region from "./svg/i-region";
@@ -514,6 +518,7 @@ import i_zoom_out from "./svg/i-zoom-out";
 import p_starchitect_small_dark from "./svg/p-starchitect-small-dark";
 const IconPack = {
 	" i-actor-line": i_actor_line,
+	" i-ai-code-line": i_ai_code_line,
 	" i-no-match-symbol-line": i_no_match_symbol_line,
 	" i-playlist-save-line": i_playlist_save_line,
 	" i-reliability-line": i_reliability_line,
@@ -521,8 +526,10 @@ const IconPack = {
 	"i-actor": i_actor,
 	"i-adjustments": i_adjustments,
 	"i-admin": i_admin,
+	"i-ai-chat-line": i_ai_chat_line,
 	"i-ai-chat": i_ai_chat,
 	"i-ai-line": i_ai_line,
+	"i-ai-write-line": i_ai_write_line,
 	"i-ai-write": i_ai_write,
 	"i-ai": i_ai,
 	"i-alarm-off": i_alarm_off,
@@ -900,6 +907,7 @@ const IconPack = {
 	"i-puzzle": i_puzzle,
 	"i-qrcode": i_qrcode,
 	"i-question-filled": i_question_filled,
+	"i-recent-line": i_recent_line,
 	"i-refresh-line": i_refresh_line,
 	"i-refresh": i_refresh,
 	"i-region-line": i_region_line,
