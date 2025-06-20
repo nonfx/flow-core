@@ -303,3 +303,7 @@
 ## [3.9.0] - 2025-06-20
 
 - Updated icons from Figma
+
+## [3.10.0] - 2025-06-20
+
+- Updated icons from Figma

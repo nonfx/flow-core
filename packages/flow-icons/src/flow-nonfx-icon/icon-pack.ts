@@ -401,6 +401,8 @@ import i_reply from "./svg/i-reply";
 import i_required from "./svg/i-required";
 import i_rewind from "./svg/i-rewind";
 import i_rmf_line from "./svg/i-rmf-line";
+import i_rmf_shape from "./svg/i-rmf-shape";
+import i_rmf_shape_line from "./svg/i-rmf-shape-line";
 import i_rmf_viz_line from "./svg/i-rmf-viz-line";
 import i_row from "./svg/i-row";
 import i_save from "./svg/i-save";
@@ -922,6 +924,8 @@ const IconPack = {
 	"i-required": i_required,
 	"i-rewind": i_rewind,
 	"i-rmf-line": i_rmf_line,
+	"i-rmf-shape-line": i_rmf_shape_line,
+	"i-rmf-shape": i_rmf_shape,
 	"i-rmf-viz-line": i_rmf_viz_line,
 	"i-row": i_row,
 	"i-save-as": i_save_as,
