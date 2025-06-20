@@ -19,6 +19,7 @@ import i_alarm_snooze from "./svg/i-alarm-snooze";
 import i_alert from "./svg/i-alert";
 import i_alert_2 from "./svg/i-alert-2";
 import i_alert_fill from "./svg/i-alert-fill";
+import i_alert_line from "./svg/i-alert-line";
 import i_all_document_line from "./svg/i-all-document-line";
 import i_app from "./svg/i-app";
 import i_app_line from "./svg/i-app-line";
@@ -114,6 +115,7 @@ import i_compare_1_line from "./svg/i-compare-1-line";
 import i_component from "./svg/i-component";
 import i_computer from "./svg/i-computer";
 import i_config_line from "./svg/i-config-line";
+import i_controls_line from "./svg/i-controls-line";
 import i_copy from "./svg/i-copy";
 import i_copy_line from "./svg/i-copy-line";
 import i_credit_card from "./svg/i-credit-card";
@@ -537,6 +539,7 @@ const IconPack = {
 	"i-alarm": i_alarm,
 	"i-alert-2": i_alert_2,
 	"i-alert-fill": i_alert_fill,
+	"i-alert-line": i_alert_line,
 	"i-alert": i_alert,
 	"i-all-document-line": i_all_document_line,
 	"i-app-line": i_app_line,
@@ -633,6 +636,7 @@ const IconPack = {
 	"i-component": i_component,
 	"i-computer": i_computer,
 	"i-config-line": i_config_line,
+	"i-controls-line": i_controls_line,
 	"i-copy-line": i_copy_line,
 	"i-copy": i_copy,
 	"i-credit-card": i_credit_card,
