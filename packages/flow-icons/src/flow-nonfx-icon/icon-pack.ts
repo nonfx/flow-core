@@ -299,6 +299,7 @@ import i_microphone from "./svg/i-microphone";
 import i_minus from "./svg/i-minus";
 import i_minus_2 from "./svg/i-minus-2";
 import i_minus_fill from "./svg/i-minus-fill";
+import i_minus_line from "./svg/i-minus-line";
 import i_minus_sm from "./svg/i-minus-sm";
 import i_missing_evidence from "./svg/i-missing-evidence";
 import i_missing_evidence_line from "./svg/i-missing-evidence-line";
@@ -319,8 +320,29 @@ import i_notifiation_line from "./svg/i-notifiation-line";
 import i_notification_line from "./svg/i-notification-line";
 import i_office_building from "./svg/i-office-building";
 import i_operate_line from "./svg/i-operate-line";
+import i_org_banking from "./svg/i-org-banking";
+import i_org_car from "./svg/i-org-car";
+import i_org_card from "./svg/i-org-card";
+import i_org_cash from "./svg/i-org-cash";
+import i_org_consumer from "./svg/i-org-consumer";
+import i_org_corporate from "./svg/i-org-corporate";
+import i_org_engineering from "./svg/i-org-engineering";
 import i_org_fill from "./svg/i-org-fill";
+import i_org_finance from "./svg/i-org-finance";
+import i_org_house from "./svg/i-org-house";
+import i_org_investment from "./svg/i-org-investment";
+import i_org_lending from "./svg/i-org-lending";
 import i_org_line from "./svg/i-org-line";
+import i_org_loan from "./svg/i-org-loan";
+import i_org_market from "./svg/i-org-market";
+import i_org_payment from "./svg/i-org-payment";
+import i_org_payments from "./svg/i-org-payments";
+import i_org_real_estate from "./svg/i-org-real-estate";
+import i_org_retail from "./svg/i-org-retail";
+import i_org_security from "./svg/i-org-security";
+import i_org_tech from "./svg/i-org-tech";
+import i_org_treasury from "./svg/i-org-treasury";
+import i_org_wealth from "./svg/i-org-wealth";
 import i_outline from "./svg/i-outline";
 import i_owner from "./svg/i-owner";
 import i_paper_airplane from "./svg/i-paper-airplane";
@@ -821,6 +843,7 @@ const IconPack = {
 	"i-microphone": i_microphone,
 	"i-minus-2": i_minus_2,
 	"i-minus-fill": i_minus_fill,
+	"i-minus-line": i_minus_line,
 	"i-minus-sm": i_minus_sm,
 	"i-minus": i_minus,
 	"i-missing-evidence-line": i_missing_evidence_line,
@@ -842,8 +865,29 @@ const IconPack = {
 	"i-notification-line": i_notification_line,
 	"i-office-building": i_office_building,
 	"i-operate-line": i_operate_line,
+	"i-org-banking": i_org_banking,
+	"i-org-car": i_org_car,
+	"i-org-card": i_org_card,
+	"i-org-cash": i_org_cash,
+	"i-org-consumer": i_org_consumer,
+	"i-org-corporate": i_org_corporate,
+	"i-org-engineering": i_org_engineering,
 	"i-org-fill": i_org_fill,
+	"i-org-finance": i_org_finance,
+	"i-org-house": i_org_house,
+	"i-org-investment": i_org_investment,
+	"i-org-lending": i_org_lending,
 	"i-org-line": i_org_line,
+	"i-org-loan": i_org_loan,
+	"i-org-market": i_org_market,
+	"i-org-payment": i_org_payment,
+	"i-org-payments": i_org_payments,
+	"i-org-real-estate": i_org_real_estate,
+	"i-org-retail": i_org_retail,
+	"i-org-security": i_org_security,
+	"i-org-tech": i_org_tech,
+	"i-org-treasury": i_org_treasury,
+	"i-org-wealth": i_org_wealth,
 	"i-outline": i_outline,
 	"i-owner": i_owner,
 	"i-paper-airplane": i_paper_airplane,
