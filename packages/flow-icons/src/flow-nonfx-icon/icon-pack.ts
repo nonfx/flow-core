@@ -242,6 +242,7 @@ import i_git_commit from "./svg/i-git-commit";
 import i_git_repo from "./svg/i-git-repo";
 import i_globe from "./svg/i-globe";
 import i_globe_2 from "./svg/i-globe-2";
+import i_globe_fill from "./svg/i-globe-fill";
 import i_governance from "./svg/i-governance";
 import i_governance_line from "./svg/i-governance-line";
 import i_grid_view from "./svg/i-grid-view";
@@ -786,6 +787,7 @@ const IconPack = {
 	"i-git-repo": i_git_repo,
 	"i-git": i_git,
 	"i-globe-2": i_globe_2,
+	"i-globe-fill": i_globe_fill,
 	"i-globe": i_globe,
 	"i-governance-line": i_governance_line,
 	"i-governance": i_governance,
