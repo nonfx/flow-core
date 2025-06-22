@@ -13,13 +13,16 @@ import i_policy_sama from "./svg/i-policy-sama";
 import i_policy_soc2 from "./svg/i-policy-soc2";
 import p_acme from "./svg/p-acme";
 import p_aicpa from "./svg/p-aicpa";
+import p_bank_of_england from "./svg/p-bank-of-england";
 import p_cyber_risk_institute from "./svg/p-cyber-risk-institute";
 import p_dora from "./svg/p-dora";
+import p_ecb from "./svg/p-ecb";
 import p_european_parliament from "./svg/p-european-parliament";
 import p_ffiec from "./svg/p-ffiec";
 import p_hsbc from "./svg/p-hsbc";
 import p_isaca from "./svg/p-isaca";
 import p_mitre from "./svg/p-mitre";
+import p_nydfs from "./svg/p-nydfs";
 import p_owasp from "./svg/p-owasp";
 import s_malaysia_gov from "./svg/s-malaysia-gov";
 const IconPack = {
@@ -38,13 +41,16 @@ const IconPack = {
 	"i-policy-soc2": i_policy_soc2,
 	"p-acme": p_acme,
 	"p-aicpa": p_aicpa,
+	"p-bank-of-england": p_bank_of_england,
 	"p-cyber-risk-institute": p_cyber_risk_institute,
 	"p-dora": p_dora,
+	"p-ecb": p_ecb,
 	"p-european-parliament": p_european_parliament,
 	"p-ffiec": p_ffiec,
 	"p-hsbc": p_hsbc,
 	"p-isaca": p_isaca,
 	"p-mitre": p_mitre,
+	"p-nydfs": p_nydfs,
 	"p-owasp": p_owasp,
 	"s-malaysia-gov": s_malaysia_gov
 } as Record<string, string>;

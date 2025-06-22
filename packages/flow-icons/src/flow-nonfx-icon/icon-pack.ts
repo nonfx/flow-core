@@ -147,7 +147,10 @@ import i_doc_current from "./svg/i-doc-current";
 import i_doc_decommissioned from "./svg/i-doc-decommissioned";
 import i_doc_draft from "./svg/i-doc-draft";
 import i_doc_expired from "./svg/i-doc-expired";
+import i_doc_inherit_line from "./svg/i-doc-inherit-line";
+import i_doc_private_line from "./svg/i-doc-private-line";
 import i_doc_published from "./svg/i-doc-published";
+import i_doc_share_line from "./svg/i-doc-share-line";
 import i_doc_vacatio_legis from "./svg/i-doc-vacatio-legis";
 import i_document from "./svg/i-document";
 import i_document_1 from "./svg/i-document-1";
@@ -693,7 +696,10 @@ const IconPack = {
 	"i-doc-decommissioned": i_doc_decommissioned,
 	"i-doc-draft": i_doc_draft,
 	"i-doc-expired": i_doc_expired,
+	"i-doc-inherit-line": i_doc_inherit_line,
+	"i-doc-private-line": i_doc_private_line,
 	"i-doc-published": i_doc_published,
+	"i-doc-share-line": i_doc_share_line,
 	"i-doc-vacatio-legis": i_doc_vacatio_legis,
 	"i-document-1": i_document_1,
 	"i-document-add": i_document_add,
