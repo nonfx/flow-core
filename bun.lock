@@ -217,7 +217,7 @@
     },
     "packages/flow-icons": {
       "name": "@nonfx/flow-icons",
-      "version": "3.13.0",
+      "version": "3.14.0",
       "dependencies": {
         "@nonfx/flow-core": "workspace:^",
         "@nonfx/flow-core-config": "workspace:^",
