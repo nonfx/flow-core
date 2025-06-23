@@ -133,6 +133,7 @@ import i_date_time from "./svg/i-date-time";
 import i_default_line from "./svg/i-default-line";
 import i_delete from "./svg/i-delete";
 import i_delete_line from "./svg/i-delete-line";
+import i_demo_jpmc from "./svg/i-demo-jpmc";
 import i_descending from "./svg/i-descending";
 import i_description from "./svg/i-description";
 import i_description_remove from "./svg/i-description-remove";
@@ -682,6 +683,7 @@ const IconPack = {
 	"i-default-line": i_default_line,
 	"i-delete-line": i_delete_line,
 	"i-delete": i_delete,
+	"i-demo-jpmc": i_demo_jpmc,
 	"i-descending": i_descending,
 	"i-description-remove": i_description_remove,
 	"i-description": i_description,
