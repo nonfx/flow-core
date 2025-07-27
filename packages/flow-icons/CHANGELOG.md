@@ -331,3 +331,7 @@
 ## [3.16.0] - 2025-06-23
 
 - Updated icons from Figma
+
+## [3.17.0] - 2025-07-27
+
+- Updated icons from Figma
