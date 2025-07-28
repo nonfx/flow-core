@@ -1653,7 +1653,7 @@
 
 	$color-color-6-subtle: #7cb1df;
 	--color-color-6-subtle: #{$color-color-6-subtle} !important;
-	--color-color-6-subtle-hover: #{getHover($color-color-6-subtle)} !important ;
+	--color-color-6-subtle-hover: #{getHover($color-color-6-subtle)} !important;
 	--color-color-6-subtle-selected: #{getSelected($color-color-6-subtle)} !important;
 
 	$color-color-6-surface: #d6e7f5;
