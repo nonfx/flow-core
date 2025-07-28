@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 5.0.0
+
+### Major Changes
+
+- Primary color change
+
 ## 4.1.0
 
 ### Minor Changes
