@@ -1441,7 +1441,7 @@
 	--color-text-secondary-hover: #{getHover($color-text-secondary)} !important;
 	--color-text-secondary-selected: #{getSelected($color-text-secondary)} !important;
 
-	$color-text-subtle: #687d87;
+	$color-text-subtle: #7d979b;
 	--color-text-subtle: #{$color-text-subtle} !important;
 	--color-text-subtle-hover: #{getHover($color-text-subtle)} !important;
 	--color-text-subtle-selected: #{getSelected($color-text-subtle)} !important;
@@ -1463,17 +1463,17 @@
 	--color-icon-subtle-selected: #{getSelected($color-icon-subtle)} !important;
 
 	/* Border Colors */
-	$color-border-default: #bac4ca;
+	$color-border-default: #bac7ca;
 	--color-border-default: #{$color-border-default} !important;
 	--color-border-default-hover: #{getHover($color-border-default)} !important;
 	--color-border-default-selected: #{getSelected($color-border-default)} !important;
 
-	$color-border-secondary: #c5ced3;
+	$color-border-secondary: #d4dcde;
 	--color-border-secondary: #{$color-border-secondary} !important;
 	--color-border-secondary-hover: #{getHover($color-border-secondary)} !important;
 	--color-border-secondary-selected: #{getSelected($color-border-secondary)} !important;
 
-	$color-border-subtle: #cbd0d8;
+	$color-border-subtle: #dfe6e7;
 	--color-border-subtle: #{$color-border-subtle} !important;
 	--color-border-subtle-hover: #{getHover($color-border-subtle)} !important;
 	--color-border-subtle-selected: #{getSelected($color-border-subtle)} !important;
@@ -1484,7 +1484,7 @@
 	--color-surface-default-hover: #{getHover($color-surface-default)} !important;
 	--color-surface-default-selected: #{getSelected($color-surface-default)} !important;
 
-	$color-surface-secondary: #ebeeef;
+	$color-surface-secondary: #e3e7e8;
 	--color-surface-secondary: #{$color-surface-secondary} !important;
 	--color-surface-secondary-hover: #{getHover($color-surface-secondary)} !important;
 	--color-surface-secondary-selected: #{getSelected($color-surface-secondary)} !important;
@@ -1494,7 +1494,7 @@
 	--color-surface-tertiary-hover: #{getHover($color-surface-tertiary)} !important;
 	--color-surface-tertiary-selected: #{getSelected($color-surface-tertiary)} !important;
 
-	$color-surface-subtle: #d4d9de;
+	$color-surface-subtle: #d4dcde;
 	--color-surface-subtle: #{$color-surface-subtle} !important;
 	--color-surface-subtle-hover: #{getHover($color-surface-subtle)} !important;
 	--color-surface-subtle-selected: #{getSelected($color-surface-subtle)} !important;
