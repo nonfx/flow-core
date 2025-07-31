@@ -349,3 +349,7 @@
 ## [3.17.0] - 2025-07-27
 
 - Updated icons from Figma
+
+## [5.1.0] - 2025-07-31
+
+- Updated icons from Figma

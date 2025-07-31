@@ -102,7 +102,7 @@
     },
     "packages/flow-core": {
       "name": "@nonfx/flow-core",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "dependencies": {
         "@emoji-mart/data": "^1.2.1",
         "@floating-ui/dom": "^1.6.13",
@@ -155,7 +155,7 @@
     },
     "packages/flow-dashboard": {
       "name": "@nonfx/flow-dashboard",
-      "version": "3.0.0",
+      "version": "4.0.0",
       "dependencies": {
         "@nonfx/flow-core": "workspace:*",
         "@nonfx/flow-core-config": "workspace:*",
@@ -187,7 +187,7 @@
     },
     "packages/flow-form-builder": {
       "name": "@nonfx/flow-form-builder",
-      "version": "5.0.0",
+      "version": "6.0.0",
       "dependencies": {
         "@nonfx/flow-core": "workspace:*",
         "@nonfx/flow-core-config": "workspace:*",
@@ -217,7 +217,7 @@
     },
     "packages/flow-icons": {
       "name": "@nonfx/flow-icons",
-      "version": "4.0.0",
+      "version": "5.0.0",
       "dependencies": {
         "@nonfx/flow-core": "workspace:^",
         "@nonfx/flow-core-config": "workspace:^",
@@ -298,7 +298,7 @@
     },
     "packages/flow-md-editor": {
       "name": "@nonfx/flow-md-editor",
-      "version": "5.0.0",
+      "version": "6.0.0",
       "dependencies": {
         "@nonfx/flow-core": "workspace:^",
         "@nonfx/flow-core-config": "workspace:^",
