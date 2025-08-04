@@ -1,7 +1,6 @@
 import { html } from "lit-html";
 import getFakeUsers, { popoverRef } from "../utils/mock-users-data";
 import { createRef, ref } from "lit/directives/ref.js";
-import downloadFile from "./donwload-file";
 
 export default {
 	title: "@nonfx/flow-table/f-table-schema",
@@ -47,7 +46,6 @@ export const Playground = {
 					>
 				</f-div>
 			</f-popover>
-			<f-button style="display:none" label="download" @click=${downloadFile}></f-button>
 			<f-div
 				state="default"
 				id="reportTemplate"

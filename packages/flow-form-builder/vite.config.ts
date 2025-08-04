@@ -1,6 +1,13 @@
 import { defineConfig } from "vite";
+import { analyzer } from "vite-bundle-analyzer";
 
 export default defineConfig({
+	plugins: [
+		analyzer({
+			enabled: false // Set to true to enable bundle analysis
+		})
+	],
+
 	build: {
 		// Disabling minification makes it easy to debug during development
 		// And all modern bundlers will consume the library and minify it anyway

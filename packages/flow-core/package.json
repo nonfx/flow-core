@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-core",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Core package of flow design system",
   "type": "module",
   "module": "dist/flow-core.es.js",
@@ -27,7 +27,6 @@
     "@floating-ui/dom": "^1.6.13",
     "@lit-labs/virtualizer": "^2.1.0",
     "@nonfx/flow-core-config": "workspace:^",
-    "axios": "^1.11.0",
     "emoji-mart": "^5.6.0",
     "flatpickr": "^4.6.13",
     "lit": "^3.2.1",

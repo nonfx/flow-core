@@ -1,7 +1,6 @@
 /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 /* global process */
-import api from "axios";
 
 const headers = () => {
 	return {
@@ -9,45 +8,39 @@ const headers = () => {
 	};
 };
 /**
- * api endpoint for files
- *
+ * Base fetch function for Figma API
  */
-const instanceFiles = () =>
-	api.create({
-		baseURL: `https://api.figma.com/v1/files/${process.env.FILE_KEY}`,
-		headers: headers()
+const figmaFetch = async (url: string, options: RequestInit = {}) => {
+	const response = await fetch(url, {
+		...options,
+		headers: {
+			...headers(),
+			...options.headers
+		}
 	});
-/**
- * api endpoint for styles
- *
- */
-const instanceStyles = () =>
-	api.create({
-		baseURL: `https://api.figma.com/v1/files/${process.env.FILE_KEY}/styles`,
-		headers: headers()
-	});
-/**
- * api endpoint for images
- *
- */
-const instanceImages = () =>
-	api.create({
-		baseURL: `https://api.figma.com/v1/images/${process.env.FILE_KEY}`,
-		headers: headers()
-	});
+
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+
+	return response.json();
+};
+
 /**
  * get Figma document info
  *
  * @return {Promise<Object>}
  */
-const getDocument = async () => instanceFiles().get("/");
+const getDocument = async () =>
+	figmaFetch(`https://api.figma.com/v1/files/${process.env.FILE_KEY}/`);
 
 /**
  * get Figma style info
  *
  * @return {Promise<Object>}
  */
-const getStyles = async () => instanceStyles().get("/");
+const getStyles = async () =>
+	figmaFetch(`https://api.figma.com/v1/files/${process.env.FILE_KEY}/styles/`);
 
 /**
  * get Figma node info
@@ -56,7 +49,9 @@ const getStyles = async () => instanceStyles().get("/");
  * @return {Promise<Object>}
  */
 const getNode = async (nodeId: string) => {
-	return instanceFiles().get(`/nodes?ids=${decodeURIComponent(nodeId)}`);
+	return figmaFetch(
+		`https://api.figma.com/v1/files/${process.env.FILE_KEY}/nodes?ids=${decodeURIComponent(nodeId)}`
+	);
 };
 /**
  * get Figma node children
@@ -65,9 +60,9 @@ const getNode = async (nodeId: string) => {
  * @return {Promise<[Object]>}
  */
 const getNodeChildren = async (nodeId: string) => {
-	const {
-		data: { nodes }
-	} = await instanceFiles().get(`/nodes?ids=${decodeURIComponent(nodeId)}`);
+	const { nodes } = await figmaFetch(
+		`https://api.figma.com/v1/files/${process.env.FILE_KEY}/nodes?ids=${decodeURIComponent(nodeId)}`
+	);
 	return nodes[nodeId].document.children;
 };
 /**
@@ -77,9 +72,9 @@ const getNodeChildren = async (nodeId: string) => {
  * @return {Promise<string>}
  */
 const getSvgImageUrl = async (nodeId: string) => {
-	const {
-		data: { images }
-	} = await instanceImages().get(`/?ids=${decodeURIComponent(nodeId)}&format=svg`);
+	const { images } = await figmaFetch(
+		`https://api.figma.com/v1/images/${process.env.FILE_KEY}/?ids=${decodeURIComponent(nodeId)}&format=svg`
+	);
 	return images[nodeId];
 };
 /**
@@ -89,12 +84,18 @@ const getSvgImageUrl = async (nodeId: string) => {
  * @return {Promise<string[]>}
  */
 const getAllSvgImageUrl = async (nodeId: string) => {
-	const {
-		data: { images }
-	} = await instanceImages().get(`/?ids=${decodeURIComponent(nodeId)}&format=svg`);
+	const { images } = await figmaFetch(
+		`https://api.figma.com/v1/images/${process.env.FILE_KEY}/?ids=${decodeURIComponent(nodeId)}&format=svg`
+	);
 	return images;
 };
-const getIconContent = async (url: string) => api.get(url);
+const getIconContent = async (url: string) => {
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+	return { data: await response.text() };
+};
 
 export {
 	getDocument,
