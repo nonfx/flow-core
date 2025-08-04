@@ -10,7 +10,6 @@ import { optimize } from "svgo";
 import { fileURLToPath } from "url";
 import { getAllSvgImageUrl, getIconContent, getNode } from "./api.js";
 import config from "./config.js";
-import { AxiosError } from "axios";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -53,7 +52,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 	 */
 	await getNode(nodeId)
 		.then(async response => {
-			const componetKeys = Object.keys(response.data.nodes[nodeId].components);
+			const componetKeys = Object.keys(response.nodes[nodeId].components);
 			const ids = componetKeys.join(",");
 
 			/**
@@ -73,7 +72,7 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 			const iconNameMapping: Record<string, string> = {};
 
 			for (const [id, component] of Object.entries(
-				Object.entries(response.data.nodes[nodeId].components)
+				Object.entries(response.nodes[nodeId].components)
 			)) {
 				iconNameMapping[id] = (component[1] as componentMeta).name;
 			}
@@ -234,10 +233,6 @@ export default async function downloadIcons(nodeId: string, pkg: string) {
 				});
 		})
 		.catch(error => {
-			if (error instanceof AxiosError) {
-				throw error.toJSON();
-			}
-
 			throw error;
 		});
 	return 1;

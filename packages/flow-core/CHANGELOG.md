@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 5.1.2
+
+### Patch Changes
+
+- Remove unused deps and cleanup code
+
 ## 5.1.1
 
 ### Patch Changes
