@@ -19,7 +19,7 @@ import {
 	TOOLTIP_SYNC
 } from "./f-timeseries-chart-utils";
 
-import type { Subscription } from "rxjs";
+import type { Subscription } from "@nonfx/flow-core-config";
 
 injectCss("f-timeseries-chart", globalStyle);
 

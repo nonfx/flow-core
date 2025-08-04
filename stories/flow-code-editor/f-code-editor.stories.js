@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 
 export default {
 	title: "@nonfx/flow-code-editor/f-code-editor",

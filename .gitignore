@@ -28,3 +28,5 @@ umd
 tsconfig.tsbuildinfo
 html.html-data.json
 custom-elements.json
+.claude
+debug-storybook.log

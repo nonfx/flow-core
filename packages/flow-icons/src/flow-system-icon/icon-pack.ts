@@ -411,6 +411,7 @@ import i_user_tick from "./svg/i-user-tick";
 import i_user_time from "./svg/i-user-time";
 import i_variable from "./svg/i-variable";
 import i_verified from "./svg/i-verified";
+import i_version_history from "./svg/i-version-history";
 import i_view from "./svg/i-view";
 import i_view_fill from "./svg/i-view-fill";
 import i_view_grid_add from "./svg/i-view-grid-add";
@@ -838,6 +839,7 @@ const IconPack = {
 	"i-user": i_user,
 	"i-variable": i_variable,
 	"i-verified": i_verified,
+	"i-version-history": i_version_history,
 	"i-view-fill": i_view_fill,
 	"i-view-grid-add": i_view_grid_add,
 	"i-view-off-fill": i_view_off_fill,

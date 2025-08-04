@@ -1,4 +1,4 @@
-import { Story, Meta } from "@storybook/web-components";
+import { Story, Meta } from "@storybook/web-components-vite";
 import { html } from "lit-html";
 import { FormBuilderField } from "@nonfx/flow-form-builder";
 import { createRef, Ref, ref } from "lit/directives/ref.js";

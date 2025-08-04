@@ -1,8 +1,8 @@
-import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/addon-docs/blocks";
 import { html } from "lit-html";
 import fGridAnatomy from "../svg/i-fgrid-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 import * as FGridStories from "./f-grid.stories";
 
 <Meta of={FGridStories} />
@@ -154,4 +154,4 @@ Defines the gap between the cells. By default it is set to small.
 
 <br />
 
-<ArgsTable of={"f-grid"} />
+<PureArgsTable of={"f-grid"} />

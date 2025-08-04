@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/web-components";
+import { Meta } from "@storybook/web-components-vite";
 import { html } from "lit-html";
 import { createRef, ref } from "lit/directives/ref.js";
 import { FormBuilderTextInputField, validateField } from "@nonfx/flow-form-builder";

@@ -23,7 +23,7 @@ import { Ref, createRef } from "lit/directives/ref.js";
 import fieldRenderer from "./fields";
 import { extractValidationState, validateField } from "../../modules/validation/validator";
 import { debounce } from "lodash-es";
-import { Subject } from "rxjs";
+import { SimpleSubject } from "@nonfx/flow-core-config";
 import { getEssentialFlowCoreStyles, propogateProperties } from "../../modules/helpers";
 import { cloneDeep, isEqual } from "lodash-es";
 import { injectCss } from "@nonfx/flow-core-config";
@@ -114,7 +114,7 @@ export class FFormBuilder extends FRoot {
 
 	lastState?: FormBuilderState;
 
-	showWhenSubject!: Subject<FormBuilderValues>;
+	showWhenSubject!: SimpleSubject<FormBuilderValues>;
 	inputTimeout!: ReturnType<typeof setTimeout>;
 
 	/**
@@ -232,7 +232,7 @@ export class FFormBuilder extends FRoot {
 		/**
 		 * this subject is created for `showWhen` implementation
 		 */
-		this.showWhenSubject = new Subject<FormBuilderValues>();
+		this.showWhenSubject = new SimpleSubject<FormBuilderValues>();
 		const ref = this.fieldRef;
 
 		if (ref.value) {

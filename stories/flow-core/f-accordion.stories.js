@@ -1,7 +1,7 @@
 import { html } from "lit-html";
 import fAccordionAnatomy from "../svg/i-faccordion-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 
 export default {
 	title: "@nonfx/flow-core/f-accordion",

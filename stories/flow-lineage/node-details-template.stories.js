@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useState, useEffect } from "@storybook/client-api";
+import { useState, useEffect } from "storybook/preview-api";
 import NodeDetailsTemplateAnatomy from "../svg/i-node-details-anatomy.js";
 
 export default {

@@ -1,8 +1,8 @@
-import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/addon-docs/blocks";
 import { html } from "lit-html";
 import FDivAnatomy from "../svg/i-fdiv-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useState, useEffect } from "@storybook/client-api";
+import { useArgs, useState, useEffect } from "storybook/preview-api";
 import * as FTabContentStories from "./f-tab-content.stories";
 
 <Meta of={FTabContentStories} />
@@ -97,4 +97,4 @@ Default value is 200 ms.
 	<Story of={FTabContentStories.Duration} />
 </Canvas>
 
-<ArgsTable of={"f-tab-content"} />
+<PureArgsTable of={"f-tab-content"} />

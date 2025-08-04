@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/addon-docs/blocks";
 import * as FSelectStories from "./f-select.stories";
 
 <Meta of={FSelectStories} />
@@ -428,7 +428,7 @@ searching and selection.
 	<Story of={FSelectStories.UseVirtualizer} />
 </Canvas>
 
-<ArgsTable of={"f-select"} />
+<PureArgsTable of={"f-select"} />
 
 <br />
 
@@ -509,4 +509,4 @@ If true, it allows user to see entered value, to get automatically added in the 
 	<Story of={FSelectStories.AutoAddOption} />
 </Canvas>
 
-<ArgsTable of={"f-select"} />
+<PureArgsTable of={"f-select"} />

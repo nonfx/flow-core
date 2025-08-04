@@ -1,6 +1,6 @@
-import { html } from "lit-html";
-import { useState } from "@storybook/preview-api";
 import { FDocViewerContent } from "@nonfx/flow-core";
+import { html } from "lit-html";
+import { useState } from "storybook/preview-api";
 import getFakeDocContent from "../utils/mock-doc-content";
 
 export default {

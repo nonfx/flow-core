@@ -14,7 +14,7 @@ import fieldRenderer from "../f-form-builder/fields";
 import { createRef, Ref } from "lit/directives/ref.js";
 import { isEmptyArray } from "../../modules/utils";
 import { validateField } from "../../modules/validation/validator";
-import { Subject } from "rxjs";
+import { SimpleSubject } from "@nonfx/flow-core-config";
 import { getEssentialFlowCoreStyles, propogateProperties } from "../../modules/helpers";
 import { FFormObject } from "../f-form-object/f-form-object";
 import { FIconButton } from "@nonfx/flow-core";
@@ -69,7 +69,7 @@ export class FFormArray extends FRoot {
 
 	fieldRefs: Ref<FFormInputElements>[] = [];
 
-	showWhenSubject!: Subject<FormBuilderValues>;
+	showWhenSubject!: SimpleSubject<FormBuilderValues>;
 
 	get isRequired() {
 		return !this.config.allowEmpty;

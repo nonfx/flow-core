@@ -1,8 +1,8 @@
-import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/addon-docs/blocks";
 import { html } from "lit-html";
 import fPopoverAnatomy from "../svg/i-fpopover-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 import { ConfigUtil } from "@nonfx/flow-core-config";
 import { createRef, ref } from "lit/directives/ref.js";
 import * as FPopoverStories from "./f-popover.stories";
@@ -299,4 +299,4 @@ popover and if the max height is attained, the body contents will scroll.
 	<Story of={FPopoverStories.ChildPopover} />
 </Canvas>
 
-<ArgsTable of={"f-popover"} />
+<PureArgsTable of={"f-popover"} />
