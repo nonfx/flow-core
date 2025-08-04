@@ -1,6 +1,6 @@
 {
   "name": "@nonfx/flow-form-builder",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Form builder for the flow design system",
   "type": "module",
   "module": "dist/flow-form-builder.es.js",
@@ -23,8 +23,7 @@
     "@nonfx/flow-core": "workspace:*",
     "@nonfx/flow-core-config": "workspace:*",
     "lit": "^3.2.1",
-    "lodash-es": "^4.17.21",
-    "rxjs": "^7.8.2"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.4",

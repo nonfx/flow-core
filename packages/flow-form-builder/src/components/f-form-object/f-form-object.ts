@@ -15,7 +15,7 @@ import {
 	FormBuilderValues
 } from "../../types";
 import { validateField } from "../../modules/validation/validator";
-import { Subject } from "rxjs";
+import { SimpleSubject } from "@nonfx/flow-core-config";
 import { getEssentialFlowCoreStyles, propogateProperties } from "../../modules/helpers";
 import { FFormGroup } from "@nonfx/flow-core";
 import { FFieldSeparator } from "../f-field-separator/f-field-separator";
@@ -72,7 +72,7 @@ export class FFormObject extends FRoot {
 
 	fieldRefs: Record<string, Ref<FFormInputElements>> = {};
 
-	showWhenSubject!: Subject<FormBuilderValues>;
+	showWhenSubject!: SimpleSubject<FormBuilderValues>;
 
 	render() {
 		return html`${this.buildFields()}`;

@@ -1,10 +1,9 @@
-import i_actor_line from "./svg/ i-actor-line";
 import i_ai_code_line from "./svg/ i-ai-code-line";
-import i_no_match_symbol_line from "./svg/ i-no-match-symbol-line";
-import i_playlist_save_line from "./svg/ i-playlist-save-line";
-import i_reliability_line from "./svg/ i-reliability-line";
+import c from "./svg/c";
 import i_access from "./svg/i-access";
+import i_activity_line from "./svg/i-activity-line";
 import i_actor from "./svg/i-actor";
+import i_actor_line from "./svg/i-actor-line";
 import i_adjustments from "./svg/i-adjustments";
 import i_admin from "./svg/i-admin";
 import i_ai from "./svg/i-ai";
@@ -48,6 +47,8 @@ import i_ascending from "./svg/i-ascending";
 import i_at_symbol from "./svg/i-at-symbol";
 import i_attachment_2 from "./svg/i-attachment-2";
 import i_audit_line from "./svg/i-audit-line";
+import i_based_on_line from "./svg/i-based-on-line";
+import i_bold_line from "./svg/i-bold-line";
 import i_bolt from "./svg/i-bolt";
 import i_bot from "./svg/i-bot";
 import i_box from "./svg/i-box";
@@ -59,6 +60,8 @@ import i_calendar from "./svg/i-calendar";
 import i_calendar_line from "./svg/i-calendar-line";
 import i_camera from "./svg/i-camera";
 import i_caret_down from "./svg/i-caret-down";
+import i_caret_left from "./svg/i-caret-left";
+import i_caret_right from "./svg/i-caret-right";
 import i_caret_up from "./svg/i-caret-up";
 import i_cart from "./svg/i-cart";
 import i_catalog from "./svg/i-catalog";
@@ -147,6 +150,7 @@ import i_doc_create from "./svg/i-doc-create";
 import i_doc_current from "./svg/i-doc-current";
 import i_doc_decommissioned from "./svg/i-doc-decommissioned";
 import i_doc_draft from "./svg/i-doc-draft";
+import i_doc_draft_line from "./svg/i-doc-draft-line";
 import i_doc_expired from "./svg/i-doc-expired";
 import i_doc_inherit_line from "./svg/i-doc-inherit-line";
 import i_doc_private_line from "./svg/i-doc-private-line";
@@ -182,12 +186,14 @@ import i_edit_line from "./svg/i-edit-line";
 import i_emoji_happy from "./svg/i-emoji-happy";
 import i_emoji_sad from "./svg/i-emoji-sad";
 import i_employment from "./svg/i-employment";
+import i_enforce_line from "./svg/i-enforce-line";
 import i_enter from "./svg/i-enter";
 import i_enter_reverse from "./svg/i-enter-reverse";
 import i_env_dev from "./svg/i-env-dev";
 import i_env_production from "./svg/i-env-production";
 import i_env_staging from "./svg/i-env-staging";
 import i_env_staging_line from "./svg/i-env-staging-line";
+import i_environment_line from "./svg/i-environment-line";
 import i_equal from "./svg/i-equal";
 import i_escalation from "./svg/i-escalation";
 import i_evidence from "./svg/i-evidence";
@@ -233,6 +239,7 @@ import i_folder_open from "./svg/i-folder-open";
 import i_folder_remove from "./svg/i-folder-remove";
 import i_folder_scope from "./svg/i-folder-scope";
 import i_folder_scope_line from "./svg/i-folder-scope-line";
+import i_fulfill_line from "./svg/i-fulfill-line";
 import i_full_match from "./svg/i-full-match";
 import i_function from "./svg/i-function";
 import i_gears from "./svg/i-gears";
@@ -265,11 +272,14 @@ import i_id from "./svg/i-id";
 import i_id_card from "./svg/i-id-card";
 import i_id_remove from "./svg/i-id-remove";
 import i_impact from "./svg/i-impact";
+import i_implement_line from "./svg/i-implement-line";
 import i_import from "./svg/i-import";
 import i_inbox from "./svg/i-inbox";
 import i_inbox_in from "./svg/i-inbox-in";
 import i_incremental from "./svg/i-incremental";
 import i_indent from "./svg/i-indent";
+import i_indent_left_line from "./svg/i-indent-left-line";
+import i_indent_right_line from "./svg/i-indent-right-line";
 import i_infinity from "./svg/i-infinity";
 import i_info_fill from "./svg/i-info-fill";
 import i_info_line from "./svg/i-info-line";
@@ -284,6 +294,7 @@ import i_library_fill from "./svg/i-library-fill";
 import i_library_line from "./svg/i-library-line";
 import i_line from "./svg/i-line";
 import i_link from "./svg/i-link";
+import i_list_line from "./svg/i-list-line";
 import i_loader from "./svg/i-loader";
 import i_location from "./svg/i-location";
 import i_lock from "./svg/i-lock";
@@ -318,6 +329,7 @@ import i_no_logo from "./svg/i-no-logo";
 import i_no_match from "./svg/i-no-match";
 import i_no_match_1 from "./svg/i-no-match-1";
 import i_no_match_line from "./svg/i-no-match-line";
+import i_no_match_symbol_line from "./svg/i-no-match-symbol-line";
 import i_node_collapse from "./svg/i-node-collapse";
 import i_node_expand from "./svg/i-node-expand";
 import i_not_equal from "./svg/i-not-equal";
@@ -361,15 +373,23 @@ import i_partial_match_symbol_line from "./svg/i-partial-match-symbol-line";
 import i_password_line from "./svg/i-password-line";
 import i_pause from "./svg/i-pause";
 import i_pause_fill from "./svg/i-pause-fill";
+import i_pause_line from "./svg/i-pause-line";
 import i_pb_audio from "./svg/i-pb-audio";
+import i_pb_audio_line from "./svg/i-pb-audio-line";
+import i_pb_blueprint_line from "./svg/i-pb-blueprint-line";
 import i_pb_document from "./svg/i-pb-document";
+import i_pb_document_line from "./svg/i-pb-document-line";
 import i_pb_image from "./svg/i-pb-image";
+import i_pb_image_line from "./svg/i-pb-image-line";
 import i_pb_integration from "./svg/i-pb-integration";
+import i_pb_link_line from "./svg/i-pb-link-line";
+import i_pb_na_line from "./svg/i-pb-na-line";
 import i_pb_postbox from "./svg/i-pb-postbox";
 import i_pb_postbox_line from "./svg/i-pb-postbox-line";
 import i_pb_query from "./svg/i-pb-query";
 import i_pb_text from "./svg/i-pb-text";
 import i_pb_video from "./svg/i-pb-video";
+import i_pb_video_line from "./svg/i-pb-video-line";
 import i_pdf from "./svg/i-pdf";
 import i_pencil_alt from "./svg/i-pencil-alt";
 import i_pentagram from "./svg/i-pentagram";
@@ -391,6 +411,7 @@ import i_playlist_line from "./svg/i-playlist-line";
 import i_playlist_remove from "./svg/i-playlist-remove";
 import i_playlist_remove_line from "./svg/i-playlist-remove-line";
 import i_playlist_save from "./svg/i-playlist-save";
+import i_playlist_save_line from "./svg/i-playlist-save-line";
 import i_plug from "./svg/i-plug";
 import i_plus from "./svg/i-plus";
 import i_plus_fill from "./svg/i-plus-fill";
@@ -403,6 +424,7 @@ import i_printer from "./svg/i-printer";
 import i_priority from "./svg/i-priority";
 import i_priority_high from "./svg/i-priority-high";
 import i_priority_highest from "./svg/i-priority-highest";
+import i_priority_highest_line from "./svg/i-priority-highest-line";
 import i_priority_low from "./svg/i-priority-low";
 import i_priority_lowest from "./svg/i-priority-lowest";
 import i_priority_medium from "./svg/i-priority-medium";
@@ -417,12 +439,14 @@ import i_publisher from "./svg/i-publisher";
 import i_puzzle from "./svg/i-puzzle";
 import i_qrcode from "./svg/i-qrcode";
 import i_question_filled from "./svg/i-question-filled";
+import i_reason_line from "./svg/i-reason-line";
 import i_recent_line from "./svg/i-recent-line";
 import i_refresh from "./svg/i-refresh";
 import i_refresh_line from "./svg/i-refresh-line";
 import i_region from "./svg/i-region";
 import i_region_line from "./svg/i-region-line";
 import i_reliability from "./svg/i-reliability";
+import i_reliability_line from "./svg/i-reliability-line";
 import i_reload from "./svg/i-reload";
 import i_reply from "./svg/i-reply";
 import i_required from "./svg/i-required";
@@ -432,8 +456,11 @@ import i_rmf_shape from "./svg/i-rmf-shape";
 import i_rmf_shape_line from "./svg/i-rmf-shape-line";
 import i_rmf_viz_line from "./svg/i-rmf-viz-line";
 import i_row from "./svg/i-row";
+import i_row_above_line from "./svg/i-row-above-line";
+import i_row_below_line from "./svg/i-row-below-line";
 import i_save from "./svg/i-save";
 import i_save_as from "./svg/i-save-as";
+import i_scope_line from "./svg/i-scope-line";
 import i_search from "./svg/i-search";
 import i_search_fill from "./svg/i-search-fill";
 import i_search_line from "./svg/i-search-line";
@@ -457,13 +484,17 @@ import i_software from "./svg/i-software";
 import i_sort from "./svg/i-sort";
 import i_sort_asc from "./svg/i-sort-asc";
 import i_sort_desc from "./svg/i-sort-desc";
+import i_source_line from "./svg/i-source-line";
 import i_sparkles from "./svg/i-sparkles";
+import i_sparse_line from "./svg/i-sparse-line";
 import i_speakerphone from "./svg/i-speakerphone";
 import i_staging_line from "./svg/i-staging-line";
 import i_stance_all from "./svg/i-stance-all";
 import i_stance_circle from "./svg/i-stance-circle";
 import i_stance_create from "./svg/i-stance-create";
 import i_stance_global from "./svg/i-stance-global";
+import i_stance_plus_line from "./svg/i-stance-plus-line";
+import i_stance_shape_line from "./svg/i-stance-shape-line";
 import i_stance_solo from "./svg/i-stance-solo";
 import i_stance_solo_line from "./svg/i-stance-solo-line";
 import i_star from "./svg/i-star";
@@ -544,16 +575,16 @@ import i_volume_up from "./svg/i-volume-up";
 import i_vote_down_line from "./svg/i-vote-down-line";
 import i_vote_up_line from "./svg/i-vote-up-line";
 import i_wifi from "./svg/i-wifi";
+import i_workflow_line from "./svg/i-workflow-line";
 import i_zoom_in from "./svg/i-zoom-in";
 import i_zoom_out from "./svg/i-zoom-out";
 import p_starchitect_small_dark from "./svg/p-starchitect-small-dark";
 const IconPack = {
-	" i-actor-line": i_actor_line,
 	" i-ai-code-line": i_ai_code_line,
-	" i-no-match-symbol-line": i_no_match_symbol_line,
-	" i-playlist-save-line": i_playlist_save_line,
-	" i-reliability-line": i_reliability_line,
+	c: c,
 	"i-access": i_access,
+	"i-activity-line": i_activity_line,
+	"i-actor-line": i_actor_line,
 	"i-actor": i_actor,
 	"i-adjustments": i_adjustments,
 	"i-admin": i_admin,
@@ -598,6 +629,8 @@ const IconPack = {
 	"i-at-symbol": i_at_symbol,
 	"i-attachment-2": i_attachment_2,
 	"i-audit-line": i_audit_line,
+	"i-based-on-line": i_based_on_line,
+	"i-bold-line": i_bold_line,
 	"i-bolt": i_bolt,
 	"i-bot": i_bot,
 	"i-box": i_box,
@@ -609,6 +642,8 @@ const IconPack = {
 	"i-calendar": i_calendar,
 	"i-camera": i_camera,
 	"i-caret-down": i_caret_down,
+	"i-caret-left": i_caret_left,
+	"i-caret-right": i_caret_right,
 	"i-caret-up": i_caret_up,
 	"i-cart": i_cart,
 	"i-catalog": i_catalog,
@@ -696,6 +731,7 @@ const IconPack = {
 	"i-doc-create": i_doc_create,
 	"i-doc-current": i_doc_current,
 	"i-doc-decommissioned": i_doc_decommissioned,
+	"i-doc-draft-line": i_doc_draft_line,
 	"i-doc-draft": i_doc_draft,
 	"i-doc-expired": i_doc_expired,
 	"i-doc-inherit-line": i_doc_inherit_line,
@@ -732,12 +768,14 @@ const IconPack = {
 	"i-emoji-happy": i_emoji_happy,
 	"i-emoji-sad": i_emoji_sad,
 	"i-employment": i_employment,
+	"i-enforce-line": i_enforce_line,
 	"i-enter-reverse": i_enter_reverse,
 	"i-enter": i_enter,
 	"i-env-dev": i_env_dev,
 	"i-env-production": i_env_production,
 	"i-env-staging-line": i_env_staging_line,
 	"i-env-staging": i_env_staging,
+	"i-environment-line": i_environment_line,
 	"i-equal": i_equal,
 	"i-escalation": i_escalation,
 	"i-evidence-2": i_evidence_2,
@@ -783,6 +821,7 @@ const IconPack = {
 	"i-folder-scope-line": i_folder_scope_line,
 	"i-folder-scope": i_folder_scope,
 	"i-folder": i_folder,
+	"i-fulfill-line": i_fulfill_line,
 	"i-full-match": i_full_match,
 	"i-function": i_function,
 	"i-gears": i_gears,
@@ -815,10 +854,13 @@ const IconPack = {
 	"i-id-remove": i_id_remove,
 	"i-id": i_id,
 	"i-impact": i_impact,
+	"i-implement-line": i_implement_line,
 	"i-import": i_import,
 	"i-inbox-in": i_inbox_in,
 	"i-inbox": i_inbox,
 	"i-incremental": i_incremental,
+	"i-indent-left-line": i_indent_left_line,
+	"i-indent-right-line": i_indent_right_line,
 	"i-indent": i_indent,
 	"i-infinity": i_infinity,
 	"i-info-fill": i_info_fill,
@@ -834,6 +876,7 @@ const IconPack = {
 	"i-library": i_library,
 	"i-line": i_line,
 	"i-link": i_link,
+	"i-list-line": i_list_line,
 	"i-loader": i_loader,
 	"i-location": i_location,
 	"i-lock": i_lock,
@@ -867,6 +910,7 @@ const IconPack = {
 	"i-no-logo": i_no_logo,
 	"i-no-match-1": i_no_match_1,
 	"i-no-match-line": i_no_match_line,
+	"i-no-match-symbol-line": i_no_match_symbol_line,
 	"i-no-match": i_no_match,
 	"i-node-collapse": i_node_collapse,
 	"i-node-expand": i_node_expand,
@@ -910,15 +954,23 @@ const IconPack = {
 	"i-partial-match": i_partial_match,
 	"i-password-line": i_password_line,
 	"i-pause-fill": i_pause_fill,
+	"i-pause-line": i_pause_line,
 	"i-pause": i_pause,
+	"i-pb-audio-line": i_pb_audio_line,
 	"i-pb-audio": i_pb_audio,
+	"i-pb-blueprint-line": i_pb_blueprint_line,
+	"i-pb-document-line": i_pb_document_line,
 	"i-pb-document": i_pb_document,
+	"i-pb-image-line": i_pb_image_line,
 	"i-pb-image": i_pb_image,
 	"i-pb-integration": i_pb_integration,
+	"i-pb-link-line": i_pb_link_line,
+	"i-pb-na-line": i_pb_na_line,
 	"i-pb-postbox-line": i_pb_postbox_line,
 	"i-pb-postbox": i_pb_postbox,
 	"i-pb-query": i_pb_query,
 	"i-pb-text": i_pb_text,
+	"i-pb-video-line": i_pb_video_line,
 	"i-pb-video": i_pb_video,
 	"i-pdf": i_pdf,
 	"i-pencil-alt": i_pencil_alt,
@@ -939,6 +991,7 @@ const IconPack = {
 	"i-playlist-line": i_playlist_line,
 	"i-playlist-remove-line": i_playlist_remove_line,
 	"i-playlist-remove": i_playlist_remove,
+	"i-playlist-save-line": i_playlist_save_line,
 	"i-playlist-save": i_playlist_save,
 	"i-playlist": i_playlist,
 	"i-plug": i_plug,
@@ -951,6 +1004,7 @@ const IconPack = {
 	"i-presentation-chart-line": i_presentation_chart_line,
 	"i-printer": i_printer,
 	"i-priority-high": i_priority_high,
+	"i-priority-highest-line": i_priority_highest_line,
 	"i-priority-highest": i_priority_highest,
 	"i-priority-low": i_priority_low,
 	"i-priority-lowest": i_priority_lowest,
@@ -967,11 +1021,13 @@ const IconPack = {
 	"i-puzzle": i_puzzle,
 	"i-qrcode": i_qrcode,
 	"i-question-filled": i_question_filled,
+	"i-reason-line": i_reason_line,
 	"i-recent-line": i_recent_line,
 	"i-refresh-line": i_refresh_line,
 	"i-refresh": i_refresh,
 	"i-region-line": i_region_line,
 	"i-region": i_region,
+	"i-reliability-line": i_reliability_line,
 	"i-reliability": i_reliability,
 	"i-reload": i_reload,
 	"i-reply": i_reply,
@@ -981,9 +1037,12 @@ const IconPack = {
 	"i-rmf-shape-line": i_rmf_shape_line,
 	"i-rmf-shape": i_rmf_shape,
 	"i-rmf-viz-line": i_rmf_viz_line,
+	"i-row-above-line": i_row_above_line,
+	"i-row-below-line": i_row_below_line,
 	"i-row": i_row,
 	"i-save-as": i_save_as,
 	"i-save": i_save,
+	"i-scope-line": i_scope_line,
 	"i-search-fill": i_search_fill,
 	"i-search-line": i_search_line,
 	"i-search": i_search,
@@ -1007,13 +1066,17 @@ const IconPack = {
 	"i-sort-asc": i_sort_asc,
 	"i-sort-desc": i_sort_desc,
 	"i-sort": i_sort,
+	"i-source-line": i_source_line,
 	"i-sparkles": i_sparkles,
+	"i-sparse-line": i_sparse_line,
 	"i-speakerphone": i_speakerphone,
 	"i-staging-line": i_staging_line,
 	"i-stance-all": i_stance_all,
 	"i-stance-circle": i_stance_circle,
 	"i-stance-create": i_stance_create,
 	"i-stance-global": i_stance_global,
+	"i-stance-plus-line": i_stance_plus_line,
+	"i-stance-shape-line": i_stance_shape_line,
 	"i-stance-solo-line": i_stance_solo_line,
 	"i-stance-solo": i_stance_solo,
 	"i-star-outline": i_star_outline,
@@ -1094,6 +1157,7 @@ const IconPack = {
 	"i-vote-down-line": i_vote_down_line,
 	"i-vote-up-line": i_vote_up_line,
 	"i-wifi": i_wifi,
+	"i-workflow-line": i_workflow_line,
 	"i-zoom-in": i_zoom_in,
 	"i-zoom-out": i_zoom_out,
 	"p-starchitect-small-dark": p_starchitect_small_dark

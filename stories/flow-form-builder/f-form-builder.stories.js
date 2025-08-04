@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 import field from "./f-formbuilder-field";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 import { createRef, ref } from "lit/directives/ref.js";
 
 export default {

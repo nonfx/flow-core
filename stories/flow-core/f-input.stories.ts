@@ -1,7 +1,7 @@
 import { html } from "lit-html";
-import fInputAnatomy from "../svg/i-finput-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useState } from "@storybook/preview-api";
+import { useState } from "storybook/preview-api";
+import fInputAnatomy from "../svg/i-finput-anatomy.js";
 
 export default {
 	title: "@nonfx/flow-core/f-input",

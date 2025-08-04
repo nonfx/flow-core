@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useEffect, useState } from "@storybook/client-api";
+import { useArgs, useEffect, useState } from "storybook/preview-api";
 import fToastAnatomy from "../svg/i-ftoast-anatomy.js";
 
 export default {

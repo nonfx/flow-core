@@ -1,6 +1,6 @@
-import { html } from "lit-html";
-import { useState } from "@storybook/preview-api";
 import { FTooltipObject, FTooltipPlacement } from "@nonfx/flow-core";
+import { html } from "lit-html";
+import { useState } from "storybook/preview-api";
 
 export default {
 	title: "@nonfx/flow-core/f-tooltip",

@@ -1,4 +1,4 @@
-import { Story, Meta } from "@storybook/web-components";
+import { Story, Meta } from "@storybook/web-components-vite";
 import { html } from "lit-html";
 import { LineageNodeElement, LineageNodeLinks, LineageNodes } from "@nonfx/flow-lineage";
 

@@ -1,4 +1,6 @@
-import { BehaviorSubject, Subject } from "rxjs";
+import { SimpleBehaviorSubject, SimpleSubject } from "./simple-observable";
+
+export { SimpleBehaviorSubject, SimpleSubject, type Subscription } from "./simple-observable";
 
 export type CustomFontConfig = {
 	para: string;
@@ -11,9 +13,9 @@ export type FlowCoreConfig = {
 	customFont?: CustomFontConfig;
 };
 
-export const themeSubject = new Subject<string>();
+export const themeSubject = new SimpleSubject<string>();
 
-export const configSubject = new BehaviorSubject<FlowCoreConfig>({
+export const configSubject = new SimpleBehaviorSubject<FlowCoreConfig>({
 	theme: "f-dark",
 	iconPack: null
 });

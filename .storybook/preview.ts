@@ -12,9 +12,9 @@ import "@nonfx/flow-form-builder";
 import "@nonfx/flow-lineage";
 import "@nonfx/flow-dashboard";
 
-import { setCustomElementsManifest, setCustomElements } from "@storybook/web-components";
-import { themes } from "@storybook/theming";
-import { Preview } from "@storybook/web-components";
+import { setCustomElementsManifest, setCustomElements } from "@storybook/web-components-vite";
+import { themes } from "storybook/theming";
+import { Preview } from "@storybook/web-components-vite";
 
 import "./storybook.css";
 
@@ -25,7 +25,8 @@ import "./storybook.css";
 const preview: Preview = {
 	parameters: {
 		docs: {
-			theme: themes.dark
+			theme: themes.dark,
+			codePanel: true
 		}
 	}
 };
@@ -163,10 +164,8 @@ async function run() {
 	setCustomElements(loggerCustomElements);
 	setCustomElementsManifest(editorCustomElements);
 	setCustomElements(editorCustomElements);
-
 	setCustomElementsManifest(tableCustomElements);
 	setCustomElements(tableCustomElements);
-
 	setCustomElementsManifest(mdEditorCustomElements);
 	setCustomElements(mdEditorCustomElements);
 	setCustomElementsManifest(textEditorCustomElements);

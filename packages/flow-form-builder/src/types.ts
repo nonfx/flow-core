@@ -24,7 +24,7 @@ import {
 	FSuggestWhen
 } from "@nonfx/flow-core";
 import { BetweenParams } from "./modules/validation/rules/between";
-import { Subject } from "rxjs";
+import { SimpleSubject } from "@nonfx/flow-core-config";
 import { MaxParams } from "./modules/validation/rules/max";
 import { MinParams } from "./modules/validation/rules/min";
 import { MaxValueParams } from "./modules/validation/rules/max-value";
@@ -384,7 +384,7 @@ export type FFormInputElements = {
 	value: FormBuilderValues;
 	state?: "primary" | "default" | "success" | "warning" | "danger";
 	validate: (silent: boolean) => FormBuilderValidationPromise;
-	showWhenSubject: Subject<FormBuilderValues>;
+	showWhenSubject: SimpleSubject<FormBuilderValues>;
 } & LitElement;
 
 export type FormBuilderValidationPromise = Promise<{

@@ -1,8 +1,5 @@
+import { FBreadcrumbs, FBreadcrumbSize, FBreadcrumbVariant } from "@nonfx/flow-core";
 import { html } from "lit-html";
-import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs } from "@storybook/manager-api";
-import { useState } from "@storybook/preview-api";
-import { FBreadcrumbs, FBreadCrumbSize, FBreadCrumbVariant } from "@nonfx/flow-core";
 
 export default {
 	title: "@nonfx/flow-core/f-breadcrumb",
@@ -16,8 +13,8 @@ export default {
 
 export type BreadcrumbArgTypes = {
 	crumbs: FBreadcrumbs;
-	size: FBreadCrumbSize;
-	variant: FBreadCrumbVariant;
+	size: FBreadcrumbSize;
+	variant: FBreadcrumbVariant;
 	disabled: boolean;
 };
 

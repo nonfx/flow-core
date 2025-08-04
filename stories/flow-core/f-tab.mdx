@@ -1,8 +1,8 @@
-import { Meta, Story, Canvas, PureArgsTable } from "@storybook/blocks";
+import { Meta, Story, Canvas, PureArgsTable } from "@storybook/addon-docs/blocks";
 import { html } from "lit-html";
 import FDivAnatomy from "../svg/i-fdiv-anatomy.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
-import { useArgs, useState } from "@storybook/client-api";
+import { useArgs, useState } from "storybook/preview-api";
 import * as FTabStories from "./f-tab.stories";
 
 <Meta of={FTabStories} />
@@ -171,4 +171,4 @@ The alignment property aligns a f-tab bar with respect to the parent container.
 
 <br />
 
-<ArgsTable of={"f-tab"} />
+<PureArgsTable of={"f-tab"} />

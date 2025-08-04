@@ -1,8 +1,8 @@
-import { Story, Meta } from "@storybook/web-components";
+import { StoryFn, Meta } from "@storybook/web-components-vite";
 import { html } from "lit-html";
 import { FormBuilderField } from "@nonfx/flow-form-builder";
 import { createRef, Ref, ref } from "lit/directives/ref.js";
-import { useArgs } from "@storybook/manager-api";
+import { useArgs } from "storybook/manager-api";
 import { FFormBuilder } from "@nonfx/flow-form-builder/src";
 
 export default {
@@ -103,7 +103,7 @@ const sampleFormBuilder: SampleFormBuilder = {
 	}
 };
 let count = 0;
-const Template: Story<unknown> = (args: any) => {
+const Template: StoryFn<unknown> = (args: any) => {
 	const [_, updateArgs] = useArgs();
 	const handleKeydown = (event: Event) => {
 		event.stopPropagation();

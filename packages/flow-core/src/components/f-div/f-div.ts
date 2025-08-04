@@ -10,7 +10,7 @@ import { injectCss } from "@nonfx/flow-core-config";
 
 export type FDivBorderWidth = "small" | "medium" | "large";
 export type FDivBorderStyle = "solid" | "dashed" | "dotted";
-export type FDivBorderColor = "default" | "secondary" | "subtle";
+export type FDivBorderColor = "default" | "secondary" | "subtle" | `var(${string})`;
 export type FDivBorderPosition = "bottom" | "top" | "left" | "right" | "around";
 export type FDivPadding = "x-large" | "large" | "medium" | "small" | "x-small" | "none";
 
