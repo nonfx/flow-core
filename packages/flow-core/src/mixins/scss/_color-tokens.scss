@@ -1463,17 +1463,17 @@
 	--color-icon-subtle-selected: #{getSelected($color-icon-subtle)} !important;
 
 	/* Border Colors */
-	$color-border-default: #bac7ca;
+	$color-border-default: #c2d0d6;
 	--color-border-default: #{$color-border-default} !important;
 	--color-border-default-hover: #{getHover($color-border-default)} !important;
 	--color-border-default-selected: #{getSelected($color-border-default)} !important;
 
-	$color-border-secondary: #d4dcde;
+	$color-border-secondary: #d1dce0;
 	--color-border-secondary: #{$color-border-secondary} !important;
 	--color-border-secondary-hover: #{getHover($color-border-secondary)} !important;
 	--color-border-secondary-selected: #{getSelected($color-border-secondary)} !important;
 
-	$color-border-subtle: #dfe6e7;
+	$color-border-subtle: #dae3e7;
 	--color-border-subtle: #{$color-border-subtle} !important;
 	--color-border-subtle-hover: #{getHover($color-border-subtle)} !important;
 	--color-border-subtle-selected: #{getSelected($color-border-subtle)} !important;
@@ -1484,23 +1484,23 @@
 	--color-surface-default-hover: #{getHover($color-surface-default)} !important;
 	--color-surface-default-selected: #{getSelected($color-surface-default)} !important;
 
-	$color-surface-secondary: #e3e7e8;
+	$color-surface-secondary: #edf1f3;
 	--color-surface-secondary: #{$color-surface-secondary} !important;
 	--color-surface-secondary-hover: #{getHover($color-surface-secondary)} !important;
 	--color-surface-secondary-selected: #{getSelected($color-surface-secondary)} !important;
 
-	$color-surface-tertiary: #e2e6e9;
+	$color-surface-tertiary: #e3eaed;
 	--color-surface-tertiary: #{$color-surface-tertiary} !important;
 	--color-surface-tertiary-hover: #{getHover($color-surface-tertiary)} !important;
 	--color-surface-tertiary-selected: #{getSelected($color-surface-tertiary)} !important;
 
-	$color-surface-subtle: #d4dcde;
+	$color-surface-subtle: #e0e8eb;
 	--color-surface-subtle: #{$color-surface-subtle} !important;
 	--color-surface-subtle-hover: #{getHover($color-surface-subtle)} !important;
 	--color-surface-subtle-selected: #{getSelected($color-surface-subtle)} !important;
 
 	/* Input Colors */
-	$color-input-default: #d7d9db;
+	$color-input-default: #e0e7eb;
 	--color-input-default: #{$color-input-default} !important;
 	--color-input-default-hover: #{getHover($color-input-default)} !important;
 	--color-input-default-selected: #{getSelected($color-input-default)} !important;
