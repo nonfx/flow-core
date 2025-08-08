@@ -1,0 +1,1 @@
+import{C as o}from"./iframe-BdnCiKt2.js";import{I as i}from"./icon-pack-DfmYCcCc.js";import"./preload-helper-CTglmYes.js";o.setConfig({iconPack:{...i,...o.getConfig().iconPack}});export{i as default};
