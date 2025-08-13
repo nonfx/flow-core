@@ -110,6 +110,7 @@ import i_code_1 from "./svg/i-code-1";
 import i_code_line from "./svg/i-code-line";
 import i_collapse from "./svg/i-collapse";
 import i_collapse_3 from "./svg/i-collapse-3";
+import i_collapse_line from "./svg/i-collapse-line";
 import i_collection from "./svg/i-collection";
 import i_column from "./svg/i-column";
 import i_compare from "./svg/i-compare";
@@ -211,6 +212,7 @@ import i_expand from "./svg/i-expand";
 import i_expand_2 from "./svg/i-expand-2";
 import i_expand_3 from "./svg/i-expand-3";
 import i_expand_4 from "./svg/i-expand-4";
+import i_expand_line from "./svg/i-expand-line";
 import i_export from "./svg/i-export";
 import i_external_link from "./svg/i-external-link";
 import i_fallback from "./svg/i-fallback";
@@ -497,6 +499,7 @@ import i_stance_plus_line from "./svg/i-stance-plus-line";
 import i_stance_shape_line from "./svg/i-stance-shape-line";
 import i_stance_solo from "./svg/i-stance-solo";
 import i_stance_solo_line from "./svg/i-stance-solo-line";
+import i_standard_line from "./svg/i-standard-line";
 import i_star from "./svg/i-star";
 import i_star_outline from "./svg/i-star-outline";
 import i_starmap from "./svg/i-starmap";
@@ -565,6 +568,7 @@ import i_user_tick from "./svg/i-user-tick";
 import i_user_time from "./svg/i-user-time";
 import i_validation from "./svg/i-validation";
 import i_variable from "./svg/i-variable";
+import i_variable_line from "./svg/i-variable-line";
 import i_verified from "./svg/i-verified";
 import i_version_history from "./svg/i-version-history";
 import i_view from "./svg/i-view";
@@ -691,6 +695,7 @@ const IconPack = {
 	"i-code-line": i_code_line,
 	"i-code": i_code,
 	"i-collapse-3": i_collapse_3,
+	"i-collapse-line": i_collapse_line,
 	"i-collapse": i_collapse,
 	"i-collection": i_collection,
 	"i-column": i_column,
@@ -792,6 +797,7 @@ const IconPack = {
 	"i-expand-2": i_expand_2,
 	"i-expand-3": i_expand_3,
 	"i-expand-4": i_expand_4,
+	"i-expand-line": i_expand_line,
 	"i-expand": i_expand,
 	"i-export": i_export,
 	"i-external-link": i_external_link,
@@ -1079,6 +1085,7 @@ const IconPack = {
 	"i-stance-shape-line": i_stance_shape_line,
 	"i-stance-solo-line": i_stance_solo_line,
 	"i-stance-solo": i_stance_solo,
+	"i-standard-line": i_standard_line,
 	"i-star-outline": i_star_outline,
 	"i-star": i_star,
 	"i-starmap-line": i_starmap_line,
@@ -1146,6 +1153,7 @@ const IconPack = {
 	"i-user-tick": i_user_tick,
 	"i-user-time": i_user_time,
 	"i-validation": i_validation,
+	"i-variable-line": i_variable_line,
 	"i-variable": i_variable,
 	"i-verified": i_verified,
 	"i-version-history": i_version_history,
