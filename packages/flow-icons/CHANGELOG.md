@@ -378,3 +378,7 @@
 ## [5.3.0] - 2025-08-13
 
 - Updated icons from Figma
+
+## [5.4.0] - 2025-08-13
+
+- Updated icons from Figma
