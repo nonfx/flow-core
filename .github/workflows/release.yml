@@ -23,9 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAGES_TOKEN }}
+        uses: actions/checkout@v5
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -37,7 +35,6 @@ jobs:
         with:
           publish: bun run release
         env:
-          GITHUB_TOKEN: ${{ secrets.PAGES_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Get current date
