@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 6.0.0
+
+### Major Changes
+
+- 6a07d01: New dark theme
+
 ## 5.1.3
 
 ### Patch Changes
