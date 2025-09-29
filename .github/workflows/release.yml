@@ -35,6 +35,7 @@ jobs:
         with:
           publish: bun run release
         env:
+          GITHUB_TOKEN: ${{ secrets.PAGES_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Get current date
