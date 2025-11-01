@@ -26,7 +26,10 @@ build: build-lib build-storybook
 
 .PHONY: clean
 clean:
-	find . -name "dist" -type d -exec rm -rf {} +
+	@echo "🧹 Cleaning repo"
+	git clean -dfx
+	git gc --prune
+	@echo "✅ All clean!"
 
 .PHONY: test
 test: build-lib
