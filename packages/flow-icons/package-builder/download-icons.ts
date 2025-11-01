@@ -41,7 +41,7 @@ for (let p = 0; p < config.packages.length; p++) {
 
 export default async function downloadIcons(nodeId: string, pkg: string) {
 	const indexFileImports = new Set();
-	indexFileImports.add('import { ConfigUtil } from "@nonfx/flow-core-config";');
+	indexFileImports.add('import { ConfigUtil } from "@nonfx/flow-core";');
 	indexFileImports.add('import IconPack from "./icon-pack" ;');
 
 	const iconPackExports = new Set();

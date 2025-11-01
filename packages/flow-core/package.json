@@ -1,10 +1,10 @@
 {
   "name": "@nonfx/flow-core",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Core package of flow design system",
   "type": "module",
   "module": "dist/flow-core.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",

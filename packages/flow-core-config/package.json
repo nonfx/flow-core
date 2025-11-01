@@ -4,7 +4,7 @@
   "description": "Shared configuration for the Flow UI library",
   "type": "module",
   "module": "dist/index.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build --emptyOutDir"
   },

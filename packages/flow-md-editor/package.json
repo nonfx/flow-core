@@ -4,7 +4,7 @@
   "description": "Code editor component for flow library",
   "type": "module",
   "module": "dist/flow-md-editor.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",

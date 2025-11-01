@@ -1,7 +1,7 @@
 import { html, fixture, expect, elementUpdated } from "@open-wc/testing";
 import loadingSVG from "./../../mixins/svg/loader";
 import notFound from "../../mixins/svg/not-found";
-import { ConfigUtil } from "@nonfx/flow-core-config";
+import { ConfigUtil } from "@nonfx/flow-core";
 
 // import all flow -core components
 import "@nonfx/flow-core";

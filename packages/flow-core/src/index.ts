@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import { ConfigUtil } from "@nonfx/flow-core-config";
+import { ConfigUtil } from "@nonfx/flow-core";
 import { version } from "../package.json";
 
 export { flowElement } from "./utils";

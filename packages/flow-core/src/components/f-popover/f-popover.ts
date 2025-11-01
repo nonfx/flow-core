@@ -318,6 +318,7 @@ export class FPopover extends FRoot {
 			};
 		}
 	}
+
 	disconnectedCallback() {
 		if (this.cleanup) {
 			this.cleanup();
@@ -332,7 +333,7 @@ export class FPopover extends FRoot {
 		if (this.targetElement) {
 			this.targetElement.style.removeProperty("z-index");
 		}
-		window.removeEventListener("click", this.outsideClick);
+		window.removeEventListener("click", this.outsideClick, true);
 	}
 
 	connectedCallback() {
@@ -342,8 +343,9 @@ export class FPopover extends FRoot {
 		/**
 		 * click outside the f-popover area
 		 */
-		window.addEventListener("click", this.outsideClick);
+		window.addEventListener("click", this.outsideClick, true);
 	}
+
 	dispatchEsc() {
 		if (this.isEscapeClicked && this.closeOnEscape) {
 			const event = new CustomEvent("esc", {
@@ -377,18 +379,31 @@ export class FPopover extends FRoot {
 	}
 
 	outsideClick = (e: MouseEvent) => {
-		if (this.open && e?.target === this) {
-			const rect = this.getBoundingClientRect();
-			const isInsideClick =
-				e.clientX > rect.left &&
-				e.clientX < rect.left + rect.width &&
-				e.clientY > rect.top &&
-				e.clientY < rect.top + rect.height;
+		if (!this.open) return;
 
-			if (!isInsideClick) {
-				this.overlayClick();
+		const path = e.composedPath();
+
+		// Check if click is on the target element (trigger)
+		if (this.targetElement && path.includes(this.targetElement)) return;
+
+		// Check if click is inside the popover's visual bounds
+		const rect = this.getBoundingClientRect();
+		const isInsideClick =
+			e.clientX > rect.left &&
+			e.clientX < rect.left + rect.width &&
+			e.clientY > rect.top &&
+			e.clientY < rect.top + rect.height;
+
+		if (isInsideClick) {
+			// Inside popover bounds, check if it's in actual content
+			if (path.includes(this)) {
+				// Popover is in the path, this is internal content
+				return;
 			}
 		}
+
+		// Any other click (including on overlay pseudo-element or outside) triggers overlay click
+		this.overlayClick();
 	};
 
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {

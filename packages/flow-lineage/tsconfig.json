@@ -1,10 +1,10 @@
 {
 	"extends": "@nonfx/tsconfig",
 	"compilerOptions": {
-		"rootDir": ".",
+		"rootDir": "src",
 		"outDir": "./dist",
 		"allowJs": true
 	},
-	"include": ["src/**/*", "package.json"],
+	"include": ["src/**/*"],
 	"exclude": ["**/*.test.ts", "**/dist", "dist"]
 }

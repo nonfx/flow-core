@@ -24,6 +24,10 @@ build-storybook: install
 .PHONY: build
 build: build-lib build-storybook
 
+.PHONY: clean
+clean:
+	find . -name "dist" -type d -exec rm -rf {} +
+
 .PHONY: test
 test: build-lib
 	bun run --bun --filter "*" test

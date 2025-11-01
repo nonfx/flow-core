@@ -1,5 +1,11 @@
 <h4 className="margin-btm-8">Release Notes</h4>
 
+## 6.0.1
+
+### Patch Changes
+
+- fixes
+
 ## 6.0.0
 
 ### Major Changes
