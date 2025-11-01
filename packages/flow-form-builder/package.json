@@ -1,10 +1,10 @@
 {
   "name": "@nonfx/flow-form-builder",
-  "version": "7.0.0",
+  "version": "7.0.2",
   "description": "Form builder for the flow design system",
   "type": "module",
   "module": "dist/flow-form-builder.es.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "./compile.sh",
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",

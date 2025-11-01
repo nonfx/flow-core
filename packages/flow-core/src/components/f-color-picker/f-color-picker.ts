@@ -175,11 +175,12 @@ export class FColorPicker extends FRoot {
 				<f-div slot="icon-tooltip"><slot name="icon-tooltip"></slot></f-div>
 				<f-div slot="help"><slot name="help"></slot></f-div>
 			</f-form-field>
+
 			<f-popover
 				id="f-color-picker-popover"
 				@overlay-click=${this.handleOverlayClick}
 				@keydown=${this.handleKeydown}
-				.overlay=${false}
+				.overlay=${true}
 				.open=${this.isOpen}
 				size="small"
 			>

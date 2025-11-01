@@ -366,32 +366,12 @@ export class FEmojiPicker extends FRoot {
 	}
 
 	/**
-	 *
-	 * @param e mMouseEvent
-	 * @param element emoji-picker component
+	 * Handle overlay click from popover
 	 */
-	closeEmojiPicker(e: MouseEvent, element: FEmojiPicker) {
-		if (!element.contains(e.target as HTMLInputElement) && element.emojiPickerPopover.open) {
-			element.emojiPickerPopover.open = false;
-		}
-	}
-
-	outsideClick = (e: MouseEvent) => {
-		this.closeEmojiPicker(e, this);
+	handleOverlayClick = () => {
+		this.toggleEmojiPicker(false);
 	};
 
-	connectedCallback(): void {
-		super.connectedCallback();
-		/**
-		 * click outside the f-select wrapper area
-		 */
-		window.addEventListener("mouseup", this.outsideClick);
-	}
-	disconnectedCallback(): void {
-		super.disconnectedCallback();
-
-		window.removeEventListener("mouseup", this.outsideClick);
-	}
 	protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
 		super.willUpdate(changedProperties);
 		this.role = "textbox";
@@ -508,12 +488,15 @@ export class FEmojiPicker extends FRoot {
 				</div>
 				<f-div direction="column" id="f-emoji-picker-error"><slot name="help"></slot> </f-div>
 			</f-div>
+
 			<f-popover
 				data-qa-emoji-popover=${this.getAttribute("data-qa-element-id")}
 				class="f-emoji-picker-popover"
-				.overlay=${false}
-				><f-div>${this.picker}</f-div></f-popover
+				.overlay=${true}
+				@overlay-click=${this.handleOverlayClick}
 			>
+				<f-div>${this.picker}</f-div>
+			</f-popover>
 		`;
 	}
 

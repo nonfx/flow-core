@@ -24,6 +24,13 @@ build-storybook: install
 .PHONY: build
 build: build-lib build-storybook
 
+.PHONY: clean
+clean:
+	@echo "🧹 Cleaning repo"
+	git clean -dfx
+	git gc --prune
+	@echo "✅ All clean!"
+
 .PHONY: test
 test: build-lib
 	bun run --bun --filter "*" test

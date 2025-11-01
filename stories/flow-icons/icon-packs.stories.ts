@@ -1,12 +1,25 @@
 import { html } from "lit-html";
-import flowAwsIcon from "@nonfx/flow-icons/src/flow-aws-icon/icon-pack";
-import flowGCPIcon from "@nonfx/flow-icons/src/flow-gcp-icon/icon-pack";
-import flowProductIcon from "@nonfx/flow-icons/src/flow-product-icon/icon-pack";
-import flowPolicyIcon from "@nonfx/flow-icons/src/flow-policy-icon/icon-pack";
-import flowAzureIcon from "@nonfx/flow-icons/src/flow-azure-icon/icon-pack";
-import flowNonfxIcon from "@nonfx/flow-icons/src/flow-nonfx-icon/icon-pack";
+import { register, type IconPackNames } from "@nonfx/flow-icons";
 import { customElement, property } from "lit/decorators.js";
 import { LitElement } from "lit";
+
+let iconPackBundle: Awaited<ReturnType<typeof register>>;
+
+async function setupIconPacks() {
+	if (!iconPackBundle) {
+		const allPacks: IconPackNames[] = [
+			"aws",
+			"gcp",
+			"product",
+			"system",
+			"policy",
+			"azure",
+			"nonfx"
+		];
+		iconPackBundle = await register(allPacks);
+	}
+	return iconPackBundle;
+}
 
 export default {
 	title: "@nonfx/flow-icons",
@@ -15,7 +28,12 @@ export default {
 		controls: {
 			hideNoControlsWarning: true
 		}
-	}
+	},
+	loaders: [
+		async () => {
+			await setupIconPacks();
+		}
+	]
 };
 
 @customElement("icon-pack")
@@ -88,8 +106,9 @@ export class IconPackElement extends LitElement {
 
 export const Aws = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"aws"} .icons=${flowAwsIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const awsPack = bundle.find(b => b.packName === "aws");
+		return html` <icon-pack .packName=${"aws"} .icons=${awsPack?.pack}> </icon-pack> `;
 	},
 
 	name: "aws"
@@ -97,8 +116,9 @@ export const Aws = {
 
 export const Gcp = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"gcp"} .icons=${flowGCPIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const gcpPack = bundle.find(b => b.packName === "gcp");
+		return html` <icon-pack .packName=${"gcp"} .icons=${gcpPack?.pack}> </icon-pack> `;
 	},
 
 	name: "gcp"
@@ -106,16 +126,18 @@ export const Gcp = {
 
 export const Product = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"product"} .icons=${flowProductIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const productPack = bundle.find(b => b.packName === "product");
+		return html` <icon-pack .packName=${"product"} .icons=${productPack?.pack}> </icon-pack> `;
 	},
 
 	name: "product"
 };
 export const Policy = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"policy"} .icons=${flowPolicyIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const policyPack = bundle.find(b => b.packName === "policy");
+		return html` <icon-pack .packName=${"policy"} .icons=${policyPack?.pack}> </icon-pack> `;
 	},
 
 	name: "policy"
@@ -123,8 +145,9 @@ export const Policy = {
 
 export const Azure = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"azure"} .icons=${flowAzureIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const azurePack = bundle.find(b => b.packName === "azure");
+		return html` <icon-pack .packName=${"azure"} .icons=${azurePack?.pack}> </icon-pack> `;
 	},
 
 	name: "azure"
@@ -132,8 +155,9 @@ export const Azure = {
 
 export const Nonfx = {
 	render: () => {
-		const searchTerm = "";
-		return html` <icon-pack .packName=${"nonfx"} .icons=${flowNonfxIcon}> </icon-pack> `;
+		const bundle = iconPackBundle;
+		const nonfxPack = bundle.find(b => b.packName === "nonfx");
+		return html` <icon-pack .packName=${"nonfx"} .icons=${nonfxPack?.pack}> </icon-pack> `;
 	},
 
 	name: "nonfx"

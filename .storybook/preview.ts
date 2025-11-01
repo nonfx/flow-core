@@ -1,6 +1,6 @@
 import { html } from "lit-html";
-import { register } from "@nonfx/flow-icons/src";
-import { ConfigUtil } from "@nonfx/flow-core-config";
+import { ConfigUtil } from "@nonfx/flow-core";
+import { register } from "@nonfx/flow-icons";
 import { changeRoute } from "./utils";
 import "@nonfx/flow-core";
 import "@nonfx/flow-log";

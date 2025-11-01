@@ -1,4 +1,4 @@
-import { ConfigUtil } from "@nonfx/flow-core-config";
+import { ConfigUtil } from "@nonfx/flow-core";
 import IconPack from "./icon-pack";
 
 ConfigUtil.setConfig({ iconPack: { ...IconPack, ...ConfigUtil.getConfig().iconPack } });

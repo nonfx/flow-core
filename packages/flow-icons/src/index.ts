@@ -1,4 +1,4 @@
-import { ConfigUtil } from "@nonfx/flow-core-config";
+import { ConfigUtil } from "@nonfx/flow-core";
 import { version } from "./../package.json";
 
 const ICON_PACK_MAP: Record<IconPackNames, () => Promise<Record<string, string>>> = {
