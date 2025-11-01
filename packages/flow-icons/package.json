@@ -4,7 +4,7 @@
   "description": "Flow icons package",
   "type": "module",
   "module": "dist/flow-icons.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "download-icons": "bun package-builder/download-icons.ts",
     "build": "bash ./compile.sh",

@@ -4,7 +4,7 @@
   "description": "Core package of flow design system",
   "type": "module",
   "module": "dist/flow-core.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "bash ./compile.sh",
     "build:watch": "concurrently --kill-others \"vite build --emptyOutDir --watch\" \"tsc --watch\"",

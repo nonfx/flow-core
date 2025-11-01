@@ -430,7 +430,7 @@ export class FTableSchema extends FRoot {
 		if (this.searchTimeout) {
 			clearTimeout(this.searchTimeout);
 		}
-		this.searchTimeout = setTimeout(() => {
+		this.searchTimeout = window.setTimeout(() => {
 			this.searchScope = event.detail.scope;
 			this.searchTerm = event.detail.value;
 		}, 300);

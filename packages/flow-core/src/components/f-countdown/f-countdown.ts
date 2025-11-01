@@ -138,7 +138,7 @@ export class FCountdown extends FRoot {
 	}
 
 	init() {
-		this.interval = setInterval(() => {
+		this.interval = window.setInterval(() => {
 			this.remaining -= 1;
 			this.timerText = this.convertSecondsToMinutesAndSeconds(this.remaining);
 

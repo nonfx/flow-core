@@ -1,3 +1,6 @@
 {
-	"extends": "@nonfx/tsconfig"
+	"extends": "@nonfx/tsconfig",
+	"compilerOptions": {
+		"noEmit": true
+	}
 }

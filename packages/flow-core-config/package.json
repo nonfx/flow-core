@@ -4,7 +4,7 @@
   "description": "Shared configuration for the Flow UI library",
   "type": "module",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "tsc --outDir dist --declaration true --emitDeclarationOnly false"
   },

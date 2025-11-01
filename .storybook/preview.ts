@@ -85,6 +85,7 @@ export const parameters = {
 };
 
 export const decorators = [
+	//@ts-expect-error type issue
 	story => {
 		window.onmessage = function (e) {
 			if (e.data && typeof e.data === "string") {
