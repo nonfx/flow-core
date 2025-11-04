@@ -14,7 +14,7 @@ build-lib: install
 	bun run --cwd packages/flow-core-config build
 	bun run --cwd packages/flow-core build
 	bun run --bun --filter "!flow-core" build
-	bun run tsc -b
+	bun run tsc -b --force
 	bun generate-types.ts
 
 .PHONY: build-storybook

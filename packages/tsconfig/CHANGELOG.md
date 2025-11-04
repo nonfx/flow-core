@@ -1,5 +1,11 @@
 # @nonfx/tsconfig
 
+## 1.1.2
+
+### Patch Changes
+
+- Fix to type inclusion in builds
+
 ## 1.1.1
 
 ### Patch Changes

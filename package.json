@@ -22,7 +22,7 @@
     "prettier:lint": "prettier --config .prettierrc.cjs --cache --cache-location .cache/prettier --check .",
     "prepare": "husky",
     "test": "bun run loki test",
-    "postinstall": "tsc -b"
+    "postinstall": "tsc -b --force"
   },
   "keywords": [
     "web-components",

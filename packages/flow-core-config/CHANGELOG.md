@@ -1,5 +1,11 @@
 <h4 class="margin-btm-8">Release Notes</h4>
 
+## 1.3.4
+
+### Patch Changes
+
+- Fix to type inclusion in builds
+
 ## 1.3.3
 
 ### Patch Changes

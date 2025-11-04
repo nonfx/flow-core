@@ -1,5 +1,11 @@
 # @nonfx/custom-elements-manifest-to-types
 
+## 2.1.2
+
+### Patch Changes
+
+- Fix to type inclusion in builds
+
 ## 2.1.1
 
 ### Patch Changes
